@@ -4,4 +4,8 @@
   background: linear-gradient(to right, #2B32B2, #1488CC);
 }
 
+.button {
+  border: none;
+}
+
 /*# sourceMappingURL=Style.css.map */
