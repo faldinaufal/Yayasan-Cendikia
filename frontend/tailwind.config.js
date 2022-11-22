@@ -9,7 +9,10 @@ module.exports = {
       "poppins": ['Poppins', 'sans-serif']
     },
     borderWidth: {
-      '0.5': '0.5px'
+      '0.5': '0.5px',
+      '2': '2px',
+      '1':'1px',
+      '4':'4px'
     },
     fontSize: {
       '44': '44px',
@@ -19,8 +22,11 @@ module.exports = {
       '30':'30px',
       '35':'35px',
       '25':'25px',
+      '23':'23px',
       '20':'20px',
-      '18':'18px'
+      '18':'18px',
+      '16':'16px',
+      '15':'15px'
     },
     extend: {},
   },

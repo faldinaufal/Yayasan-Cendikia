@@ -46,26 +46,8 @@
   height: 450px;
 }
 
-.bg-create {
-  background: #de6161;
-  background: -webkit-linear-gradient(to right, #2657eb, #de6161);
-  background: linear-gradient(to right, #2657eb, #de6161);
-}
-
-.background {
-  background: #0575E6;
-  background: -webkit-linear-gradient(to right, #021B79, #0575E6);
-  background: linear-gradient(to right, #021B79, #0575E6);
-}
-
-.background-edit {
-  background: #a8c0ff;
-  background: -webkit-linear-gradient(to right, #3f2b96, #a8c0ff);
-  background: linear-gradient(to right, #3f2b96, #a8c0ff);
-}
-
-::-webkit-scrollbar {
-  width: 5px;
+.bg-button {
+  background-color: red;
 }
 
 /*# sourceMappingURL=Style.css.map */
