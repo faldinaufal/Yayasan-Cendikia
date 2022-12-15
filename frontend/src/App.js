@@ -1,10 +1,10 @@
 import Routing from './Config/Routing';
-import './Asset/Style/Output.css'
 import './Asset/Style/Sass/Style.css'
+import './App.css';
 
 function App() {
   return (
-    <div className="App bg-zinc-100">
+    <div className="App">
       <Routing/>
     </div>
   );
