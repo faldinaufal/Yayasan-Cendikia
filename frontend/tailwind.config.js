@@ -7,6 +7,7 @@ module.exports = {
     backgroundColor: {
       'dark': '#262626',
       'white': '#FFFFFF',
+      'sosmed': '#484D56',
       'fb': '#1877F2',
       'ig': '#E4405F',
       'twitter': '#1DA1F2',
@@ -18,35 +19,39 @@ module.exports = {
       'hr': '#6B7280'
     },
     width: {
+      '40': '40px',
+      '65': '65px',
+      '58': '48px',
+      '49': '49px',
+      '43': '43px',
       '80%': '80%',
       '92%': '92%',
       '100%': '100%',
-      '70': '70px',
-      '150': '150px',
-      '230': '230px',
-      '530': '530px'
+      '260': '260px',
+      '282': '282px',
+      '588': '588px',
+    },
+    height: {
+      '40': '40px',
     },
     borderWidth: {
       '1': '1px'
     },
     fontSize: {
-      '13': '13px',
-      '14': '14px',
-      '15': '15px',
       '16': '16px',
-      '17': '17px',
       '18': '18px',
-      '20': '20px',
+      '24': '24px'
+    },
+    lineHeight: {
+      '24': '24px',
+      '30': '30px'
     },
     fontWeight: {
       '400': '400',
-      '500': '500',
       '600': '700',
       '700': '700',
-      '800': '800',
     },
     fontFamily: {
-      'poppins': ['Poppins', 'sans-serif'],
       'inter': ['Inter', 'sans-serif'],
       'century': ['Century Gothic', 'sans-serif']
     },
