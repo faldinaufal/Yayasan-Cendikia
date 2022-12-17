@@ -53,8 +53,8 @@ module.exports = {
         '700': '700',
       },
       fontFamily: {
-        'inter': ['Inter', 'sans-serif'],
-        'century': ['Century Gothic', 'sans-serif']
+        inter: ['Inter'],
+        century : ['Century Gothic']
       },
     },
     container: {

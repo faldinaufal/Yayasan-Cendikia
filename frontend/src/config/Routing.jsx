@@ -1,12 +1,12 @@
 import React from 'react'
-import Footer from "../components/footer/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Home } from '../pages';
 
 const Routing = () => {
   return (
     <Router>
         <Routes>
-            <Route path="/" element={<Footer/>}/>
+            <Route path="/" element={<Home/>}/>
         </Routes>
     </Router>
   )
