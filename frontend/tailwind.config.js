@@ -31,6 +31,7 @@ module.exports = {
         '230': '230px',
         '260': '260px',
         '282': '282px',
+        '340': '340px',
         '400': '400px',
         '500': '500px',
         '588': '588px',
@@ -42,14 +43,22 @@ module.exports = {
       borderWidth: {
         '1': '1px'
       },
+      colors: {
+        'dark': '#262626',
+        'gray2': '#6B7280',
+      },
       fontFamily: {
         'inter': ['Inter', 'sans-serif'],
         'century': ['Century Gothic', 'sans-serif']
       },
       fontSize: {
+        '12': '12px',
         '16': '16px',
         '18': '18px',
-        '24': '24px'
+        '22': '22px',
+        '24': '24px',
+        '34': '34px',
+        '36': '36px',
       },
       lineHeight: {
         '24': '24px',

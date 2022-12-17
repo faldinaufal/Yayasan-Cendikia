@@ -1,12 +1,12 @@
 import React from 'react'
-import Footer from "../components/footer/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { EC } from '../pages';
 
 const Routing = () => {
   return (
     <Router>
         <Routes>
-            <Route path="/" element={<Footer/>}/>
+            <Route path="/pusat-edukasi" element={<EC/>}/>
         </Routes>
     </Router>
   )
