@@ -3,11 +3,12 @@ import TerapiIcon from '../../assets/Icon/terapi.svg'
 import KonsultasiIcon from '../../assets/Icon/konsultasi.svg'
 import KerjasamaIcon from '../../assets/Icon/kerjasama.svg'
 import FrameBanner from '../../assets/image/Frame.svg'
+import './style.css'
 
 const Banner = () => {
   return (
-    <div className=''>
-        <div className='container h-[600px] flex justify-center items-center gap-6'>
+    <div className='banner h-[600px]'>
+        <div className='container flex justify-center items-center gap-6'>
             <div className='container'>
                 <div className='grid gap-6'>
                     <div className='w-[588px]'>
@@ -30,7 +31,7 @@ const Banner = () => {
                         <div>
                             <button className='flex items-center w-[180px] rounded-lg px-2 py-4 bg-white gap-1'>
                                 <img src={KonsultasiIcon} alt="Konsultasi Icon" />
-                                <p className='text-base font-semibold font-inter'>Konsultas</p>
+                                <p className='text-base font-semibold font-inter'>Konsultasi</p>
                             </button>
                         </div>
                         <div>
@@ -44,7 +45,7 @@ const Banner = () => {
             </div>
             <div className='container'>
                 <div>
-                    <img src={FrameBanner} alt="Gambar Anak Belajar" />
+                    <img src={FrameBanner} alt="Gambar Anak Belajar" className=''/>
                 </div>
             </div>
         </div>
