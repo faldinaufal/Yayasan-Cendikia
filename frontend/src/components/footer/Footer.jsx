@@ -7,11 +7,14 @@ import {AiOutlineTwitter} from 'react-icons/ai'
 import {BsWhatsapp, BsYoutube, BsInstagram} from 'react-icons/bs'
 import {SiGmail} from 'react-icons/si'
 import {MdEmail} from 'react-icons/md'
+import Navbar from '../navbar/Navbar'
 
 const Footer = () => {
   return (
+    <div>
+<Navbar/>
     <footer className='bg-dark'>
-        <div className='w-80% mx-auto text-white'>
+        <div className='container w-80% mx-auto text-white'>
             <section className='flex flex-wrap pb-3 pt-1'>
                 <div className='font-century w-588 mt-3 mr-4'>
                     <p className='text-24 font-700'>Ruang Disabilitas</p>
@@ -76,6 +79,8 @@ const Footer = () => {
             <p className='text-center'>&copy; 2022 Ruang Disabilitas. All Rights Reserved.</p>
         </div>
     </footer>
+    </div>
+    
   )
 }
 
