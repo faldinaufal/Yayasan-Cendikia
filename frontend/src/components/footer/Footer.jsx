@@ -10,7 +10,7 @@ import {MdEmail} from 'react-icons/md'
 
 const Footer = () => {
   return (
-    <footer className='bg-[#262626]'>
+    <footer className='bg-[#262626] mt-auto'>
         <div className='container text-white'>
             <section className='flex flex-wrap pb-3 pt-1'>
                 <div className='font-century w-[588px] mt-3 mb-1 lg:mr-1'>

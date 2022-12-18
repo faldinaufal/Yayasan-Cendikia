@@ -1,4 +1,5 @@
 import EC from "./EducationCenter/EC";
-import AEC from "./articleEC/AEC";
+import AEC from "./ArticleEC/AEC";
+import Join from "./Join/Join";
 
-export {EC, AEC}
+export {EC, AEC, Join}
