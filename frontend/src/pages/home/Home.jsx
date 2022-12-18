@@ -157,7 +157,7 @@ const Home = () => {
             </div>
             <div className='flex justify-center items-center mt-10'>
               <button className='w-[183px] h-[48px] px-3 py-4 rounded-[4px]'>
-                <p className='font-inter font-semibold text-base text-[#262626]'>Lihat Semua Artikel</p>
+                <a href='/edukasi/artikel-ilmiah' className='font-inter font-semibold text-base text-[#262626]'>Lihat Semua Artikel</a>
               </button>
             </div>
           </div>
