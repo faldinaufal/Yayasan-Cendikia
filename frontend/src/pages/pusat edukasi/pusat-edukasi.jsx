@@ -122,15 +122,15 @@ const Education = () => {
                 </div>
               </div>
             </div>
-            <div className='flex justify-center items-center mt-4'>
-              <div className='flex gap-6'>
+            <div className='flex justify-center items-center mt-3'>
+              <div className='flex gap-6 h-[28px]'>
                 <button><img src={VectorGrayLeft} alt="" /></button>
                 <li className='list-none flex gap-4 text-[#008CB2] font-semibold font-inter text-base'>
-                  <button>1</button>
-                  <button>2</button>
-                  <button>3</button>
-                  <button>4</button>
-                  <button>5</button>
+                  <button className='hover:text-xl hover:font-bold'>1</button>
+                  <button className='hover:text-xl hover:font-bold'>2</button>
+                  <button className='hover:text-xl hover:font-bold'>3</button>
+                  <button className='hover:text-xl hover:font-bold'>4</button>
+                  <button className='hover:text-xl hover:font-bold'>5</button>
                 </li>
                 <button><img src={VectorBlueRight} alt=""/></button>
               </div>

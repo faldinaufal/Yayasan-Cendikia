@@ -7,23 +7,23 @@ const Navbar = () => {
         <div className='container relative  flex h-[48px]'>
           <div className='font-inter flex items-center text-base font-semibold leading-6 gap-6'>
             <div className='pr-4'>
-              <img src={Logo} alt="Logo Yayasan Cendikia" />
+              <a href="/"><img src={Logo} alt="Logo Yayasan Cendikia" /></a>
             </div>
             <div>
-              <a href="/">Beranda</a>
+              <a href="/" className='hover:text-[#009FCC]'>Beranda</a>
             </div>
             <div>
-              <a href="/edukasi">Pusat Edukasi</a>
+              <a href="/edukasi" className='hover:text-[#009FCC]'>Pusat Edukasi</a>
             </div>
             <div>
-              <a href="#">Join Yuk</a>
+              <a href="#" className='hover:text-[#009FCC]'>Join Yuk</a>
             </div>
             <div>
-              <a href="#">Tentang Kami</a>
+              <a href="#" className='hover:text-[#009FCC]'>Tentang Kami</a>
             </div>
           </div>
           <div className='absolute right-0 flex items-center'>
-            <button className='w-[146px] h-[48px] bg-[#009FCC] font-inter text-base font-semibold text-white rounded'>
+            <button className='w-[146px] h-[48px] bg-[#009FCC] font-inter text-base font-semibold text-white rounded hover:bg-white hover:text-[#009FCC] hover:border-[#009FCC] hover:border-2'>
               <span>Masuk / Daftar</span>
             </button>
           </div>
