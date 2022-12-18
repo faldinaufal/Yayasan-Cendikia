@@ -68,7 +68,14 @@ module.exports = {
     },
     backgroundImage: {
 
+    },
+    boxShadow: {
+      'card': '0px 8px 16px rgba(0, 0, 0, 0.15)',
+      'box':  '0px 8px 12px rgba(0, 0, 0, 0.25)',
+      'navbar': '0px 1px 3px rgba(0, 0, 0, 0.1), 0px 1px 2px -1px rgba(0, 0, 0, 0.1)'
     }
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/line-clamp'),
+  ],
 }

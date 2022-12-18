@@ -3,17 +3,17 @@ import Logo from '../../assets/Icon/Logo Yayasan.svg'
 
 const Navbar = () => {
   return (
-    <div className='h-[88px] flex justify-center items-center'>
+    <div className='h-[88px] flex justify-center shadow-navbar items-center'>
         <div className='container relative  flex h-[48px]'>
           <div className='font-inter flex items-center text-base font-semibold leading-6 gap-6'>
             <div className='pr-4'>
               <img src={Logo} alt="Logo Yayasan Cendikia" />
             </div>
             <div>
-              <a href="#">Beranda</a>
+              <a href="/">Beranda</a>
             </div>
             <div>
-              <a href="#">Pusat Edukasi</a>
+              <a href="/edukasi">Pusat Edukasi</a>
             </div>
             <div>
               <a href="#">Join Yuk</a>
