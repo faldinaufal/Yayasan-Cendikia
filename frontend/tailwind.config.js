@@ -5,7 +5,7 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundColor: {
+      colors: {
         'dark': '#262626',
         'white': '#FFFFFF',
         'sosmed': '#484D56',
@@ -26,25 +26,17 @@ module.exports = {
         '49': '49px',
         '43': '43px',
         '80%': '80%',
-        '95%': '95%',
+        '92%': '92%',
         '100%': '100%',
-        '230': '230px',
         '260': '260px',
         '282': '282px',
-        '400': '400px',
-        '500': '500px',
         '588': '588px',
       },
       height: {
-        '2': '2px',
         '40': '40px',
       },
       borderWidth: {
         '1': '1px'
-      },
-      fontFamily: {
-        'inter': ['Inter', 'sans-serif'],
-        'century': ['Century Gothic', 'sans-serif']
       },
       fontSize: {
         '16': '16px',
@@ -60,7 +52,30 @@ module.exports = {
         '600': '700',
         '700': '700',
       },
+      fontFamily: {
+        inter: ['Inter'],
+        century : ['Century Gothic']
+      },
     },
+    container: {
+      center: true,
+      screens: {
+        sm: '600px',
+        md: '728px',
+        lg: '984px',
+        xl: '1200px',
+      }
+    },
+    backgroundImage: {
+
+    },
+    boxShadow: {
+      'card': '0px 8px 16px rgba(0, 0, 0, 0.15)',
+      'box':  '0px 8px 12px rgba(0, 0, 0, 0.25)',
+      'navbar': '0px 1px 3px rgba(0, 0, 0, 0.1), 0px 1px 2px -1px rgba(0, 0, 0, 0.1)'
+    }
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/line-clamp'),
+  ],
 }

@@ -11,7 +11,7 @@ import {MdEmail} from 'react-icons/md'
 const Footer = () => {
   return (
     <footer className='bg-dark'>
-        <div className='w-95% mx-auto text-white sm:w-80%'>
+        <div className='container mx-auto text-white'>
             <section className='flex flex-wrap pb-3 pt-1'>
                 <div className='font-century w-500 mt-3 mb-1 sm:w-588 lg:mr-1'>
                     <p className='text-24 font-700 mb-1'>Ruang Disabilitas</p>
