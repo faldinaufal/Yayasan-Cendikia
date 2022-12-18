@@ -13,8 +13,8 @@ const Footer = () => {
     <footer className='bg-dark'>
         <div className='container mx-auto text-white'>
             <section className='flex flex-wrap pb-3 pt-1'>
-                <div className='font-century w-588 mt-3 mr-4'>
-                    <p className='text-24 font-700'>Ruang Disabilitas</p>
+                <div className='font-century w-500 mt-3 mb-1 sm:w-588 lg:mr-1'>
+                    <p className='text-24 font-700 mb-1'>Ruang Disabilitas</p>
                     <p className='text-16 font-inter font-400 leading-24'>
                         Ruang Disabilitas adalah sebuah ruang melatih potensi dan mengembangkan sebuah bakat yang dimiliki
                         oleh anak-anak agar menjadi pribadi yang tumbuh optimal, kreatif, hebat, dan pribadi yang mandiri
@@ -41,8 +41,8 @@ const Footer = () => {
                         <a href="/" target={'_blank'} className='bg-white p-1 w-40 h-40 flex justify-center items-center rounded-full duration-200 hover:-translate-y-1 hover:bg-gmail group'><SiGmail className='text-slate-600 text-16 group-hover:text-white'/></a>
                     </div>
                 </div>
-                <div className='w-282 mt-3 mr-4'>
-                    <p className='font-century text-24 font-700'>Tautan Cepat</p>
+                <div className='mt-3 mb-1 md:mr-8'>
+                    <p className='font-century text-24 font-700 mb-1'>Tautan Cepat</p>
                     <div className='ml-1 font-inter text-16 font-600'>
                         <div className='mb-1 duration-150 hover:translate-x-2 w-65'>
                             <Link to='/' className='duration-150 hover:opacity-70'>Beranda</Link>
@@ -58,21 +58,21 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div className='mt-3 w-282'>
-                    <p className='font-century text-24 font-700'>Subscribe</p>
+                <div className='mt-3 w-100% sm:w-400 lg:w-230'>
+                    <p className='font-century text-24 font-700 mb-1'>Subscribe</p>
                     <form className='flex flex-col'>
                         <label htmlFor="email" className='font-inter text-16 font-600 mb-1'>Email</label>
-                        <div className='flex items-center'>
-                            <MdEmail className='relative left-3 text-gray-500 text-24 z-50'/>
-                            <input type="email" placeholder='Email' id='email' className='relative w-282 -left-5 rounded-sm outline-1 py-2 pl-10 font-inter font-16 font-400 outline-blue-500 text-slate-800'/>
+                        <div className='flex items-center relative'>
+                            <MdEmail className='absolute left-2 text-gray-500 text-24 z-50'/>
+                            <input type="email" placeholder='Email' id='email' className='relative w-80% lg:w-100% rounded-sm outline-1 py-2 pl-10 font-inter font-16 font-400 outline-blue-500 text-slate-800'/>
                         </div>
-                        <button className='bg-btn-art mt-4 py-2 rounded-sm font-intern font-16 font-600 w-260 duration-200 hover:bg-opacity-80'>Berlangganan Artikel</button>
+                        <button className='bg-btn-art mt-4 py-2 rounded-sm font-intern font-16 font-600 w-80% lg:w-100% duration-200 hover:bg-opacity-80'>Berlangganan Artikel</button>
                     </form>
                 </div>
             </section>
         </div>
-        <div className='w-100% bg-hr h-0.5'></div>
-        <div className='text-white font-century text-14 py-5'>
+        <div className='w-100% bg-hr h-2 mt-2'></div>
+        <div className='text-white font-inter text-16 font-400 py-5'>
             <p className='text-center'>&copy; 2022 Ruang Disabilitas. All Rights Reserved.</p>
         </div>
     </footer>
