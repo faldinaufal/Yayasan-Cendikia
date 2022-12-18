@@ -19,7 +19,7 @@ const Navbar = () => {
               <a href="#" className='hover:text-[#009FCC]'>Join Yuk</a>
             </div>
             <div>
-              <a href="#" className='hover:text-[#009FCC]'>Tentang Kami</a>
+              <a href="/tentang-kami" className='hover:text-[#009FCC]'>Tentang Kami</a>
             </div>
           </div>
           <div className='absolute right-0 flex items-center'>
