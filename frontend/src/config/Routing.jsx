@@ -1,12 +1,13 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { EC } from '../pages';
+import { EC, AEC } from '../pages';
 
 const Routing = () => {
   return (
     <Router>
         <Routes>
             <Route path="/pusat-edukasi" element={<EC/>}/>
+            <Route path="/pusat-edukasi-artikel" element={<AEC/>}/>
         </Routes>
     </Router>
   )
