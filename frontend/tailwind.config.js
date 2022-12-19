@@ -7,6 +7,11 @@ module.exports = {
     extend: {
       colors: {
         'dark': '#262626',
+        'gray1': '#9CA3AF',
+        'gray2': '#6B7280'
+      },
+      backgroundImage: {
+        'vector': "url('/src/assets/image/Vector.png')"
       },
       fontFamily: {
         'inter': ['Inter', 'sans-serif'],

@@ -9,7 +9,7 @@
     @apply bg-white p-1 w-[40px] h-[40px] flex justify-center items-center rounded-full duration-200 hover:-translate-y-1 mr-3;
   }
   .share-sosmed {
-    @apply w-9 h-9 bg-[#DADADA] flex justify-center items-center rounded-full mr-3 duration-150
+    @apply w-9 h-9 bg-[#DADADA] flex justify-center items-center rounded-full mr-4 duration-150
   }
 }
 body {
@@ -30,4 +30,11 @@ code {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+.text-linear{
+  background: linear-gradient(90deg, #BFECFC 0%, #F3AACD 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }
