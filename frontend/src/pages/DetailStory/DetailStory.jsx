@@ -8,14 +8,14 @@ import {AiOutlineTwitter} from 'react-icons/ai'
 import {BsYoutube, BsInstagram} from 'react-icons/bs'
 import {artikel1} from '../../assets/image'
 
-const AEC = () => {
+const DetailStory = () => {
   return (
     <section className='w-full bg-white'>
-      <div className='container'>
+      <div className='container mb-20'>
         <div className='flex items-center font-inter font-600 mt-10 mb-6'>
           <p className='text-[#009FCC] mr-[15.33px]'>Pusat Edukasi</p>
           <FaChevronRight className='text-gray1'/>
-          <p className='text-[#009FCC] ml-[14.67px] mr-[15.33px]'>Artikel Ilmiah</p>
+          <p className='text-[#009FCC] ml-[14.67px] mr-[15.33px]'>Cerita Kisah / Timbal Balik</p>
           <FaChevronRight className='text-gray1'/>
           <p className='text-gray2 ml-[14.67px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
         </div>
@@ -108,4 +108,4 @@ const AEC = () => {
   )
 }
 
-export default AEC
+export default DetailStory

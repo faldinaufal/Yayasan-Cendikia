@@ -1,13 +1,13 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { EC, AEC, Join, Login, Register, ForgotPass, EmailSent, EditPass, PassSucc, NotFound } from '../pages';
+import { EC, DetailAEC, Join, Login, Register, ForgotPass, EmailSent, EditPass, PassSucc, NotFound, MoreEvnt, DetailEvnt, MoreStory, DetailStory } from '../pages';
 
 const Routing = () => {
   return (
     <Router>
         <Routes>
             <Route path="/pusat-edukasi" element={<EC/>}/>
-            <Route path="/pusat-edukasi-artikel" element={<AEC/>}/>
+            <Route path="/detail-artikel" element={<DetailAEC/>}/>
             <Route path="/join-yuk" element={<Join/>}/>
             <Route path="/login" element={<Login/>}/>
             <Route path="/daftar" element={<Register/>}/>
@@ -15,6 +15,10 @@ const Routing = () => {
             <Route path="/email-terkirim" element={<EmailSent/>}/>
             <Route path="/perbarui-password" element={<EditPass/>}/>
             <Route path="/password-sukses" element={<PassSucc/>}/>
+            <Route path="/pusat-edukasi-acara" element={<MoreEvnt/>}/>
+            <Route path="/detail-acara" element={<DetailEvnt/>}/>
+            <Route path="/pusat-edukasi-cerita-kisah" element={<MoreStory/>}/>
+            <Route path="/detail-cerita-kisah" element={<DetailStory/>}/>
             <Route path="*" element={<NotFound/>}/>
         </Routes>
     </Router>
