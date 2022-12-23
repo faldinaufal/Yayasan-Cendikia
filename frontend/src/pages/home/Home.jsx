@@ -1,5 +1,5 @@
-import React, { version } from 'react'
-import { Banner, Footer, Navbar } from '../../components'
+import React from 'react'
+import { ArtikelPost, Banner, Footer, Navbar } from '../../components'
 import image1 from '../../assets/image/image 1.jpg'
 import ArrowLeft from '../../assets/Icon/Button.svg'
 import ArrowRight from '../../assets/Icon/Button-1.svg'
@@ -24,6 +24,7 @@ import './style.css'
 const Home = () => {
   return (
     <div>
+        <ArtikelPost/>
         <Navbar/>
         <div>
           <Banner/> 
