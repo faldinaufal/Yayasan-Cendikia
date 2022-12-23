@@ -7,5 +7,6 @@ import ForgotPass from "./ForgotPass/ForgotPass";
 import EmailSent from "./EmailSent/EmailSent";
 import EditPass from "./EditPassword/EditPass";
 import PassSucc from "./PassSucc/PassSucc";
+import NotFound from "./NotFound/NotFound";
 
-export {EC, AEC, Join, Login, Register, ForgotPass, EmailSent, EditPass, PassSucc}
+export {EC, AEC, Join, Login, Register, ForgotPass, EmailSent, EditPass, PassSucc, NotFound}

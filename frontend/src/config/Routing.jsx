@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { EC, AEC, Join, Login, Register, ForgotPass, EmailSent, EditPass, PassSucc } from '../pages';
+import { EC, AEC, Join, Login, Register, ForgotPass, EmailSent, EditPass, PassSucc, NotFound } from '../pages';
 
 const Routing = () => {
   return (
@@ -15,6 +15,7 @@ const Routing = () => {
             <Route path="/email-terkirim" element={<EmailSent/>}/>
             <Route path="/perbarui-password" element={<EditPass/>}/>
             <Route path="/password-sukses" element={<PassSucc/>}/>
+            <Route path="*" element={<NotFound/>}/>
         </Routes>
     </Router>
   )
