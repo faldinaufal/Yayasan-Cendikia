@@ -5,6 +5,7 @@ import profile from '../image/profil.png'
 import kerjasama from '../image/KerjaSama.png'
 import imageLogin from '../image/image-login.png'
 import logoYayasan from '../image/logo-yayasan.png'
+import lupaPassword from '../image/Lupa password.png'
 
 export {
     artikel1,
@@ -13,5 +14,6 @@ export {
     profile,
     kerjasama,
     imageLogin,
-    logoYayasan
+    logoYayasan,
+    lupaPassword
 }
