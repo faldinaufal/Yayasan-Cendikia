@@ -1,5 +1,5 @@
-import React, { version } from 'react'
-import { Banner, Footer, Navbar } from '../../components'
+import React from 'react'
+import { ArtikelPost, Banner, Footer, Navbar } from '../../components'
 import image1 from '../../assets/image/image 1.jpg'
 import ArrowLeft from '../../assets/Icon/Button.svg'
 import ArrowRight from '../../assets/Icon/Button-1.svg'
@@ -14,9 +14,6 @@ import LogoM8 from '../../assets/image/LogoM8.svg'
 import LogoM9 from '../../assets/image/LogoM9.svg'
 import LogoM10 from '../../assets/image/LogoM10.svg'
 import LogoM11 from '../../assets/image/LogoM11.svg'
-import ImageCard1 from '../../assets/image/image card1.jpg'
-import ImageCard2 from '../../assets/image/image card2.jpg'
-import ImageCard3 from '../../assets/image/image card3.jpg'
 import Vector from '../../assets/Icon/Vector.svg'
 import image2 from '../../assets/image/image1.png'
 import './style.css'
@@ -105,55 +102,8 @@ const Home = () => {
             <div className='text-[48px] font-century leading-[58px] text-[#009FCC]'>
               <h2>Artikel Terbaru</h2>
             </div>
-            <div className='mt-10 flex gap-10'>
-              <div className='card w-[384px] h-[452px] rounded-lg border border-[#E0E7FF] shadow-card'>
-                <div>
-                  <img src={ImageCard1} alt="Gambar Artikel" className='rounded-t-lg'/>
-                </div>
-                <div className='p-4 grid gap-4'>
-                  <div className='font-century text-[24px] leading-[30px] text-[#262626]'>
-                    <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
-                  </div>
-                  <div>
-                    <p className='font-inter font-normal text-base text-[#6B7280] line-clamp-3'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus commodo luctus venenatis. Integer rhoncus iaculis quam, et iaculis odio sagittis consequat. In at enim justo. Ut in lacus a sem iaculis accumsan.</p>
-                  </div>
-                  <div className='text-xs font-inter font-normal text-[#6B7280]'>
-                    <p>31 January 2030</p>
-                  </div>
-                </div>
-              </div>
-              <div className='card w-[384px] h-[452px] rounded-lg border border-[#E0E7FF] shadow-card'>
-                <div>
-                  <img src={ImageCard2} alt="Gambar Artikel" className='rounded-t-lg'/>
-                </div>
-                <div className='p-4 grid gap-4'>
-                  <div className='font-century text-[24px] leading-[30px] text-[#262626]'>
-                    <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
-                  </div>
-                  <div>
-                    <p className='font-inter font-normal text-base text-[#6B7280] line-clamp-3'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus commodo luctus venenatis. Integer rhoncus iaculis quam, et iaculis odio sagittis consequat. In at enim justo. Ut in lacus a sem iaculis accumsan.</p>
-                  </div>
-                  <div className='text-xs font-inter font-normal text-[#6B7280]'>
-                    <p>31 January 2030</p>
-                  </div>
-                </div>
-              </div>
-              <div className='card w-[384px] h-[452px] rounded-lg border border-[#E0E7FF] shadow-card'>
-                <div>
-                  <img src={ImageCard3} alt="Gambar Artikel" className='rounded-t-lg'/>
-                </div>
-                <div className='p-4 grid gap-4'>
-                  <div className='font-century text-[24px] leading-[30px] text-[#262626]'>
-                    <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
-                  </div>
-                  <div>
-                    <p className='font-inter font-normal text-base text-[#6B7280] line-clamp-3'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus commodo luctus venenatis. Integer rhoncus iaculis quam, et iaculis odio sagittis consequat. In at enim justo. Ut in lacus a sem iaculis accumsan.</p>
-                  </div>
-                  <div className='text-xs font-inter font-normal text-[#6B7280]'>
-                    <p>31 January 2030</p>
-                  </div>
-                </div>
-              </div>
+            <div className='mt-10'>
+              <ArtikelPost/>
             </div>
             <div className='flex justify-center items-center mt-10'>
               <a href='/edukasi/artikel-ilmiah' className='w-[183px] h-[48px] px-3 py-4 rounded-[4px]'>
