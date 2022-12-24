@@ -1,41 +1,47 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 const ArtikelPost = () => {
-    const [post, setPost] = useState()
+    const [post, setPost] = useState([])
 
     useEffect(() => {
-        getArtikel()
-    })
+        fetch()
+    },[])
 
-    const getArtikel = async () => {
-        await axios.get('http://localhost:1337/api/artikels?populate=*').then((response) => {
-            // setPost(response.data.data)
-            console.log(response.data.data)
-        }).catch((error) => {
-        console.log(error)
-        })
+   const fetch = async () => {
+    try {
+        const res = await axios.get('http://localhost:1337/api/artikels?sort[1]=id%3Adesc&populate=*')
+        setPost(res.data.data)
+    } catch (error) {
+        console.log(error);
     }
+   }
+   console.log(post)
     return (
-        <div>
-            {/* <div className='card w-[384px] h-[452px] rounded-lg border border-[#E0E7FF] shadow-card'>
-                <div>
-                    <img src={ImageCard1} alt="Gambar Artikel" className='rounded-t-lg'/>
-                </div>
-                <div className='p-4 grid gap-4'>
-                    <div className='font-century text-[24px] leading-[30px] text-[#262626]'>
-                        <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
-                    </div>  
+        <div className='flex justify-between'>
+            {post.slice(0,3).map((index) => (
+                <Link to={`/artikel-ilmiah/${index.id}`}>
+                <div className='w-[384px] h-[452px] rounded-lg border border-[#E0E7FF] shadow-card'>
                     <div>
-                        <p className='font-inter font-normal text-base text-[#6B7280] line-clamp-3'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus commodo luctus venenatis. Integer rhoncus iaculis quam, et iaculis odio sagittis consequat. In at enim justo. Ut in lacus a sem iaculis accumsan.</p>
+                        <img src={`http://localhost:1337`+index?.attributes.Image.data.attributes.url} alt="Gambar Artikel" className='rounded-t-lg'/>
                     </div>
-                    <div className='text-xs font-inter font-normal text-[#6B7280]'>
-                    <p>31 January 2030</p>
+                    <div className='p-4 grid gap-4'>
+                        <div className='font-century text-[24px] leading-[30px] text-[#262626]'>
+                            <h4>{index?.attributes.Title}</h4>
+                        </div>
+                        <div>
+                            <p className='font-inter font-normal text-base text-[#6B7280] line-clamp-3'>{index.attributes.Body}</p>
+                        </div>
+                        <div className='text-xs font-inter font-normal text-[#6B7280]'>
+                        <p>{index?.attributes.createdAt}</p>
+                        </div>
                     </div>
                 </div>
-            </div> */}
-        </div>
+                </Link>
+            ))}
+        </div> 
     )
 }
 
