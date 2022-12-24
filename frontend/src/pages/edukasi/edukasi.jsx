@@ -1,11 +1,10 @@
 import React from 'react'
-import { Navbar, ArtikelPost } from '../../components'
+import { Navbar } from '../../components'
 
 const Edukasi = () => {
   return (
     <div>
         <Navbar/>
-        {/* <ArtikelPost/> */}
     </div>
   )
 }

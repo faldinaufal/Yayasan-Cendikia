@@ -18,7 +18,7 @@ const ArtikelPost = () => {
         console.log(error);
     }
    }
-   console.log(post)
+
     return (
         <div className='flex justify-between'>
             {post.slice(0,3).map((index) => (

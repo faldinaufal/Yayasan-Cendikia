@@ -5,7 +5,7 @@ import image2 from '../../assets/image/Gambar-2.jpg'
 import image3 from '../../assets/image/Gambar-3.jpg'
 import image4 from '../../assets/image/Gambar-4.jpg'
 import Fb from '../../assets/Icon/FB.svg'
-import FbHover from '../../assets/Icon/FBHover.svg'
+// import FbHover from '../../assets/Icon/FBHover.svg'
 import './style.css'
 
 const AboutUs = () => {
