@@ -19,7 +19,7 @@ const ForgotPass = () => {
                     <form>
                         <div className='font-inter font-600 flex flex-col mb-4'>
                             <label htmlFor="email" className='mb-1'>Email</label>
-                            <input type="email" placeholder='Email' id='email' className='border-2 border-gray1 py-3 px-4 rounded-md invalid:outline-pink-500 text-gray2 valid:border-2 invalid:text-pink-500 outline-2 outline-blue-500 invalid:border-pink-600'/>
+                            <input type="email" placeholder='Email' id='email' className='font-400 border-2 border-gray1 py-3 px-4 rounded-md invalid:outline-pink-500 text-gray2 valid:border-2 invalid:text-pink-500 outline-2 outline-blue-500 invalid:border-pink-600'/>
                         </div>
                         <button className='mt-10 w-full duration-200 hover:opacity-80 bg-[#009FCC] text-white rounded-md font-inter font-600 py-3'>Kirim</button>
                     </form>

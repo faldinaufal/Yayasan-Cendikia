@@ -16,7 +16,7 @@ const Join = () => {
         <div className='mt-10'>
           <div className='flex items-center justify-between mb-6'>
             <p className='font-century font-700 text-4xl text-dark'>Terapis</p>
-            <Link to='' className='flex items-center text-[#009FCC] font-600 font-inter duration-150 hover:opacity-80'>
+            <Link to='/join-terapis' className='flex items-center text-[#009FCC] font-600 font-inter duration-150 hover:opacity-80'>
               More
               <AiOutlineRight className='text-dark ml-1'/>
             </Link>
@@ -96,7 +96,7 @@ const Join = () => {
         <div className='my-20'>
           <div className='flex items-center justify-between mb-6'>
             <p className='font-century font-700 text-4xl text-dark my-5'>Konsultasi</p>
-            <Link to='' className='flex items-center text-[#009FCC] font-600 font-inter duration-150 hover:opacity-80'>
+            <Link to='/join-konsultasi' className='flex items-center text-[#009FCC] font-600 font-inter duration-150 hover:opacity-80'>
               More
               <AiOutlineRight className='text-dark ml-1'/>
             </Link>
@@ -196,12 +196,13 @@ const Join = () => {
               <img src={kerjasama} alt={kerjasama} className='w-[208px] h-[208px]'/>
             </div>
           </div>
-          {open && <div id='hubungi-kami' className='absolute -top-40 lg:left-1/3 z-50'>
-            <IoClose onClick={()=>setOpen(!open)} className='z-50 text-slate-700 relative -bottom-12 left-[390px] cursor-pointer duration-200 hover:text-white text-4xl'/>
-            <ContactUs className='z-50'/>
-          </div>}
-          {open && <div id='hubungi-kami' className='absolute bg-black h-[550px] -top-40 bottom-0 opacity-60 w-full'></div>}
         </div>
+        {open && <div id='hubungi-kami' className='flex justify-center'>
+          <div className='relative'>
+            <IoClose onClick={()=>setOpen(!open)} className='absolute top-7 right-5 text-3xl cursor-pointer duration-200 hover:text-white'/>
+            <ContactUs/>
+          </div>
+        </div>}
       </div>
       <footer>
         <Footer/>

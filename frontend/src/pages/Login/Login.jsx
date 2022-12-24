@@ -19,11 +19,11 @@ const Login = () => {
                     <form>
                         <div className='font-inter font-600 flex flex-col mb-4'>
                             <label htmlFor="email" className='mb-1'>Email</label>
-                            <input type="email" placeholder='Email' id='email' className='border-2 border-gray1 py-3 px-4 rounded-md invalid:outline-pink-500 text-gray2 valid:border-2 invalid:text-pink-500 outline-2 outline-blue-500 invalid:border-pink-600'/>
+                            <input type="email" placeholder='Email' id='email' className='font-400 border-2 border-gray1 py-3 px-4 rounded-md invalid:outline-pink-500 text-gray2 valid:border-2 invalid:text-pink-500 outline-2 outline-blue-500 invalid:border-pink-600'/>
                         </div>
                         <div className='font-inter font-600 flex flex-col'>
                             <label htmlFor="password" className='mb-1'>Password</label>
-                            <input type="password" placeholder='Password' id='password' className='border-2 border-gray1 py-3 px-4 rounded-md text-gray2 valid:border-2 outline-blue-500'/>
+                            <input type="password" placeholder='Password' id='password' className=' font-400 border-2 border-gray1 py-3 px-4 rounded-md text-gray2 valid:border-2 outline-blue-500'/>
                         </div>
                         <button className='mt-10 w-full mb-10 hover:bg-[#009FCC] duration-200 hover:text-white bg-gray1 rounded-md font-inter font-600 text-gray2 py-3'>Masuk</button>
                     </form>
@@ -31,7 +31,7 @@ const Login = () => {
                         <p className='text-dark mr-1'>Belum Pernah Mendaftar?</p>
                         <Link to='/daftar' className='font-600 text-[#009FCC] hover:opacity-70 duration-200'>Daftar sekarang</Link>
                     </div>
-                    <Link to='' className='font-inter font-600 text-[#009FCC] hover:opacity-70 duration-200 flex justify-center mt-2 mb-[174px]'>Lupa Password</Link>
+                    <Link to='/lupa-password' className='font-inter font-600 text-[#009FCC] hover:opacity-70 duration-200 flex justify-center mt-2 mb-[174px]'>Lupa Password</Link>
                 </div>
                 <div className='flex flex-col items-center mb-10'>
                     <img src={logoYayasan} alt={logoYayasan} className='w-12 h-12 mb-4'/>

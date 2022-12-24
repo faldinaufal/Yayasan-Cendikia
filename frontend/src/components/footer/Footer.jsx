@@ -54,7 +54,7 @@ const Footer = () => {
                             <Link to='/' className='duration-150 hover:opacity-70'>Terms</Link>
                         </div>
                         <div className='duration-150 hover:translate-x-2 w-[43px]'>
-                            <Link to='/' className='duration-150 hover:opacity-70'>Login</Link>
+                            <Link to='/login' className='duration-150 hover:opacity-70'>Login</Link>
                         </div>
                     </div>
                 </div>
