@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { EC, DetailAEC, Join, Login, Register, ForgotPass, EmailSent, EditPass, PassSucc, NotFound, MoreEvnt, DetailEvnt, MoreStory, DetailStory, MoreThera, MoreConsul } from '../pages';
+import { Home, AboutUs, Education, EducationCenter, EC, DetailAEC, Join, Login, Register, ForgotPass, EmailSent, EditPass, PassSucc, NotFound, MoreEvnt, DetailEvnt, MoreStory, DetailStory, MoreThera, MoreConsul } from '../pages';
 
 const Routing = () => {
   return (
@@ -22,6 +22,10 @@ const Routing = () => {
             <Route path="/join-terapis" element={<MoreThera/>}/>
             <Route path="/join-konsultasi" element={<MoreConsul/>}/>
             <Route path="*" element={<NotFound/>}/>
+            <Route path="/" element={<Home/>}/>
+            <Route path="/edukasi/artikel-ilmiah" element={<EducationCenter/>}/>
+            <Route path="/edukasi" element={<Education/>}/>
+            <Route path="/tentang-kami" element={<AboutUs/>}/>
         </Routes>
     </Router>
   )

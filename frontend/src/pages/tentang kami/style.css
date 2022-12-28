@@ -1,0 +1,25 @@
+.banner {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 80px 120px;
+    gap: 24px;
+    isolation: isolate;
+
+    width: 100%;
+
+    /* Gradient 1 */
+    background: linear-gradient(90deg, #BFECFC 0%, #F3AACD 100%);
+}
+
+.text {
+    background: linear-gradient(90deg, #BFECFC 0%, #F3AACD 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}

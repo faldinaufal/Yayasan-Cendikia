@@ -14,5 +14,9 @@ import MoreStory from "./MoreStory/MoreStory";
 import DetailStory from "./DetailStory/DetailStory";
 import MoreThera from "./MoreThera/MoreThera";
 import MoreConsul from "./MoreConsul/MoreConsul";
+import Home from "./home/Home"
+import Education from "./edukasi/edukasi"
+import EducationCenter from "./edukasi/pusat edukasi/pusat-edukasi"
+import AboutUs from "./tentang kami/aboutUs"
 
-export {EC, DetailAEC, Join, Login, Register, ForgotPass, EmailSent, EditPass, PassSucc, NotFound, MoreEvnt, DetailEvnt, MoreStory, DetailStory, MoreThera, MoreConsul}
+export { Home, Education, EducationCenter, AboutUs, EC, DetailAEC, Join, Login, Register, ForgotPass, EmailSent, EditPass, PassSucc, NotFound, MoreEvnt, DetailEvnt, MoreStory, DetailStory, MoreThera, MoreConsul }
