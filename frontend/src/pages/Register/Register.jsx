@@ -29,7 +29,7 @@ const Register = () => {
                             <label htmlFor="password" className='mb-1'>Password</label>
                             <input type="password" placeholder='Password' id='password' className='font-400 border-2 border-gray1 py-3 px-4 rounded-md text-gray2 valid:border-2 outline-blue-500'/>
                         </div>
-                        <button className='my-10 w-full hover:bg-[#009FCC] duration-200 hover:text-white bg-gray1 rounded-md font-inter font-600 text-gray2 py-3'>Masuk</button>
+                        <button className='my-10 w-full hover:bg-[#009FCC] duration-200 hover:text-white bg-gray1 rounded-md font-inter font-600 text-gray2 py-3'>Daftar</button>
                     </form>
                     <div className='font-inter flex items-center justify-center'>
                         <p className='text-dark mr-1'>Sudah memiliki akun?</p>

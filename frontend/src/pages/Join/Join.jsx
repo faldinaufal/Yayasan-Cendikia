@@ -21,9 +21,9 @@ const Join = () => {
               <AiOutlineRight className='text-dark ml-1'/>
             </Link>
           </div>
-          <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 place-items-center'>
+          <div className='flex flex-wrap justify-center gap-6'>
             <div className=''>
-              <div className='flex border-[1px] border-gray1 rounded-md w-[384px] h-[160px] p-[16px]'>
+              <div className='flex items-center border-[1px] border-gray1 rounded-md w-[384px] h-[160px] p-[16px]'>
                 <img src={profile} alt={profile} className='w-[80px] h-[80px] rounded-full'/>
                 <div className='font-inter w-[264px] ml-2'>
                   <p className='text-lg font-600 text-dark'>dr. Lorem Ipsum</p>
@@ -101,7 +101,7 @@ const Join = () => {
               <AiOutlineRight className='text-dark ml-1'/>
             </Link>
           </div>
-          <div className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 place-items-center'>
+          <div className='flex flex-wrap justify-center gap-5'>
             <div className=''>
               <div className='flex flex-col items-center border-[1px] border-gray1 rounded-md w-[284px] h-[248px] p-[16px]'>
                 <img src={profile} alt={profile} className='w-[80px] h-[80px] rounded-full mb-2'/>

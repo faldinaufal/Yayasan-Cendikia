@@ -18,7 +18,7 @@ const EC = () => {
             </Link>
           </div>
         </div>
-        <div className='grid gap-6 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 place-items-center'>
+        <div className='flex flex-wrap justify-center gap-6'>
           <div className='rounded-lg w-[384px] shadow-md shadow-black/40'>
             <div className='w-[384px] overflow-hidden rounded-t-md h-[240px]'>
               <img src={artikel1} alt={artikel1} className='w-[384px] h-[240px]'/>
@@ -72,7 +72,7 @@ const EC = () => {
             </Link>
           </div>
         </div>
-        <div className='grid gap-6 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 place-items-center'>
+        <div className='flex flex-wrap justify-center gap-6'>
           <div className='rounded-lg w-[384px] shadow-md shadow-black/40'>
             <div className='w-[384px] overflow-hidden rounded-t-md h-[240px]'>
               <img src={artikel1} alt={artikel1} className='w-[384px] h-[240px]'/>
@@ -126,7 +126,7 @@ const EC = () => {
             </Link>
           </div>
         </div>
-        <div className='grid gap-6 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 place-items-center mb-20'>
+        <div className='flex flex-wrap justify-center gap-6 mb-20'>
           <div className='rounded-lg w-[384px] shadow-md shadow-black/40'>
             <div className='w-[384px] overflow-hidden rounded-t-md h-[240px]'>
               <img src={artikel1} alt={artikel1} className='w-[384px] h-[240px]'/>

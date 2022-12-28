@@ -18,7 +18,7 @@ const MoreThera = () => {
           <div className='flex items-center justify-between mb-6'>
             <p className='font-century font-700 text-4xl text-dark'>Terapis</p>
           </div>
-          <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 place-items-center'>
+          <div className='flex flex-wrap justify-center gap-6'>
             <div className=''>
               <div className='flex border-[1px] border-gray1 rounded-md w-[384px] h-[160px] p-[16px]'>
                 <img src={profile} alt={profile} className='w-[80px] h-[80px] rounded-full'/>

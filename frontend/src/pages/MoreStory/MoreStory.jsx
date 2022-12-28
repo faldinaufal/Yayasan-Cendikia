@@ -16,7 +16,7 @@ const MoreStory = () => {
         <div className='mb-6 flex items-center justify-between'>
           <p className='font-century text-4xl font-700 text-dark'>Cerita Kisah / Timbal Balik</p>
         </div>
-        <div className='grid gap-6 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 place-items-center'>
+        <div className='flex flex-wrap justify-center gap-6'>
           <div className='rounded-lg w-[384px] shadow-md shadow-black/40'>
             <div className='w-[384px] overflow-hidden rounded-t-md h-[240px]'>
               <img src={artikel1} alt={artikel1} className='w-[384px] h-[240px]'/>

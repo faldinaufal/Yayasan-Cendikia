@@ -64,7 +64,7 @@ const Footer = () => {
                         <label htmlFor="email" className='font-inter text-base font-600 mb-1'>Email</label>
                         <div className='flex items-center relative'>
                             <MdEmail className='absolute left-2 text-gray-500 text-2xl z-50'/>
-                            <input type="email" placeholder='Email' id='email' className='relative w-full rounded-sm outline-1 py-2 pl-10 font-inter font-16 font-400 outline-blue-500 text-slate-800 invalid:text-pink-500 invalid:outline-pink-500 valid:text-blue-400 valid:border-blue-400 valid:border-2 invalid:border-2 invalid:border-pink-500'/>
+                            <input type="email" placeholder='Email' id='email' className='relative w-full border-gray-400 rounded-sm outline-1 py-2 pl-10 font-inter font-16 font-400 text-slate-800 invalid:text-pink-500 invalid:outline-pink-500 valid:text-blue-500 valid:outline-blue-500 valid:border-2 invalid:border-2 invalid:border-pink-500'/>
                         </div>
                         <button className='bg-[#009FCC] mt-4 py-2 rounded-sm font-intern font-600 duration-200 hover:bg-opacity-80'>Berlangganan Artikel</button>
                     </form>
