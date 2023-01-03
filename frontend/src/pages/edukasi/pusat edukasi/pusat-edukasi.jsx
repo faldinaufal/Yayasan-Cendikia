@@ -1,16 +1,28 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Footer, Navbar } from '../../../components'
 import VectorGray from '../../../assets/Icon/Vector Abu.svg'
 import VectorGrayLeft from '../../../assets/Icon/Vector Abu Kiri.svg'
 import VectorBlueRight from '../../../assets/Icon/Vector Biru Kanan.svg'
-import ImageCard1 from '../../../assets/image/image card1.jpg'
-import ImageCard2 from '../../../assets/image/image card2.jpg'
-import ImageCard3 from '../../../assets/image/image card3.jpg'
-import ImageCard4 from '../../../assets/image/image card4.jpg'
-import ImageCard5 from '../../../assets/image/image card5.jpg'
-import ImageCard6 from '../../../assets/image/image card6.jpg'
+import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 const Education = () => {
+
+  const [post, setPost] = useState([])
+
+    useEffect(() => {
+        fetch()
+    },[])
+
+   const fetch = async () => {
+    try {
+        const res = await axios.get('http://localhost:1337/api/artikels?sort[1]=id%3Adesc&populate=*')
+        setPost(res.data.data)
+    } catch (error) {
+        console.log(error);
+    }
+   }
+
   return (
     <div>
         <Navbar/>
@@ -23,102 +35,28 @@ const Education = () => {
             <div>
               <h3 className='font-century text-[36px] leading-[42px] text-[#262626] self-stretch'>Artikel Ilmiah</h3>
             </div>
-            <div className='grid grid-cols-3 gap-6'>
-              <div className='card w-[384px] h-[452px] rounded-lg border border-[#E0E7FF] shadow-card'>
-                <div>
-                  <img src={ImageCard1} alt="Gambar Artikel" className='rounded-t-lg'/>
-                </div>
-                <div className='p-4 grid gap-4'>
-                  <div className='font-century text-[24px] leading-[30px] text-[#262626]'>
-                    <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
-                  </div>
-                  <div>
-                    <p className='font-inter font-normal text-base text-[#6B7280] line-clamp-3'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus commodo luctus venenatis. Integer rhoncus iaculis quam, et iaculis odio sagittis consequat. In at enim justo. Ut in lacus a sem iaculis accumsan.</p>
-                  </div>
-                  <div className='text-xs font-inter font-normal text-[#6B7280]'>
-                    <p>31 January 2030</p>
-                  </div>
-                </div>
-              </div>
-              <div className='card w-[384px] h-[452px] rounded-lg border border-[#E0E7FF] shadow-card'>
-                <div>
-                  <img src={ImageCard2} alt="Gambar Artikel" className='rounded-t-lg'/>
-                </div>
-                <div className='p-4 grid gap-4'>
-                  <div className='font-century text-[24px] leading-[30px] text-[#262626]'>
-                    <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
-                  </div>
-                  <div>
-                    <p className='font-inter font-normal text-base text-[#6B7280] line-clamp-3'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus commodo luctus venenatis. Integer rhoncus iaculis quam, et iaculis odio sagittis consequat. In at enim justo. Ut in lacus a sem iaculis accumsan.</p>
-                  </div>
-                  <div className='text-xs font-inter font-normal text-[#6B7280]'>
-                    <p>31 January 2030</p>
-                  </div>
-                </div>
-              </div>
-              <div className='card w-[384px] h-[452px] rounded-lg border border-[#E0E7FF] shadow-card'>
-                <div>
-                  <img src={ImageCard3} alt="Gambar Artikel" className='rounded-t-lg'/>
-                </div>
-                <div className='p-4 grid gap-4'>
-                  <div className='font-century text-[24px] leading-[30px] text-[#262626]'>
-                    <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
-                  </div>
-                  <div>
-                    <p className='font-inter font-normal text-base text-[#6B7280] line-clamp-3'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus commodo luctus venenatis. Integer rhoncus iaculis quam, et iaculis odio sagittis consequat. In at enim justo. Ut in lacus a sem iaculis accumsan.</p>
-                  </div>
-                  <div className='text-xs font-inter font-normal text-[#6B7280]'>
-                    <p>31 January 2030</p>
-                  </div>
-                </div>
-              </div>
-              <div className='card w-[384px] h-[452px] rounded-lg border border-[#E0E7FF] shadow-card'>
-                <div>
-                  <img src={ImageCard4} alt="Gambar Artikel" className='rounded-t-lg'/>
-                </div>
-                <div className='p-4 grid gap-4'>
-                  <div className='font-century text-[24px] leading-[30px] text-[#262626]'>
-                    <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
-                  </div>
-                  <div>
-                    <p className='font-inter font-normal text-base text-[#6B7280] line-clamp-3'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus commodo luctus venenatis. Integer rhoncus iaculis quam, et iaculis odio sagittis consequat. In at enim justo. Ut in lacus a sem iaculis accumsan.</p>
-                  </div>
-                  <div className='text-xs font-inter font-normal text-[#6B7280]'>
-                    <p>31 January 2030</p>
-                  </div>
-                </div>
-              </div>
-              <div className='card w-[384px] h-[452px] rounded-lg border border-[#E0E7FF] shadow-card'>
-                <div>
-                  <img src={ImageCard5} alt="Gambar Artikel" className='rounded-t-lg'/>
-                </div>
-                <div className='p-4 grid gap-4'>
-                  <div className='font-century text-[24px] leading-[30px] text-[#262626]'>
-                    <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
-                  </div>
-                  <div>
-                    <p className='font-inter font-normal text-base text-[#6B7280] line-clamp-3'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus commodo luctus venenatis. Integer rhoncus iaculis quam, et iaculis odio sagittis consequat. In at enim justo. Ut in lacus a sem iaculis accumsan.</p>
-                  </div>
-                  <div className='text-xs font-inter font-normal text-[#6B7280]'>
-                    <p>31 January 2030</p>
-                  </div>
-                </div>
-              </div>
-              <div className='card w-[384px] h-[452px] rounded-lg border border-[#E0E7FF] shadow-card'>
-                <div>
-                  <img src={ImageCard6} alt="Gambar Artikel" className='rounded-t-lg'/>
-                </div>
-                <div className='p-4 grid gap-4'>
-                  <div className='font-century text-[24px] leading-[30px] text-[#262626]'>
-                    <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
-                  </div>
-                  <div>
-                    <p className='font-inter font-normal text-base text-[#6B7280] line-clamp-3'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus commodo luctus venenatis. Integer rhoncus iaculis quam, et iaculis odio sagittis consequat. In at enim justo. Ut in lacus a sem iaculis accumsan.</p>
-                  </div>
-                  <div className='text-xs font-inter font-normal text-[#6B7280]'>
-                    <p>31 January 2030</p>
-                  </div>
-                </div>
+            <div>
+              <div className='grid grid-cols-3 gap-6'>
+                {post.slice(0,6).map((index) => (
+                    <Link to={`/artikel-ilmiah/${index.id}`}>
+                    <div className='w-[384px] h-[452px] rounded-lg border border-[#E0E7FF] shadow-card'>
+                        <div>
+                            <img src={`http://localhost:1337`+index?.attributes.Image.data.attributes.url} alt="Gambar Artikel" className='rounded-t-lg'/>
+                        </div>
+                        <div className='p-4 grid gap-4'>
+                            <div className='font-century text-[24px] leading-[30px] text-[#262626]'>
+                                <h4>{index?.attributes.Title}</h4>
+                            </div>
+                            <div>
+                                <p className='font-inter font-normal text-base text-[#6B7280] line-clamp-3'>{index.attributes.Body}</p>
+                            </div>
+                            <div className='text-xs font-inter font-normal text-[#6B7280]'>
+                            <p>{index?.attributes.createdAt}</p>
+                            </div>
+                        </div>
+                    </div>
+                    </Link>
+                ))}
               </div>
             </div>
             <div className='flex justify-center items-center mt-3'>

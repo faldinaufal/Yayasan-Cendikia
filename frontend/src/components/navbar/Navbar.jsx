@@ -16,7 +16,7 @@ const Navbar = () => {
               <a href="/edukasi" className='hover:text-[#009FCC]'>Pusat Edukasi</a>
             </div>
             <div>
-              <a href="#" className='hover:text-[#009FCC]'>Join Yuk</a>
+              <a href="/join" className='hover:text-[#009FCC]'>Join Yuk</a>
             </div>
             <div>
               <a href="/tentang-kami" className='hover:text-[#009FCC]'>Tentang Kami</a>
