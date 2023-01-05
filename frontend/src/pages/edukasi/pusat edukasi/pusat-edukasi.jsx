@@ -16,7 +16,7 @@ const Education = () => {
 
    const fetch = async () => {
     try {
-        const res = await axios.get('http://localhost:1337/api/artikels?sort[1]=id%3Adesc&populate=*')
+        const res = await axios.get('http://localhost:1337/api/posts?sort[1]=id%3Adesc&filters[Categories][$eq]=Article&populate=*')
         setPost(res.data.data)
     } catch (error) {
         console.log(error);
