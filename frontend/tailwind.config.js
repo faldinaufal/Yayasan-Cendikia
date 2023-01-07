@@ -13,7 +13,10 @@ module.exports = {
       },
       backgroundImage: {
         'vector': "url('/src/assets/image/Vector.png')",
-        'image-login': "url('/src/assets/image/image-login.png')"
+        bgLogin: "url('/src/assets/image/image-login.svg')"
+      },
+      backgroundColor: {
+        admin: '#f0f2f5',
       },
       fontFamily: {
         'inter': ['Inter', 'sans-serif'],

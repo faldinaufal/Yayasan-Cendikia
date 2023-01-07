@@ -1,6 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { EC, DetailAEC, Join, Login, Register, ForgotPass, EmailSent, EditPass, PassSucc, NotFound, MoreEvnt, DetailEvnt, MoreStory, DetailStory, MoreThera, MoreConsul } from '../pages';
+import { Dashboard } from '../admin';
 
 const Routing = () => {
   return (
@@ -22,6 +23,7 @@ const Routing = () => {
             <Route path="/join-terapis" element={<MoreThera/>}/>
             <Route path="/join-konsultasi" element={<MoreConsul/>}/>
             <Route path="*" element={<NotFound/>}/>
+            <Route path="/halaman-utama" element={<Dashboard/>}/>
         </Routes>
     </Router>
   )

@@ -6,10 +6,10 @@ import {logoYayasan} from '../../assets/image'
 const Login = () => {
   return (
     <section>
-        <div className='flex items-center justify-center md:justify-start lg:gap-6 xl:gap-20'>
-            <div className='hidden md:block bg-image-login h-[960px] rounded-br-[40px] rounded-tr-[40px] bg-no-repeat w-[708px] bg-center'></div>
+        <div className='flex justify-center md:justify-between lg:gap-6 xl:gap-20'>
+            <div className='hidden md:block bg-bgLogin h-screen sticky top-0 rounded-br-[40px] rounded-tr-[40px] bg-no-repeat w-[80%] bg-center bg-cover'></div>
             <div className='mx-0 md:mx-5'>
-                <div className='w-[348px]'>
+                <div className='w-[384px]'>
                     <Link to='' className='flex items-center text-[#009FCC] font-inter font-600 hover:opacity-70 duration-200 mt-10'>
                         <BsChevronLeft className='mr-[8.89px]'/>
                         Kembali ke Beranda

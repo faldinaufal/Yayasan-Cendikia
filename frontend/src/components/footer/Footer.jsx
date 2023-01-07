@@ -6,13 +6,12 @@ import {FaFacebookF, FaTiktok} from 'react-icons/fa'
 import {AiOutlineTwitter} from 'react-icons/ai'
 import {BsWhatsapp, BsYoutube, BsInstagram} from 'react-icons/bs'
 import {SiGmail} from 'react-icons/si'
-import {MdEmail} from 'react-icons/md'
 
 const Footer = () => {
   return (
     <footer className='bg-[#262626] mt-auto'>
         <div className='container text-white'>
-            <section className='flex flex-wrap pb-3 pt-1'>
+            <section className='flex lg:justify-evenly flex-wrap pb-3 pt-1'>
                 <div className='font-century w-[588px] mt-3 mb-1 lg:mr-1'>
                     <p className='text-2xl font-700 mb-1'>Ruang Disabilitas</p>
                     <p className='text-base font-inter font-400 leading-24'>
@@ -57,17 +56,6 @@ const Footer = () => {
                             <Link to='/login' className='duration-150 hover:opacity-70'>Login</Link>
                         </div>
                     </div>
-                </div>
-                <div className='mt-3 w-[282px]'>
-                    <p className='font-century text-2xl font-700 mb-1'>Subscribe</p>
-                    <form className='flex flex-col'>
-                        <label htmlFor="email" className='font-inter text-base font-600 mb-1'>Email</label>
-                        <div className='flex items-center relative'>
-                            <MdEmail className='absolute left-2 text-gray-500 text-2xl z-50'/>
-                            <input type="email" placeholder='Email' id='email' className='relative w-full border-gray-400 rounded-sm outline-1 py-2 pl-10 font-inter font-16 font-400 text-slate-800 invalid:text-pink-500 invalid:outline-pink-500 valid:text-blue-500 valid:outline-blue-500 valid:border-2 invalid:border-2 invalid:border-pink-500'/>
-                        </div>
-                        <button className='bg-[#009FCC] mt-4 py-2 rounded-sm font-intern font-600 duration-200 hover:bg-opacity-80'>Berlangganan Artikel</button>
-                    </form>
                 </div>
             </section>
         </div>

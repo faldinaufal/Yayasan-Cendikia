@@ -18,7 +18,7 @@ const Join = () => {
             <p className='font-century font-700 text-4xl text-dark'>Terapis</p>
             <Link to='/join-terapis' className='flex items-center text-[#009FCC] font-600 font-inter duration-150 hover:opacity-80'>
               More
-              <AiOutlineRight className='text-dark ml-1'/>
+              <AiOutlineRight className='text-[#009FCC] ml-1'/>
             </Link>
           </div>
           <div className='flex flex-wrap justify-center gap-6'>
@@ -98,7 +98,7 @@ const Join = () => {
             <p className='font-century font-700 text-4xl text-dark my-5'>Konsultasi</p>
             <Link to='/join-konsultasi' className='flex items-center text-[#009FCC] font-600 font-inter duration-150 hover:opacity-80'>
               More
-              <AiOutlineRight className='text-dark ml-1'/>
+              <AiOutlineRight className='text-[#009FCC] ml-1'/>
             </Link>
           </div>
           <div className='flex flex-wrap justify-center gap-5'>

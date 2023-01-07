@@ -38,3 +38,6 @@ code {
   background-clip: text;
   text-fill-color: transparent;
 }
+.background-sidebar{
+  background-image: linear-gradient(to right bottom, #1a3359, #003a81, #0040a9, #0041cf, #203cf2);
+}
