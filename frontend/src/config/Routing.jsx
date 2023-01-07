@@ -1,5 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Dashboard } from '../admin';
 import { Home, AboutUs, Education, EducationCenter, EC, DetailAEC, Join, Login, Register, ForgotPass, EmailSent, EditPass, PassSucc, NotFound, MoreEvnt, DetailEvnt, MoreStory, DetailStory, MoreThera, MoreConsul } from '../pages';
 
 const Routing = () => {
@@ -22,6 +23,7 @@ const Routing = () => {
             <Route path="/join-terapis" element={<MoreThera/>}/>
             <Route path="/join-konsultasi" element={<MoreConsul/>}/>
             <Route path="*" element={<NotFound/>}/>
+            <Route path="/halaman-utama" element={<Dashboard/>}/>
             <Route path="/" element={<Home/>}/>
             <Route path="/edukasi/artikel-ilmiah" element={<EducationCenter/>}/>
             <Route path="/edukasi" element={<Education/>}/>
