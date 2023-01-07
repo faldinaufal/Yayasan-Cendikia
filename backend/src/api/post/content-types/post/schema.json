@@ -4,8 +4,7 @@
   "info": {
     "singularName": "post",
     "pluralName": "posts",
-    "displayName": "Post",
-    "description": ""
+    "displayName": "Post"
   },
   "options": {
     "draftAndPublish": true
@@ -15,8 +14,26 @@
     "Title": {
       "type": "string"
     },
-    "Content": {
+    "Body": {
       "type": "richtext"
+    },
+    "Image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Categories": {
+      "type": "enumeration",
+      "enum": [
+        "Article",
+        "Event",
+        "Story"
+      ]
     }
   }
 }
