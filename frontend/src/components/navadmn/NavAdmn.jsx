@@ -22,17 +22,17 @@ const NavAdmn = () => {
   return (
     <section>
       <nav className='flex items-center justify-end gap-3 mt-5'>
-        <div className='shadow-md cursor-pointer group shadow-gray-400 w-10 h-10 flex items-center justify-center rounded-full'>
+        <div className='shadow-navadmn cursor-pointer group shadow-gray-400 w-10 h-10 flex items-center justify-center rounded-full'>
             <FiMessageSquare className='text-xl text-gray-400 group-hover:text-black duration-200'/>
         </div>
         <div>
-            <img src={profile} alt={profile} className=' cursor-pointer duration-150 w-11 h-11 rounded-full shadow-md shadow-gray-400' onClick={()=>setOpenProfile(!openProfile)}/>
+            <img src={profile} alt={profile} className=' cursor-pointer duration-150 w-11 h-11 rounded-full shadow-navadmn shadow-gray-400' onClick={()=>setOpenProfile(!openProfile)}/>
         </div>
       </nav>
       {openProfile && (<section className='relative z-50'>
         <div className='absolute w-[270px] shadow-xl rounded-lg p-4 z-50 right-0'>
           <div className='flex justify-center flex-col items-center'>
-            <img src={profile} alt={profile} className='w-[87px] h-[87px] shadow-md shadow-slate-600 rounded-full'/>
+            <img src={profile} alt={profile} className='w-[87px] h-[87px] shadow-navadmn shadow-slate-600 rounded-full'/>
             <div className='font-inter text-center font-600 mt-2 text-slate-800'>
               <p>Wyero JR</p>
               <p>wyero@gmail.com</p>

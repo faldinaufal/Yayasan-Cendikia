@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
-import { Footer } from '../../components'
+import { Footer, Navbar } from '../../components'
 import {AiOutlineRight, AiFillLike} from 'react-icons/ai'
 import {IoClose} from 'react-icons/io5'
 import {MdWork} from 'react-icons/md'
@@ -12,6 +12,9 @@ const Join = () => {
   const [open, setOpen] = useState(false)
   return (
     <section>
+      <nav>
+        <Navbar/>
+      </nav>
       <div className='container mb-20'>
         <div className='mt-10'>
           <div className='flex items-center justify-between mb-6'>
@@ -180,10 +183,10 @@ const Join = () => {
             </div>
           </div>
         </div>
-        <div className='relative flex justify-center bg-dark rounded-2xl lg:justify-start lg:h-[288px] mb-20'>
-          <div className='w-[548px] m-10'>
+        <div className='container relative flex justify-center bg-dark rounded-2xl lg:justify-start lg:h-[288px] mb-20'>
+          <div className='m-10'>
             <div>
-              <p className='font-century font-700 text-[40px] text-linear w-[223px] mb-4'>Kerja Sama</p>
+              <p className='font-century font-700 text-[40px] text-linear mb-4'>Kerja Sama</p>
               <p className='font-century font-700 text-[18px] leading-7 text-gray1'>Butuh konsultan untuk lembaga/instansi di tempat anda? Atau kerja sama dalam hal lainnya? Silahkan hubungi kami!</p>
               <a href="#hubungi-kami" onClick={()=>setOpen(!open)} className='hover:opacity-90 duration-200 mt-6 rounded-sm w-[164px] bg-[#009FCC] p-3 text-white font-inter font-700 flex items-center justify-center'>
                 Hubungi Kami
@@ -191,7 +194,7 @@ const Join = () => {
               </a>
             </div>
           </div>
-          <div className='hidden bg-vector w-[588px] h-[288px] rounded-2xl lg:block'>
+          <div className='hidden bg-vector w-[950px] rounded-2xl lg:block'>
             <div className='m-10 flex items-center justify-end'>
               <img src={kerjasama} alt={kerjasama} className='w-[208px] h-[208px]'/>
             </div>

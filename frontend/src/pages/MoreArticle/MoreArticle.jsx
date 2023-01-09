@@ -4,7 +4,7 @@ import {FaChevronRight, FaChevronLeft} from 'react-icons/fa'
 import { Footer, Navbar } from '../../components'
 import {artikel1} from '../../assets/image'
 
-const MoreStory = () => {
+const MoreArticle = () => {
   return (
     <section className='bg-white'>
       <nav>
@@ -14,10 +14,10 @@ const MoreStory = () => {
         <div className='flex items-center font-inter font-600 mt-10 mb-6'>
           <p className='text-[#009FCC] mr-[15.33px]'>Pusat Edukasi</p>
           <FaChevronRight className='text-gray1'/>
-          <p className='text-gray2 ml-[14.67px]'>Cerita Kisah / Timbal Balik</p>
+          <p className='text-gray2 ml-[14.67px]'>Artikel</p>
         </div>
         <div className='mb-6 flex items-center justify-between'>
-          <p className='font-century text-4xl font-700 text-dark'>Cerita Kisah / Timbal Balik</p>
+          <p className='font-century text-4xl font-700 text-dark'>Artikel</p>
         </div>
         <div className='flex flex-wrap justify-center gap-6'>
           <div className='rounded-lg w-[384px]  shadow-card sm:w-[430px] lg:w-[384px]'>
@@ -25,7 +25,7 @@ const MoreStory = () => {
               <img src={artikel1} alt={artikel1} className='w-[384px] h-[240px] sm:w-[430px] sm:h-[270px] lg:w-[384px] lg:h-[240px]'/>
             </div>
             <div className='w-[352px] mx-auto sm:w-[370px] lg:w-[352px]'>
-              <Link to='/detail-cerita-kisah'>
+              <Link to='/detail-artikel'>
                 <p className='font-century font-700 text-2xl leading-[30px] my-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>  
               </Link>
               <p className='limit-content font-inter font-400 text-gray2 leading-6 mb-4'>
@@ -39,7 +39,7 @@ const MoreStory = () => {
               <img src={artikel1} alt={artikel1} className='w-[384px] h-[240px] sm:w-[430px] sm:h-[270px] lg:w-[384px] lg:h-[240px]'/>
             </div>
             <div className='w-[352px] mx-auto sm:w-[370px] lg:w-[352px]'>
-              <Link to='/detail-cerita-kisah'>
+              <Link to='/detail-artikel'>
                 <p className='font-century font-700 text-2xl leading-[30px] my-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>  
               </Link>
               <p className='limit-content font-inter font-400 text-gray2 leading-6 mb-4'>
@@ -53,7 +53,7 @@ const MoreStory = () => {
               <img src={artikel1} alt={artikel1} className='w-[384px] h-[240px] sm:w-[430px] sm:h-[270px] lg:w-[384px] lg:h-[240px]'/>
             </div>
             <div className='w-[352px] mx-auto sm:w-[370px] lg:w-[352px]'>
-              <Link to='/detail-cerita-kisah'>
+              <Link to='/detail-artikel'>
                 <p className='font-century font-700 text-2xl leading-[30px] my-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>  
               </Link>
               <p className='limit-content font-inter font-400 text-gray2 leading-6 mb-4'>
@@ -67,7 +67,7 @@ const MoreStory = () => {
               <img src={artikel1} alt={artikel1} className='w-[384px] h-[240px] sm:w-[430px] sm:h-[270px] lg:w-[384px] lg:h-[240px]'/>
             </div>
             <div className='w-[352px] mx-auto sm:w-[370px] lg:w-[352px]'>
-              <Link to='/detail-cerita-kisah'>
+              <Link to='/detail-artikel'>
                 <p className='font-century font-700 text-2xl leading-[30px] my-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>  
               </Link>
               <p className='limit-content font-inter font-400 text-gray2 leading-6 mb-4'>
@@ -81,7 +81,7 @@ const MoreStory = () => {
               <img src={artikel1} alt={artikel1} className='w-[384px] h-[240px] sm:w-[430px] sm:h-[270px] lg:w-[384px] lg:h-[240px]'/>
             </div>
             <div className='w-[352px] mx-auto sm:w-[370px] lg:w-[352px]'>
-              <Link to='/detail-cerita-kisah'>
+              <Link to='/detail-artikel'>
                 <p className='font-century font-700 text-2xl leading-[30px] my-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>  
               </Link>
               <p className='limit-content font-inter font-400 text-gray2 leading-6 mb-4'>
@@ -95,7 +95,7 @@ const MoreStory = () => {
               <img src={artikel1} alt={artikel1} className='w-[384px] h-[240px] sm:w-[430px] sm:h-[270px] lg:w-[384px] lg:h-[240px]'/>
             </div>
             <div className='w-[352px] mx-auto sm:w-[370px] lg:w-[352px]'>
-              <Link to='/detail-cerita-kisah'>
+              <Link to='/detail-artikel'>
                 <p className='font-century font-700 text-2xl leading-[30px] my-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>  
               </Link>
               <p className='limit-content font-inter font-400 text-gray2 leading-6 mb-4'>
@@ -122,4 +122,4 @@ const MoreStory = () => {
   )
 }
 
-export default MoreStory
+export default MoreArticle

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Footer } from '../../components'
+import { Footer, Navbar } from '../../components'
 import {AiFillLike} from 'react-icons/ai'
 import {MdWork} from 'react-icons/md'
 import {FaCalendarAlt, FaChevronRight, FaChevronLeft} from 'react-icons/fa'
@@ -8,6 +8,9 @@ import { profile } from '../../assets/image'
 const MoreThera = () => {
   return (
     <section>
+      <nav>
+        <Navbar/>
+      </nav>
       <div className='container mb-20'>
         <div className='mt-10'>
             <div className='flex items-center font-inter font-600 mb-5'>

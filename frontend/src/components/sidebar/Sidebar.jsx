@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom'
 import { logoCendikia } from '../../assets/image'
 import {HiOutlineMenu} from 'react-icons/hi'
 import {MdOutlineMenuOpen} from 'react-icons/md'
-import {BsChevronDown} from 'react-icons/bs'
+import {BsChevronDown, BsChevronUp} from 'react-icons/bs'
 import { menu } from '../../data/data'
 
 const Sidebar = () => {
   const [open, setOpen] = useState(false)
-  const [subMenu, setSubMenu] = useState(false)
+  const [openMenu, setopenMenu] = useState("")
   return (
     <section>
       <div className=''>
@@ -23,22 +23,24 @@ const Sidebar = () => {
           <div className={`mt-4 mx-auto ${open?'w-[280px]':'w-10'}`}>
             {menu.map((menu, index)=>(
               <>
-              <Link key={index} to={menu.path} className={`relative flex items-center ${!open?'justify-center':'justify-start'} gap-3 py-2 rounded-lg my-2 text-white font-century font-700 duration-200 hover:bg-slate-800`}>
+              <Link key={index} to={menu.path} className={`relative group flex items-center ${!open?'justify-center':'justify-start'} gap-3 py-2 rounded-lg my-2 text-white font-century font-700 duration-200 hover:bg-slate-800`} onClick={()=>openMenu !== menu.title ? setopenMenu(menu.title):setopenMenu("")}>
                 <span className={`text-2xl ${open && 'ml-6'}`}>{menu.icon}</span>
-                <div className={`text-lg ${!open && 'hidden'}`} onClick={()=>setSubMenu(menu.title)}>{menu.title}</div>
+                <div className={`text-lg ${!open && 'hidden'}`}>{menu.title}</div>
                 <div className='absolute right-5'>
                   {menu.submenu && (
-                    <BsChevronDown className={`text-lg ${!open && 'hidden'}`}/>
+                    <div className={`text-lg ${!open && 'hidden'}`}>
+                      {openMenu === menu.title ? <BsChevronUp/>:<BsChevronDown/>}
+                    </div>
                   )}
                 </div>
               </Link>
-              <div>
-                {menu.submenu && subMenu && (
-                  <div className={`ml-14 ${!open && 'hidden'}`}>
+              <div className={`${openMenu === menu.title? 'block relative':'hidden relative'}`}>
+                {menu.submenu && openMenu && (
+                  <div className={`ml-14 duration-300 ${!open && 'absolute left-5 -top-12 bg-white shadow-navadmn w-40 rounded-md'}`}>
                     {menu.submenuItems.map((submenuItems, index)=>(
-                      <Link key={index} to={submenuItems.path} className='flex font-century font-600 rounded-lg items-center gap-3 py-2 my-1 text-white duration-200 hover:bg-slate-800'>
-                        <span className={`text-xl ${open && 'ml-2'}`}>{submenuItems.icon}</span>
-                        <div>{submenuItems.title}</div>
+                      <Link key={index} to={submenuItems.path} className={`flex font-century font-600 rounded-lg items-center gap-3 py-2 my-1 text-white duration-200 group ${open?'hover:bg-slate-800':'hover:bg-blue-800'}`}>
+                        <span className={`text-xl ${open && 'ml-2'} ${!open && 'text-slate-700 ml-3 group-hover:text-white'}`}>{submenuItems.icon}</span>
+                        <div className={`${!open && 'text-slate-700 -ml-1 group-hover:text-white'}`}>{submenuItems.title}</div>
                       </Link>
                     ))}
                   </div>

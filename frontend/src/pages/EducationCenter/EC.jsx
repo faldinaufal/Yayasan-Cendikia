@@ -1,25 +1,28 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import {AiOutlineRight} from 'react-icons/ai'
-import { Footer } from '../../components'
+import { Footer, Navbar } from '../../components'
 import {artikel1} from '../../assets/image'
 
 const EC = () => {
   return (
     <section className='bg-white'>
+      <nav>
+        <Navbar/>
+      </nav>
       <div className='container mb-20'>
         {/* artikel ilmiah */}
         <div className='flex items-center justify-between mt-10 mb-6'>
           <p className='font-century text-4xl font-700 text-dark'>Artikel Ilmiah</p>
           <div className='flex justify-end'>
-            <Link to='/' className='flex items-center font-inter text-[#009FCC] font-600 duration-150 hover:opacity-70'>
+            <Link to='/pusat-edukasi-artikel' className='flex items-center font-inter text-[#009FCC] font-600 duration-150 hover:opacity-70'>
               More
               <AiOutlineRight className='ml-0.5'/>
             </Link>
           </div>
         </div>
         <div className='flex flex-wrap justify-center gap-6'>
-          <div className='rounded-lg w-[384px] shadow-md shadow-black/40 sm:w-[430px] lg:w-[384px]'>
+          <div className='rounded-lg w-[384px]  shadow-card sm:w-[430px] lg:w-[384px]'>
             <div className='w-[384px] overflow-hidden rounded-t-md h-[240px] sm:w-[430px] sm:h-[270px] lg:w-[384px] lg:h-[240px]'>
               <img src={artikel1} alt={artikel1} className='w-[384px] h-[240px] sm:w-[430px] sm:h-[270px] lg:w-[384px] lg:h-[240px]'/>
             </div>
@@ -33,7 +36,7 @@ const EC = () => {
               <p className='font-inter text-[12px] text-gray2 pb-2'>31 January 2030</p>
             </div>
           </div>
-          <div className='rounded-lg w-[384px] shadow-md shadow-black/40 sm:w-[430px] lg:w-[384px]'>
+          <div className='rounded-lg w-[384px]  shadow-card sm:w-[430px] lg:w-[384px]'>
             <div className='w-[384px] overflow-hidden rounded-t-md h-[240px] sm:w-[430px] sm:h-[270px] lg:w-[384px] lg:h-[240px]'>
               <img src={artikel1} alt={artikel1} className='w-[384px] h-[240px] sm:w-[430px] sm:h-[270px] lg:w-[384px] lg:h-[240px]'/>
             </div>
@@ -47,7 +50,7 @@ const EC = () => {
               <p className='font-inter text-[12px] text-gray2 pb-2'>31 January 2030</p>
             </div>
           </div>
-          <div className='rounded-lg w-[384px] shadow-md shadow-black/40 sm:w-[430px] lg:w-[384px]'>
+          <div className='rounded-lg w-[384px]  shadow-card sm:w-[430px] lg:w-[384px]'>
             <div className='w-[384px] overflow-hidden rounded-t-md h-[240px] sm:w-[430px] sm:h-[270px] lg:w-[384px] lg:h-[240px]'>
               <img src={artikel1} alt={artikel1} className='w-[384px] h-[240px] sm:w-[430px] sm:h-[270px] lg:w-[384px] lg:h-[240px]'/>
             </div>
@@ -73,7 +76,7 @@ const EC = () => {
           </div>
         </div>
         <div className='flex flex-wrap justify-center gap-6'>
-          <div className='rounded-lg w-[384px] shadow-md shadow-black/40 sm:w-[430px] lg:w-[384px]'>
+          <div className='rounded-lg w-[384px]  shadow-card sm:w-[430px] lg:w-[384px]'>
             <div className='w-[384px] overflow-hidden rounded-t-md h-[240px] sm:w-[430px] sm:h-[270px] lg:w-[384px] lg:h-[240px]'>
               <img src={artikel1} alt={artikel1} className='w-[384px] h-[240px] sm:w-[430px] sm:h-[270px] lg:w-[384px] lg:h-[240px]'/>
             </div>
@@ -87,7 +90,7 @@ const EC = () => {
               <p className='font-inter text-[12px] text-gray2 pb-2'>31 January 2030</p>
             </div>
           </div>
-          <div className='rounded-lg w-[384px] shadow-md shadow-black/40 sm:w-[430px] lg:w-[384px]'>
+          <div className='rounded-lg w-[384px]  shadow-card sm:w-[430px] lg:w-[384px]'>
             <div className='w-[384px] overflow-hidden rounded-t-md h-[240px] sm:w-[430px] sm:h-[270px] lg:w-[384px] lg:h-[240px]'>
               <img src={artikel1} alt={artikel1} className='w-[384px] h-[240px] sm:w-[430px] sm:h-[270px] lg:w-[384px] lg:h-[240px]'/>
             </div>
@@ -101,7 +104,7 @@ const EC = () => {
               <p className='font-inter text-[12px] text-gray2 pb-2'>31 January 2030</p>
             </div>
           </div>
-          <div className='rounded-lg w-[384px] shadow-md shadow-black/40 sm:w-[430px] lg:w-[384px]'>
+          <div className='rounded-lg w-[384px]  shadow-card sm:w-[430px] lg:w-[384px]'>
             <div className='w-[384px] overflow-hidden rounded-t-md h-[240px] sm:w-[430px] sm:h-[270px] lg:w-[384px] lg:h-[240px]'>
               <img src={artikel1} alt={artikel1} className='w-[384px] h-[240px] sm:w-[430px] sm:h-[270px] lg:w-[384px] lg:h-[240px]'/>
             </div>
@@ -127,7 +130,7 @@ const EC = () => {
           </div>
         </div>
         <div className='flex flex-wrap justify-center gap-6 mb-20'>
-          <div className='rounded-lg w-[384px] shadow-md shadow-black/40 sm:w-[430px] lg:w-[384px]'>
+          <div className='rounded-lg w-[384px]  shadow-card sm:w-[430px] lg:w-[384px]'>
             <div className='w-[384px] overflow-hidden rounded-t-md h-[240px] sm:w-[430px] sm:h-[270px] lg:w-[384px] lg:h-[240px]'>
               <img src={artikel1} alt={artikel1} className='w-[384px] h-[240px] sm:w-[430px] sm:h-[270px] lg:w-[384px] lg:h-[240px]'/>
             </div>
@@ -141,7 +144,7 @@ const EC = () => {
               <p className='font-inter text-[12px] text-gray2 pb-2'>31 January 2030</p>
             </div>
           </div>
-          <div className='rounded-lg w-[384px] shadow-md shadow-black/40 sm:w-[430px] lg:w-[384px]'>
+          <div className='rounded-lg w-[384px]  shadow-card sm:w-[430px] lg:w-[384px]'>
             <div className='w-[384px] overflow-hidden rounded-t-md h-[240px] sm:w-[430px] sm:h-[270px] lg:w-[384px] lg:h-[240px]'>
               <img src={artikel1} alt={artikel1} className='w-[384px] h-[240px] sm:w-[430px] sm:h-[270px] lg:w-[384px] lg:h-[240px]'/>
             </div>
@@ -155,7 +158,7 @@ const EC = () => {
               <p className='font-inter text-[12px] text-gray2 pb-2'>31 January 2030</p>
             </div>
           </div>
-          <div className='rounded-lg w-[384px] shadow-md shadow-black/40 sm:w-[430px] lg:w-[384px]'>
+          <div className='rounded-lg w-[384px]  shadow-card sm:w-[430px] lg:w-[384px]'>
             <div className='w-[384px] overflow-hidden rounded-t-md h-[240px] sm:w-[430px] sm:h-[270px] lg:w-[384px] lg:h-[240px]'>
               <img src={artikel1} alt={artikel1} className='w-[384px] h-[240px] sm:w-[430px] sm:h-[270px] lg:w-[384px] lg:h-[240px]'/>
             </div>

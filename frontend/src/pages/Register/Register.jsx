@@ -10,7 +10,7 @@ const Register = () => {
         <div className='hidden md:block bg-bgLogin h-screen sticky top-0 rounded-br-[40px] rounded-tr-[40px] bg-no-repeat w-[80%] bg-center bg-cover'></div>
             <div className='mx-0 md:mx-5'>
                 <div className='w-[348px]'>
-                    <Link to='' className='flex items-center text-[#009FCC] font-inter font-600 hover:opacity-70 duration-200 mt-10'>
+                    <Link to='/' className='flex items-center text-[#009FCC] font-inter font-600 hover:opacity-70 duration-200 mt-10'>
                         <BsChevronLeft className='mr-[8.89px]'/>
                         Kembali ke Beranda
                     </Link>

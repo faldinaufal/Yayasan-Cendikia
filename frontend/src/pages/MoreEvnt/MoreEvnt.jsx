@@ -1,12 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import {FaChevronRight, FaChevronLeft} from 'react-icons/fa'
-import { Footer } from '../../components'
+import { Footer, Navbar } from '../../components'
 import {artikel1} from '../../assets/image'
 
 const MoreEvnt = () => {
   return (
     <section className='bg-white'>
+      <nav>
+        <Navbar/>
+      </nav>
       <div className='container mb-20'>
         <div className='flex items-center font-inter font-600 mt-10 mb-6'>
           <p className='text-[#009FCC] mr-[15.33px]'>Pusat Edukasi</p>
@@ -17,7 +20,7 @@ const MoreEvnt = () => {
           <p className='font-century text-4xl font-700 text-dark'>Acara & Kegiatan</p>
         </div>
         <div className='flex flex-wrap justify-center gap-6'>
-          <div className='rounded-lg w-[384px] shadow-md shadow-black/40 sm:w-[430px] lg:w-[384px]'>
+          <div className='rounded-lg w-[384px]  shadow-card sm:w-[430px] lg:w-[384px]'>
             <div className='w-[384px] overflow-hidden rounded-t-md h-[240px] sm:w-[430px] sm:h-[270px] lg:w-[384px] lg:h-[240px]'>
               <img src={artikel1} alt={artikel1} className='w-[384px] h-[240px] sm:w-[430px] sm:h-[270px] lg:w-[384px] lg:h-[240px]'/>
             </div>
@@ -31,7 +34,7 @@ const MoreEvnt = () => {
               <p className='font-inter text-[12px] text-gray2 pb-2'>31 January 2030</p>
             </div>
           </div>
-          <div className='rounded-lg w-[384px] shadow-md shadow-black/40 sm:w-[430px] lg:w-[384px]'>
+          <div className='rounded-lg w-[384px]  shadow-card sm:w-[430px] lg:w-[384px]'>
             <div className='w-[384px] overflow-hidden rounded-t-md h-[240px] sm:w-[430px] sm:h-[270px] lg:w-[384px] lg:h-[240px]'>
               <img src={artikel1} alt={artikel1} className='w-[384px] h-[240px] sm:w-[430px] sm:h-[270px] lg:w-[384px] lg:h-[240px]'/>
             </div>
@@ -45,7 +48,7 @@ const MoreEvnt = () => {
               <p className='font-inter text-[12px] text-gray2 pb-2'>31 January 2030</p>
             </div>
           </div>
-          <div className='rounded-lg w-[384px] shadow-md shadow-black/40 sm:w-[430px] lg:w-[384px]'>
+          <div className='rounded-lg w-[384px]  shadow-card sm:w-[430px] lg:w-[384px]'>
             <div className='w-[384px] overflow-hidden rounded-t-md h-[240px] sm:w-[430px] sm:h-[270px] lg:w-[384px] lg:h-[240px]'>
               <img src={artikel1} alt={artikel1} className='w-[384px] h-[240px] sm:w-[430px] sm:h-[270px] lg:w-[384px] lg:h-[240px]'/>
             </div>
@@ -59,7 +62,7 @@ const MoreEvnt = () => {
               <p className='font-inter text-[12px] text-gray2 pb-2'>31 January 2030</p>
             </div>
           </div>
-          <div className='rounded-lg w-[384px] shadow-md shadow-black/40 sm:w-[430px] lg:w-[384px]'>
+          <div className='rounded-lg w-[384px]  shadow-card sm:w-[430px] lg:w-[384px]'>
             <div className='w-[384px] overflow-hidden rounded-t-md h-[240px] sm:w-[430px] sm:h-[270px] lg:w-[384px] lg:h-[240px]'>
               <img src={artikel1} alt={artikel1} className='w-[384px] h-[240px] sm:w-[430px] sm:h-[270px] lg:w-[384px] lg:h-[240px]'/>
             </div>
@@ -73,7 +76,7 @@ const MoreEvnt = () => {
               <p className='font-inter text-[12px] text-gray2 pb-2'>31 January 2030</p>
             </div>
           </div>
-          <div className='rounded-lg w-[384px] shadow-md shadow-black/40 sm:w-[430px] lg:w-[384px]'>
+          <div className='rounded-lg w-[384px]  shadow-card sm:w-[430px] lg:w-[384px]'>
             <div className='w-[384px] overflow-hidden rounded-t-md h-[240px] sm:w-[430px] sm:h-[270px] lg:w-[384px] lg:h-[240px]'>
               <img src={artikel1} alt={artikel1} className='w-[384px] h-[240px] sm:w-[430px] sm:h-[270px] lg:w-[384px] lg:h-[240px]'/>
             </div>
@@ -87,7 +90,7 @@ const MoreEvnt = () => {
               <p className='font-inter text-[12px] text-gray2 pb-2'>31 January 2030</p>
             </div>
           </div>
-          <div className='rounded-lg w-[384px] shadow-md shadow-black/40 sm:w-[430px] lg:w-[384px]'>
+          <div className='rounded-lg w-[384px]  shadow-card sm:w-[430px] lg:w-[384px]'>
             <div className='w-[384px] overflow-hidden rounded-t-md h-[240px] sm:w-[430px] sm:h-[270px] lg:w-[384px] lg:h-[240px]'>
               <img src={artikel1} alt={artikel1} className='w-[384px] h-[240px] sm:w-[430px] sm:h-[270px] lg:w-[384px] lg:h-[240px]'/>
             </div>
