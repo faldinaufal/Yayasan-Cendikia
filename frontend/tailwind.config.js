@@ -9,11 +9,14 @@ module.exports = {
         'dark': '#262626',
         'gray1': '#9CA3AF',
         'gray2': '#6B7280',
-        'gray3': '#484D56'
+        'gray3': '#484D56',
+        'Text-Title' : '#262626',
+        'Text-Paragraph' : '#484D56'
       },
       backgroundImage: {
         'vector': "url('/src/assets/image/Vector.png')",
-        'image-login': "url('/src/assets/image/image-login.png')"
+        'image-login': "url('/src/assets/image/image-login.png')",
+        'Background-AboutUs' : "url('/src/assets/image/FrameBackgroundSectionAboutUs.svg')"
       },
       fontWeight: {
         '400': '400',

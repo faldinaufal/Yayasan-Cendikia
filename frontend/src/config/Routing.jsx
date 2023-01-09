@@ -6,9 +6,9 @@ const Routing = () => {
   return (
     <Router>
         <Routes>
-            <Route path="/pusat-edukasi" element={<EC/>}/>
+            <Route path="/educenter" element={<EC/>}/>
             <Route path="/detail-artikel" element={<DetailAEC/>}/>
-            <Route path="/join-yuk" element={<Join/>}/>
+            <Route path="/join" element={<Join/>}/>
             <Route path="/login" element={<Login/>}/>
             <Route path="/daftar" element={<Register/>}/>
             <Route path="/lupa-password" element={<ForgotPass/>}/>
@@ -23,9 +23,8 @@ const Routing = () => {
             <Route path="/join-konsultasi" element={<MoreConsul/>}/>
             <Route path="*" element={<NotFound/>}/>
             <Route path="/" element={<Home/>}/>
-            <Route path="/edukasi/artikel-ilmiah" element={<EducationCenter/>}/>
-            <Route path="/edukasi" element={<Education/>}/>
-            <Route path="/tentang-kami" element={<AboutUs/>}/>
+            <Route path="/educenter/article" element={<Education/>}/>
+            <Route path="/about" element={<AboutUs/>}/>
         </Routes>
     </Router>
   )

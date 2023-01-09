@@ -106,7 +106,7 @@ const Home = () => {
               <ArtikelPost/>
             </div>
             <div className='flex justify-center items-center mt-10'>
-              <a href='/edukasi/artikel-ilmiah' className='w-[183px] h-[48px] px-3 py-4 rounded-[4px]'>
+              <a href='/educenter/article' className='w-[183px] h-[48px] px-3 py-4 rounded-[4px]'>
                 <button className='font-inter font-semibold text-base text-[#262626] hover:text-[#009FCC]'>Lihat Semua Artikel</button>
               </a>
             </div>

@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import { Footer, Navbar } from '../../../components'
-import VectorGray from '../../../assets/Icon/Vector Abu.svg'
-import VectorGrayLeft from '../../../assets/Icon/Vector Abu Kiri.svg'
-import VectorBlueRight from '../../../assets/Icon/Vector Biru Kanan.svg'
+import { Footer, Navbar } from '../../components'
+import VectorGray from '../../assets/Icon/Vector Abu.svg'
+import VectorGrayLeft from '../../assets/Icon/Vector Abu Kiri.svg'
+import VectorBlueRight from '../../assets/Icon/Vector Biru Kanan.svg'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 
-const Education = () => {
+const   Education = () => {
 
   const [post, setPost] = useState([])
 

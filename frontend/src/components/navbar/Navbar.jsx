@@ -13,19 +13,21 @@ const Navbar = () => {
               <a href="/" className='hover:text-[#009FCC]'>Beranda</a>
             </div>
             <div>
-              <a href="/edukasi" className='hover:text-[#009FCC]'>Pusat Edukasi</a>
+              <a href="/educenter" className='hover:text-[#009FCC]'>Pusat Edukasi</a>
             </div>
             <div>
               <a href="/join" className='hover:text-[#009FCC]'>Join Yuk</a>
             </div>
             <div>
-              <a href="/tentang-kami" className='hover:text-[#009FCC]'>Tentang Kami</a>
+              <a href="/about" className='hover:text-[#009FCC]'>Tentang Kami</a>
             </div>
           </div>
           <div className='absolute right-0 flex items-center'>
-            <button className='w-[146px] h-[48px] bg-[#009FCC] font-inter text-base font-semibold text-white rounded hover:bg-white hover:text-[#009FCC] hover:border-[#009FCC] hover:border-2'>
-              <span>Masuk / Daftar</span>
-            </button>
+            <a href="/login">
+              <button className='w-[146px] h-[48px] bg-[#009FCC] font-inter text-base font-semibold text-white rounded hover:bg-white hover:text-[#009FCC] hover:border-[#009FCC] hover:border-2'>
+                <span>Masuk / Daftar</span>
+              </button>
+            </a>
           </div>
         </div>
     </div>
