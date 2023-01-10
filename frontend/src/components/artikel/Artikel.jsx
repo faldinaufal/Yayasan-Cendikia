@@ -22,7 +22,7 @@ const ArtikelPost = () => {
     return (
         <div className='flex justify-between'>
             {post.slice(0,3).map((index) => (
-                <Link to={`/artikel-ilmiah/${index.id}`}>
+                <Link to={`/artikel-ilmiah/${index.attributes.Title}`}>
                 <div className='w-[384px] h-[452px] rounded-lg border border-[#E0E7FF] shadow-card'>
                     <div>
                         <img src={`http://localhost:1337`+index?.attributes.Image.data.attributes.url} alt="Gambar Artikel" className='rounded-t-lg'/>

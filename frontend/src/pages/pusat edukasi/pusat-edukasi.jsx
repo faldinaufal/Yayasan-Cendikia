@@ -4,7 +4,7 @@ import VectorGray from '../../assets/Icon/Vector Abu.svg'
 import VectorGrayLeft from '../../assets/Icon/Vector Abu Kiri.svg'
 import VectorBlueRight from '../../assets/Icon/Vector Biru Kanan.svg'
 import axios from 'axios'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
 const   Education = () => {
 
@@ -38,7 +38,7 @@ const   Education = () => {
             <div>
               <div className='grid grid-cols-3 gap-6'>
                 {post.slice(0,6).map((index) => (
-                    <Link to={`/artikel-ilmiah/${index.id}`}>
+                    <Link to={`/educenter/article/${index.attributes.Title}`}>
                     <div className='w-[384px] h-[452px] rounded-lg border border-[#E0E7FF] shadow-card'>
                         <div>
                             <img src={`http://localhost:1337`+index?.attributes.Image.data.attributes.url} alt="Gambar Artikel" className='rounded-t-lg'/>

@@ -2,13 +2,16 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import {BsChevronLeft} from 'react-icons/bs'
 import {logoYayasan} from '../../assets/image'
+import Image1 from '../../assets/image/image-login.png'
 
 const Login = () => {
   return (
     <section>
-        <div className='flex items-center justify-center md:justify-start lg:gap-6 xl:gap-20'>
-            <div className='hidden md:block bg-image-login h-[960px] rounded-br-[40px] rounded-tr-[40px] bg-no-repeat w-[708px] bg-center'></div>
-            <div className='mx-0 md:mx-5'>
+        <div className='flex items-center lg:gap-6 xl:gap-20'>
+            <div className='container md:block rounded-br-[40px] rounded-tr-[40px] bg-no-repeat bg-center'>
+                <img src={Image1} alt="" className='min-h-screen'/>
+            </div>  
+            <div className='container grid justify-items-center  mx-0 md:mx-5'>
                 <div>
                     <div className='w-[348px]'>
                         <Link to='/' className='flex items-center text-[#009FCC] font-inter font-600 hover:opacity-70 duration-200 mt-10'>

@@ -24,7 +24,7 @@ const Navbar = () => {
           </div>
           <div className='absolute right-0 flex items-center'>
             <a href="/login">
-              <button className='w-[146px] h-[48px] bg-[#009FCC] font-inter text-base font-semibold text-white rounded hover:bg-white hover:text-[#009FCC] hover:border-[#009FCC] hover:border-2'>
+              <button className='w-[146px] h-[48px] bg-[#009FCC] duration-100 font-inter text-base font-semibold text-white rounded hover:bg-white hover:text-[#009FCC] hover:border-[#009FCC] hover:border-2'>
                 <span>Masuk / Daftar</span>
               </button>
             </a>

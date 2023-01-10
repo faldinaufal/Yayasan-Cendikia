@@ -5,6 +5,7 @@ import image2 from '../../assets/image/Gambar-2.jpg'
 import image3 from '../../assets/image/Gambar-3.jpg'
 import image4 from '../../assets/image/Gambar-4.jpg'
 import Fb from '../../assets/Icon/FB.svg'
+import FbHover from '../../assets/Icon/FBHover.svg'
 import IG from '../../assets/Icon/Sosmed Icon/Social Media=Instagram, State=Default.svg'
 import IGHover from '../../assets/Icon/Sosmed Icon/Social Media=Instagram, State=Hover.svg'
 import Twitter from '../../assets/Icon/Sosmed Icon/Social Media=Twitter, State=Default.svg'
@@ -18,7 +19,6 @@ import GmailHover from '../../assets/Icon/Sosmed Icon/Social Media=Gmail, State=
 import YT from '../../assets/Icon/Sosmed Icon/Social Media=Youtube, State=Default.svg'
 import YTHover from '../../assets/Icon/Sosmed Icon/Social Media=Youtube, State=Hover.svg'
 import Background from '../../assets/image/FrameBackgroundSectionAboutUs.svg'
-// import FbHover from '../../assets/Icon/FBHover.svg'
 import './style.css'
 
 const AboutUs = () => {
@@ -61,26 +61,24 @@ const AboutUs = () => {
                         <img src={Fb} alt="Facebook Logo" className='w-12 h-12'/>
                     </button>
                     <button href="#">
-                        <img src={IG} alt="Facebook Logo" className='w-12 h-12'/>
+                        <img src={IG} alt="Instagram Logo" className='w-12 h-12'/>
                     </button>
                     <button href="#">
-                        <img src={Twitter} alt="Facebook Logo" className='w-12 h-12'/>
+                        <img src={Twitter} alt="Twitter Logo" className='w-12 h-12'/>
                     </button>
                     <button href="#">
-                        <img src={Tiktok} alt="Facebook Logo" className='w-12 h-12'/>
+                        <img src={Tiktok} alt="Tiktok Logo" className='w-12 h-12'/>
                     </button>
                     <button href="#">
-                        <img src={WA} alt="Facebook Logo" className='w-12 h-12'/>
+                        <img src={WA} alt="Whatsapp Logo" className='w-12 h-12'/>
                     </button>
                     <button href="#">
-                        <img src={Gmail} alt="Facebook Logo" className='w-12 h-12'/>
+                        <img src={Gmail} alt="Gmail Logo" className='w-12 h-12'/>
                     </button>
                     <button href="#">
-                        <img src={YT} alt="Facebook Logo" className='w-12 h-12'/>
+                        <img src={YT} alt="Youtube Logo" className='w-12 h-12'/>
                     </button>
-                    {/* <a href="#" className=''>
-                        <img src={FbHover} alt="Facebook Logo" className='w-12 h-12'/>
-                    </a> */}
+                    
                 </div>
             </div>
         </div>
@@ -112,7 +110,7 @@ const AboutUs = () => {
                                 <textarea type="text" placeholder='Deskripsi' className='px-4 py-3 font-inter border-2 border-[#9CA3AF] rounded-[4px] bg-white h-[84px]'/>
                             </div>
                             <div className='grid'>
-                                <button className='bg-[#9CA3AF] text-[#6B7280] hover:bg-[#009FCC] hover:text-white rounded-[4px] text-center py-3'>
+                                <button className='bg-[#9CA3AF] text-[#6B7280] duration-200 hover:bg-[#009FCC] hover:text-white rounded-[4px] text-center py-3'>
                                     <p className='font-inter text-base font-semibold '>Kirim</p>
                                 </button>
                             </div>
