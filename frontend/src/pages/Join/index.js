@@ -1,9 +1,9 @@
-import MPJ from "./MPJ/Join";
-import MoreThera from "./MoreThera/MoreThera";
-import MoreConsul from "./MoreConsul/MoreConsul";
+import LetsJoin from "./LetsJoin/LetsJoin";
+import JoinConsul from "./JoinConsul/JoinConsul";
+import JoinThera from "./JoinThera/JoinThera";
 
 export {
-    MPJ,
-    MoreThera,
-    MoreConsul
+    LetsJoin,
+    JoinConsul,
+    JoinThera
 }

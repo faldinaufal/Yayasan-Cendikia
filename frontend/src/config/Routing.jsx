@@ -1,35 +1,34 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Dashboard } from '../admin';
-import { Home, AboutUs, Education, EducationCenter } from '../pages';
-import {MPEC, DetailAEC} from '../pages/EducationCenter'
+import { Home, About } from '../pages';
+import { Educenter, EducenterArticles, EducenterEvent, EducenterStory, Article, Event, Stories } from '../pages/EducationCenter';
+import { LetsJoin, JoinConsul, JoinThera } from '../pages/Join';
+import { Login, Register, ForgotPass, EmailSent, UpdatePass, PassSucc } from '../pages/Login&Register';
 
 const Routing = () => {
   return (
     <Router>
         <Routes>
-            <Route path="/pusat-edukasi" element={<MPEC/>}/>
-            <Route path="/detail-artikel" element={<DetailAEC/>}/>
-            {/* <Route path="/join-yuk" element={<Join/>}/>
-            <Route path="/login" element={<Login/>}/>
-            <Route path="/daftar" element={<Register/>}/>
-            <Route path="/lupa-password" element={<ForgotPass/>}/>
-            <Route path="/email-terkirim" element={<EmailSent/>}/>
-            <Route path="/perbarui-password" element={<EditPass/>}/>
-            <Route path="/password-sukses" element={<PassSucc/>}/>
-            <Route path="/pusat-edukasi-acara" element={<MoreEvnt/>}/>
-            <Route path="/pusat-edukasi-artikel" element={<MoreArticle/>}/>
-            <Route path="/detail-acara" element={<DetailEvnt/>}/>
-            <Route path="/pusat-edukasi-cerita-kisah" element={<MoreStory/>}/>
-            <Route path="/detail-cerita-kisah" element={<DetailStory/>}/>
-            <Route path="/join-terapis" element={<MoreThera/>}/>
-            <Route path="/join-konsultasi" element={<MoreConsul/>}/> */}
-            <Route path="*" element={<Home/>}/>
-            <Route path="/halaman-utama" element={<Dashboard/>}/>
-            <Route path="/" element={<Home/>}/>
-            <Route path="/edukasi/artikel-ilmiah" element={<EducationCenter/>}/>
-            <Route path="/edukasi" element={<Education/>}/>
-            <Route path="/tentang-kami" element={<AboutUs/>}/>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/educenter" element={<Educenter/>}/>
+          <Route path="/educenter/articles" element={<EducenterArticles/>}/>
+          <Route path="/educenter/events" element={<EducenterEvent/>}/>
+          <Route path="/educenter/stories" element={<EducenterStory/>}/>
+          <Route path="/educenter/article/" element={<Article/>}/>
+          <Route path="/educenter/event/" element={<Event/>}/>
+          <Route path="/educenter/story/" element={<Stories/>}/>
+          <Route path="/about" element={<About/>}/>
+          <Route path="/join" element={<LetsJoin/>}/>
+          <Route path="/join/therapist" element={<JoinThera/>}/>
+          <Route path="/join/consultation" element={<JoinConsul/>}/>
+          <Route path="/login" element={<Login/>}/>
+          <Route path="/register" element={<Register/>}/>
+          <Route path="/forgot/password" element={<ForgotPass/>}/>
+          <Route path="/email/sent" element={<EmailSent/>}/>
+          <Route path="/update/passwords" element={<UpdatePass/>}/>
+          <Route path="/password/updated/successfully" element={<PassSucc/>}/>
+          <Route path="/halaman-utama" element={<Dashboard/>}/>
         </Routes>
     </Router>
   )
