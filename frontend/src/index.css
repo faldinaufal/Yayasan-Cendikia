@@ -10,7 +10,7 @@
     @apply bg-white p-1 w-[40px] h-[40px] flex justify-center items-center rounded-full duration-200 hover:-translate-y-1 mr-3;
   }
   .share-sosmed {
-    @apply w-9 h-9 bg-[#DADADA] flex justify-center items-center rounded-full mr-4 duration-150
+    @apply w-9 h-9 bg-[#DADADA] flex justify-center items-center rounded-full mr-4 duration-150;
   }
 }
 
@@ -46,4 +46,10 @@ code {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
+}
+.background-sidebar{
+  background-image: linear-gradient(to right bottom, #1a3359, #003a81, #0040a9, #0041cf, #203cf2);
+}
+.active{
+  color: #009FCC;
 }
