@@ -38,7 +38,7 @@ const Sidebar = () => {
                 {menu.submenu && openMenu && (
                   <div className={`ml-14 duration-300 ${!open && 'absolute left-5 -top-12 bg-white shadow-navadmn w-40 rounded-md'}`}>
                     {menu.submenuItems.map((submenuItems, index)=>(
-                      <Link key={index} to={submenuItems.path} className={`flex font-century font-600 rounded-lg items-center gap-3 py-2 my-1 text-white duration-200 group ${open?'hover:bg-slate-800':'hover:bg-blue-800'}`}>
+                      <Link key={index} to={submenuItems.path} className={`flex font-century font-600 rounded-lg items-center gap-3 py-2 my-1 text-white duration-200 group ${open?'hover:bg-slate-800':'hover:bg-blue-800 mx-1'}`}>
                         <span className={`text-xl ${open && 'ml-2'} ${!open && 'text-slate-700 ml-3 group-hover:text-white'}`}>{submenuItems.icon}</span>
                         <div className={`${!open && 'text-slate-700 -ml-1 group-hover:text-white'}`}>{submenuItems.title}</div>
                       </Link>
