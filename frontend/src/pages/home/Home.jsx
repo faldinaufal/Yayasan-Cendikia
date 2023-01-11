@@ -108,7 +108,7 @@ const Home = () => {
               <Categories categories="Article"/>
             </div>
             <div className='flex justify-center items-center mt-10'>
-              <Link to='/educenter/article' className='w-[183px] h-[48px] px-3 py-4 rounded-[4px]'>
+              <Link to='/educenter/Article' className='w-[183px] h-[48px] px-3 py-4 rounded-[4px]'>
                 <button className='font-inter font-semibold text-base text-[#262626] hover:text-[#009FCC]'>Lihat Semua Artikel</button>
               </Link>
             </div>
