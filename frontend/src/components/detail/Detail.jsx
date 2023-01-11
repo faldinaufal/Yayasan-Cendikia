@@ -11,9 +11,9 @@ const Detail = () => {
   return (
     <div>
         <div className='flex items-center font-inter font-600 mt-10 mb-6'>
-          <p className='text-[#009FCC] mr-[15.33px]'>Pusat Edukasi</p>
+          <Link to="/educenter" className='text-[#009FCC] mr-[15.33px]'>Pusat Edukasi</Link>
           <FaChevronRight className='text-gray1'/>
-          <p className='text-[#009FCC] ml-[14.67px] mr-[15.33px]'>Artikel Ilmiah</p>
+          <Link to={`/educenter/Article`} className='text-[#009FCC] ml-[14.67px] mr-[15.33px]'>Artikel Ilmiah</Link>
           <FaChevronRight className='text-gray1'/>
           <p className='text-gray2 ml-[14.67px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
         </div>

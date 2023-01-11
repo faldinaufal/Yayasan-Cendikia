@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Card = ({index}) => {
     return (
-        <Link to={`/artikel-ilmiah/${index.attributes.Title}`}>
+        <Link to={`/educenter/${index.attributes.Categories}/${index.attributes.Title}`}>
         <div className='w-[384px] h-[452px] rounded-lg border border-[#E0E7FF] shadow-card'>
             <div>
                 <img src={`http://localhost:1337`+index.attributes.Image.data.attributes.url} alt="Gambar Artikel" className='rounded-t-lg'/>

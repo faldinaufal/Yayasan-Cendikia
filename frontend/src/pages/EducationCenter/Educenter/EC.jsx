@@ -14,7 +14,7 @@ const MPEC = () => {
         <div className='flex items-center justify-between mt-10 mb-6'>
           <p className='font-century text-4xl font-700 text-dark'>Artikel Ilmiah</p>
           <div className='flex justify-end'>
-            <Link to='/educenter/article' className='flex items-center font-inter text-[#009FCC] font-600 duration-150 hover:opacity-70'>
+            <Link to='/educenter/Article' className='flex items-center font-inter text-[#009FCC] font-600 duration-150 hover:opacity-70'>
               More
               <AiOutlineRight className='ml-0.5'/>
             </Link>
@@ -27,7 +27,7 @@ const MPEC = () => {
         <div className='mt-20 mb-6 flex items-center justify-between'>
           <p className='font-century text-4xl font-700 text-dark'>Acara & Kegiatan</p>
           <div className='my-1 flex justify-end mr-3'>
-            <Link to='/educenter/event' className='flex items-center font-inter text-[#009FCC] font-600 duration-150 hover:opacity-70'>
+            <Link to='/educenter/Event' className='flex items-center font-inter text-[#009FCC] font-600 duration-150 hover:opacity-70'>
               More
               <AiOutlineRight className='ml-0.5'/>
             </Link>
@@ -40,7 +40,7 @@ const MPEC = () => {
         <div className='mt-20 mb-6 flex items-center justify-between'>
           <p className='font-century text-4xl font-700 text-dark'>Cerita Kisah / Timbal Balik</p>
           <div className='my-1 flex justify-end mr-3'>
-            <Link to='/educenter/story' className='flex items-center font-inter text-[#009FCC] font-600 duration-150 hover:opacity-70'>
+            <Link to='/educenter/Story' className='flex items-center font-inter text-[#009FCC] font-600 duration-150 hover:opacity-70'>
               More
               <AiOutlineRight className='ml-0.5'/>
             </Link>
