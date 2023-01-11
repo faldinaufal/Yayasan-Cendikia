@@ -1,4 +1,4 @@
-import JoinUs from "./JoinUs/Join";
+import JoinUs from "./LetsJoin/Join";
 import MoreThera from "./MoreThera/MoreThera";
 import MoreConsul from "./MoreConsul/MoreConsul";
 
