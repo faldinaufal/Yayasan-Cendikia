@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import {BsChevronLeft} from 'react-icons/bs'
 import {logoYayasan} from '../../../assets/image'
 
-const EditPass = () => {
+const UpdatePass = () => {
   return (
     <section>
         <div className='flex justify-center md:justify-between lg:gap-6 xl:gap-20'>
@@ -34,4 +34,4 @@ const EditPass = () => {
   )
 }
 
-export default EditPass
+export default UpdatePass
