@@ -1,5 +1,5 @@
 import React from 'react'
-import { ArtikelPost, Banner, Footer, Navbar } from '../../components'
+import { Banner, Footer, Navbar, Categories } from '../../components'
 import image1 from '../../assets/image/image 1.jpg'
 import ArrowLeft from '../../assets/Icon/Button.svg'
 import ArrowRight from '../../assets/Icon/Button-1.svg'
@@ -17,6 +17,8 @@ import LogoM11 from '../../assets/image/LogoM11.svg'
 import Vector from '../../assets/Icon/Vector.svg'
 import image2 from '../../assets/image/image1.png'
 import './style.css'
+import { Link } from 'react-router-dom'
+
 
 const Home = () => {
   return (
@@ -103,12 +105,12 @@ const Home = () => {
               <h2>Artikel Terbaru</h2>
             </div>
             <div className='mt-10'>
-              <ArtikelPost/>
+              <Categories categories="Article"/>
             </div>
             <div className='flex justify-center items-center mt-10'>
-              <a href='/educenter/article' className='w-[183px] h-[48px] px-3 py-4 rounded-[4px]'>
+              <Link to='/educenter/article' className='w-[183px] h-[48px] px-3 py-4 rounded-[4px]'>
                 <button className='font-inter font-semibold text-base text-[#262626] hover:text-[#009FCC]'>Lihat Semua Artikel</button>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

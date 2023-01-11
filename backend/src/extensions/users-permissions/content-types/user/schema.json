@@ -63,11 +63,15 @@
       "inversedBy": "users",
       "configurable": false
     },
-    "Categories": {
-      "type": "string"
-    },
     "PhoneNumber": {
       "type": "integer"
+    },
+    "Categories": {
+      "type": "enumeration",
+      "enum": [
+        "User",
+        "Terapis"
+      ]
     }
   }
 }

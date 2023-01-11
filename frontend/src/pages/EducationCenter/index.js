@@ -1,17 +1,17 @@
-import MPEC from "./MPEC/EC";
+import Educenter from "./Educenter/EC";
 import DetailAEC from "./DetailAEC/DetailAEC";
 import DetailEvnt from "./DetailEvnt/DetailEvnt";
 import DetailStory from "./DetailStory/DetailStory";
-import MoreArticle from "./MoreArticle/MoreArticle";
-import MoreEvnt from "./MoreEvnt/MoreEvnt";
-import MoreStory from "./MoreStory/MoreStory";
+import EducenterArticle from "./Educenter-Articles/MoreArticle";
+import EducenterEvent from "./Educenter-Event/MoreEvnt";
+import EducenterStory from "./Educenter-Story/MoreStory";
 
 export {
-    MPEC,
+    Educenter,
     DetailAEC,
     DetailEvnt,
     DetailStory,
-    MoreArticle,
-    MoreEvnt,
-    MoreStory
+    EducenterArticle,
+    EducenterEvent,
+    EducenterStory
 }

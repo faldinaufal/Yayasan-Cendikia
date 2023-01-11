@@ -13,9 +13,9 @@ const Navbar = () => {
               <Link to='/'><img src={Logo} alt="Logo Yayasan Cendikia"/></Link>
             </div>
               <NavLink to='/' className={({isActive})=>isActive?activeLink:normalLink}>Beranda</NavLink>
-              <NavLink to='/pusat-edukasi'  className={({isActive})=>isActive?activeLink:normalLink}>Pusat Edukasi</NavLink>
-              <NavLink to='/join-yuk'  className={({isActive})=>isActive?activeLink:normalLink}>Join Yuk</NavLink>
-              <NavLink to='/tentang-kami'  className={({isActive})=>isActive?activeLink:normalLink}>Tentang Kami</NavLink>
+              <NavLink to='/educenter'  className={({isActive})=>isActive?activeLink:normalLink}>Pusat Edukasi</NavLink>
+              <NavLink to='/join'  className={({isActive})=>isActive?activeLink:normalLink}>Join Yuk</NavLink>
+              <NavLink to='/about'  className={({isActive})=>isActive?activeLink:normalLink}>Tentang Kami</NavLink>
             </div>
           <div className='absolute right-0 flex items-center'>
             <Link to='/login' className='w-[146px] duration-200 h-[48px] bg-[#009FCC] font-inter text-base font-semibold text-white rounded hover:bg-white hover:text-[#009FCC] hover:border-[#009FCC] hover:border-2 flex items-center justify-center'>

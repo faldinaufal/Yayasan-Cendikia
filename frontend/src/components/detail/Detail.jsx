@@ -7,7 +7,7 @@ import {AiOutlineTwitter} from 'react-icons/ai'
 import {BsYoutube, BsInstagram} from 'react-icons/bs'
 import {artikel1} from '../../assets/image'
 
-const Detail = (index) => {
+const Detail = () => {
   return (
     <div>
         <div className='flex items-center font-inter font-600 mt-10 mb-6'>

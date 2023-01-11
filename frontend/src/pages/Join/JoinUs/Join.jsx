@@ -186,7 +186,7 @@ const MPJ = () => {
             <div>
               <p className='font-century font-700 text-[40px] text-linear mb-4'>Kerja Sama</p>
               <p className='font-century font-700 text-[18px] leading-7 text-gray1'>Butuh konsultan untuk lembaga/instansi di tempat anda? Atau kerja sama dalam hal lainnya? Silahkan hubungi kami!</p>
-              <a href="" onClick={()=>setOpen(!open)} className='hover:opacity-90 duration-200 mt-6 rounded-sm w-[164px] bg-[#009FCC] p-3 text-white font-inter font-700 flex items-center justify-center'>
+              <a href="#" onClick={()=>setOpen(!open)} className='hover:opacity-90 duration-200 mt-6 rounded-sm w-[164px] bg-[#009FCC] p-3 text-white font-inter font-700 flex items-center justify-center'>
                 Hubungi Kami
                 <AiOutlineRight className='ml-2'/>
               </a>

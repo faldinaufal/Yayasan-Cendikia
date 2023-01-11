@@ -1,9 +1,9 @@
-import MPJ from "./MPJ/Join";
+import JoinUs from "./JoinUs/Join";
 import MoreThera from "./MoreThera/MoreThera";
 import MoreConsul from "./MoreConsul/MoreConsul";
 
 export {
-    MPJ,
+    JoinUs,
     MoreThera,
     MoreConsul
 }

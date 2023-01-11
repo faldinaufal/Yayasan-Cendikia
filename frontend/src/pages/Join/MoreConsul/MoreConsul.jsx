@@ -1,5 +1,5 @@
 import React from 'react'
-import { Footer, Navbar } from '../../components'
+import { Footer, Navbar } from '../../../components'
 import {AiFillLike} from 'react-icons/ai'
 import {MdWork} from 'react-icons/md'
 import {FaCalendarAlt, FaChevronRight, FaChevronLeft} from 'react-icons/fa'
