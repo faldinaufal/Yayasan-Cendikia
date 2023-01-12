@@ -16,6 +16,7 @@ const Routing = () => {
             <Route path="/educenter/:Categories/:Title" element={<DetailPost/>}/>
             <Route path="/halaman-utama" element={<Dashboard/>}/>
             <Route path="/educenter/:Categories" element={<PostList/>}/>
+            <Route path="/educenter/:Categories" element={<PostList/>}/>
         </Routes>
     </Router>
   )
