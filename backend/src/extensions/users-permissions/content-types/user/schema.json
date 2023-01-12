@@ -66,12 +66,11 @@
     "PhoneNumber": {
       "type": "integer"
     },
-    "Categories": {
-      "type": "enumeration",
-      "enum": [
-        "User",
-        "Terapis"
-      ]
+    "role_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::role-user.role-user",
+      "inversedBy": "users"
     }
   }
 }

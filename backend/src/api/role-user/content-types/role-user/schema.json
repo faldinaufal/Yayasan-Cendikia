@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "role_users",
+  "info": {
+    "singularName": "role-user",
+    "pluralName": "role-users",
+    "displayName": "Role User",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "UUID": {
+      "type": "uid",
+      "targetField": "Role"
+    },
+    "Role": {
+      "type": "string"
+    },
+    "users": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "role_user"
+    }
+  }
+}
