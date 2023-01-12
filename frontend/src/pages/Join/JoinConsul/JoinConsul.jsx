@@ -5,7 +5,7 @@ import {MdWork} from 'react-icons/md'
 import {FaCalendarAlt, FaChevronRight, FaChevronLeft} from 'react-icons/fa'
 import { profile } from '../../../assets/image'
 
-const MoreConsul = () => {
+const JoinConsul = () => {
   return (
     <section>
       <nav>
@@ -155,4 +155,4 @@ const MoreConsul = () => {
   )
 }
 
-export default MoreConsul
+export default JoinConsul

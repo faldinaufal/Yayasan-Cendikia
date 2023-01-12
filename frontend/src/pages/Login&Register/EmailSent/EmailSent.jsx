@@ -6,9 +6,9 @@ import {logoYayasan, lupaPassword} from '../../../assets/image'
 const EmailSent = () => {
   return (
     <section>
-        <div className='flex justify-center md:justify-between lg:gap-6 xl:gap-20'>
-        <div className='hidden md:block bg-bgLogin h-screen sticky top-0 rounded-br-[40px] rounded-tr-[40px] bg-no-repeat w-[80%] bg-center bg-cover'></div>
-            <div className='mx-0 md:mx-5'>
+        <div className='flex justify-center md:justify-start gap-3'>
+        <div className='hidden md:block bg-bgLogin h-screen sticky top-0 rounded-br-[40px] rounded-tr-[40px] bg-no-repeat w-[708px] bg-center bg-cover'></div>
+            <div className='mx-0 md:mx-7 lg:mx-auto'>
                 <div className='w-[348px]'>
                     <Link to='/' className='flex items-center text-[#009FCC] font-inter font-600 hover:opacity-70 duration-200 mt-10'>
                         <BsChevronLeft className='mr-[8.89px]'/>
@@ -20,7 +20,7 @@ const EmailSent = () => {
                 </div>
                 <div className='font-inter flex items-center justify-center'>
                     <p className='text-dark mr-1'>Tidak menerima email?</p>
-                    <Link to='/lupa-password' className='font-600 text-[#009FCC] hover:opacity-70 duration-200'>Kirim ulang email</Link>
+                    <Link to='/forgot/password' className='font-600 text-[#009FCC] hover:opacity-70 duration-200'>Kirim ulang email</Link>
                 </div>
                 <div className='flex flex-col items-center mb-10 mt-[308px]'>
                     <img src={logoYayasan} alt={logoYayasan} className='w-12 h-12 mb-4'/>

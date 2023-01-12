@@ -5,7 +5,7 @@ import {MdWork} from 'react-icons/md'
 import {FaCalendarAlt, FaChevronRight, FaChevronLeft} from 'react-icons/fa'
 import { profile } from '../../../assets/image'
 
-const MoreThera = () => {
+const JoinThera = () => {
   return (
     <section>
       <nav>
@@ -179,4 +179,4 @@ const MoreThera = () => {
   )
 }
 
-export default MoreThera
+export default JoinThera
