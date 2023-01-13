@@ -53,3 +53,11 @@ code {
 .bg-about{
   background: linear-gradient(90deg, #BFECFC 0%, #F3AACD 100%);
 }
+
+.scroll{
+  overflow-x: scroll;
+  box-sizing: border-box;
+}
+.scroll::-webkit-scrollbar{
+  width: 0;
+}

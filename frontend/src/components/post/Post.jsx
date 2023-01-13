@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import VectorGray from '../../assets/Icon/Vector Abu.svg'
-import VectorGrayLeft from '../../assets/Icon/Vector Abu Kiri.svg'
-import VectorBlueRight from '../../assets/Icon/Vector Biru Kanan.svg'
 import Card from '../card/Card'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import {FaChevronRight, FaChevronLeft} from 'react-icons/fa'
 
 const Post = ({categories}) => {
     const [post, setPost] = useState([])
@@ -24,102 +22,90 @@ const Post = ({categories}) => {
 
     if(categories === "Article") {
         return (
-            <div className='container grid gap-6 my-10'>
-                <div className='flex gap-[15px]'>
-                    <Link to="/educenter" className='font-inter text-[#009FCC] font-semibold text-base'>Pusat Edukasi</Link>
-                    <img src={VectorGray} alt="" />
-                    <p className='font-inter text-[#6B7280] font-semibold text-base'>Artikel Ilmiah</p>
+            <div className='container mb-20'>
+                <div className='flex items-center font-inter font-600 mt-10 mb-6 ml-2 sm:ml-0'>
+                    <Link to="/educenter" className='text-[#009FCC] mr-[15.33px]'>Pusat Edukasi</Link>
+                    <FaChevronRight className='text-gray1'/>
+                    <p className='text-gray2 ml-[14.67px]'>Artikel Ilmiah</p>
+                </div>
+                <div className='mb-6 flex items-center justify-between ml-2 sm:ml-0'>
+                    <p className='font-century text-3xl font-700 text-dark sm:text-4xl'>Artikel Ilmiah</p>
                 </div>
                 <div>
-                <h3 className='font-century text-[36px] leading-[42px] text-[#262626] self-stretch'>Artikel Ilmiah</h3>
-                </div>
-                <div>
-                <div className='grid grid-cols-3 gap-6'>
+                <div className='flex flex-wrap justify-center gap-6'>
                     {post.slice(0,6).map((index) => (
                         <Card index={index} key={index.id}/>
                     ))}
                 </div>
                 </div>
-                <div className='flex justify-center items-center mt-3'>
-                <div className='flex gap-6 h-[28px]'>
-                    <button><img src={VectorGrayLeft} alt="" /></button>
-                    <li className='list-none flex gap-4 text-[#008CB2] font-semibold font-inter text-base'>
-                    <button>1</button>
-                    <button>2</button>
-                    <button>3</button>
-                    <button>4</button>
-                    <button>5</button>
-                    </li>
-                    <button><img src={VectorBlueRight} alt=""/></button>
-                </div>
+                <div className='flex items-center justify-center mt-10 mb-20'>
+                    <button className='text-[#009FCC] mr-[23.33px] duration-200 hover:text-gray2'><FaChevronLeft/></button>
+                    <button className='text-[#009FCC] mr-4 duration-200 hover:text-gray2 font-inter'>1</button>
+                    <button className='text-[#009FCC] mr-4 duration-200 hover:text-gray2 font-inter'>2</button>
+                    <button className='text-[#009FCC] mr-4 duration-200 hover:text-gray2 font-inter'>3</button>
+                    <button className='text-[#009FCC] mr-4 duration-200 hover:text-gray2 font-inter'>4</button>
+                    <button className='text-[#009FCC] duration-200 hover:text-gray2 font-inter'>5</button>
+                    <button className='text-[#009FCC] ml-[23.33px] duration-200 hover:text-gray2'><FaChevronRight/></button>
                 </div>
             </div>
         )
     }
     if(categories === "Event") {
         return (
-            <div className='container grid gap-6 my-10'>
-                <div className='flex gap-[15px]'>
-                    <Link to="/educenter" className='font-inter text-[#009FCC] font-semibold text-base'>Pusat Edukasi</Link>
-                    <img src={VectorGray} alt="" />
-                    <p className='font-inter text-[#6B7280] font-semibold text-base'>Acara & Kegiatan</p>
+            <div className='container mb-20'>
+                <div className='flex items-center font-inter font-600 mt-10 mb-6 ml-2 sm:ml-0'>
+                    <Link to="/educenter" className='text-[#009FCC] mr-[15.33px]'>Pusat Edukasi</Link>
+                    <FaChevronRight className='text-gray1'/>
+                    <p className='text-gray2 ml-[14.67px]'>Acara & Kegiatan</p>
+                </div>
+                <div className='mb-6 flex items-center justify-between ml-2 sm:ml-0'>
+                    <p className='font-century text-3xl font-700 text-dark sm:text-4xl'>Acara & Kegiatan</p>
                 </div>
                 <div>
-                <h3 className='font-century text-[36px] leading-[42px] text-[#262626] self-stretch'>Acara & Kegiatan</h3>
-                </div>
-                <div>
-                <div className='grid grid-cols-3 gap-6'>
+                <div className='flex flex-wrap justify-center gap-6'>
                     {post.slice(0,6).map((index) => (
                         <Card index={index} key={index.id}/>
                     ))}
                 </div>
                 </div>
-                <div className='flex justify-center items-center mt-3'>
-                <div className='flex gap-6 h-[28px]'>
-                    <button><img src={VectorGrayLeft} alt="" /></button>
-                    <li className='list-none flex gap-4 text-[#008CB2] font-semibold font-inter text-base'>
-                    <button>1</button>
-                    <button>2</button>
-                    <button>3</button>
-                    <button>4</button>
-                    <button>5</button>
-                    </li>
-                    <button><img src={VectorBlueRight} alt=""/></button>
-                </div>
+                <div className='flex items-center justify-center mt-10 mb-20'>
+                    <button className='text-[#009FCC] mr-[23.33px] duration-200 hover:text-gray2'><FaChevronLeft/></button>
+                    <button className='text-[#009FCC] mr-4 duration-200 hover:text-gray2 font-inter'>1</button>
+                    <button className='text-[#009FCC] mr-4 duration-200 hover:text-gray2 font-inter'>2</button>
+                    <button className='text-[#009FCC] mr-4 duration-200 hover:text-gray2 font-inter'>3</button>
+                    <button className='text-[#009FCC] mr-4 duration-200 hover:text-gray2 font-inter'>4</button>
+                    <button className='text-[#009FCC] duration-200 hover:text-gray2 font-inter'>5</button>
+                    <button className='text-[#009FCC] ml-[23.33px] duration-200 hover:text-gray2'><FaChevronRight/></button>
                 </div>
             </div>
         )
     }
     if(categories === "Story") {
         return (
-            <div className='container grid gap-6 my-10'>
-                <div className='flex gap-[15px]'>
-                    <Link to="/educenter" className='font-inter text-[#009FCC] font-semibold text-base'>Pusat Edukasi</Link>
-                    <img src={VectorGray} alt="" />
-                    <p className='font-inter text-[#6B7280] font-semibold text-base'>Cerita Kisah / Timbal Balik</p>
+            <div className='container mb-20'>
+                <div className='flex items-center font-inter font-600 mt-10 mb-6 ml-2 sm:ml-0'>
+                    <Link to="/educenter" className='text-[#009FCC] mr-[15.33px]'>Pusat Edukasi</Link>
+                    <FaChevronRight className='text-gray1'/>
+                    <p className='text-gray2 ml-[14.67px]'>Cerita Kisah / Timbal Balik</p>
+                </div>
+                <div className='mb-6 flex items-center justify-between ml-2 sm:ml-0'>
+                    <p className='font-century text-3xl font-700 text-dark sm:text-4xl'>Cerita Kisah / Timbal Balik</p>
                 </div>
                 <div>
-                <h3 className='font-century text-[36px] leading-[42px] text-[#262626] self-stretch'>Cerita Kisah / Timbal Balik</h3>
-                </div>
-                <div>
-                <div className='grid grid-cols-3 gap-6'>
+                <div className='flex flex-wrap justify-center gap-6'>
                     {post.slice(0,6).map((index) => (
                         <Card index={index} key={index.id}/>
                     ))}
                 </div>
                 </div>
-                <div className='flex justify-center items-center mt-3'>
-                <div className='flex gap-6 h-[28px]'>
-                    <button><img src={VectorGrayLeft} alt="" /></button>
-                    <li className='list-none flex gap-4 text-[#008CB2] font-semibold font-inter text-base'>
-                    <button>1</button>
-                    <button>2</button>
-                    <button>3</button>
-                    <button>4</button>
-                    <button>5</button>
-                    </li>
-                    <button><img src={VectorBlueRight} alt=""/></button>
-                </div>
+                <div className='flex items-center justify-center mt-10 mb-20'>
+                    <button className='text-[#009FCC] mr-[23.33px] duration-200 hover:text-gray2'><FaChevronLeft/></button>
+                    <button className='text-[#009FCC] mr-4 duration-200 hover:text-gray2 font-inter'>1</button>
+                    <button className='text-[#009FCC] mr-4 duration-200 hover:text-gray2 font-inter'>2</button>
+                    <button className='text-[#009FCC] mr-4 duration-200 hover:text-gray2 font-inter'>3</button>
+                    <button className='text-[#009FCC] mr-4 duration-200 hover:text-gray2 font-inter'>4</button>
+                    <button className='text-[#009FCC] duration-200 hover:text-gray2 font-inter'>5</button>
+                    <button className='text-[#009FCC] ml-[23.33px] duration-200 hover:text-gray2'><FaChevronRight/></button>
                 </div>
             </div>
         )

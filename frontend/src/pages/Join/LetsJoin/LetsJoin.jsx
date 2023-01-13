@@ -14,8 +14,8 @@ const LetsJoin = () => {
       </nav>
       <div className='container mb-20'>
         <div className='mt-10'>
-          <div className='flex items-center justify-between mb-6'>
-            <p className='font-century font-700 text-4xl text-dark'>Terapis</p>
+          <div className='flex items-center justify-between mb-6 mx-2 sm:mx-0'>
+            <p className='font-century font-700 text-3xl text-dark sm:text-4xl'>Terapis</p>
             <Link to='/join/therapist' className='flex items-center text-[#009FCC] font-600 font-inter duration-150 hover:opacity-80'>
               More
               <AiOutlineRight className='text-[#009FCC] ml-1'/>
@@ -94,8 +94,8 @@ const LetsJoin = () => {
           </div>
         </div>
         <div className='my-20'>
-          <div className='flex items-center justify-between mb-6'>
-            <p className='font-century font-700 text-4xl text-dark my-5'>Konsultasi</p>
+          <div className='flex items-center justify-between mb-6 mx-2 sm:mx-0'>
+            <p className='font-century font-700 text-3xl text-dark my-5 sm:text-4xl'>Konsultasi</p>
             <Link to='/join/consultation' className='flex items-center text-[#009FCC] font-600 font-inter duration-150 hover:opacity-80'>
               More
               <AiOutlineRight className='text-[#009FCC] ml-1'/>
