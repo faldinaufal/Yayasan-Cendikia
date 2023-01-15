@@ -20,7 +20,7 @@ const Categories = ({categories}) => {
    }
 
     return (
-        <div className='grid grid-cols-3 justify-items-center gap-6'>
+        <div className='flex flex-wrap justify-center gap-6'>
             {post.slice(0,3).map((index) => (
                 <Card index={index} key={index.id}/>
             ))}

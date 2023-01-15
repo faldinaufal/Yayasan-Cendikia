@@ -1,11 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { Footer, Navbar } from '../../../components'
 import {AiFillLike} from 'react-icons/ai'
 import {MdWork} from 'react-icons/md'
 import {FaCalendarAlt, FaChevronRight, FaChevronLeft} from 'react-icons/fa'
 import { profile } from '../../../assets/image'
 
-const MoreThera = () => {
+const JoinThera = () => {
   return (
     <section>
       <nav>
@@ -13,13 +14,13 @@ const MoreThera = () => {
       </nav>
       <div className='container mb-20'>
         <div className='mt-10'>
-            <div className='flex items-center font-inter font-600 mb-5'>
-                <p className='text-[#009FCC] mr-[15.33px]'>Join Yuk</p>
+            <div className='flex items-center font-inter font-600 mb-5 ml-2 sm:ml-0'>
+                <Link to='/join'><p className='text-[#009FCC] mr-[15.33px]'>Join Yuk</p></Link>
                 <FaChevronRight className='text-gray1'/>
                 <p className='text-gray2 ml-[14.67px]'>Terapis</p>
             </div>
-          <div className='flex items-center justify-between mb-6'>
-            <p className='font-century font-700 text-4xl text-dark'>Terapis</p>
+          <div className='flex items-center justify-between mb-6 ml-2 sm:ml-0'>
+            <p className='font-century font-700 text-3xl text-dark sm:text-4xl'>Terapis</p>
           </div>
           <div className='flex flex-wrap justify-center gap-6'>
             <div className=''>
@@ -179,4 +180,4 @@ const MoreThera = () => {
   )
 }
 
-export default MoreThera
+export default JoinThera
