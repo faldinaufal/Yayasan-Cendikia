@@ -1,4 +1,4 @@
 import Home from "./home/Home"
 import AboutUs from "./About/aboutUs"
-
-export { Home, AboutUs }
+import Message from "./Message/Message"
+export { Home, AboutUs, Message}

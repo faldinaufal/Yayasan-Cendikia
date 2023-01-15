@@ -6,10 +6,10 @@ import {logoYayasan} from '../../../assets/image'
 const PassSucc = () => {
   return (
     <section>
-        <div className='flex justify-center md:justify-between lg:gap-6 xl:gap-20'>
-        <div className='hidden md:block bg-bgLogin h-screen sticky top-0 rounded-br-[40px] rounded-tr-[40px] bg-no-repeat w-[80%] bg-center bg-cover'></div>
-            <div className='mx-0 md:mx-5'>
-                <div className='w-[348px]'>
+        <div className='flex justify-center md:justify-start gap-3'>
+        <div className='hidden md:block bg-bgLogin h-screen sticky top-0 rounded-br-[40px] rounded-tr-[40px] bg-no-repeat w-[708px] bg-center bg-coverr'></div>
+            <div className='mx-0 md:mx-7 lg:mx-auto'>
+                <div className='w-[348px] flex flex-col items-center sm:block'>
                     <Link to='/' className='flex items-center text-[#009FCC] font-inter font-600 hover:opacity-70 duration-200 my-10'>
                         <BsChevronLeft className='mr-[8.89px]'/>
                         Kembali ke Beranda
@@ -21,9 +21,9 @@ const PassSucc = () => {
                             <div className='absolute top-10 left-4 border-[10px] bg-[#19AB6E] rounded-r-full border-[#19AB6E] w-[48px] rounded-l-full rotate-[44deg]'></div>
                         </div>
                     </div>
-                    <p className='font-century font-700 text-4xl mt-10 mb-2'>Password Berhasil Diperbarui</p>
-                    <p className='font-inter leading-6 text-gray3 mb-10'>Password anda berhasil diperbarui. Silahkan kembali ke halaman Masuk dengan tombol di bawah</p>
-                    <Link to='/login' className='font-inter font-600 rounded-md bg-[#009FCC] py-4 px-3 text-white hover:opacity-70 duration-200 flex justify-center mt-2 mb-[252px]'>Masuk</Link>
+                    <p className='font-century font-700 text-4xl mt-10 mb-2 text-center sm:text-start'>Password Berhasil Diperbarui</p>
+                    <p className='font-inter leading-6 text-gray3 mb-10 text-center sm:text-start'>Password anda berhasil diperbarui. Silahkan kembali ke halaman Masuk dengan tombol di bawah</p>
+                    <Link to='/login' className='font-inter w-full font-600 rounded-md bg-[#009FCC] py-4 px-3 text-white hover:opacity-70 duration-200 flex justify-center mt-2 mb-[252px]'>Masuk</Link>
                 </div>
                 <div className='flex flex-col items-center mb-10'>
                     <img src={logoYayasan} alt={logoYayasan} className='w-12 h-12 mb-4'/>

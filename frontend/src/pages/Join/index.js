@@ -1,9 +1,9 @@
-import JoinUs from "./LetsJoin/Join";
-import MoreThera from "./MoreThera/MoreThera";
-import MoreConsul from "./MoreConsul/MoreConsul";
+import LetsJoin from "./LetsJoin/LetsJoin";
+import JoinConsul from "./JoinConsul/JoinConsul";
+import JoinThera from "./JoinThera/JoinThera";
 
 export {
-    JoinUs,
-    MoreThera,
-    MoreConsul
+    LetsJoin,
+    JoinConsul,
+    JoinThera
 }

@@ -1,64 +1,37 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import {BsChevronLeft} from 'react-icons/bs'
-<<<<<<< HEAD:frontend/src/pages/Login/Login.jsx
-import {logoYayasan} from '../../assets/image'
-import Image1 from '../../assets/image/image-login.png'
-=======
 import {logoYayasan} from '../../../assets/image'
->>>>>>> 27e52d0ba756778040f5f25669ecf3570562ffe7:frontend/src/pages/LoginRegister/Login/Login.jsx
 
 const Login = () => {
   return (
     <section>
-<<<<<<< HEAD:frontend/src/pages/Login/Login.jsx
-        <div className='flex items-center lg:gap-6 xl:gap-20'>
-            <div className='container md:block rounded-br-[40px] rounded-tr-[40px] bg-no-repeat bg-center'>
-                <img src={Image1} alt="" className='min-h-screen'/>
-            </div>  
-            <div className='container grid justify-items-center  mx-0 md:mx-5'>
-                <div>
-                    <div className='w-[348px]'>
-                        <Link to='/' className='flex items-center text-[#009FCC] font-inter font-600 hover:opacity-70 duration-200 mt-10'>
-                            <BsChevronLeft className='mr-[8.89px]'/>
-                            Kembali ke Beranda
-                        </Link>
-                        <p className='font-century font-700 text-4xl mt-10 mb-2'>Masuk</p>
-                        <p className='font-inter leading-6 text-gray3 mb-10'>Masuk dengan akun yang pernah anda daftarkan</p>
-                        <form>
-                            <div className='font-inter font-600 flex flex-col mb-4'>
-                                <label htmlFor="email" className='mb-1'>Email</label>
-                                <input type="email" placeholder='Email' id='email' className='font-400 border-2 border-gray1 py-3 px-4 rounded-md invalid:outline-pink-500 text-gray2 valid:border-2 invalid:text-pink-500 outline-2 outline-blue-500 invalid:border-pink-600'/>
-                            </div>
-                            <div className='font-inter font-600 flex flex-col'>
-                                <label htmlFor="password" className='mb-1'>Password</label>
-                                <input type="password" placeholder='Password' id='password' className=' font-400 border-2 border-gray1 py-3 px-4 rounded-md text-gray2 valid:border-2 outline-blue-500'/>
-                            </div>
-                            <button className='mt-10 w-full mb-10 hover:bg-[#009FCC] duration-200 hover:text-white bg-gray1 rounded-md font-inter font-600 text-gray2 py-3'>Masuk</button>
-                        </form>
-                        <div className='font-inter flex items-center justify-center'>
-                            <p className='text-dark mr-1'>Belum Pernah Mendaftar?</p>
-                            <Link to='/daftar' className='font-600 text-[#009FCC] hover:opacity-70 duration-200'>Daftar sekarang</Link>
-=======
-        <div className='flex justify-center md:justify-between lg:gap-5 xl:gap-20'>
+        <div className='flex justify-center md:justify-start gap-3'>
             <div className='hidden md:block bg-bgLogin h-screen sticky top-0 rounded-br-[40px] rounded-tr-[40px] bg-no-repeat w-[708px] bg-center bg-cover'></div>
-            <div className='mx-0 md:mx-5'>
-                <div className='w-[384px]'>
+            <div className='mx-0 md:mx-7 lg:mx-auto'>
+                <div className='w-[348px] flex flex-col items-center sm:block'>
                     <Link to='/' className='flex items-center text-[#009FCC] font-inter font-600 hover:opacity-70 duration-200 mt-10'>
                         <BsChevronLeft className='mr-[8.89px]'/>
                         Kembali ke Beranda
                     </Link>
                     <p className='font-century font-700 text-4xl mt-10 mb-2'>Masuk</p>
-                    <p className='font-inter leading-6 text-gray3 mb-10'>Masuk dengan akun yang pernah anda daftarkan</p>
+                    <p className='font-inter leading-6 text-gray3 mb-10 text-center sm:text-start'>Masuk dengan akun yang pernah anda daftarkan</p>
                     <form>
                         <div className='font-inter font-600 flex flex-col mb-4'>
                             <label htmlFor="email" className='mb-1'>Email</label>
                             <input type="email" placeholder='Email' id='email' className='font-400 border-2 border-gray1 py-3 px-4 rounded-md invalid:outline-pink-500 text-gray2 valid:border-2 invalid:text-pink-500 outline-2 outline-blue-500 invalid:border-pink-600'/>
->>>>>>> 27e52d0ba756778040f5f25669ecf3570562ffe7:frontend/src/pages/LoginRegister/Login/Login.jsx
                         </div>
-                        <Link to='/lupa-password' className='font-inter font-600 text-[#009FCC] hover:opacity-70 duration-200 flex justify-center mt-2 mb-[174px]'>Lupa Password</Link>
+                        <div className='font-inter font-600 flex flex-col'>
+                            <label htmlFor="password" className='mb-1'>Password</label>
+                            <input type="password" placeholder='Password' id='password' className=' font-400 border-2 border-gray1 py-3 px-4 rounded-md text-gray2 valid:border-2 outline-blue-500'/>
+                        </div>
+                        <button className='mt-10 w-full mb-10 hover:bg-[#009FCC] duration-200 hover:text-white bg-gray1 rounded-md font-inter font-600 text-gray2 py-3'>Masuk</button>
+                    </form>
+                    <div className='font-inter flex items-center justify-center'>
+                        <p className='text-dark mr-1'>Belum Pernah Mendaftar?</p>
+                        <Link to='/register' className='font-600 text-[#009FCC] hover:opacity-70 duration-200'>Daftar sekarang</Link>
                     </div>
-                    
+                    <Link to='/forgot/password' className='font-inter font-600 text-[#009FCC] hover:opacity-70 duration-200 flex justify-center mt-2 mb-[174px]'>Lupa Password</Link>
                 </div>
                 <div className='flex flex-col items-center mb-10'>
                     <img src={logoYayasan} alt={logoYayasan} className='w-12 h-12 mb-4'/>

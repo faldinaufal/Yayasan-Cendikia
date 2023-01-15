@@ -9,100 +9,90 @@ import LogoM3 from '../../assets/image/LogoM3.svg'
 import LogoM4 from '../../assets/image/LogoM4.svg'
 import LogoM5 from '../../assets/image/LogoM5.svg'
 import LogoM6 from '../../assets/image/LogoM6.svg'
-import LogoM7 from '../../assets/image/LogoM7.svg'
-import LogoM8 from '../../assets/image/LogoM8.svg'
-import LogoM9 from '../../assets/image/LogoM9.svg'
-import LogoM10 from '../../assets/image/LogoM10.svg'
-import LogoM11 from '../../assets/image/LogoM11.svg'
-import Vector from '../../assets/Icon/Vector.svg'
+import {AiOutlineRight} from 'react-icons/ai'
 import image2 from '../../assets/image/image1.png'
 import './style.css'
 import { Link } from 'react-router-dom'
-
-
 const Home = () => {
   return (
-    <div>
+    <div className='overflow-hidden'>
         <Navbar/>
         <div>
           <Banner/> 
         </div>
-        <div className='container h-[538px] grid items-center'>
-          <div className='grid gap-10'>
-            <div className='text-[#009FCC] font-century text-[48px] leading-[58px]'>
-              <h2>Education Center</h2>
+        <div className='container flex items-center md:h-[538px]'>
+          <div className='gap-10 grid'>
+            <div className='text-[#009FCC] font-century text-[40px] mt-5 leading-[58px] mb-5 md:text-[48px] md:mb-0'>
+              <h2 className='text-center md:text-start'>Education Center</h2>
             </div>
-            <div className='flex gap-5'>
-              <div className='container'>
-                <img src={image1} alt="Gambar Keluarga" />
+            <div className='gap-5 flex flex-col justify-center items-center mb-5 md:flex-row'>
+              <div className='md:container'>
+                <img src={image1} alt="Gambar Keluarga" className='w-[588px] h-[360px]'/>
               </div>
-              <div className='container'>
-                <div className='font-century text-[36px] leading-[42px] font-bold text-[#262626]'>
-                  <h3>Lorem Ipsum Dolor Sit Amet 1</h3>
+              <div className='md:container'>
+                <div className='font-century text-[36px] leading-[42px] font-bold text-[#262626] mx-2 md:mx-0'>
+                  <h3 className='text-center md:text-start'>Lorem Ipsum Dolor Sit Amet 1</h3>
                 </div>
-                <div className='font-inter text-18 leading-[28px] font-normal text-[#6B7280] mt-4'>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus commodo luctus venenatis. Integer rhoncus iaculis quam, et iaculis odio sagittis consequat.</p>
+                <div className='font-inter text-18 leading-[28px] font-normal text-[#6B7280] mt-4 mx-2 md:mx-0'>
+                  <p className='text-center md:text-start'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus commodo luctus venenatis. Integer rhoncus iaculis quam, et iaculis odio sagittis consequat.</p>
                 </div>
-                <div className='flex mt-4 gap-4'>
-                  <button>
-                    <img src={ArrowLeft} alt="" />
-                  </button>
-                  <button>
-                    <img src={ArrowRight} alt="" />
-                  </button>
+                <div className='flex justify-evenly mt-4 gap-4 md:justify-center'>
+                    <img src={ArrowLeft} alt="" className='cursor-pointer'/>
+                    <img src={ArrowRight} alt="" className='cursor-pointer'/>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div className='bg-[#E0E7FF] h-[522px] grid items-center'>
+        <div className='bg-[#E0E7FF] py-10'>
           <div className='container'>
-            <div className='text-[48px] font-century leading-[58px] text-[#009FCC]'>
-              <h2>Mitra Kerja</h2>
+            <div className='text-[40px] font-century leading-[58px] text-[#009FCC] md:text-[48px] mb-10'>
+              <h2 className='text-center md:text-start'>Mitra Kerja</h2>
             </div>
-            <div className='mt-10 flex gap-6 justify-center'>
+            <div className='mt-10 flex gap-3 justify-center flex-wrap md:gap-6'>
               <div className='w-[180px] h-[120px] bg-white rounded-lg flex justify-center items-center'>
-                <img src={LogoM1} alt="Logo Mitra" />
+                <img src={LogoM1} alt="Logo Mitra" className='w-[130px] h-[80px]'/>
               </div>
               <div className='w-[180px] h-[120px] bg-white rounded-lg flex justify-center items-center'>
-                <img src={LogoM2} alt="Logo Mitra" />
+                <img src={LogoM2} alt="Logo Mitra" className='w-[130px] h-[80px]'/>
               </div>
               <div className='w-[180px] h-[120px] bg-white rounded-lg flex justify-center items-center'>
-                <img src={LogoM3} alt="Logo Mitra" />
+                <img src={LogoM3} alt="Logo Mitra" className='w-[130px] h-[80px]'/>
               </div>
               <div className='w-[180px] h-[120px] bg-white rounded-lg flex justify-center items-center'>
-                <img src={LogoM4} alt="Logo Mitra" />
+                <img src={LogoM4} alt="Logo Mitra" className='w-[130px] h-[80px]'/>
               </div>
               <div className='w-[180px] h-[120px] bg-white rounded-lg flex justify-center items-center'>
-                <img src={LogoM5} alt="Logo Mitra" />
+                <img src={LogoM5} alt="Logo Mitra" className='w-[130px] h-[80px]'/>
               </div>
               <div className='w-[180px] h-[120px] bg-white rounded-lg flex justify-center items-center'>
-                <img src={LogoM6} alt="Logo Mitra" />
-              </div>
-            </div>
-            <div className='mt-6 flex gap-6 justify-center'>
-              <div className='w-[180px] h-[120px] bg-white rounded-lg flex justify-center items-center'>
-                <img src={LogoM7} alt="Logo Mitra" />
+                <img src={LogoM6} alt="Logo Mitra" className='w-[130px] h-[80px]'/>
               </div>
               <div className='w-[180px] h-[120px] bg-white rounded-lg flex justify-center items-center'>
-                <img src={LogoM8} alt="Logo Mitra" />
+                <img src={LogoM1} alt="Logo Mitra" className='w-[130px] h-[80px]'/>
               </div>
               <div className='w-[180px] h-[120px] bg-white rounded-lg flex justify-center items-center'>
-                <img src={LogoM9} alt="Logo Mitra" />
+                <img src={LogoM2} alt="Logo Mitra" className='w-[130px] h-[80px]'/>
               </div>
               <div className='w-[180px] h-[120px] bg-white rounded-lg flex justify-center items-center'>
-                <img src={LogoM10} alt="Logo Mitra" />
+                <img src={LogoM3} alt="Logo Mitra" className='w-[130px] h-[80px]'/>
               </div>
               <div className='w-[180px] h-[120px] bg-white rounded-lg flex justify-center items-center'>
-                <img src={LogoM11} alt="Logo Mitra" />
+                <img src={LogoM4} alt="Logo Mitra" className='w-[130px] h-[80px]'/>
+              </div>
+              <div className='w-[180px] h-[120px] bg-white rounded-lg flex justify-center items-center'>
+                <img src={LogoM5} alt="Logo Mitra" className='w-[130px] h-[80px]'/>
+              </div>
+              <div className='w-[180px] h-[120px] bg-white rounded-lg flex justify-center items-center'>
+                <img src={LogoM6} alt="Logo Mitra" className='w-[130px] h-[80px]'/>
               </div>
             </div>
           </div>
         </div>
-        <div className='h-[718px] grid items-center'>
+        <div className='flex items-center mt-[52px] mb-[92px]'>
           <div className='container'>
-            <div className='text-[48px] font-century leading-[58px] text-[#009FCC]'>
-              <h2>Artikel Terbaru</h2>
+            <div className='text-[40px] font-century leading-[58px] text-[#009FCC] md:text-[48px]'>
+              <h2 className='text-center md:text-start'>Artikel Terbaru</h2>
             </div>
             <div className='mt-10'>
               <Categories categories="Article"/>
@@ -114,24 +104,20 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className='h-[408px]'>
-          <div className='container flex'>
-            <div className='container grid gap-4 p-10 bg-[#262626] rounded-l-[32px] shadow-box'>
-              <div className='font-century'>
-                <p className='text'>Let’s Join Us</p>
-              </div>
-              <div className='font-century text-lg text-[#9CA3AF] self-stretch'>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus commodo luctus venenatis.</p>
-              </div>
-              <div>
-                <button className='bg-[#009FCC] rounded-[4px] w-[114px] h-[48px] flex justify-center items-center mt-6'>
-                  <p className='font-inter text-base text-center text-white font-semibold'>Join Us</p>
-                  <img src={Vector} alt="" className='pl-[14.11px]'/>
-                </button>
-              </div>
+        <div className='container relative flex justify-center bg-dark rounded-2xl lg:justify-start lg:h-[288px] mb-20'>
+          <div className='m-10'>
+            <div>
+              <p className='font-century font-700 text-[40px] text-linear mb-4'>Let's Join Us</p>
+              <p className='font-century font-700 text-[18px] leading-7 text-gray1'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus commodo luctus venenatis.</p>
+              <a href="/about/#contact" className='hover:opacity-90 duration-200 mt-6 rounded-sm w-[114px] bg-[#009FCC] p-3 text-white font-inter font-700 flex items-center justify-center'>
+                Join Us
+                <AiOutlineRight className='ml-2'/>
+              </a>
             </div>
-            <div className='box2 container rounded-r-[32px] shadow-box flex items-center justify-end p-10'>
-              <img src={image2} alt="Gambar Anak Sekolah" className='rounded-[300px] border-4 border-white'/>
+          </div>
+          <div className='hidden bg-vector w-[800px] rounded-2xl lg:block'>
+            <div className='m-10 flex items-center justify-end'>
+              <img src={image2} alt={image2} className='w-[208px] h-[208px] rounded-full border-2 border-white'/>
             </div>
           </div>
         </div>
