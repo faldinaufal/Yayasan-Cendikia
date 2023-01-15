@@ -66,12 +66,9 @@
     "PhoneNumber": {
       "type": "integer"
     },
-    "Categories": {
-      "type": "enumeration",
-      "enum": [
-        "User",
-        "Terapis"
-      ]
+    "Name": {
+      "type": "string",
+      "required": true
     }
   }
 }

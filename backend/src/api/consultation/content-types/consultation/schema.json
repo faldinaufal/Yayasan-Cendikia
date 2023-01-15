@@ -4,7 +4,8 @@
   "info": {
     "singularName": "consultation",
     "pluralName": "consultations",
-    "displayName": "consultation"
+    "displayName": "Consultation",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -13,6 +14,25 @@
   "attributes": {
     "Name": {
       "type": "string"
+    },
+    "Email": {
+      "type": "string"
+    },
+    "phoneNumber": {
+      "type": "integer"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "Users": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "Terapis": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::konsultan.konsultan"
     }
   }
 }

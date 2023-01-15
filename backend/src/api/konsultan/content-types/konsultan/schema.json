@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "terapis",
+  "info": {
+    "singularName": "konsultan",
+    "pluralName": "terapis",
+    "displayName": "Terapis",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "UID": {
+      "type": "uid",
+      "required": true,
+      "maxLength": 8
+    },
+    "users": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}
