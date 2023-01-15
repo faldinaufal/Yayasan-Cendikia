@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * role-user controller
+ * konsultan controller
  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::role-user.role-user');
+module.exports = createCoreController('api::konsultan.konsultan');

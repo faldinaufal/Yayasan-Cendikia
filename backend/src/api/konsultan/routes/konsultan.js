@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * role-user router
+ * konsultan router
  */
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
-module.exports = createCoreRouter('api::role-user.role-user');
+module.exports = createCoreRouter('api::konsultan.konsultan');

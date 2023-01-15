@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * role-user service
+ * konsultan service
  */
 
 const { createCoreService } = require('@strapi/strapi').factories;
 
-module.exports = createCoreService('api::role-user.role-user');
+module.exports = createCoreService('api::konsultan.konsultan');

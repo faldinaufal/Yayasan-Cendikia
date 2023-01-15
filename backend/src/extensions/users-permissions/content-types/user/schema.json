@@ -66,11 +66,9 @@
     "PhoneNumber": {
       "type": "integer"
     },
-    "role_user": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::role-user.role-user",
-      "inversedBy": "users"
+    "Name": {
+      "type": "string",
+      "required": true
     }
   }
 }
