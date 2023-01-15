@@ -1,10 +1,10 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Dashboard } from '../admin';
-import { Home, AboutUs } from '../pages';
+import { Home, AboutUs, Message} from '../pages';
 import { Educenter, DetailPost, PostList} from '../pages/EducationCenter'
 import { LetsJoin, JoinConsul, JoinThera } from '../pages/Join';
 import { Login, Register, ForgotPass, EmailSent, UpdatePass, PassSucc } from '../pages/Login&Register';
+import { Profile, ChangePass, Contact } from '../pages/User';
 
 const Routing = () => {
   return (
@@ -24,7 +24,10 @@ const Routing = () => {
             <Route path="/update/passwords" element={<UpdatePass/>}/>
             <Route path="/password/updated/successfully" element={<PassSucc/>}/>
             <Route path="/educenter/:Categories" element={<PostList/>}/>
-            <Route path="/dashboard" element={<Dashboard/>}/>
+            <Route path="/profile" element={<Profile/>}/>
+            <Route path="/change-password" element={<ChangePass/>}/>
+            <Route path="/contact/consultation" element={<Contact/>}/>
+            <Route path="/consultation/message" element={<Message/>}/>
         </Routes>
     </Router>
   )

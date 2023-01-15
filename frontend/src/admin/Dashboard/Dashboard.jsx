@@ -1,6 +1,6 @@
 import React from 'react'
 import Sidebar from '../../components/sidebar/Sidebar'
-import NavAdmn from '../../components/navadmn/NavAdmn'
+import UserLogin from '../../components/userLogin/UserLogin'
 
 const Dashboard = () => {
   return (
@@ -9,7 +9,7 @@ const Dashboard = () => {
       <div className='w-full'>
         <div className='w-[92%] mx-auto'>
           <nav>
-            <NavAdmn/>
+            <UserLogin/>
           </nav>
         </div>
       </div>

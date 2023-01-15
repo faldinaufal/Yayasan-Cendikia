@@ -13,17 +13,15 @@ import {AiOutlineRight} from 'react-icons/ai'
 import image2 from '../../assets/image/image1.png'
 import './style.css'
 import { Link } from 'react-router-dom'
-
-
 const Home = () => {
   return (
-    <div>
+    <div className='overflow-hidden'>
         <Navbar/>
         <div>
           <Banner/> 
         </div>
-        <div className='container grid items-center md:h-[538px]'>
-          <div className='gap-10 md:grid'>
+        <div className='container flex items-center md:h-[538px]'>
+          <div className='gap-10 grid'>
             <div className='text-[#009FCC] font-century text-[40px] mt-5 leading-[58px] mb-5 md:text-[48px] md:mb-0'>
               <h2 className='text-center md:text-start'>Education Center</h2>
             </div>
@@ -39,12 +37,8 @@ const Home = () => {
                   <p className='text-center md:text-start'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus commodo luctus venenatis. Integer rhoncus iaculis quam, et iaculis odio sagittis consequat.</p>
                 </div>
                 <div className='flex justify-evenly mt-4 gap-4 md:justify-center'>
-                  <button>
-                    <img src={ArrowLeft} alt="" />
-                  </button>
-                  <button>
-                    <img src={ArrowRight} alt="" />
-                  </button>
+                    <img src={ArrowLeft} alt="" className='cursor-pointer'/>
+                    <img src={ArrowRight} alt="" className='cursor-pointer'/>
                 </div>
               </div>
             </div>
@@ -55,7 +49,7 @@ const Home = () => {
             <div className='text-[40px] font-century leading-[58px] text-[#009FCC] md:text-[48px] mb-10'>
               <h2 className='text-center md:text-start'>Mitra Kerja</h2>
             </div>
-            <div className='mt-10 flex gap-3 justify-center flex-wrap'>
+            <div className='mt-10 flex gap-3 justify-center flex-wrap md:gap-6'>
               <div className='w-[180px] h-[120px] bg-white rounded-lg flex justify-center items-center'>
                 <img src={LogoM1} alt="Logo Mitra" className='w-[130px] h-[80px]'/>
               </div>
@@ -95,7 +89,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className='grid items-center mt-[52px] mb-[92px]'>
+        <div className='flex items-center mt-[52px] mb-[92px]'>
           <div className='container'>
             <div className='text-[40px] font-century leading-[58px] text-[#009FCC] md:text-[48px]'>
               <h2 className='text-center md:text-start'>Artikel Terbaru</h2>

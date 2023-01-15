@@ -9,14 +9,14 @@ const EmailSent = () => {
         <div className='flex justify-center md:justify-start gap-3'>
         <div className='hidden md:block bg-bgLogin h-screen sticky top-0 rounded-br-[40px] rounded-tr-[40px] bg-no-repeat w-[708px] bg-center bg-cover'></div>
             <div className='mx-0 md:mx-7 lg:mx-auto'>
-                <div className='w-[348px]'>
+                <div className='w-[348px] flex flex-col items-center sm:block'>
                     <Link to='/' className='flex items-center text-[#009FCC] font-inter font-600 hover:opacity-70 duration-200 mt-10'>
                         <BsChevronLeft className='mr-[8.89px]'/>
                         Kembali ke Beranda
                     </Link>
                     <img src={lupaPassword} alt={lupaPassword} className='mt-2'/>
                     <p className='font-century font-700 text-4xl mt-5 mb-2'>Email Terkirim</p>
-                    <p className='font-inter leading-6 text-gray3 mb-10'>Silahkan cek email anda, kami sudah mengirim tautan untuk memperbarui password anda</p>
+                    <p className='font-inter leading-6 text-gray3 mb-10 text-center sm:text-start'>Silahkan cek email anda, kami sudah mengirim tautan untuk memperbarui password anda</p>
                 </div>
                 <div className='font-inter flex items-center justify-center'>
                     <p className='text-dark mr-1'>Tidak menerima email?</p>

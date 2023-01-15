@@ -32,7 +32,7 @@ const Footer = () => {
                             <p className='text-base font-inter font-400'>contact@ruangdisabilitas.com</p>
                         </div>
                     </div>
-                    <div className='flex mt-3'>
+                    <div className='flex flex-wrap gap-4 mt-3'>
                         <a href="/" target={'_blank'} className='a-sosmed group hover:bg-[#1877F2] '><FaFacebookF className='text-slate-600 text-16 group-hover:text-white'/></a>
                         <a href="/" target={'_blank'} className='a-sosmed group hover:bg-[#E4405F] '><BsInstagram className='text-slate-600 text-16 group-hover:text-white'/></a>
                         <a href="/" target={'_blank'} className='a-sosmed group hover:bg-[#1DA1F2] '><AiOutlineTwitter className='text-slate-600 text-16 group-hover:text-white'/></a>

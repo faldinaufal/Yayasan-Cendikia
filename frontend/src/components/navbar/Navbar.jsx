@@ -2,6 +2,8 @@ import React, {useState} from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import Logo from '../../assets/Icon/Logo Yayasan.svg'
 import {HiOutlineMenuAlt3, HiOutlineMenuAlt2} from 'react-icons/hi'
+import UserLogin from '../userLogin/UserLogin'
+import {AiOutlineMessage} from 'react-icons/ai'
 
 const Navbar = () => {
   const activeLink = "text-[#009FCC] mr-6"
@@ -13,6 +15,10 @@ const Navbar = () => {
           <div className='font-inter text-base font-semibold leading-6 gap-6 lg:flex lg:items-center'>
             <div className='mt-5 mb-7 flex items-center justify-between mx-2 lg:mt-0 lg:mb-0 lg:mx-0 lg:block lg:pr-4'>
               <Link to='/'><img src={Logo} alt="Logo Yayasan Cendikia" className='w-[60px] h-[60px] lg:w-[48px] lg:h-[48px]'/></Link>
+              <div className='lg:hidden ml-auto mr-3 flex items-center gap-2'>
+                <Link to='/consultation/message'><AiOutlineMessage className='text-4xl mt-1 hover:opacity-60 duration-200'/></Link>
+                <UserLogin/>
+              </div>
               <div onClick={()=>setOpen(!open)} className='lg:hidden'>
                 {!open ? <HiOutlineMenuAlt2 className='text-3xl cursor-pointer duration-200'/>:<HiOutlineMenuAlt3 className='text-3xl cursor-pointer duration-200'/>}
               </div>
@@ -41,6 +47,11 @@ const Navbar = () => {
                     <span>Masuk / Daftar</span>
                   </Link>
                 </div>
+                  
+                {/* <div className='absolute right-0 hidden lg:flex gap-2 lg:items-center'>
+                  <Link to='/consultation/message'><AiOutlineMessage className='text-4xl mt-1 hover:opacity-60 duration-200'/></Link>
+                  <UserLogin/>
+                </div> */}
             </div>
         </div>
     </div>
