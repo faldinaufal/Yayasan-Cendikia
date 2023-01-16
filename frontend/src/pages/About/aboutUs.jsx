@@ -42,7 +42,7 @@ const AboutUs = () => {
                 }
             })
             console.log("Berhasil Mengirim Pesan")
-            navigate("/about")
+            window.location.reload(false);
         } catch (error) {
             setMsg(error)
             console.log(msg)
