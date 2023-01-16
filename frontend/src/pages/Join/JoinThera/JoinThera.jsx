@@ -1,12 +1,24 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Footer, Navbar } from '../../../components'
-import {AiFillLike} from 'react-icons/ai'
-import {MdWork} from 'react-icons/md'
-import {FaCalendarAlt, FaChevronRight, FaChevronLeft} from 'react-icons/fa'
-import { profile } from '../../../assets/image'
+import { Footer, Navbar, TherapistCard } from '../../../components'
+import {FaChevronRight, FaChevronLeft} from 'react-icons/fa'
+import axios from 'axios'
 
 const JoinThera = () => {
+  const [data, setData] = useState([])
+
+  useEffect(() => {
+      const Fetch = async () => {
+          try {
+              const res = await axios.get(`${process.env.REACT_APP_API_URL}/users?filters[userRole][$eq]=Terapis&populate=*`)
+              setData(res.data)
+          } catch (error) {
+              console.log(error);
+          }
+          }
+      Fetch()
+  },[])
+
   return (
     <section>
       <nav>
@@ -23,144 +35,9 @@ const JoinThera = () => {
             <p className='font-century font-700 text-3xl text-dark sm:text-4xl'>Terapis</p>
           </div>
           <div className='flex flex-wrap justify-center gap-6'>
-            <div className=''>
-              <div className='flex border-[1px] border-gray1 rounded-md w-[384px] h-[160px] p-[16px]'>
-                <img src={profile} alt={profile} className='w-[80px] h-[80px] rounded-full'/>
-                <div className='font-inter w-[264px] ml-2'>
-                  <p className='text-lg font-600 text-dark'>dr. Lorem Ipsum</p>
-                  <p className='text-gray2'>Keahlian Lorem Ipsum</p>
-                  <div className='text-gray2 text-[14px] font-600'>
-                    <div className='flex items-center'>
-                      <MdWork className='text-[17px] mr-2'/>
-                      <p>6 Tahun</p>
-                    </div>
-                    <div className='flex items-center'>
-                      <AiFillLike className='text-[17px] mr-2'/>
-                      <p>4.9/5</p>
-                    </div>
-                    <div className='flex items-center'>
-                      <FaCalendarAlt className='text-[17px] mr-2'/>
-                      <p>Senin-Rabu 07:00-11:00</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className=''>
-              <div className='flex border-[1px] border-gray1 rounded-md w-[384px] h-[160px] p-[16px]'>
-                <img src={profile} alt={profile} className='w-[80px] h-[80px] rounded-full'/>
-                <div className='font-inter w-[264px] ml-2'>
-                  <p className='text-lg font-600 text-dark'>dr. Lorem Ipsum</p>
-                  <p className='text-gray2'>Keahlian Lorem Ipsum</p>
-                  <div className='text-gray2 text-[14px] font-600'>
-                    <div className='flex items-center'>
-                      <MdWork className='text-[17px] mr-2'/>
-                      <p>6 Tahun</p>
-                    </div>
-                    <div className='flex items-center'>
-                      <AiFillLike className='text-[17px] mr-2'/>
-                      <p>4.9/5</p>
-                    </div>
-                    <div className='flex items-center'>
-                      <FaCalendarAlt className='text-[17px] mr-2'/>
-                      <p>Senin-Rabu 07:00-11:00</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className=''>
-              <div className='flex border-[1px] border-gray1 rounded-md w-[384px] h-[160px] p-[16px]'>
-                <img src={profile} alt={profile} className='w-[80px] h-[80px] rounded-full'/>
-                <div className='font-inter w-[264px] ml-2'>
-                  <p className='text-lg font-600 text-dark'>dr. Lorem Ipsum</p>
-                  <p className='text-gray2'>Keahlian Lorem Ipsum</p>
-                  <div className='text-gray2 text-[14px] font-600'>
-                    <div className='flex items-center'>
-                      <MdWork className='text-[17px] mr-2'/>
-                      <p>6 Tahun</p>
-                    </div>
-                    <div className='flex items-center'>
-                      <AiFillLike className='text-[17px] mr-2'/>
-                      <p>4.9/5</p>
-                    </div>
-                    <div className='flex items-center'>
-                      <FaCalendarAlt className='text-[17px] mr-2'/>
-                      <p>Senin-Rabu 07:00-11:00</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className=''>
-              <div className='flex border-[1px] border-gray1 rounded-md w-[384px] h-[160px] p-[16px]'>
-                <img src={profile} alt={profile} className='w-[80px] h-[80px] rounded-full'/>
-                <div className='font-inter w-[264px] ml-2'>
-                  <p className='text-lg font-600 text-dark'>dr. Lorem Ipsum</p>
-                  <p className='text-gray2'>Keahlian Lorem Ipsum</p>
-                  <div className='text-gray2 text-[14px] font-600'>
-                    <div className='flex items-center'>
-                      <MdWork className='text-[17px] mr-2'/>
-                      <p>6 Tahun</p>
-                    </div>
-                    <div className='flex items-center'>
-                      <AiFillLike className='text-[17px] mr-2'/>
-                      <p>4.9/5</p>
-                    </div>
-                    <div className='flex items-center'>
-                      <FaCalendarAlt className='text-[17px] mr-2'/>
-                      <p>Senin-Rabu 07:00-11:00</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className=''>
-              <div className='flex border-[1px] border-gray1 rounded-md w-[384px] h-[160px] p-[16px]'>
-                <img src={profile} alt={profile} className='w-[80px] h-[80px] rounded-full'/>
-                <div className='font-inter w-[264px] ml-2'>
-                  <p className='text-lg font-600 text-dark'>dr. Lorem Ipsum</p>
-                  <p className='text-gray2'>Keahlian Lorem Ipsum</p>
-                  <div className='text-gray2 text-[14px] font-600'>
-                    <div className='flex items-center'>
-                      <MdWork className='text-[17px] mr-2'/>
-                      <p>6 Tahun</p>
-                    </div>
-                    <div className='flex items-center'>
-                      <AiFillLike className='text-[17px] mr-2'/>
-                      <p>4.9/5</p>
-                    </div>
-                    <div className='flex items-center'>
-                      <FaCalendarAlt className='text-[17px] mr-2'/>
-                      <p>Senin-Rabu 07:00-11:00</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className=''>
-              <div className='flex border-[1px] border-gray1 rounded-md w-[384px] h-[160px] p-[16px]'>
-                <img src={profile} alt={profile} className='w-[80px] h-[80px] rounded-full'/>
-                <div className='font-inter w-[264px] ml-2'>
-                  <p className='text-lg font-600 text-dark'>dr. Lorem Ipsum</p>
-                  <p className='text-gray2'>Keahlian Lorem Ipsum</p>
-                  <div className='text-gray2 text-[14px] font-600'>
-                    <div className='flex items-center'>
-                      <MdWork className='text-[17px] mr-2'/>
-                      <p>6 Tahun</p>
-                    </div>
-                    <div className='flex items-center'>
-                      <AiFillLike className='text-[17px] mr-2'/>
-                      <p>4.9/5</p>
-                    </div>
-                    <div className='flex items-center'>
-                      <FaCalendarAlt className='text-[17px] mr-2'/>
-                      <p>Senin-Rabu 07:00-11:00</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            {data.slice(0,9).map((index) => (
+                <TherapistCard index={index} key={index.id}/>
+            ))}
           </div>
         </div>
       </div>

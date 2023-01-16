@@ -19,8 +19,6 @@ import GmailHover from '../../assets/Icon/Sosmed Icon/Social Media=Gmail, State=
 import YT from '../../assets/Icon/Sosmed Icon/Social Media=Youtube, State=Default.svg'
 import YTHover from '../../assets/Icon/Sosmed Icon/Social Media=Youtube, State=Hover.svg'
 import axios from 'axios'
-import { useNavigate } from 'react-router-dom'
-
 import '../User/Contact/style.css'
 
 const AboutUs = () => {
@@ -29,12 +27,11 @@ const AboutUs = () => {
     const [phoneNumber, setPhoneNumber] = useState()
     const [description, setDescription] = useState()
     const [msg, setMsg] = useState()
-    const navigate = useNavigate()
 
     const Post = async () => {
         try {
             await axios.post(`${process.env.REACT_APP_API_URL}/contacts`, {
-                "data": {
+                data: {
                     Name: name,
                     Email: email,
                     phoneNumber: phoneNumber,
