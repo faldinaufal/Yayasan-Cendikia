@@ -6,19 +6,18 @@ import {FaChevronRight, FaChevronLeft} from 'react-icons/fa'
 
 const Post = ({categories}) => {
     const [post, setPost] = useState([])
-  
-        useEffect(() => {
-            fetch()
-        },[])
-    
+
+    useEffect(() => {
         const fetch = async () => {
-        try {
-            const res = await axios.get(`${process.env.REACT_APP_API_URL}/posts?sort[1]=id%3Adesc&filters[Categories][$eq]=${categories}&populate=*`)
-            setPost(res.data.data)
-        } catch (error) {
-            console.log(error);
+            try {
+                const res = await axios.get(`${process.env.REACT_APP_API_URL}/posts?sort[1]=id%3Adesc&filters[Categories][$eq]=${categories}&populate=*`)
+                setPost(res.data.data)
+            } catch (error) {
+                console.log(error);
+            }
         }
-    }
+        fetch()
+    },[])
 
     if(categories === "Article") {
         return (

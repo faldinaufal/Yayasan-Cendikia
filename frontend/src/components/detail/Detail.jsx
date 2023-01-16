@@ -11,17 +11,18 @@ const Detail = () => {
   const [post, setPost] = useState([])
 
   useEffect(() => {
-      fetch()
+    const fetch = async () => {
+      try {
+          const res = await axios.get(`${process.env.REACT_APP_API_URL}/posts?filters[Title][$eq]=${Title}&populate=*`)
+          setPost(res.data.data)
+      } catch (error) {
+          console.log(error);
+      }
+    }
+    fetch()
   },[])
 
-  const fetch = async () => {
-    try {
-        const res = await axios.get(`${process.env.REACT_APP_API_URL}/posts?filters[Title][$eq]=${Title}&populate=*`)
-        setPost(res.data.data)
-    } catch (error) {
-        console.log(error);
-    }
-  }
+  
 
   if(Categories === "Article") {
     return (

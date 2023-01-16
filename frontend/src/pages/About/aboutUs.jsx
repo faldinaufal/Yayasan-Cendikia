@@ -18,7 +18,7 @@ import Gmail from '../../assets/Icon/Sosmed Icon/Social Media=Gmail, State=Defau
 // import GmailHover from '../../assets/Icon/Sosmed Icon/Social Media=Gmail, State=Hover.svg'
 import YT from '../../assets/Icon/Sosmed Icon/Social Media=Youtube, State=Default.svg'
 import axios from 'axios'
-import { Navigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 // import YTHover from '../../assets/Icon/Sosmed Icon/Social Media=Youtube, State=Hover.svg'
 // import Background from '../../assets/image/FrameBackgroundSectionAboutUs.svg'
 import './style.css'
@@ -29,6 +29,7 @@ const AboutUs = () => {
     const [phoneNumber, setPhoneNumber] = useState()
     const [description, setDescription] = useState()
     const [msg, setMsg] = useState()
+    const navigate = useNavigate()
 
     const Post = async () => {
         try {
@@ -41,7 +42,7 @@ const AboutUs = () => {
                 }
             })
             console.log("Berhasil Mengirim Pesan")
-            window.location.reload(false)
+            navigate("/about")
         } catch (error) {
             setMsg(error)
             console.log(msg)

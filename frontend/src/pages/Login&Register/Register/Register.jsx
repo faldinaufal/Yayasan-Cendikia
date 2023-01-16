@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import {BsChevronLeft} from 'react-icons/bs'
 import {logoYayasan} from '../../../assets/image'
 import { useState } from 'react'

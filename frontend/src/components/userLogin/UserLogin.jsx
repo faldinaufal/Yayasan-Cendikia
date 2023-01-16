@@ -4,6 +4,7 @@ import { useState } from 'react'
 import {CgProfile, CgLogOut} from 'react-icons/cg'
 import {RiLockPasswordFill} from 'react-icons/ri'
 import ImageProfile from '../imageProfile/ImageProfile'
+import Cookies from 'universal-cookie'
 
 const UserLogin = () => {
   const [openProfile, setOpenProfile] = useState(false)
@@ -18,6 +19,13 @@ const UserLogin = () => {
       path: '/change-password'
     }
   ]
+  const cookies = new Cookies()
+
+  const RemoveCookie = () => {
+    cookies.remove('token')
+    window.location.reload(false);
+  }
+
   return (
     <section className='z-50'>
       <nav className='flex items-center justify-end gap-3'>
@@ -47,7 +55,7 @@ const UserLogin = () => {
               </Link>
             ))}
           </div>
-          <button className='flex items-center gap-2 rounded-lg my-2 w-full py-2 text-century font-600 border-white border-[1px] duration-200 hover:bg-[#009FCC] hover:text-white'>
+          <button onClick={RemoveCookie} className='flex items-center gap-2 rounded-lg my-2 w-full py-2 text-century font-600 border-white border-[1px] duration-200 hover:bg-[#009FCC] hover:text-white'>
             <CgLogOut className='ml-3 text-2xl'/>
             Keluar
           </button>

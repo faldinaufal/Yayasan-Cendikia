@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import {BsChevronLeft} from 'react-icons/bs'
 import {logoYayasan} from '../../../assets/image'
 
@@ -10,10 +9,10 @@ const ForgotPass = () => {
         <div className='hidden md:block bg-bgLogin h-screen sticky top-0 rounded-br-[40px] rounded-tr-[40px] bg-no-repeat w-[708px] bg-center bg-cover'></div>
             <div className='mx-0 md:mx-7 lg:mx-auto'>
                 <div className='w-[348px] flex flex-col items-center sm:block'>
-                    <Link to='/' className='flex items-center text-[#009FCC] font-inter font-600 hover:opacity-70 duration-200 mt-10'>
+                    <a href='/' className='flex items-center text-[#009FCC] font-inter font-600 hover:opacity-70 duration-200 mt-10'>
                         <BsChevronLeft className='mr-[8.89px]'/>
                         Kembali ke Beranda
-                    </Link>
+                    </a>
                     <p className='font-century font-700 text-4xl mt-10 mb-2'>Lupa Password</p>
                     <p className='font-inter leading-6 text-gray3 mb-10 text-center sm:text-start'>Silahkan masukkan email saat mendaftar, kami akan mengirimkan tautan untuk memulikan password anda</p>
                     <form>
