@@ -5,23 +5,23 @@ import image2 from '../../assets/image/Gambar-2.jpg'
 import image3 from '../../assets/image/Gambar-3.jpg'
 import image4 from '../../assets/image/Gambar-4.jpg'
 import Fb from '../../assets/Icon/FB.svg'
-// import FbHover from '../../assets/Icon/FBHover.svg'
+import FbHover from '../../assets/Icon/FBHover.svg'
 import IG from '../../assets/Icon/Sosmed Icon/Social Media=Instagram, State=Default.svg'
-// import IGHover from '../../assets/Icon/Sosmed Icon/Social Media=Instagram, State=Hover.svg'
+import IGHover from '../../assets/Icon/Sosmed Icon/Social Media=Instagram, State=Hover.svg'
 import Twitter from '../../assets/Icon/Sosmed Icon/Social Media=Twitter, State=Default.svg'
-// import TwitterHover from '../../assets/Icon/Sosmed Icon/Social Media=Twitter, State=Hover.svg'
+import TwitterHover from '../../assets/Icon/Sosmed Icon/Social Media=Twitter, State=Hover.svg'
 import Tiktok from '../../assets/Icon/Sosmed Icon/Social Media=Tik Tok, State=Default.svg'
-// import TiktokHover from '../../assets/Icon/Sosmed Icon/Social Media=Tik Tok, State=Hover.svg'
+import TiktokHover from '../../assets/Icon/Sosmed Icon/Social Media=Tik Tok, State=Hover.svg'
 import WA from '../../assets/Icon/Sosmed Icon/Social Media=Whatsapp, State=Default.svg'
-// import WAHover from '../../assets/Icon/Sosmed Icon/Social Media=Whatsapp, State=Hover.svg'
+import WAHover from '../../assets/Icon/Sosmed Icon/Social Media=Whatsapp, State=Hover.svg'
 import Gmail from '../../assets/Icon/Sosmed Icon/Social Media=Gmail, State=Default.svg'
-// import GmailHover from '../../assets/Icon/Sosmed Icon/Social Media=Gmail, State=Hover.svg'
+import GmailHover from '../../assets/Icon/Sosmed Icon/Social Media=Gmail, State=Hover.svg'
 import YT from '../../assets/Icon/Sosmed Icon/Social Media=Youtube, State=Default.svg'
+import YTHover from '../../assets/Icon/Sosmed Icon/Social Media=Youtube, State=Hover.svg'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
-// import YTHover from '../../assets/Icon/Sosmed Icon/Social Media=Youtube, State=Hover.svg'
-// import Background from '../../assets/image/FrameBackgroundSectionAboutUs.svg'
-import './style.css'
+
+import '../User/Contact/style.css'
 
 const AboutUs = () => {
     const [name, setName] = useState()
@@ -78,15 +78,36 @@ const AboutUs = () => {
                 <div className='container flex flex-col items-center justify-center py-[43px] gap-6 lg:md:flex-row'>
                     <h3 className='text text-center font-century text-[36px] leading-[42px]'>Keep in touch with us</h3>
                     <div className='relative flex flex-wrap justify-center gap-6'>
-                        <a href="/" target={'_blank'}><img src={Fb} alt="Facebook Logo" className='w-12 h-12'/></a>
-                        <a href="/" target={'_blank'}><img src={IG} alt="Instagram Logo" className='w-12 h-12'/></a>
-                        <a href="/" target={'_blank'}><img src={Twitter} alt="Twitter Logo" className='w-12 h-12'/>  </a>
-                        <a href="/" target={'_blank'}><img src={Tiktok} alt="Tiktok Logo" className='w-12 h-12'/> </a>
-                        <a href="/" target={'_blank'}><img src={WA} alt="Whatsapp Logo" className='w-12 h-12'/> </a>
-                        <a href="/" target={'_blank'}><img src={Gmail} alt="Gmail Logo" className='w-12 h-12'/></a>
-                        <a href="/" target={'_blank'}><img src={YT} alt="Youtube Logo" className='w-12 h-12'/> </a>     
+                        <div className='group duration-150 rounded-full'>
+                            <a href="#" target="_blank"><img src={Fb} alt="Facebook Logo" className='w-12 h-12 rounded-full group-hover:hidden'/></a>
+                            <a href="#" target="_blank"><img src={FbHover} alt="Facebook Logo" className='w-12 h-12 rounded-full hidden group-hover:block'/></a>
+                        </div>
+                        <div className='group duration-150 rounded-full'>
+                            <a href="#" target="_blank"><img src={IG} alt="Instagram Logo" className='w-12 h-12 rounded-full group-hover:hidden'/></a>
+                            <a href="#" target="_blank"><img src={IGHover} alt="Instagram Logo" className='w-12 h-12 rounded-full hidden group-hover:block'/></a>
+                        </div>
+                        <div className='group duration-150 rounded-full'>
+                            <a href="#" target="_blank"><img src={Twitter} alt="Twitter Logo" className='w-12 h-12 rounded-full group-hover:hidden'/></a>
+                            <a href="#" target="_blank"><img src={TwitterHover} alt="Twitter Logo" className='w-12 h-12 rounded-full hidden group-hover:block'/></a>
+                        </div>
+                        <div className='group duration-150 rounded-full'>
+                            <a href="#" target="_blank"><img src={Tiktok} alt="Tiktok Logo" className='w-12 h-12 rounded-full group-hover:hidden'/></a>
+                            <a href="#" target="_blank"><img src={TiktokHover} alt="Tiktok Logo" className='w-12 h-12 rounded-full hidden group-hover:block'/></a>
+                        </div>
+                        <div className='group duration-150 rounded-full'>
+                            <a href="#" target="_blank"><img src={WA} alt="Whatsapp Logo" className='w-12 h-12 rounded-full group-hover:hidden'/></a>
+                            <a href="#" target="_blank"><img src={WAHover} alt="Whatsapp Logo" className='w-12 h-12 rounded-full hidden group-hover:block'/></a>
+                        </div>
+                        <div className='group duration-150 rounded-full'>
+                            <a href="#" target="_blank"><img src={Gmail} alt="Gmail Logo" className='w-12 h-12 rounded-full group-hover:hidden'/></a>
+                            <a href="#" target="_blank"><img src={GmailHover} alt="Gmail Logo" className='w-12 h-12 rounded-full hidden group-hover:block'/></a>
+                        </div>
+                        <div className='group duration-150 rounded-full'>
+                            <a href="#" target="_blank"><img src={YT} alt="Youtube Logo" className='w-12 h-12 rounded-full group-hover:hidden'/></a>     
+                            <a href="#" target="_blank"><img src={YTHover} alt="Youtube Logo" className='w-12 h-12 rounded-full hidden group-hover:block'/></a>
+                        </div>
                     </div>
-                </div>
+                </div>    
             </div>
             <div className='bg-Background-AboutUs bg-no-repeat bg-left-bottom'>
                 <div className='container py-9 gap-6 lg:flex lg:py-[80px]'>
@@ -109,7 +130,7 @@ const AboutUs = () => {
                                 </div>
                                 <div className='grid gap-1'>
                                     <p className='font-inter font-semibold text-base text-Text-Title'>Nomor Whatsapp</p>
-                                    <input type="text" placeholder='Nomor Whatsapp' onChange={(e) => setPhoneNumber(e.target.value)} className='px-4 py-3 font-inter border-2 border-[#9CA3AF] rounded-[4px] bg-white h-12 focus:outline-2 focus:outline-blue-500 duration-200'/>
+                                    <input type="number" placeholder='Nomor Whatsapp' onChange={(e) => setPhoneNumber(e.target.value)} className='px-4 py-3 font-inter border-2 border-[#9CA3AF] rounded-[4px] bg-white h-12 focus:outline-2 focus:outline-blue-500 duration-200'/>
                                 </div>
                                 <div className='grid gap-1'>
                                     <p className='font-inter font-semibold text-base text-Text-Title'>Deskripsi</p>
@@ -124,7 +145,7 @@ const AboutUs = () => {
                 </div>
             </div>
             <Footer/>
-        </div>
+        </div>   
     )
 }
 
