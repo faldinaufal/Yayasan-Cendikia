@@ -7,6 +7,9 @@ import logoYayasan from '../image/logo-yayasan.png'
 import lupaPassword from '../image/Lupa password.png'
 import logoCendikia from '../image/logo-cendikia.svg'
 import imageLogin from '../image/image-login.svg'
+import image1 from '../image/image card5.jpg'
+import image from '../image/image card6.jpg'
+import image3 from '../image/image 1.jpg'
 
 export {
     artikel1,
@@ -17,5 +20,8 @@ export {
     imageLogin,
     logoYayasan,
     lupaPassword,
-    logoCendikia
+    logoCendikia,
+    image1,
+    image,
+    image3
 }
