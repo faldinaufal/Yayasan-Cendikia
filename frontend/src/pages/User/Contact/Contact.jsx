@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 import { Navbar, Footer } from '../../../components'
-import './style.css'
 import Cookies from 'universal-cookie'
 import { useNavigate } from 'react-router-dom'
+import './style.css'
 
 const Contact = () => {
   const cookies = new Cookies()
@@ -10,11 +10,11 @@ const Contact = () => {
 
   const jwttoken = cookies.get('token')
 
-  useEffect(() => { 
-    if(!jwttoken){
-      return navigate("/")
-    }
-  },[jwttoken])
+  // useEffect(() => { 
+  //   if(!jwttoken){
+  //     return navigate("/")
+  //   }
+  // },[jwttoken])
 
   return (
     <section>
