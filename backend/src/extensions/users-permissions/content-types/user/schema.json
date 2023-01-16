@@ -65,10 +65,6 @@
     },
     "PhoneNumber": {
       "type": "integer"
-    },
-    "Name": {
-      "type": "string",
-      "required": true
     }
   }
 }
