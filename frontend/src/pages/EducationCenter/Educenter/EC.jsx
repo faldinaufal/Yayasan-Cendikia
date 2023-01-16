@@ -14,7 +14,7 @@ const MPEC = () => {
         <div className='flex items-center justify-between mt-10 mb-6 mx-2 sm:mx-0'>
           <p className='font-century text-3xl font-700 text-dark sm:text-4xl'>Artikel Ilmiah</p>
           <div className='flex justify-end'>
-            <Link to='/educenter/Article' className='flex items-center font-inter text-[#009FCC] font-600 duration-150 hover:opacity-70'>
+            <Link to={`/${process.env.REACT_APP_EDU}/${process.env.REACT_APP_POST_ARTICLE}`} className='flex items-center font-inter text-[#009FCC] font-600 duration-150 hover:opacity-70'>
               More
               <AiOutlineRight className='ml-0.5'/>
             </Link>
@@ -27,7 +27,7 @@ const MPEC = () => {
         <div className='mt-20 mb-6 flex items-center justify-between mx-2 sm:mx-0'>
           <p className='font-century text-3xl font-700 text-dark sm:text-4xl'>Acara & Kegiatan</p>
           <div className='my-1 flex justify-end mr-3'>
-            <Link to='/educenter/Event' className='flex items-center font-inter text-[#009FCC] font-600 duration-150 hover:opacity-70'>
+            <Link to={`/${process.env.REACT_APP_EDU}/${process.env.REACT_APP_POST_EVENT}`} className='flex items-center font-inter text-[#009FCC] font-600 duration-150 hover:opacity-70'>
               More
               <AiOutlineRight className='ml-0.5'/>
             </Link>
@@ -40,7 +40,7 @@ const MPEC = () => {
         <div className='mt-20 mb-6 flex items-center justify-between mx-2 sm:mx-0'>
           <p className='font-century text-3xl font-700 text-dark sm:text-4xl'>Cerita Kisah / Timbal Balik</p>
           <div className='my-1 flex justify-end mr-3'>
-            <Link to='/educenter/Story' className='flex items-center font-inter text-[#009FCC] font-600 duration-150 hover:opacity-70'>
+            <Link to={`/${process.env.REACT_APP_EDU}/${process.env.REACT_APP_POST_STORY}`} className='flex items-center font-inter text-[#009FCC] font-600 duration-150 hover:opacity-70'>
               More
               <AiOutlineRight className='ml-0.5'/>
             </Link>

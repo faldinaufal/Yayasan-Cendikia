@@ -4,7 +4,8 @@
   "info": {
     "singularName": "post",
     "pluralName": "posts",
-    "displayName": "Post"
+    "displayName": "Post",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,20 +13,24 @@
   "pluginOptions": {},
   "attributes": {
     "Title": {
-      "type": "string"
+      "type": "string",
+      "unique": true,
+      "required": true
     },
     "Body": {
-      "type": "richtext"
+      "type": "richtext",
+      "required": true
     },
     "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "Categories": {
       "type": "enumeration",
@@ -33,7 +38,8 @@
         "Article",
         "Event",
         "Story"
-      ]
+      ],
+      "required": true
     }
   }
 }

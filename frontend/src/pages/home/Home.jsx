@@ -115,9 +115,6 @@ const Home = () => {
               <div className='w-[180px] h-[120px] bg-white rounded-lg flex justify-center items-center'>
                 <img src={LogoM5} alt="Logo Mitra" className='w-[130px] h-[80px]'/>
               </div>
-              <div className='w-[180px] h-[120px] bg-white rounded-lg flex justify-center items-center'>
-                <img src={LogoM6} alt="Logo Mitra" className='w-[130px] h-[80px]'/>
-              </div>
             </div>
           </div>
         </div>
@@ -130,7 +127,7 @@ const Home = () => {
               <Categories categories="Article"/>
             </div>
             <div className='flex justify-center items-center mt-10'>
-              <Link to='/educenter/Article' className='w-[183px] h-[48px] px-3 py-4 rounded-[4px]'>
+              <Link to={`/${process.env.REACT_APP_EDU}/${process.env.REACT_APP_POST_ARTICLE}`} className='w-[183px] h-[48px] px-3 py-4 rounded-[4px]'>
                 <button className='font-inter font-semibold text-base text-[#262626] hover:text-[#009FCC]'>Lihat Semua Artikel</button>
               </Link>
             </div>
@@ -141,7 +138,7 @@ const Home = () => {
             <div>
               <p className='font-century font-700 text-[40px] text-linear mb-4'>Let's Join Us</p>
               <p className='font-century font-700 text-[18px] leading-7 text-gray1'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus commodo luctus venenatis.</p>
-              <a href="/about/#contact" className='hover:opacity-90 duration-200 mt-6 rounded-sm w-[114px] bg-[#009FCC] p-3 text-white font-inter font-700 flex items-center justify-center'>
+              <a href={`/${process.env.REACT_APP_ABOUT}/contact`} className='hover:opacity-90 duration-200 mt-6 rounded-sm w-[114px] bg-[#009FCC] p-3 text-white font-inter font-700 flex items-center justify-center'>
                 Join Us
                 <AiOutlineRight className='ml-2'/>
               </a>

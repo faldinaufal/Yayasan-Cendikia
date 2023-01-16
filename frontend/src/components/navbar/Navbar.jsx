@@ -27,9 +27,9 @@ const Navbar = () => {
               <div className='lg:hidden'>
                 {open && (<div className='flex flex-col duration-150 items-center gap-7 w-screen bg-white relative -top-7 py-5 opacity-90 min-h-screen'>
                   <NavLink to='/' className={({isActive})=>isActive?activeLink:normalLink}>Beranda</NavLink>
-                  <NavLink to='/educenter'  className={({isActive})=>isActive?activeLink:normalLink}>Pusat Edukasi</NavLink>
-                  <NavLink to='/join'  className={({isActive})=>isActive?activeLink:normalLink}>Join Yuk</NavLink>
-                  <NavLink to='/about'  className={({isActive})=>isActive?activeLink:normalLink}>Tentang Kami</NavLink>
+                  <NavLink to={`/${process.env.REACT_APP_EDU}`}  className={({isActive})=>isActive?activeLink:normalLink}>Pusat Edukasi</NavLink>
+                  <NavLink to={`/${process.env.REACT_APP_JOIN}`}  className={({isActive})=>isActive?activeLink:normalLink}>Join Yuk</NavLink>
+                  <NavLink to={`/${process.env.REACT_APP_ABOUT}`}  className={({isActive})=>isActive?activeLink:normalLink}>Tentang Kami</NavLink>
                   <Link to='/login' className='w-[146px] mt-5 duration-200 h-[48px] bg-[#009FCC] font-inter text-base font-semibold text-white rounded hover:bg-white hover:text-[#009FCC] hover:border-[#009FCC] hover:border-2 flex items-center justify-center'>
                     Masuk / Daftar
                   </Link>
@@ -38,9 +38,9 @@ const Navbar = () => {
               {/* laptop menu */}
               <div className='hidden lg:block'>
                 <NavLink to='/' className={({isActive})=>isActive?activeLink:normalLink}>Beranda</NavLink>
-                <NavLink to='/educenter' className={({isActive})=>isActive?activeLink:normalLink}>Pusat Edukasi</NavLink>
-                <NavLink to='/join' className={({isActive})=>isActive?activeLink:normalLink}>Join Yuk</NavLink>
-                <NavLink to='/about' className={({isActive})=>isActive?activeLink:normalLink}>Tentang Kami</NavLink>
+                <NavLink to={`/${process.env.REACT_APP_EDU}`} className={({isActive})=>isActive?activeLink:normalLink}>Pusat Edukasi</NavLink>
+                <NavLink to={`/${process.env.REACT_APP_JOIN}`} className={({isActive})=>isActive?activeLink:normalLink}>Join Yuk</NavLink>
+                <NavLink to={`/${process.env.REACT_APP_ABOUT}`} className={({isActive})=>isActive?activeLink:normalLink}>Tentang Kami</NavLink>
               </div>
                 <div className='absolute right-0 hidden lg:flex lg:items-center'>
                   <Link to='/login' className='w-[146px] duration-200 h-[48px] bg-[#009FCC] font-inter text-base font-semibold text-white rounded hover:bg-white hover:text-[#009FCC] hover:border-[#009FCC] hover:border-2 flex items-center justify-center'>

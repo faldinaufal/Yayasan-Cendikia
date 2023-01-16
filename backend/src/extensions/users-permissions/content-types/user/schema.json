@@ -65,13 +65,6 @@
     },
     "PhoneNumber": {
       "type": "integer"
-    },
-    "Categories": {
-      "type": "enumeration",
-      "enum": [
-        "User",
-        "Terapis"
-      ]
     }
   }
 }

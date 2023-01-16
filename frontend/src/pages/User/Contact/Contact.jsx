@@ -1,7 +1,21 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Navbar, Footer } from '../../../components'
+import './style.css'
+import Cookies from 'universal-cookie'
+import { useNavigate } from 'react-router-dom'
 
 const Contact = () => {
+  const cookies = new Cookies()
+  const navigate = useNavigate()
+
+  const jwttoken = cookies.get('token')
+
+  useEffect(() => { 
+    if(!jwttoken){
+      return navigate("/")
+    }
+  },[jwttoken])
+
   return (
     <section>
       <Navbar/>
@@ -24,7 +38,7 @@ const Contact = () => {
                 </div>
                 <div className='grid gap-1'>
                     <p className='font-inter font-semibold text-base text-Text-Title'>Deskripsi</p>
-                    <textarea type="text" placeholder='Deskripsi' className='px-4 py-3 font-inter border-2 border-[#9CA3AF] rounded-[4px] bg-white h-[84px] focus:outline-2 focus:outline-blue-500 duration-200'/>
+                    <textarea type="text" placeholder='Deskripsi' className='px-4 py-3 font-inter border-2 border-[#9CA3AF] rounded-[4px] bg-white h-[180px] focus:outline-2 focus:outline-blue-500 duration-200'/>
                 </div>
                 <div className='grid'>
                     <button className='bg-[#9CA3AF] text-[#6B7280] duration-200 hover:bg-[#009FCC] hover:text-white rounded-[4px] text-center py-3'>
