@@ -30,7 +30,7 @@ const Detail = () => {
           <div className='flex items-center font-inter font-600 mt-10 mb-6'>
             <a href={`/${process.env.REACT_APP_EDU}`} className='text-[#009FCC] mr-[15.33px]'>Pusat Edukasi</a>
             <FaChevronRight className='text-gray1'/>
-            <a href={`/${process.env.REACT_APP_EDU}/Article`} className='text-[#009FCC] ml-[14.67px] mr-[15.33px]'>Artikel Ilmiah</a>
+            <a href={`/${process.env.REACT_APP_EDU}/${process.env.REACT_APP_POST_ARTICLE}`} className='text-[#009FCC] ml-[14.67px] mr-[15.33px]'>Artikel Ilmiah</a>
             <FaChevronRight className='text-gray1'/>
             <p className='text-gray2 ml-[14.67px]'>{Title}</p>
           </div>

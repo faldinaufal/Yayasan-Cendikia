@@ -138,7 +138,7 @@ const Home = () => {
             <div>
               <p className='font-century font-700 text-[40px] text-linear mb-4'>Let's Join Us</p>
               <p className='font-century font-700 text-[18px] leading-7 text-gray1'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus commodo luctus venenatis.</p>
-              <a href={`/${process.env.REACT_APP_ABOUT}/contact`} className='hover:opacity-90 duration-200 mt-6 rounded-sm w-[114px] bg-[#009FCC] p-3 text-white font-inter font-700 flex items-center justify-center'>
+              <a href={`/login`} className='hover:opacity-90 duration-200 mt-6 rounded-sm w-[114px] bg-[#009FCC] p-3 text-white font-inter font-700 flex items-center justify-center'>
                 Join Us
                 <AiOutlineRight className='ml-2'/>
               </a>
