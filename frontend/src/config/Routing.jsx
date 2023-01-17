@@ -26,7 +26,7 @@ const Routing = () => {
             <Route path="/educenter/:Categories" element={<PostList/>}/>
             <Route path="/profile" element={<Profile/>}/>
             <Route path="/change-password" element={<ChangePass/>}/>
-            <Route path="/contact/consultation" element={<Contact/>}/>
+            <Route path="/:Terapis/consultation" element={<Contact/>}/>
             <Route path="/consultation/message" element={<Message/>}/>
         </Routes>
     </Router>

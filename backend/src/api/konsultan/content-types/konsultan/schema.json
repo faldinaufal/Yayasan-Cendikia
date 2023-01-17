@@ -14,13 +14,19 @@
   "attributes": {
     "UID": {
       "type": "uid",
-      "required": true,
-      "maxLength": 8
+      "required": true
     },
-    "users": {
+    "user": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "plugin::users-permissions.user"
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "terapisId"
+    },
+    "Skill": {
+      "type": "string"
+    },
+    "Experiences": {
+      "type": "string"
     }
   }
 }

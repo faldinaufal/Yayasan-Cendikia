@@ -65,6 +65,27 @@
     },
     "PhoneNumber": {
       "type": "integer"
+    },
+    "photoProfile": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "terapisId": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::konsultan.konsultan",
+      "mappedBy": "user"
+    },
+    "userRole": {
+      "type": "enumeration",
+      "enum": [
+        "Terapis",
+        "Member"
+      ]
     }
   }
 }
