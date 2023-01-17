@@ -1,5 +1,5 @@
-import React from 'react'
-import { Banner, Footer, Navbar, Categories } from '../../components'
+import React, { useEffect } from 'react'
+import { Banner, Footer, Navbar, Categories, Post } from '../../components'
 import ArrowLeft from '../../assets/Icon/Button.svg'
 import ArrowRight from '../../assets/Icon/Button-1.svg'
 import LogoM1 from '../../assets/image/LogoM1.svg'
@@ -10,12 +10,28 @@ import LogoM5 from '../../assets/image/LogoM5.svg'
 import LogoM6 from '../../assets/image/LogoM6.svg'
 import {AiOutlineRight} from 'react-icons/ai'
 import image2 from '../../assets/image/image1.png'
+import { image1, image, image3 } from '../../assets/image'
 import './style.css'
 import { Link } from 'react-router-dom'
-import { image1, image, image3 } from '../../assets/image'
 import { useState } from 'react'
+import axios from 'axios'
 
 const Home = () => {
+  const [post, setPost] = useState([])
+
+  useEffect(() => {
+      fetch()
+  },[])
+
+  const fetch = async () => {
+    try {
+        const res = await axios.get(`${process.env.REACT_APP_API_URL}/posts?sort[1]=id%3Adesc&populate=*`)
+        setPost(res.data.data)
+    } catch (error) {
+        console.log(error);
+    }
+  }
+
   const slides = [
     {
       image: image,
@@ -33,6 +49,7 @@ const Home = () => {
       desc: "Lorem ipsum dolor ddsdfvc sit amet, consectetur adipiscing elit. Vivamus commodo luctus venenatis. Integer rhoncus iaculis quam, et iaculis odio sagittis consequat."
     }
   ]
+
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const prevSlide = () => {
@@ -69,8 +86,8 @@ const Home = () => {
                   <p className='text-center md:text-start'>{slides[currentIndex].desc}</p>
                 </div>
                 <div className='flex justify-evenly mt-4 gap-4 md:justify-center'>
-                    <img src={ArrowLeft} alt="" className='cursor-pointer' onClick={prevSlide}/>
-                    <img src={ArrowRight} alt="" className='cursor-pointer' onClick={nextSlide}/>
+                  <img src={ArrowLeft} alt="" className='cursor-pointer' onClick={prevSlide}/>
+                  <img src={ArrowRight} alt="" className='cursor-pointer' onClick={nextSlide}/>
                 </div>
               </div>
             </div>

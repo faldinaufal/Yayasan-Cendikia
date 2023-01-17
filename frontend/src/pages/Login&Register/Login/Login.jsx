@@ -16,7 +16,7 @@ const Login = () => {
           identifier: email,
           password: password
         }).then((res)=> {
-          cookies.set('token', res.data.jwt)
+          cookies.set('token', res.data.jwt, {path: "/"})
           console.log("Berhasil Masuk")
           navigate("/")
         }).catch((error) => {

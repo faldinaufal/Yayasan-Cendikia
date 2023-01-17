@@ -22,7 +22,7 @@ const UserLogin = () => {
   const cookies = new Cookies()
 
   const RemoveCookie = () => {
-    cookies.remove('token')
+    cookies.remove('token',{path: "/"})
     window.location.reload(false);
   }
 
