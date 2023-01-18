@@ -1,0 +1,353 @@
+{
+	"info": {
+		"_postman_id": "33156f78-24d3-48f0-9a5b-72d7175ee49b",
+		"name": "Strapi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21993034"
+	},
+	"item": [
+		{
+			"name": "Get Post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1337/api/artikels/1?populate[images][populate]=*",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"artikels",
+						"1"
+					],
+					"query": [
+						{
+							"key": "populate[images][populate]",
+							"value": "*"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Post by Categories",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1337/api/artikels?sort[1]=id%3Adesc&filters[Categories][$eq]=[Artikel]&populate=*",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"artikels"
+					],
+					"query": [
+						{
+							"key": "sort[1]",
+							"value": "id%3Adesc"
+						},
+						{
+							"key": "filters[Categories][$eq]",
+							"value": "[Artikel]"
+						},
+						{
+							"key": "populate",
+							"value": "*"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Post Auth",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\": {\n        \"Title\" : \"Test Post 2\",\n        \"Content\" : \"Content Test Post 2\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1337/api/posts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"user2\",\n    \"email\": \"user2@email.com\",\n    \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1337/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"identifier\" : \"user1@email.com\",\n    \"password\" : \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1337/api/auth/local",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"auth",
+						"local"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test User Role",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Konsultasi",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNjczODkyMDY3LCJleHAiOjE2NzY0ODQwNjd9.8FJQtrGzj0ovFr664yM9vHDBqq5wcOmNfswPkVj8Jno",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\": {\n        \"Name\" : \"Roy Joy\",\n        \"Email\" : \"joyroy@email.com\",\n        \"phoneNumber\" : 1234567890,\n        \"Description\" : \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae dui in elit elementum interdum. Sed pharetra nunc vitae elit eleifend faucibus. Vestibulum vitae magna sem. Cras vehicula commodo imperdiet. Sed condimentum dignissim sem, lacinia rutrum leo pellentesque nec. Praesent ultricies fermentum magna at commodo. Integer eu nibh risus. Aliquam sollicitudin a mauris id finibus. Vestibulum varius ex metus, a malesuada purus pulvinar cursus. Donec quis facilisis dui. Donec a consequat enim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.\",\n        \"Terapis\": \"T0005\",\n        \"Users\": \"user2\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1337/api/consultations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"consultations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test Get Post",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Post Contact Us",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Name\" : \"Jhon Wick\",\n    \"Email\" : \"jhonwick@email.com\",\n    \"phoneNumber\" : \"1234567890\",\n    \"Description\" : \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae dui in elit elementum interdum. Sed pharetra nunc vitae elit eleifend faucibus. Vestibulum vitae magna sem. Cras vehicula commodo imperdiet. Sed condimentum dignissim sem, lacinia rutrum leo pellentesque nec. Praesent ultricies fermentum magna at commodo. Integer eu nibh risus. Aliquam sollicitudin a mauris id finibus. Vestibulum varius ex metus, a malesuada purus pulvinar cursus. Donec quis facilisis dui. Donec a consequat enim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1337/api/contacts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Forgot Password",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Get Terapis",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1337/api/users?filters[terapis]",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "filters[terapis]",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test User Me",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Change Password",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNjc0MDQ4MTUwLCJleHAiOjE2NzY2NDAxNTB9.X2fKtGA2dwZRqFjXqByoCYosmrkUi34zAyR-VIq9r8E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"currentPassword\": \"123456\",\n    \"newPassword\": \"654321\",\n    \"passwordConfirmation\": \"654321\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1337/api/auth/change-password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1337",
+					"path": [
+						"api",
+						"auth",
+						"change-password"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
