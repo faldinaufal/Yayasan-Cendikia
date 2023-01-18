@@ -3,7 +3,6 @@ import TerapiIcon from '../../assets/Icon/terapi.svg'
 import KonsultasiIcon from '../../assets/Icon/konsultasi.svg'
 import KerjasamaIcon from '../../assets/Icon/kerjasama.svg'
 import FrameBanner from '../../assets/image/Frame.svg'
-import { Link } from 'react-router-dom'
 
 const Banner = () => {
   return (
@@ -12,28 +11,28 @@ const Banner = () => {
             <div className='container'>
                 <div className='grid gap-6'>
                     <div className='lg:w-[588px]'>
-                        <h1 className='text-[#009FCC] font-century text-[40px] leading-[60px] md:text-start md:text-[68px] md:leading-[76px]'>Latih Potensi <span className='text-dark'>dan</span></h1>
-                        <h1 className='text-[#009FCC] font-century text-[40px] leading-[60px] md:text-start md:text-[68px] md:leading-[76px]'>Kembangkan Bakat</h1>
+                        <h1 className='text-[#009FCC] font-century text-[40px] leading-[60px] md:text-start lg:text-[68px] md:leading-[76px]'>Latih Potensi <span className='text-dark'>dan</span></h1>
+                        <h1 className='text-[#009FCC] font-century text-[40px] leading-[60px] md:text-start lg:text-[68px] md:leading-[76px]'>Kembangkan Bakat</h1>
                     </div>
                     <p className='font-inter text-18 leading-7 font-normal text-[#484D56] mx-1 md:text-start lg:w-[588px]'>Melalui program pelatihan yang kami sediakan, kami percaya bahwa anak-anak dengan disabilitas dapat mencapai potensi yang terbaik dan menjadi bagian dari masyarakat yang lebih inklusif.</p>
-                    <div className='flex justify-center flex-wrap gap-6 my-5 lg:my-0'>
+                    <div className='flex justify-center flex-wrap gap-6 my-5 '>
                         <div>
-                            <Link to='/join' className='flex items-center w-[180px] rounded-lg px-2 py-4 bg-white gap-1'>
+                            <a href={`/${process.env.REACT_APP_JOIN}`} className='flex items-center w-[180px] rounded-lg px-2 py-4 bg-white gap-1'>
                                 <img src={TerapiIcon} alt="Terapi Icon" />
                                 <p className='text-base font-semibold font-inter'>Terapi</p>
-                            </Link>
+                            </a>
                         </div>
                         <div>
-                            <Link to='/join' className='flex items-center w-[180px] rounded-lg px-2 py-4 bg-white gap-1'>
+                            <a href={`/${process.env.REACT_APP_JOIN}`} className='flex items-center w-[180px] rounded-lg px-2 py-4 bg-white gap-1'>
                                 <img src={KonsultasiIcon} alt="Konsultasi Icon" />
                                 <p className='text-base font-semibold font-inter'>Konsultasi</p>
-                            </Link>
+                            </a>
                         </div>
                         <div>
-                            <Link to='/' className='flex items-center w-[180px] rounded-lg px-2 py-4 bg-white gap-1'>
+                            <a href={`/`} className='flex items-center w-[180px] rounded-lg px-2 py-4 bg-white gap-1'>
                                 <img src={KerjasamaIcon} alt="Kerjasama Icon" />
                                 <p className='text-base font-semibold font-inter'>Kerjasama</p>
-                            </Link>
+                            </a>
                         </div>
                     </div>
                 </div>
