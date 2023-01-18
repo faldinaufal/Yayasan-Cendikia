@@ -1,11 +1,9 @@
-import React, {useState} from 'react'
-import noProfile2 from '../../assets/image/noProfile2.jpg'
+import React from 'react'
 
-const ImageProfile = () => {
-  const [image, setImage] = useState(noProfile2)
+const ImageProfile = ({image}) => {
   return (
     <div>
-        <img src={image} alt='Profil' className='rounded-full'/>
+        <img src={image} alt='Profil' className='rounded-full object-cover'/>
     </div>
   )
 }

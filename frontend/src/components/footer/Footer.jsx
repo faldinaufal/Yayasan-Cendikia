@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import {HiOutlineMail} from 'react-icons/hi'
 import {HiOutlineMapPin} from 'react-icons/hi2'
 import {FaFacebookF, FaTiktok} from 'react-icons/fa'
@@ -46,16 +45,16 @@ const Footer = () => {
                     <p className='font-century text-2xl font-700 mb-4'>Tautan Cepat</p>
                     <div className='ml-1 font-inter text-16 font-600'>
                         <div className='mb-1 duration-150 hover:translate-x-2 w-[65px]'>
-                            <Link to='/' className='duration-150 hover:opacity-70'>Beranda</Link>
+                            <a href='/' className='duration-150 hover:opacity-70'>Beranda</a>
                         </div>
                         <div className='mb-1 duration-150 hover:translate-x-2 w-[58px]'>
-                            <Link to='/' className='duration-150 hover:opacity-70'>Privacy</Link>
+                            <a href='/' className='duration-150 hover:opacity-70'>Privacy</a>
                         </div>
                         <div className='mb-1 duration-150 hover:translate-x-2 w-[49px]'>
-                            <Link to='/' className='duration-150 hover:opacity-70'>Terms</Link>
+                            <a href='/' className='duration-150 hover:opacity-70'>Terms</a>
                         </div>
                         <div className='duration-150 hover:translate-x-2 w-[43px]'>
-                            <Link to='/login' className='duration-150 hover:opacity-70'>Login</Link>
+                            <a href={`/${process.env.REACT_APP_LOGIN}`} className='duration-150 hover:opacity-70'>Login</a>
                         </div>
                     </div>
                 </div>

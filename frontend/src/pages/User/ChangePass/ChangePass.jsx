@@ -1,11 +1,16 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Navbar, Footer } from '../../../components'
 import Cookies from 'universal-cookie'
+import axios from 'axios'
 
 const ChangePass = () => {
     const cookies = new Cookies()
     const navigate = useNavigate()
+    const [oldPassword, setOldPassword] = useState()
+    const [newPassword, setNewPassword] = useState()
+    const [confPassword, setConfPassword] = useState()
+    const [msg, setMsg] = useState(null)
 
     const jwttoken = cookies.get('token')
 
@@ -15,29 +20,60 @@ const ChangePass = () => {
         }
     },[jwttoken])
 
+    const ChangePass = async () => {
+        try {
+            await axios({
+            method: "POST",
+            url: `${process.env.REACT_APP_API_URL}/api/auth/change-password`,
+            data: {
+                currentPassword: oldPassword,
+                password: newPassword,
+                passwordConfirmation: confPassword
+            },
+            headers: {
+                Authorization: `Bearer ${jwttoken}`
+            },
+            })
+            setMsg("Berhasil Merubah Password")
+        } catch (error) {
+            console.log(error)
+            setMsg("Password lama salah atau Password baru tidak sama!")
+        }
+    }
+
     return (
         <section>
             <Navbar/>
-            <div className='container my-12 md:my-36'>
+            <div className='container w-[700px] my-12 md:my-36'>
                 <div className=''>
-                    <h1 className='font-century text-[40px] sm:text-[48px] mx-5 text-[#009FCC]'>Ganti Password</h1>
-                    <form className=' mx-5'>
+                    <h1 className='font-century text-[40px] mb-2 sm:text-[48px] mx-5 text-[#009FCC]'>Ganti Password</h1>
+                    {msg === "Berhasil Merubah Password" &&
+                    <div className='bg-[#79EC66] py-2 mx-5 rounded-sm text-center text-xl text-[#252A41] font-semibold font-inter'>
+                        <p>{msg}</p>
+                    </div>
+                    }
+                    {msg === "Password lama salah atau Password baru tidak sama!" &&
+                    <div className='bg-[#FD8A8A] py-2 mx-5 rounded-sm text-center text-xl text-[#252A41] font-semibold font-inter'>
+                        <p>{msg}</p>
+                    </div>
+                    }
+                    <div className='mx-5'>
                         <div className=''>
-                            <div className='mt-7'>
+                            <div className='mt-3'>
                                 <label htmlFor="oldPassword" className='font-century text-lg'>Password Lama</label>
-                                <input type="password" id='oldPassword' className='border-[1px] mt-1 border-dark rounded-md py-2 px-3 w-full focus:outline-[1px] focus:outline-[#009FCC]'/>
+                                <input type="password" onChange={(e) => setOldPassword(e.target.value)} id='oldPassword' className='border-[1px] mt-1 border-dark rounded-md py-2 px-3 w-full focus:outline-[1px] focus:outline-[#009FCC]'/>
                             </div>
                             <div className='my-5'>
                                 <label htmlFor="newPassword" className='font-century text-lg'>Password Baru</label>
-                                <input type="password" id='newPassword' className='border-[1px] mt-1 border-dark rounded-md py-2 px-3 w-full focus:outline-[1px] focus:outline-[#009FCC]'/>
+                                <input type="password" id='newPassword' onChange={(e) => setNewPassword(e.target.value)} className='border-[1px] mt-1 border-dark rounded-md py-2 px-3 w-full focus:outline-[1px] focus:outline-[#009FCC]'/>
                             </div>
                             <div className=''>
                                 <label htmlFor="pass" className='font-century text-lg'>Ulangi Password Baru</label>
-                                <input type="password" id='pass' className='border-[1px] mt-1 border-dark rounded-md py-2 px-3 w-full focus:outline-[1px] focus:outline-[#009FCC]'/>
+                                <input type="password" id='pass' onChange={(e) => setConfPassword(e.target.value)} className='border-[1px] mt-1 border-dark rounded-md py-2 px-3 w-full focus:outline-[1px] focus:outline-[#009FCC]'/>
                             </div>
-                            <button className='font-inter bg-[#009FCC] w-[90px] py-2 rounded-md text-white font-600 mt-5 hover:bg-white hover:border-2 duration-200 hover:border-[#009FCC] hover:text-black'>Update</button>
+                            <button onClick={ChangePass} className='font-inter bg-[#009FCC] px-3 py-2 rounded-md text-white font-600 mt-5 hover:bg-white border-2 border-[#009FCC] duration-200 hover:border-[#009FCC] hover:text-[#009FCC]'>Ubah Password</button>
                         </div>  
-                    </form>
+                    </div>
                 </div>
             </div>
             <Footer/>

@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
 import { ConsultationCard, Footer, Navbar, TherapistCard } from '../../../components'
-import {AiOutlineRight, AiFillLike} from 'react-icons/ai'
-import {MdWork} from 'react-icons/md'
-import {FaCalendarAlt} from 'react-icons/fa'
-import { profile, kerjasama } from '../../../assets/image'
+import {AiOutlineRight} from 'react-icons/ai'
+import { kerjasama } from '../../../assets/image'
 import axios from 'axios'
 
 const LetsJoin = () => {
@@ -14,7 +11,7 @@ const LetsJoin = () => {
   useEffect(() => {
       const Fetch = async () => {
           try {
-              const res = await axios.get(`${process.env.REACT_APP_API_URL}/users?filters[userRole][$eq]=Terapis&populate=*`)
+              const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/users?filters[userRole][$eq]=Terapis&populate=*`)
               setData(res.data)
           } catch (error) {
               console.log(error);

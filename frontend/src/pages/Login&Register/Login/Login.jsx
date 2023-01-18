@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import {BsChevronLeft} from 'react-icons/bs'
 import {logoYayasan} from '../../../assets/image'
@@ -8,19 +8,30 @@ import Cookies from 'universal-cookie'
 const Login = () => {
     const [email, setEmail] = useState()
     const [password, setPassword] = useState()
+    const [msg, setMsg] = useState()
     const cookies = new Cookies()
     const navigate = useNavigate()
 
+    const jwttoken = cookies.get('token')
+
+    useEffect(()=> {
+        if(jwttoken) {
+            navigate("/")
+        }
+    })
+
     const Login = async () => {
-        await axios.post(`${process.env.REACT_APP_API_URL}/auth/local`, {
+        await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/local`, {
           identifier: email,
           password: password
         }).then((res)=> {
-          cookies.set('token', res.data.jwt)
+          cookies.set('token', res.data.jwt, {path: "/"})
           console.log("Berhasil Masuk")
           navigate("/")
         }).catch((error) => {
-          console.log(error)
+          console.log(error)  
+          console.log(error.response.data.error.message)
+          setMsg("Email atau Password Salah")
         })
     }
 
@@ -35,8 +46,13 @@ const Login = () => {
                             Kembali ke Beranda
                         </a>
                         <p className='font-century font-700 text-4xl mt-10 mb-2'>Masuk</p>
-                        <p className='font-inter leading-6 text-gray3 mb-10 text-center sm:text-start'>Masuk dengan akun yang pernah anda daftarkan</p>
-                        <div>
+                        <p className='font-inter leading-6 text-gray3 mb-2 text-center sm:text-start'>Masuk dengan akun yang pernah anda daftarkan</p>
+                        {msg != null &&
+                        <div className='bg-[#FD8A8A] py-1 rounded-sm text-center text-[#252A41] font-semibold font-inter'>
+                            <p>{msg}</p>
+                        </div>
+                        }
+                        <div className='mt-2'>
                             <div className='font-inter font-600 flex flex-col mb-4'>
                                 <label htmlFor="email" className='mb-1'>Email</label>
                                 <input type="email" placeholder='Email' id='email' onChange={(e) => setEmail(e.target.value)} className='font-400 border-2 border-gray1 py-3 px-4 rounded-md invalid:outline-pink-500 text-gray2 valid:border-2 invalid:text-pink-500 outline-2 outline-blue-500 invalid:border-pink-600'/>
