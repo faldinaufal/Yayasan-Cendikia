@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Navbar, Footer } from '../../../components'
-import ImageProfile from '../../../components/imageProfile/ImageProfile'
 import Cookies from 'universal-cookie'
 import axios from 'axios'
 
@@ -17,6 +16,7 @@ const Profile = () => {
         return navigate("/")
         }
         getMe()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     },[jwttoken])
 
     const getMe = async () => {

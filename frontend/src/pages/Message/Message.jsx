@@ -14,6 +14,7 @@ const Message = () => {
         if(!jwttoken){
         return navigate("/")
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     },[jwttoken])
     
     return (
@@ -28,7 +29,7 @@ const Message = () => {
                             <div className='font-600 mt-2'>
                                 <p>Wyero JR</p>
                                 <p className='my-1'>Wyero@gmail.co.id</p>
-                                <a href="https://wa.me/0812341102" target={'_blank'} className='duration-200 hover:opacity-60'>08122233344</a>
+                                <a href="/" className='duration-200 hover:opacity-60'>08122233344</a>
                             </div>
                             <div className='text-start mt-1'>
                                 <p className='font-600'>Deskripsi : </p>
@@ -42,7 +43,7 @@ const Message = () => {
                             <div className='font-600 mt-2'>
                                 <p>Wyero JR</p>
                                 <p className='my-1'>Wyero@gmail.co.id</p>
-                                <a href="https://wa.me/0812341102" target={'_blank'} className='duration-200 hover:opacity-60'>08122233344</a>
+                                <a href="/" className='duration-200 hover:opacity-60'>08122233344</a>
                             </div>
                             <div className='text-start mt-1'>
                                 <p className='font-600'>Deskripsi : </p>
@@ -56,7 +57,7 @@ const Message = () => {
                             <div className='font-600 mt-2'>
                                 <p>Wyero JR</p>
                                 <p className='my-1'>Wyero@gmail.co.id</p>
-                                <a href="https://wa.me/0812341102" target={'_blank'} className='duration-200 hover:opacity-60'>08122233344</a>
+                                <a href="/" className='duration-200 hover:opacity-60'>08122233344</a>
                             </div>
                             <div className='text-start mt-1'>
                                 <p className='font-600'>Deskripsi : </p>
@@ -70,7 +71,7 @@ const Message = () => {
                             <div className='font-600 mt-2'>
                                 <p>Wyero JR</p>
                                 <p className='my-1'>Wyero@gmail.co.id</p>
-                                <a href="https://wa.me/0812341102" target={'_blank'} className='duration-200 hover:opacity-60'>08122233344</a>
+                                <a href="/" className='duration-200 hover:opacity-60'>08122233344</a>
                             </div>
                             <div className='text-start mt-1'>
                                 <p className='font-600'>Deskripsi : </p>
@@ -84,7 +85,7 @@ const Message = () => {
                             <div className='font-600 mt-2'>
                                 <p>Wyero JR</p>
                                 <p className='my-1'>Wyero@gmail.co.id</p>
-                                <a href="https://wa.me/0812341102" target={'_blank'} className='duration-200 hover:opacity-60'>08122233344</a>
+                                <a href="/" className='duration-200 hover:opacity-60'>08122233344</a>
                             </div>
                             <div className='text-start mt-1'>
                                 <p className='font-600'>Deskripsi : </p>
@@ -98,7 +99,7 @@ const Message = () => {
                             <div className='font-600 mt-2'>
                                 <p>Wyero JR</p>
                                 <p className='my-1'>Wyero@gmail.co.id</p>
-                                <a href="https://wa.me/0812341102" target={'_blank'} className='duration-200 hover:opacity-60'>08122233344</a>
+                                <a href="/" className='duration-200 hover:opacity-60'>08122233344</a>
                             </div>
                             <div className='text-start mt-1'>
                                 <p className='font-600'>Deskripsi : </p>

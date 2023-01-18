@@ -32,13 +32,13 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className='flex flex-wrap gap-4 mt-3'>
-                        <a href="#" target="_blank" className='a-sosmed group hover:bg-[#1877F2] '><FaFacebookF className='text-slate-600 text-16 group-hover:text-white'/></a>
-                        <a href="#" target="_blank" className='a-sosmed group hover:bg-[#E4405F] '><BsInstagram className='text-slate-600 text-16 group-hover:text-white'/></a>
-                        <a href="#" target="_blank" className='a-sosmed group hover:bg-[#1DA1F2] '><AiOutlineTwitter className='text-slate-600 text-16 group-hover:text-white'/></a>
-                        <a href="#" target="_blank" className='a-sosmed group hover:bg-[#EE1D51] '><FaTiktok className='text-slate-600 text-16 group-hover:text-white'/></a>
-                        <a href="#" target="_blank" className='a-sosmed group hover:bg-[#CD201F] '><BsYoutube className='text-slate-600 text-16 group-hover:text-white'/></a>
-                        <a href="#" target="_blank" className='a-sosmed group hover:bg-[#25D366] '><BsWhatsapp className='text-slate-600 text-16 group-hover:text-white'/></a>
-                        <a href="#" target="_blank" className='a-sosmed group hover:bg-[#9146ff]'><SiGmail className='text-slate-600 text-16 group-hover:text-white'/></a>
+                        <a href="/" target="_blank" className='a-sosmed group hover:bg-[#1877F2] '><FaFacebookF className='text-slate-600 text-16 group-hover:text-white'/></a>
+                        <a href="/" target="_blank" className='a-sosmed group hover:bg-[#E4405F] '><BsInstagram className='text-slate-600 text-16 group-hover:text-white'/></a>
+                        <a href="/" target="_blank" className='a-sosmed group hover:bg-[#1DA1F2] '><AiOutlineTwitter className='text-slate-600 text-16 group-hover:text-white'/></a>
+                        <a href="/" target="_blank" className='a-sosmed group hover:bg-[#EE1D51] '><FaTiktok className='text-slate-600 text-16 group-hover:text-white'/></a>
+                        <a href="/" target="_blank" className='a-sosmed group hover:bg-[#CD201F] '><BsYoutube className='text-slate-600 text-16 group-hover:text-white'/></a>
+                        <a href="/" target="_blank" className='a-sosmed group hover:bg-[#25D366] '><BsWhatsapp className='text-slate-600 text-16 group-hover:text-white'/></a>
+                        <a href="/" target="_blank" className='a-sosmed group hover:bg-[#9146ff]'><SiGmail className='text-slate-600 text-16 group-hover:text-white'/></a>
                     </div>
                 </div>
                 <div className='mt-10 mr-1 mb-1 w-[282px]'>

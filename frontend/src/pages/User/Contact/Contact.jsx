@@ -19,6 +19,7 @@ const Contact = () => {
     if(!jwttoken){
       return (navigate("/"))
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   },[jwttoken])
 
   const Post = async () => {
