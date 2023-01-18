@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import {CgProfile, CgLogOut} from 'react-icons/cg'
 import {RiLockPasswordFill} from 'react-icons/ri'
@@ -15,6 +14,7 @@ const UserLogin = () => {
 
   useEffect(() => {
     getMe()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   },[data])
 
   const getMe = async () => {

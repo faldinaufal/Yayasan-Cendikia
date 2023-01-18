@@ -1,0 +1,15 @@
+list api :
+- upload post :
+  - http://localhost:1337/api/posts {
+    di list menggunakan kategori bis di liat contoh punya saya yang di component artikel 
+    /media/farhan/HDD 1TB/Web Project/Yayasan Cendekia/Web/frontend/src/components/artikel/Artikel.jsx
+  }
+- Register :
+ - http://localhost:1337/api/users
+- login :
+ - http://localhost:1337/api/auth/local {
+    contoh cara login nya menggunakan {
+      "identifier" : "user2@email.com", #identifier nya email yang di daftarkan
+      "password" : "123456"
+    }
+ }

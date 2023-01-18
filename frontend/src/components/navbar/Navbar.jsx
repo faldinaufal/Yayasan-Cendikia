@@ -19,9 +19,9 @@ const Navbar = () => {
           <div className='md:container md:relative  md:flex md:h-[48px]'>
             <div className='font-inter text-base font-semibold leading-6 gap-6 md:flex md:items-center'>
               <div className='mt-5 mb-7 flex items-center justify-between mx-2 md:mt-0 md:mb-0 md:mx-0 md:block md:pr-4'>
-                <a to='/'><img src={Logo} alt="Logo Yayasan Cendikia" className='w-[60px] h-[60px] md:w-[48px] md:h-[48px]'/></a>
+                <a href='/'><img src={Logo} alt="Logo Yayasan Cendikia" className='w-[60px] h-[60px] md:w-[48px] md:h-[48px]'/></a>
                 <div className='md:hidden ml-auto mr-3 flex items-center gap-2'>
-                  <a to='/consultation/message'><AiOutlineMessage className='text-4xl mt-1 hover:opacity-60 duration-200'/></a>
+                  <a href='/consultation/message'><AiOutlineMessage className='text-4xl mt-1 hover:opacity-60 duration-200'/></a>
                   <UserLogin/>
                 </div>
                 <div onClick={()=>setOpen(!open)} className='md:hidden'>
@@ -63,9 +63,9 @@ const Navbar = () => {
           <div className='md:container relative items-center md:flex md:h-[48px]'>
             <div className='font-inter text-base align-middle font-semibold leading-6 gap-6 md:flex md:items-center'>
               <div className='mt-5 mb-7 flex items-center justify-between mx-2 md:mt-0 md:mb-0 md:mx-0 md:block md:pr-4'>
-                <a to='/'><img src={Logo} alt="Logo Yayasan Cendikia" className='w-[60px] h-[60px] md:w-[48px] md:h-[48px]'/></a>
+                <a href='/'><img src={Logo} alt="Logo Yayasan Cendikia" className='w-[60px] h-[60px] md:w-[48px] md:h-[48px]'/></a>
                 <div className='md:hidden ml-auto mr-3 flex items-center gap-2'>
-                  <a to='/consultation/message'><AiOutlineMessage className='text-4xl mt-1 hover:opacity-60 duration-200'/></a>
+                  <a href='/consultation/message'><AiOutlineMessage className='text-4xl mt-1 hover:opacity-60 duration-200'/></a>
                   <UserLogin/>
                 </div>
                 <div onClick={()=>setOpen(!open)} className='md:hidden'>

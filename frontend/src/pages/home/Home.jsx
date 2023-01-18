@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { Banner, Footer, Navbar, Categories, Post } from '../../components'
+import { Banner, Footer, Navbar, Categories } from '../../components'
 import ArrowLeft from '../../assets/Icon/Button.svg'
 import ArrowRight from '../../assets/Icon/Button-1.svg'
 import LogoM1 from '../../assets/image/LogoM1.svg'
