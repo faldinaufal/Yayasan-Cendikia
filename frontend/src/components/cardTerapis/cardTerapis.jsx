@@ -1,7 +1,6 @@
 import React from 'react'
 import {MdWork} from 'react-icons/md'
 import {FaCalendarAlt} from 'react-icons/fa'
-import {AiFillLike} from 'react-icons/ai'
 
 const TherapistCard = ({index}) => {
     return (
@@ -16,10 +15,6 @@ const TherapistCard = ({index}) => {
                     <div className='flex items-center'>
                         <MdWork className='text-[17px] mr-2'/>
                         <p>{index.terapisId.Experiences}</p>
-                    </div>
-                    <div className='flex items-center'>
-                        <AiFillLike className='text-[17px] mr-2'/>
-                        <p>4.9/5</p>
                     </div>
                     <div className='flex items-center'>
                         <FaCalendarAlt className='text-[17px] mr-2'/>
