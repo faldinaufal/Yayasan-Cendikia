@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
 import { ConsultationCard, Footer, Navbar, TherapistCard } from '../../../components'
-import {AiOutlineRight, AiFillLike} from 'react-icons/ai'
-import {MdWork} from 'react-icons/md'
-import {FaCalendarAlt} from 'react-icons/fa'
-import { profile, kerjasama } from '../../../assets/image'
+import {AiOutlineRight} from 'react-icons/ai'
+import { kerjasama } from '../../../assets/image'
 import axios from 'axios'
 
 const LetsJoin = () => {

@@ -24,8 +24,8 @@ const Routing = () => {
             <Route path="/update/passwords" element={<UpdatePass/>}/>
             <Route path="/password/updated/successfully" element={<PassSucc/>}/>
             <Route path="/educenter/:Categories" element={<PostList/>}/>
-            <Route path="/profile" element={<Profile/>}/>
-            <Route path="/change-password" element={<ChangePass/>}/>
+            <Route path="/profile/:username" element={<Profile/>}/>
+            <Route path="/profile/:username/change-password" element={<ChangePass/>}/>
             <Route path="/:Terapis/consultation" element={<Contact/>}/>
             <Route path="/consultation/message" element={<Message/>}/>
         </Routes>

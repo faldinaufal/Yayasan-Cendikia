@@ -60,7 +60,7 @@ const DetailPost = () => {
           <div className='flex items-center font-inter font-600 mt-10 mb-6'>
             <a href={`/${process.env.REACT_APP_EDU}`} className='text-[#009FCC] mr-[15.33px]'>Pusat Edukasi</a>
             <FaChevronRight className='text-gray1'/>
-            <a href={`/${process.env.REACT_APP_EDU}/${process.env.REACT_APP_POST_STORY}`} className='text-[#009FCC] ml-[14.67px] mr-[15.33px]'>Acara & Kegiatan</a>
+            <a href={`/${process.env.REACT_APP_EDU}/${process.env.REACT_APP_POST_STORY}`} className='text-[#009FCC] ml-[14.67px] mr-[15.33px]'>Cerita Kisah / Timbal Balik</a>
             <FaChevronRight className='text-gray1'/>
             <p className='text-gray2 ml-[14.67px]'>{Title}</p>
           </div>
@@ -90,7 +90,7 @@ const DetailPost = () => {
           <div className='flex items-center font-inter font-600 mt-10 mb-6'>
             <a href={`/${process.env.REACT_APP_EDU}`} className='text-[#009FCC] mr-[15.33px]'>Pusat Edukasi</a>
             <FaChevronRight className='text-gray1'/>
-            <a href={`/${process.env.REACT_APP_EDU}/${process.env.REACT_APP_POST_EVENT}`} className='text-[#009FCC] ml-[14.67px] mr-[15.33px]'>Cerita Kisah / Timbal Balik</a>
+            <a href={`/${process.env.REACT_APP_EDU}/${process.env.REACT_APP_POST_EVENT}`} className='text-[#009FCC] ml-[14.67px] mr-[15.33px]'>Acara & Kegiatan</a>
             <FaChevronRight className='text-gray1'/>
             <p className='text-gray2 ml-[14.67px]'>{Title}</p>
           </div>

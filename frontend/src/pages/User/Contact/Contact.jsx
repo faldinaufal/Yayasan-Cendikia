@@ -17,7 +17,7 @@ const Contact = () => {
 
   useEffect(() => { 
     if(!jwttoken){
-      return navigate("/")
+      return (navigate("/"))
     }
   },[jwttoken])
 

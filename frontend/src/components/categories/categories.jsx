@@ -18,8 +18,6 @@ const Categories = ({categories}) => {
         Fetch()
     },[])
 
-   console.log(post)
-
     return (
         <div className='flex flex-wrap justify-center gap-6'>
             {post.slice(0,3).map((index) => (

@@ -6,7 +6,6 @@ import {BsYoutube, BsInstagram} from 'react-icons/bs'
 import axios from 'axios'
 
 const SeePost = () => {
-
   const [post, setPost] = useState([])
 
   useEffect(() => {
