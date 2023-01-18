@@ -10,7 +10,6 @@ import LogoM5 from '../../assets/image/LogoM5.svg'
 import LogoM6 from '../../assets/image/LogoM6.svg'
 import {AiOutlineRight} from 'react-icons/ai'
 import image2 from '../../assets/image/image1.png'
-import { image1, image, image3 } from '../../assets/image'
 import './style.css'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
@@ -19,13 +18,13 @@ import axios from 'axios'
 const Home = () => {
   const [post, setPost] = useState([])
 
-  useEffect(() => {
+  useEffect(() => { 
       fetch()
   },[])
 
   const fetch = async () => {
     try {
-        const res = await axios.get(`${process.env.REACT_APP_API_URL}/posts?sort[1]=id%3Adesc&populate=*`)
+        const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/posts?sort[1]=id%3Adesc&populate=*`)
         setPost(res.data.data)
     } catch (error) {
         console.log(error);
@@ -33,21 +32,7 @@ const Home = () => {
   }
 
   const slides = [
-    {
-      image: image,
-      title: "Lorem Ipsum Dolor Sit Amet 1",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus commodo luctus venenatis. Integer rhoncus iaculis quam, et iaculis odio sagittis consequat."
-    },
-    {
-      image: image1,
-      title: "Lorem Ipsum Dolor Sit Amet 2",
-      desc: "Lorem ipsum wwwwdsds dolor sit amet, consectetur adipiscing elit. Vivamus commodo luctus venenatis. Integer rhoncus iaculis quam, et iaculis odio sagittis consequat."
-    },
-    {
-      image: image3,
-      title: "Lorem Ipsum Dolor Sit Amet 3",
-      desc: "Lorem ipsum dolor ddsdfvc sit amet, consectetur adipiscing elit. Vivamus commodo luctus venenatis. Integer rhoncus iaculis quam, et iaculis odio sagittis consequat."
-    }
+   {},{},{}
   ]
 
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -74,23 +59,27 @@ const Home = () => {
             <div className='text-[#009FCC] font-century text-[40px] mt-5 leading-[58px] mb-5 md:text-[48px] md:mb-0'>
               <h2 className='text-center md:text-start'>Education Center</h2>
             </div>
-            <div className='gap-5 flex flex-col justify-center items-center mb-5 md:flex-row'>
+            {/* <div className='gap-5 flex flex-col justify-center items-center mb-5 md:flex-row'>
               <div className='md:container'>
-                <img src={slides[currentIndex].image} alt="Gambar Keluarga" className='w-[588px] h-[360px] rounded-md'/>
+                <img src={process.env.REACT_APP_API_URL+post[currentIndex].attributes.Image.data.attributes.url} alt="Gambar Keluarga" className='w-[588px] h-[360px] rounded-md'/>
               </div>
               <div className='md:container'>
                 <div className='font-century text-[36px] leading-[42px] font-bold text-[#262626] mx-2 md:mx-0'>
-                  <h3 className='text-center md:text-start'>{slides[currentIndex].title}</h3>
+                  <h3 className='text-center md:text-start'>{post[currentIndex].attributes.Title}</h3>
                 </div>
                 <div className='font-inter text-18 leading-[28px] font-normal text-[#6B7280] mt-4 mx-2 md:mx-0'>
-                  <p className='text-center md:text-start'>{slides[currentIndex].desc}</p>
+                  <p className='text-center md:text-start line-clamp-3'>{post[currentIndex].attributes.Body}</p>
                 </div>
                 <div className='flex justify-evenly mt-4 gap-4 md:justify-center'>
-                  <img src={ArrowLeft} alt="" className='cursor-pointer' onClick={prevSlide}/>
-                  <img src={ArrowRight} alt="" className='cursor-pointer' onClick={nextSlide}/>
+                  <button onClick={prevSlide} className='p-1 cursor-pointer'>
+                    <img src={ArrowLeft} alt="Panah Kiri"/>
+                  </button>
+                  <button onClick={nextSlide} className='p-1 cursor-pointer'>
+                    <img src={ArrowRight} alt="Panah Kanan"/>
+                  </button>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className='bg-[#E0E7FF] py-10'>

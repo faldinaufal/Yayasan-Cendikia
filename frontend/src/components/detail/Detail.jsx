@@ -4,7 +4,7 @@ import {FaChevronRight, FaCalendarAlt} from 'react-icons/fa'
 import {AiFillEye} from 'react-icons/ai'
 import axios from 'axios'
 
-const Detail = () => {
+const DetailPost = () => {
   let { Title } = useParams()
   let { Categories } = useParams()
 
@@ -13,7 +13,7 @@ const Detail = () => {
   useEffect(() => {
     const fetch = async () => {
       try {
-          const res = await axios.get(`${process.env.REACT_APP_API_URL}/posts?filters[Title][$eq]=${Title}&populate=*`)
+          const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/posts?filters[Title][$eq]=${Title}&populate=*`)
           setPost(res.data.data)
       } catch (error) {
           console.log(error);
@@ -43,10 +43,10 @@ const Detail = () => {
           </div>
             {post.map((index) => (
               <div>
-                <img src={`http://localhost:1337`+index.attributes.Image.data.attributes.url} alt="Gambar Artikel" className='w-[1200px] h-[600px] rounded-2xl my-6'/>
+                <img src={process.env.REACT_APP_API_URL+index.attributes.Image.data.attributes.url} alt="Gambar Artikel" className='w-[1200px] h-[600px] rounded-2xl my-6'/>
                 <p className='font-inter text-[18px] leading-7 text-dark'>{index.attributes.Body}</p>
                 <div className='flex justify-center my-6'>
-                  <img src={`http://localhost:1337`+index.attributes.Image.data.attributes.url} alt="Gambar Artikel" className='w-[600px] h-[400px] rounded-lg'/>
+                  <img src={process.env.REACT_APP_API_URL+index.attributes.Image.data.attributes.url} alt="Gambar Artikel" className='w-[600px] h-[400px] rounded-lg'/>
                 </div>
               </div>
             ))}
@@ -60,7 +60,7 @@ const Detail = () => {
           <div className='flex items-center font-inter font-600 mt-10 mb-6'>
             <a href={`/${process.env.REACT_APP_EDU}`} className='text-[#009FCC] mr-[15.33px]'>Pusat Edukasi</a>
             <FaChevronRight className='text-gray1'/>
-            <a href={`/${process.env.REACT_APP_EDU}/Story`} className='text-[#009FCC] ml-[14.67px] mr-[15.33px]'>Acara & Kegiatan</a>
+            <a href={`/${process.env.REACT_APP_EDU}/${process.env.REACT_APP_POST_STORY}`} className='text-[#009FCC] ml-[14.67px] mr-[15.33px]'>Acara & Kegiatan</a>
             <FaChevronRight className='text-gray1'/>
             <p className='text-gray2 ml-[14.67px]'>{Title}</p>
           </div>
@@ -73,10 +73,10 @@ const Detail = () => {
           </div>
             {post.map((index) => (
               <div>
-                <img src={`http://localhost:1337`+index.attributes.Image.data.attributes.url} alt="Gambar Artikel" className='w-[1200px] h-[600px] rounded-2xl my-6'/>
+                <img src={process.env.REACT_APP_API_URL+index.attributes.Image.data.attributes.url} alt="Gambar Artikel" className='w-[1200px] h-[600px] rounded-2xl my-6'/>
                 <p className='font-inter text-[18px] leading-7 text-dark'>{index.attributes.Body}</p>
                 <div className='flex justify-center my-6'>
-                  <img src={`http://localhost:1337`+index.attributes.Image.data.attributes.url} alt="Gambar Artikel" className='w-[600px] h-[400px] rounded-lg'/>
+                  <img src={process.env.REACT_APP_API_URL+index.attributes.Image.data.attributes.url} alt="Gambar Artikel" className='w-[600px] h-[400px] rounded-lg'/>
                 </div>
               </div>
             ))}
@@ -90,7 +90,7 @@ const Detail = () => {
           <div className='flex items-center font-inter font-600 mt-10 mb-6'>
             <a href={`/${process.env.REACT_APP_EDU}`} className='text-[#009FCC] mr-[15.33px]'>Pusat Edukasi</a>
             <FaChevronRight className='text-gray1'/>
-            <a href={`/${process.env.REACT_APP_EDU}/Event`} className='text-[#009FCC] ml-[14.67px] mr-[15.33px]'>Cerita Kisah / Timbal Balik</a>
+            <a href={`/${process.env.REACT_APP_EDU}/${process.env.REACT_APP_POST_EVENT}`} className='text-[#009FCC] ml-[14.67px] mr-[15.33px]'>Cerita Kisah / Timbal Balik</a>
             <FaChevronRight className='text-gray1'/>
             <p className='text-gray2 ml-[14.67px]'>{Title}</p>
           </div>
@@ -103,10 +103,10 @@ const Detail = () => {
           </div>
             {post.map((index) => (
               <div>
-                <img src={`http://localhost:1337`+index.attributes.Image.data.attributes.url} alt="Gambar Artikel" className='w-[1200px] h-[600px] rounded-2xl my-6'/>
+                <img src={process.env.REACT_APP_API_URL+index.attributes.Image.data.attributes.url} alt="Gambar Artikel" className='w-[1200px] h-[600px] rounded-2xl my-6'/>
                 <p className='font-inter text-[18px] leading-7 text-dark'>{index.attributes.Body}</p>
                 <div className='flex justify-center my-6'>
-                  <img src={`http://localhost:1337`+index.attributes.Image.data.attributes.url} alt="Gambar Artikel" className='w-[600px] h-[400px] rounded-lg'/>
+                  <img src={process.env.REACT_APP_API_URL+index.attributes.Image.data.attributes.url} alt="Gambar Artikel" className='w-[600px] h-[400px] rounded-lg'/>
                 </div>
               </div>
             ))}
@@ -115,4 +115,4 @@ const Detail = () => {
   }
 }
 
-export default Detail
+export default DetailPost

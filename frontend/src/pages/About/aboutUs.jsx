@@ -30,7 +30,7 @@ const AboutUs = () => {
 
     const Post = async () => {
         try {
-            await axios.post(`${process.env.REACT_APP_API_URL}/contacts`, {
+            await axios.post(`${process.env.REACT_APP_API_URL}/api/contacts`, {
                 data: {
                     Name: name,
                     Email: email,

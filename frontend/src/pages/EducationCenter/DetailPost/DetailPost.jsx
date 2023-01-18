@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import {Card, Footer, Navbar} from '../../../components'
-import Detail from '../../../components/detail/Detail'
+import {Card, DetailPost, Footer, Navbar} from '../../../components'
 import {FaFacebookF} from 'react-icons/fa'
 import {AiOutlineTwitter} from 'react-icons/ai'
 import {BsYoutube, BsInstagram} from 'react-icons/bs'
 import axios from 'axios'
 
-const DetailAEC = () => {
+const SeePost = () => {
 
   const [post, setPost] = useState([])
 
@@ -16,7 +15,7 @@ const DetailAEC = () => {
 
   const fetch = async () => {
     try {
-        const res = await axios.get(`${process.env.REACT_APP_API_URL}/posts?sort[1]=id%3Adesc&populate=*`)
+        const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/posts?sort[1]=id%3Adesc&populate=*`)
         setPost(res.data.data)
     } catch (error) {
         console.log(error);
@@ -29,7 +28,7 @@ const DetailAEC = () => {
         <Navbar/>
       </nav>
       <div className='container mb-20'>
-        <Detail />
+        <DetailPost/>
         <div className='w-full border-[1px] bg-gray1 my-10'></div>
         <div className='flex items-center'>
           <p className='font-inter mr-4'>Bagikan</p>
@@ -54,4 +53,4 @@ const DetailAEC = () => {
   )
 }
 
-export default DetailAEC
+export default SeePost

@@ -25,7 +25,7 @@ const Contact = () => {
     try {
       await axios({
         method: "POST",
-        url: `${process.env.REACT_APP_API_URL}/consultations`,
+        url: `${process.env.REACT_APP_API_URL}/api/consultations`,
         data: {
           "data": {
             Name: name,

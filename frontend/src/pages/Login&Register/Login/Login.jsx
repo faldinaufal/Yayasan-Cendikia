@@ -12,7 +12,7 @@ const Login = () => {
     const navigate = useNavigate()
 
     const Login = async () => {
-        await axios.post(`${process.env.REACT_APP_API_URL}/auth/local`, {
+        await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/local`, {
           identifier: email,
           password: password
         }).then((res)=> {
