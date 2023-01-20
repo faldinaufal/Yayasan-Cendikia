@@ -10,7 +10,6 @@ const Post = ({categories, pages}) => {
     useEffect(() => {
         const fetch = async () => {
             try {
-                // const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/posts?sort[1]=id%3Adesc&filters[Categories][$eq]=${categories}&populate=*`)
                 const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/posts?sort[1]=id%3Adesc&filters[Categories][$eq]=${categories}&pagination[page]=${pages}&pagination[pageSize]=6&populate=*`)
                 setPost(res.data.data)
             } catch (error) {

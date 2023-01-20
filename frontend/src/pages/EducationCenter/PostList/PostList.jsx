@@ -13,7 +13,6 @@ const Education = () => {
   useEffect(() => {
     const fetch = async () => {
         try {
-            // const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/posts?sort[1]=id%3Adesc&filters[Categories][$eq]=${categories}&populate=*`)
             const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/posts?sort[1]=id%3Adesc&filters[Categories][$eq]=${Categories}&pagination[pageSize]=6&populate=*`)
             setPost(res.data.meta.pagination.pageCount)
         } catch (error) {
