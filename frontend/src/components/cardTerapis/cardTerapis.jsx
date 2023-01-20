@@ -5,7 +5,7 @@ import {FaCalendarAlt} from 'react-icons/fa'
 const TherapistCard = ({index}) => {
     return (
         <div>
-            <a href={`/${index.therapist.UID}/consultation`}>
+            <a href={`/${index.therapist.terapisId}/consultation`}>
                 <div className='flex border-[1px] border-gray1 rounded-md w-[384px] h-[160px] p-[16px]'>
                     <img src={process.env.REACT_APP_API_URL+index.photoProfile.url} alt="Foto Profil" className='w-[80px] h-[80px] rounded-full'/>
                 <div className='font-inter w-[264px] ml-2'>
