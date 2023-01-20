@@ -74,18 +74,18 @@
         "images"
       ]
     },
-    "terapisId": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::konsultan.konsultan",
-      "mappedBy": "user"
-    },
     "userRole": {
       "type": "enumeration",
       "enum": [
         "Terapis",
         "Member"
       ]
+    },
+    "therapist": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::therapist.therapist",
+      "inversedBy": "user"
     }
   }
 }

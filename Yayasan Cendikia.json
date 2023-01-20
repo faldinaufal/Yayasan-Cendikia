@@ -1,0 +1,362 @@
+{
+	"info": {
+		"_postman_id": "1e56361d-c7f8-40c6-9a8d-692c07ee023c",
+		"name": "Yayasan Cendikia",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21993034"
+	},
+	"item": [
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "List Posts",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{BASEURL}}/api/posts?populate=Image",
+							"host": [
+								"{{BASEURL}}"
+							],
+							"path": [
+								"api",
+								"posts"
+							],
+							"query": [
+								{
+									"key": "populate",
+									"value": "Image"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Posts by Category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASEURL}}/api/posts?sort[1]=id%3Adesc&filters[Categories][$eq]=Article&populate=*",
+							"host": [
+								"{{BASEURL}}"
+							],
+							"path": [
+								"api",
+								"posts"
+							],
+							"query": [
+								{
+									"key": "sort[1]",
+									"value": "id%3Adesc"
+								},
+								{
+									"key": "filters[Categories][$eq]",
+									"value": "Article"
+								},
+								{
+									"key": "populate",
+									"value": "*"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{BASEURL}}/api/posts",
+							"host": [
+								"{{BASEURL}}"
+							],
+							"path": [
+								"api",
+								"posts"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register Member",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"Strapi user\",\r\n    \"email\": \"user@strapi.io\",\r\n    \"password\": \"strapiPassword\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASEURL}}/api/auth/local/register",
+							"host": [
+								"{{BASEURL}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"local",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register Terapist",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"Johnny\",\r\n    \"email\": \"userjhonny@strapi.io\",\r\n    \"password\": \"strapiPassword\",\r\n    \"userRole\": \"Terapis\",\r\n    \"phoneNumber\": 123456789,\r\n    \"terapisId\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASEURL}}/api/auth/local/register",
+							"host": [
+								"{{BASEURL}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"local",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"identifier\": \"user@strapi.io\",\r\n    \"password\": \"strapiPassword\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASEURL}}/api/auth/local",
+							"host": [
+								"{{BASEURL}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"local"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forgot Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"user@strapi.io\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASEURL}}/auth/local/forgot-password",
+							"host": [
+								"{{BASEURL}}"
+							],
+							"path": [
+								"auth",
+								"local",
+								"forgot-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjc0MDYzMTE2LCJleHAiOjE2NzY2NTUxMTZ9.IFSH4VrFhXRGlD56PFtjLP2KDZyg-jsSMAAq0M6fNTU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"currentPassword\": \"strapiPassword\",\n    \"password\": \"oldPWDude\",\n    \"passwordConfirmation\": \"oldPWDude\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASEURL}}/api/auth/change-password",
+							"host": [
+								"{{BASEURL}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"change-password"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Consultation",
+			"item": [
+				{
+					"name": "List Consultation",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjc0MDYzMTc1LCJleHAiOjE2NzY2NTUxNzV9.2-2M1umGB7CEYHrKrf0AcopkAA-CxBfL-xw54PxF950",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"Name\" : \"Roy Joy\",\n        \"Email\" : \"joyroy@email.com\",\n        \"phoneNumber\" : 1234567890,\n        \"Description\" : \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae dui in elit elementum interdum. Sed pharetra nunc vitae elit eleifend faucibus. Vestibulum vitae magna sem. Cras vehicula commodo imperdiet. Sed condimentum dignissim sem, lacinia rutrum leo pellentesque nec. Praesent ultricies fermentum magna at commodo. Integer eu nibh risus. Aliquam sollicitudin a mauris id finibus. Vestibulum varius ex metus, a malesuada purus pulvinar cursus. Donec quis facilisis dui. Donec a consequat enim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.\",\n        \"Terapis\": \"T0005\",\n        \"Users\": \"user2\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASEURL}}/api/consultations",
+							"host": [
+								"{{BASEURL}}"
+							],
+							"path": [
+								"api",
+								"consultations"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Contact",
+			"item": [
+				{
+					"name": "Post Contact Us",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"Name\": \"Jhon Wick\",\n        \"Email\": \"jhonwick@email.com\",\n        \"phoneNumber\": \"1234567890\",\n        \"Description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae dui in elit elementum interdum. Sed pharetra nunc vitae elit eleifend faucibus. Vestibulum vitae magna sem. Cras vehicula commodo imperdiet. Sed condimentum dignissim sem, lacinia rutrum leo pellentesque nec. Praesent ultricies fermentum magna at commodo. Integer eu nibh risus. Aliquam sollicitudin a mauris id finibus. Vestibulum varius ex metus, a malesuada purus pulvinar cursus. Donec quis facilisis dui. Donec a consequat enim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASEURL}}/api/contacts",
+							"host": [
+								"{{BASEURL}}"
+							],
+							"path": [
+								"api",
+								"contacts"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "List Terapist",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASEURL}}/api/users?filters[terapis]",
+							"host": [
+								"{{BASEURL}}"
+							],
+							"path": [
+								"api",
+								"users"
+							],
+							"query": [
+								{
+									"key": "filters[terapis]",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "BASEURL",
+			"value": "http://localhost:1337"
+		}
+	]
+}

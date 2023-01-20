@@ -35,8 +35,8 @@ const Navbar = () => {
                     <NavLink to={`/${process.env.REACT_APP_EDU}`}  className={({isActive})=>isActive?activeLink:normalLink}>Pusat Edukasi</NavLink>
                     <NavLink to={`/${process.env.REACT_APP_JOIN}`}  className={({isActive})=>isActive?activeLink:normalLink}>Join Yuk</NavLink>
                     <NavLink to={`/${process.env.REACT_APP_ABOUT}`}  className={({isActive})=>isActive?activeLink:normalLink}>Tentang Kami</NavLink>
-                    <a href={`/${process.env.REACT_APP_LOGIN}`} className='w-[146px] mt-5 duration-200 h-[48px] bg-[#009FCC] font-inter text-base font-semibold text-white rounded hover:bg-white hover:text-[#009FCC] hover:border-[#009FCC] hover:border-2 flex items-center justify-center'>
-                      Masuk / Daftar
+                    <a href={`/${process.env.REACT_APP_LOGIN}`} >
+                     <button className='w-[146px] mt-5 h-[48px] bg-[#009FCC] font-inter text-base font-semibold text-white rounded hover:bg-white hover:text-[#009FCC] hover:border-[#009FCC] hover:border-2 flex items-center justify-center'>Masuk / Daftar</button>
                     </a>
                   </div>)} 
                 </div>
@@ -92,9 +92,9 @@ const Navbar = () => {
                 <NavLink to={`/${process.env.REACT_APP_ABOUT}`} className={({isActive})=>isActive?activeLink:normalLink}>Tentang Kami</NavLink>
               </div>
               <div className='absolute right-0 hidden md:flex md:items-center'>
-                <button className='w-[146px] duration-200 h-[48px] bg-[#009FCC] font-inter text-base font-semibold text-white rounded hover:bg-white hover:text-[#009FCC] hover:border-[#009FCC] hover:border-2 flex items-center justify-center'>
-                  <a href={`/${process.env.REACT_APP_LOGIN}`}>Masuk / Daftar</a>
-                </button>
+                  <a href={`/${process.env.REACT_APP_LOGIN}`} >
+                   <button className='w-[146px] mt-5 h-[48px] bg-[#009FCC] font-inter text-base font-semibold text-white rounded hover:bg-white hover:text-[#009FCC] hover:border-[#009FCC] hover:border-2 flex items-center justify-center'>Masuk / Daftar</button>
+                  </a>
               </div>
             </div>
           </div>

@@ -46,6 +46,23 @@ const Contact = () => {
     }
   }
 
+  function abc() {
+    var element = document.getElementById("button");
+    if (email != null && name != null && phoneNumber!= null && description != null) {
+        element.style.backgroundColor = "#009FCC"; 
+        element.style.color = "#FFFFFF";
+        element.addEventListener("mouseout", function(){
+            this.style.backgroundColor = "#009FCC";
+            this.style.color = "#FFFFFF"
+        })
+        element.addEventListener("mouseover", function(){
+            this.style.backgroundColor = "#9CA3AF";
+            this.style.color = "#6B7280"
+        })
+    }
+}
+abc()
+
   return (
     <section>
       <Navbar/>
@@ -70,7 +87,7 @@ const Contact = () => {
                   <p className='font-inter font-semibold text-base text-Text-Title'>Deskripsi</p>
                   <textarea type="text" placeholder='Deskripsi' onChange={(e) => setDescription(e.target.value)} className='px-4 py-3 font-inter border-2 border-[#9CA3AF] rounded-[4px] bg-white h-[180px] focus:outline-2 focus:outline-blue-500 duration-200'/>
                 </div>
-                <button type='button' onClick={Post} className='bg-[#9CA3AF] text-[#6B7280] duration-200 hover:bg-[#009FCC] hover:text-white rounded-[4px] text-center py-3'>
+                <button id='button' type='button' onClick={Post} className='bg-[#9CA3AF] text-[#6B7280] duration-200 hover:bg-[#009FCC] hover:text-white rounded-[4px] text-center py-3'>
                   <p className='font-inter text-base font-semibold '>Kirim</p>
                 </button>
             </div>

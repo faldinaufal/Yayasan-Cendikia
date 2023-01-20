@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import {BsChevronLeft} from 'react-icons/bs'
 import {logoYayasan} from '../../../assets/image'
@@ -11,6 +11,10 @@ const Register = () => {
     const [password, setPassword] = useState()
     const [msg, setMsg] = useState()
     const navigate = useNavigate()
+
+    useEffect(() => {
+        abc()
+    })
 
     const Register = async () => {
         try {
@@ -27,6 +31,22 @@ const Register = () => {
         } catch (error) {
             setMsg(error)
             console.log(msg)
+        }
+    }
+
+    function abc() {
+        var element = document.getElementById("button");
+        if (email != null && name != null && password != null) {
+            element.style.backgroundColor = "#009FCC"; 
+            element.style.color = "#FFFFFF";
+            element.addEventListener("mouseout", function(){
+                this.style.backgroundColor = "#009FCC";
+                this.style.color = "#FFFFFF"
+            })
+            element.addEventListener("mouseover", function(){
+                this.style.backgroundColor = "#9CA3AF";
+                this.style.color = "#6B7280"
+            })
         }
     }
     
@@ -55,7 +75,7 @@ const Register = () => {
                                 <label htmlFor="password" className='mb-1'>Password</label>
                                 <input type="password" placeholder='Password' id='password' onChange={(e) => setPassword(e.target.value)} className='font-400 border-2 border-gray1 py-3 px-4 rounded-md text-gray2 valid:border-2 outline-blue-500'/>
                             </div>
-                            <button onClick={Register} className='my-10 w-full hover:bg-[#009FCC] duration-200 hover:text-white bg-gray1 rounded-md font-inter font-600 text-gray2 py-3'>Daftar</button>
+                            <button id='button' onClick={Register} className='my-10 w-full hover:bg-[#009FCC] duration-200 hover:text-white bg-gray1 rounded-md font-inter font-600 text-gray2 py-3'>Daftar</button>
                         </div>
                         <div className='font-inter flex items-center justify-center'>
                             <p className='text-dark mr-1'>Sudah memiliki akun?</p>
