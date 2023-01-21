@@ -3,7 +3,6 @@ import { useParams } from 'react-router-dom'
 import { Footer, Navbar, Post } from '../../../components'
 import {FaChevronRight, FaChevronLeft} from 'react-icons/fa'
 import axios from 'axios'
-import { MdFirstPage, MdLastPage } from 'react-icons/md'
 
 const Education = () => {
   let {Categories} = useParams()
