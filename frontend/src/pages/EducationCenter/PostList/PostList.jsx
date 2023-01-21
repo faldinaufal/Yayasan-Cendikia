@@ -8,13 +8,13 @@ import { MdFirstPage, MdLastPage } from 'react-icons/md'
 const Education = () => {
   let {Categories} = useParams()
   let {Page} = useParams()
-  // const [post, setPost] = useState([])
+  const [post, setPost] = useState([])
 
   useEffect(() => {
     const fetch = async () => {
         try {
             const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/posts?sort[1]=id%3Adesc&filters[Categories][$eq]=${Categories}&pagination[pageSize]=6&populate=*`)
-            // setPost(res.data.meta.pagination.pageCount)
+            setPost(res.data.meta.pagination.pageCount)
         } catch (error) {
             console.log(error);
         }
@@ -26,8 +26,6 @@ const Education = () => {
   if(Page == null) {
       Page = 1
   }
-  
-  var post = 18
 
   return (
     <div>
