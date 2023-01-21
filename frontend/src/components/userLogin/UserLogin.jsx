@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import {CgProfile, CgLogOut} from 'react-icons/cg'
 import {RiLockPasswordFill} from 'react-icons/ri'

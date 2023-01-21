@@ -8,5 +8,6 @@ import ImageProfile from "./imageProfile/ImageProfile";
 import TherapistCard from "./cardTerapis/cardTerapis";
 import ConsultationCard from "./cardKonsultasi/cardKonsultasi";
 import DetailPost from "./detail/Detail";
+import Medsos from "./medsos/Medsos";
 
-export { Footer, Navbar, Banner, Card, Categories, Post, ImageProfile, TherapistCard, ConsultationCard, DetailPost }
+export { Footer, Navbar, Banner, Card, Categories, Post, ImageProfile, TherapistCard, ConsultationCard, DetailPost, Medsos }
