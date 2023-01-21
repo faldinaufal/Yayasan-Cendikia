@@ -5,6 +5,7 @@ import {RiLockPasswordFill} from 'react-icons/ri'
 import ImageProfile from '../imageProfile/ImageProfile'
 import Cookies from 'universal-cookie'
 import axios from 'axios'
+import ImgProfileDefault from '../../assets/image/noProfile2.jpg'
 
 const UserLogin = () => {
   const [openProfile, setOpenProfile] = useState(false)
@@ -40,7 +41,11 @@ const UserLogin = () => {
         <nav className='flex items-center justify-end gap-3'>
         <div className='flex items-center gap-3 cursor-pointer' onClick={()=>setOpenProfile(!openProfile)}>
             <div className='cursor-pointer duration-150 w-10 h-10 rounded-full shadow-navadmn shadow-gray-400'>
-              <ImageProfile image={process.env.REACT_APP_API_URL+data.photoProfile.url}/>
+              {data.photoProfile === null ?
+                <ImageProfile image={ImgProfileDefault}/>
+              :data.photoProfile.url !== null &&
+                <ImageProfile image={process.env.REACT_APP_API_URL+data.photoProfile.url}/>
+              }
             </div>
         </div>
       </nav>
@@ -49,7 +54,11 @@ const UserLogin = () => {
         <div className='absolute w-[270px] shadow-xl rounded-lg p-4 z-50 right-0 bg-white top-2'>
           <div className='flex justify-center flex-col items-center'>
             <div className='w-[87px] h-[87px] rounded-full'>
-              <ImageProfile image={process.env.REACT_APP_API_URL+data.photoProfile.url}/>
+              {data.photoProfile === null ?
+                <ImageProfile image={ImgProfileDefault}/>
+              :data.photoProfile.url !== null &&
+                <ImageProfile image={process.env.REACT_APP_API_URL+data.photoProfile.url}/>
+              }
             </div>
             <div className='font-inter text-center font-600 mt-2 text-slate-800'>
               <p>{data.username}</p>

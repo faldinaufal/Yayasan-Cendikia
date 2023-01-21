@@ -1,13 +1,18 @@
 import React from 'react'
 import {MdWork} from 'react-icons/md'
 import {FaCalendarAlt} from 'react-icons/fa'
+import ImgProfileDefault from '../../assets/image/noProfile2.jpg'
 
 const ConsultationCard = ({index}) => {
     return (
         <div>
             <a href={`/${index.therapist.terapisId}/consultation`}>
                 <div className='flex flex-col items-center border-[1px] border-gray1 rounded-md w-[284px] h-[248px] p-[16px]'>
-                    <img src={process.env.REACT_APP_API_URL+index.photoProfile.url} alt="Foto Profil" className='w-[80px] h-[80px] rounded-full mb-2'/>
+                    {index.photoProfile == null ?
+                     <img src={ImgProfileDefault} alt="Foto Profil" className='w-[80px] h-[80px] rounded-full mb-2'/> 
+                    :
+                     <img src={process.env.REACT_APP_API_URL+index.photoProfile.url} alt="Foto Profil" className='w-[80px] h-[80px] rounded-full mb-2'/>
+                    }
                     <p className='font-inter font-600 text-[18px] text-dark mb-1'>{index.username}</p>
                     <p className='font-inter text-gray2'>{index.therapist.skill}</p>
                     <div className='font-inter text-[14px] flex items-center text-gray2 mb-1'>
