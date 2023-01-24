@@ -19,7 +19,7 @@ import GmailHover from '../../assets/Icon/Sosmed Icon/Social Media=Gmail, State=
 import YT from '../../assets/Icon/Sosmed Icon/Social Media=Youtube, State=Default.svg'
 import YTHover from '../../assets/Icon/Sosmed Icon/Social Media=Youtube, State=Hover.svg'
 import axios from 'axios'
-import '../User/Contact/style.css'
+import '../User/Collaboration/style.css'
 
 const AboutUs = () => {
     const [name, setName] = useState()

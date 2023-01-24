@@ -1,17 +1,13 @@
 import React from 'react'
 import {HiOutlineMail} from 'react-icons/hi'
 import {HiOutlineMapPin} from 'react-icons/hi2'
-import {FaFacebookF, FaTiktok} from 'react-icons/fa'
-import {AiOutlineTwitter} from 'react-icons/ai'
-import {BsWhatsapp, BsYoutube, BsInstagram} from 'react-icons/bs'
-import {SiGmail} from 'react-icons/si'
 import logoYayasan from '../../assets/image/logo-cendikia.svg'
 import logoSalt from '../../assets/image/logoSalt.svg'
 import Medsos from '../medsos/Medsos'
 
 const Footer = () => {
   return (
-    <footer className='bg-[#262626] mt-auto'>
+    <footer className='bg-[#262626]'>
         <div className='container text-white'>
             <section className='flex lg:justify-evenly flex-wrap pb-3 pt-1'>
                 <div className='font-century w-[588px] mt-10 mb-1 lg:mr-1'>
