@@ -16,7 +16,7 @@ const UserLogin = () => {
   useEffect(() => {
     getMe()
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  },[data])
+  },[])
 
   const getMe = async () => {
     try {
