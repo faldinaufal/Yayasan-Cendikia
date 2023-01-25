@@ -47,10 +47,10 @@ const Navbar = () => {
                   <NavLink to={`/${process.env.REACT_APP_JOIN}`} className={({isActive})=>isActive?activeLink:normalLink}>Join Yuk</NavLink>
                   <NavLink to={`/${process.env.REACT_APP_ABOUT}`} className={({isActive})=>isActive?activeLink:normalLink}>Tentang Kami</NavLink>
                 </div>
-                  <div className='absolute right-0 hidden md:flex gap-2 md:items-center'>
-                    <a href='/consultation/message'><AiOutlineMessage className='text-4xl mt-1 hover:opacity-60 duration-200'/></a>
-                    <UserLogin/>
-                  </div>
+                <div className='absolute right-0 hidden md:flex gap-2 md:items-center'>
+                  <a href='/consultation/message'><AiOutlineMessage className='text-4xl mt-1 hover:opacity-60 duration-200'/></a>
+                  <UserLogin/>
+                </div>
               </div>
           </div>
       </div>

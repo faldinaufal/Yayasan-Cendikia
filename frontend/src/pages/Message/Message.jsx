@@ -35,7 +35,7 @@ const Message = () => {
         <div>
             <Navbar/>
             <div className='container my-10'>
-                <h1 className='font-century text-[48px] text-[#009FCC] mt-10 mb-2'>Pesan</h1>
+                <h1 className='font-century text-[40px] sm:text-[48px] text-[#009FCC] mt-10 mb-2 text-center sm:text-start'>Pesan</h1>
                 <div className='flex items-center justify-center flex-wrap gap-6'>
                     <MessageCard/>
                     <MessageCard/>

@@ -35,7 +35,7 @@ const ChangePass = () => {
                 Authorization: `Bearer ${jwttoken}`
             },
             })
-            setMsg("Berhasil Merubah Password")
+            setMsg("Password Berhasil Diubah")
         } catch (error) {
             console.log(error)
             setMsg("Password lama salah atau Password baru tidak sama!")
@@ -45,16 +45,16 @@ const ChangePass = () => {
     return (
         <section>
             <Navbar/>
-            <div className='container w-[700px] my-12 md:my-36'>
+            <div className='container my-12 md:my-36'>
                 <div className=''>
-                    <h1 className='font-century text-[40px] mb-2 sm:text-[48px] mx-5 text-[#009FCC]'>Ganti Password</h1>
-                    {msg === "Berhasil Merubah Password" &&
-                    <div className='bg-[#79EC66] py-2 mx-5 rounded-sm text-center text-xl text-[#252A41] font-semibold font-inter'>
+                    <h1 className='font-century text-[40px] mb-2 sm:text-[48px] text-center text-[#009FCC] sm:text-start sm:ml-5'>Ganti Password</h1>
+                    {msg === "Password Berhasil Diubah" &&
+                    <div className='bg-[#79EC66] p-2 mx-5 rounded-md bg-opacity-50 text-[15px] text-green-600 font-inter'>
                         <p>{msg}</p>
                     </div>
                     }
                     {msg === "Password lama salah atau Password baru tidak sama!" &&
-                    <div className='bg-[#FD8A8A] py-2 mx-5 rounded-sm text-center text-xl text-[#252A41] font-semibold font-inter'>
+                    <div className='bg-pink-200 bg-opacity-60 p-2 text-red-600 mx-5 rounded-md text-[15px] font-inter'>
                         <p>{msg}</p>
                     </div>
                     }

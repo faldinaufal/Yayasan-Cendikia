@@ -65,7 +65,7 @@ const Login = () => {
                         <p className='font-century font-700 text-4xl mt-10 mb-2'>Masuk</p>
                         <p className='font-inter leading-6 text-gray3 mb-2 text-center sm:text-start'>Masuk dengan akun yang pernah anda daftarkan</p>
                         {msg != null &&
-                        <div className='bg-[#FD8A8A] py-1 rounded-sm text-center text-[#252A41] font-semibold font-inter'>
+                        <div className='font-inter bg-pink-200 bg-opacity-60 p-2 rounded-md text-[14px] text-red-600 text-center'>
                             <p>{msg}</p>
                         </div>
                         }

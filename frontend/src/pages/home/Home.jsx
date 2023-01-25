@@ -56,27 +56,27 @@ const Home = () => {
         </div>
         <div className='container flex items-center md:h-[538px]'>
           <div className='gap-10 grid'>
-            <div className='text-[#009FCC] font-century text-[40px] mt-5 leading-[58px] mb-5 md:text-[48px] md:mb-0'>
+            <div className='text-[#009FCC] font-century text-[40px] mt-7 leading-[58px] md:text-[48px] md:mb-0'>
               <h2 className='text-center md:text-start'>Education Center</h2>
             </div>
             {item && 
              (<div className='gap-5 flex flex-col justify-center items-center mb-5 md:flex-row'>
                 <div className='md:container'>
-                  <img src={process.env.REACT_APP_API_URL+item[currentIndex].attributes.Image.data.attributes.url} alt="Gambar Keluarga" className='w-[588px] h-[360px] rounded-md'/>
+                  <img src={process.env.REACT_APP_API_URL+item[currentIndex].attributes.Image.data.attributes.url} alt="Gambar Keluarga" className='w-[350px] h-[250px] rounded-md sm:w-[588px] sm:h-[360px]'/>
                 </div>
                 <div className='md:container'>
-                  <div className='font-century text-[36px] leading-[42px] font-bold text-[#262626] mx-2 md:mx-0'>
+                  <div className='font-century text-[25px] leading-[42px] font-bold text-[#262626] sm:text-[36px] w-full'>
                     <h3 className='text-center md:text-start'>{item[currentIndex].attributes.Title}</h3>
                   </div>
-                  <div className='font-inter text-18 leading-[28px] gap-2 font-normal text-[#6B7280] mt-4 mx-2 md:mx-0'>
+                  <div className='font-inter leading-[28px] gap-2 font-normal text-[#6B7280] mt-4 mx-2 md:mx-0 sm:text-[18px]'>
                     <p className='text-center md:text-start line-clamp-3'>{item[currentIndex].attributes.Body}</p>
-                    <a className='rounded-md text-[#009FCC] font-600' href={`/${process.env.REACT_APP_EDU}/${item[currentIndex].attributes.Categories}/${item[currentIndex].attributes.Title}`}>Baca Selengkapnya...</a>
+                    {/* <a className='rounded-md text-[#009FCC] font-600' href={`/${process.env.REACT_APP_EDU}/${item[currentIndex].attributes.Categories}/${item[currentIndex].attributes.Title}`}>Baca Selengkapnya...</a> */}
                   </div>
-                  <div className='flex justify-evenly mt-4 gap-4 md:justify-center'>
-                    <button onClick={prevSlide} className='p-1 cursor-pointer'>
+                  <div className='flex justify-evenly mt-4 md:justify-center w-4/5 mx-auto md:w-full'>
+                    <button onClick={prevSlide} className='p-1 cursor-pointer md:mr-10'>
                       <img src={ArrowLeft} alt="Panah Kiri"/>
                     </button>
-                    <button onClick={nextSlide} className='p-1 cursor-pointer'>
+                    <button onClick={nextSlide} className='p-1 cursor-pointer md:mr-auto'>
                       <img src={ArrowRight} alt="Panah Kanan"/>
                     </button>
                   </div>
