@@ -5,6 +5,63 @@ import bag from '../../../assets/Icon/bag.svg'
 import {FaCalendarAlt} from 'react-icons/fa'
 
 const Contact = () => {
+  const cookies = new Cookies()
+  const [name, setName] = useState()
+  const [email, setEmail] = useState()
+  const [phoneNumber, setPhoneNumber] = useState()
+  const [description, setDescription] = useState()
+  const navigate = useNavigate()
+
+  const jwttoken = cookies.get('token')
+
+  useEffect(() => { 
+    if(!jwttoken){
+      return (navigate("/"))
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[jwttoken])
+
+  const Post = async () => {
+    try {
+      await axios({
+        method: "POST",
+        url: `${process.env.REACT_APP_API_URL}/api/consultations`,
+        data: {
+          "data": {
+            Name: name,
+            Email: email,
+            phoneNumber: phoneNumber,
+            Description : description
+          }
+        },
+        headers: {
+          Authorization: `Bearer ${jwttoken}`
+        },
+      })
+      console.log("Berhasil Mengirim Pesan")
+      window.location.reload(false);
+    } catch (error) {
+        console.log(error)
+    }
+  }
+
+  function abc() {
+    var element = document.getElementById("button");
+    if (email != null && name != null && phoneNumber!= null && description != null) {
+        element.style.backgroundColor = "#009FCC"; 
+        element.style.color = "#FFFFFF";
+        element.addEventListener("mouseout", function(){
+            this.style.backgroundColor = "#009FCC";
+            this.style.color = "#FFFFFF"
+        })
+        element.addEventListener("mouseover", function(){
+            this.style.backgroundColor = "#9CA3AF";
+            this.style.color = "#6B7280"
+        })
+    }
+  }
+  abc()
+
   return (
     <section>
         <Navbar/>
@@ -51,6 +108,9 @@ const Contact = () => {
                         </div>
                     </div>
                 </form>
+                <button id='button' type='button' onClick={Post} className='bg-[#9CA3AF] text-[#6B7280] duration-200 hover:bg-[#009FCC] hover:text-white rounded-[4px] text-center py-3'>
+                  <p className='font-inter text-base font-semibold '>Kirim</p>
+                </button>
             </div>
         </div>
         <Footer/>

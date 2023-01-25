@@ -12,27 +12,32 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Name": {
-      "type": "string"
+    "name": {
+      "type": "string",
+      "required": true
     },
-    "Email": {
-      "type": "string"
+    "email": {
+      "type": "string",
+      "required": true
     },
     "phoneNumber": {
-      "type": "integer"
+      "type": "integer",
+      "required": true
     },
-    "Description": {
-      "type": "richtext"
+    "description": {
+      "type": "richtext",
+      "required": true
     },
-    "Users": {
+    "therapist": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::therapist.therapist",
+      "inversedBy": "consultations"
+    },
+    "user": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "plugin::users-permissions.user"
-    },
-    "Terapis": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::konsultan.konsultan"
     }
   }
 }

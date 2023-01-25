@@ -46,6 +46,23 @@ const AboutUs = () => {
         }
     }
 
+    function abc() {
+        var element = document.getElementById("button");
+        if (email != null && name != null && phoneNumber!= null && description != null) {
+            element.style.backgroundColor = "#009FCC"; 
+            element.style.color = "#FFFFFF";
+            element.addEventListener("mouseout", function(){
+                this.style.backgroundColor = "#009FCC";
+                this.style.color = "#FFFFFF"
+            })
+            element.addEventListener("mouseover", function(){
+                this.style.backgroundColor = "#9CA3AF";
+                this.style.color = "#6B7280"
+            })
+        }
+    }
+    abc()
+
     return (
         <div>
             <Navbar/>
@@ -76,32 +93,32 @@ const AboutUs = () => {
                     <h3 className='text text-center font-century text-[36px] leading-[42px]'>Keep in touch with us</h3>
                     <div className='relative flex flex-wrap justify-center gap-6'>
                         <div className='group duration-150 rounded-full'>
-                            <a href="#" target="_blank"><img src={Fb} alt="Facebook Logo" className='w-12 h-12 rounded-full group-hover:hidden'/></a>
-                            <a href="#" target="_blank"><img src={FbHover} alt="Facebook Logo" className='w-12 h-12 rounded-full hidden group-hover:block'/></a>
+                            <a href="/" target="_blank"><img src={Fb} alt="Facebook Logo" className='w-12 h-12 rounded-full group-hover:hidden'/></a>
+                            <a href="/" target="_blank"><img src={FbHover} alt="Facebook Logo" className='w-12 h-12 rounded-full hidden group-hover:block'/></a>
                         </div>
                         <div className='group duration-150 rounded-full'>
-                            <a href="#" target="_blank"><img src={IG} alt="Instagram Logo" className='w-12 h-12 rounded-full group-hover:hidden'/></a>
-                            <a href="#" target="_blank"><img src={IGHover} alt="Instagram Logo" className='w-12 h-12 rounded-full hidden group-hover:block'/></a>
+                            <a href="/" target="_blank"><img src={IG} alt="Instagram Logo" className='w-12 h-12 rounded-full group-hover:hidden'/></a>
+                            <a href="/" target="_blank"><img src={IGHover} alt="Instagram Logo" className='w-12 h-12 rounded-full hidden group-hover:block'/></a>
                         </div>
                         <div className='group duration-150 rounded-full'>
-                            <a href="#" target="_blank"><img src={Twitter} alt="Twitter Logo" className='w-12 h-12 rounded-full group-hover:hidden'/></a>
-                            <a href="#" target="_blank"><img src={TwitterHover} alt="Twitter Logo" className='w-12 h-12 rounded-full hidden group-hover:block'/></a>
+                            <a href="/" target="_blank"><img src={Twitter} alt="Twitter Logo" className='w-12 h-12 rounded-full group-hover:hidden'/></a>
+                            <a href="/" target="_blank"><img src={TwitterHover} alt="Twitter Logo" className='w-12 h-12 rounded-full hidden group-hover:block'/></a>
                         </div>
                         <div className='group duration-150 rounded-full'>
-                            <a href="#" target="_blank"><img src={Tiktok} alt="Tiktok Logo" className='w-12 h-12 rounded-full group-hover:hidden'/></a>
-                            <a href="#" target="_blank"><img src={TiktokHover} alt="Tiktok Logo" className='w-12 h-12 rounded-full hidden group-hover:block'/></a>
+                            <a href="/" target="_blank"><img src={Tiktok} alt="Tiktok Logo" className='w-12 h-12 rounded-full group-hover:hidden'/></a>
+                            <a href="/" target="_blank"><img src={TiktokHover} alt="Tiktok Logo" className='w-12 h-12 rounded-full hidden group-hover:block'/></a>
                         </div>
                         <div className='group duration-150 rounded-full'>
-                            <a href="#" target="_blank"><img src={WA} alt="Whatsapp Logo" className='w-12 h-12 rounded-full group-hover:hidden'/></a>
-                            <a href="#" target="_blank"><img src={WAHover} alt="Whatsapp Logo" className='w-12 h-12 rounded-full hidden group-hover:block'/></a>
+                            <a href="/" target="_blank"><img src={WA} alt="Whatsapp Logo" className='w-12 h-12 rounded-full group-hover:hidden'/></a>
+                            <a href="/" target="_blank"><img src={WAHover} alt="Whatsapp Logo" className='w-12 h-12 rounded-full hidden group-hover:block'/></a>
                         </div>
                         <div className='group duration-150 rounded-full'>
-                            <a href="#" target="_blank"><img src={Gmail} alt="Gmail Logo" className='w-12 h-12 rounded-full group-hover:hidden'/></a>
-                            <a href="#" target="_blank"><img src={GmailHover} alt="Gmail Logo" className='w-12 h-12 rounded-full hidden group-hover:block'/></a>
+                            <a href="/" target="_blank"><img src={Gmail} alt="Gmail Logo" className='w-12 h-12 rounded-full group-hover:hidden'/></a>
+                            <a href="/" target="_blank"><img src={GmailHover} alt="Gmail Logo" className='w-12 h-12 rounded-full hidden group-hover:block'/></a>
                         </div>
                         <div className='group duration-150 rounded-full'>
-                            <a href="#" target="_blank"><img src={YT} alt="Youtube Logo" className='w-12 h-12 rounded-full group-hover:hidden'/></a>     
-                            <a href="#" target="_blank"><img src={YTHover} alt="Youtube Logo" className='w-12 h-12 rounded-full hidden group-hover:block'/></a>
+                            <a href="/" target="_blank"><img src={YT} alt="Youtube Logo" className='w-12 h-12 rounded-full group-hover:hidden'/></a>     
+                            <a href="/" target="_blank"><img src={YTHover} alt="Youtube Logo" className='w-12 h-12 rounded-full hidden group-hover:block'/></a>
                         </div>
                     </div>
                 </div>    
@@ -133,7 +150,7 @@ const AboutUs = () => {
                                     <p className='font-inter font-semibold text-base text-Text-Title'>Deskripsi</p>
                                     <textarea type="text" placeholder='Deskripsi' onChange={(e) => setDescription(e.target.value)} className='px-4 py-3 font-inter border-2 border-[#9CA3AF] rounded-[4px] bg-white h-[84px] focus:outline-2 focus:outline-blue-500 duration-200'/>
                                 </div>
-                                <button onClick={Post} className='bg-[#9CA3AF] text-[#6B7280] duration-200 hover:bg-[#009FCC] hover:text-white rounded-[4px] text-center py-3'>
+                                <button id='button' onClick={Post} className='bg-[#9CA3AF] text-[#6B7280] duration-200 hover:bg-[#009FCC] hover:text-white rounded-[4px] text-center py-3'>
                                     <p className='font-inter text-base font-semibold '>Kirim</p>
                                 </button>
                             </div>
