@@ -79,13 +79,14 @@
       "enum": [
         "Terapis",
         "Member"
-      ]
+      ],
+      "default": "Member"
     },
     "therapist": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::therapist.therapist",
-      "inversedBy": "user"
+      "mappedBy": "user"
     }
   }
 }
