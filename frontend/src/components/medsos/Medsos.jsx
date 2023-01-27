@@ -19,32 +19,32 @@ const Medsos = () => {
     <section>
         <div className='flex flex-wrap gap-4 items-center'>
             <div className='group duration-150 rounded-full'>
-                <a href="#" target="_blank"><img src={Fb} alt="Facebook Logo" className='w-10 h-10 rounded-full group-hover:hidden'/></a>
-                <a href="#" target="_blank"><img src={FbHover} alt="Facebook Logo" className='w-10 h-10 rounded-full hidden group-hover:block'/></a>
+                <a href="/" target="_blank"><img src={Fb} alt="Facebook Logo" className='w-10 h-10 rounded-full group-hover:hidden'/></a>
+                <a href="/" target="_blank"><img src={FbHover} alt="Facebook Logo" className='w-10 h-10 rounded-full hidden group-hover:block'/></a>
             </div>
             <div className='group duration-150 rounded-full'>
-                <a href="#" target="_blank"><img src={IG} alt="Instagram Logo" className='w-10 h-10 rounded-full group-hover:hidden'/></a>
-                <a href="#" target="_blank"><img src={IGHover} alt="Instagram Logo" className='w-10 h-10 rounded-full hidden group-hover:block'/></a>
+                <a href="/" target="_blank"><img src={IG} alt="Instagram Logo" className='w-10 h-10 rounded-full group-hover:hidden'/></a>
+                <a href="/" target="_blank"><img src={IGHover} alt="Instagram Logo" className='w-10 h-10 rounded-full hidden group-hover:block'/></a>
             </div>
             <div className='group duration-150 rounded-full'>
-                <a href="#" target="_blank"><img src={Twitter} alt="Twitter Logo" className='w-10 h-10 rounded-full group-hover:hidden'/></a>
-                <a href="#" target="_blank"><img src={TwitterHover} alt="Twitter Logo" className='w-10 h-10 rounded-full hidden group-hover:block'/></a>
+                <a href="/" target="_blank"><img src={Twitter} alt="Twitter Logo" className='w-10 h-10 rounded-full group-hover:hidden'/></a>
+                <a href="/" target="_blank"><img src={TwitterHover} alt="Twitter Logo" className='w-10 h-10 rounded-full hidden group-hover:block'/></a>
             </div>
             <div className='group duration-150 rounded-full'>
-                <a href="#" target="_blank"><img src={Tiktok} alt="Tiktok Logo" className='w-10 h-10 rounded-full group-hover:hidden'/></a>
-                <a href="#" target="_blank"><img src={TiktokHover} alt="Tiktok Logo" className='w-10 h-10 rounded-full hidden group-hover:block'/></a>
+                <a href="/" target="_blank"><img src={Tiktok} alt="Tiktok Logo" className='w-10 h-10 rounded-full group-hover:hidden'/></a>
+                <a href="/" target="_blank"><img src={TiktokHover} alt="Tiktok Logo" className='w-10 h-10 rounded-full hidden group-hover:block'/></a>
             </div>
             <div className='group duration-150 rounded-full'>
-                <a href="#" target="_blank"><img src={WA} alt="Whatsapp Logo" className='w-10 h-10 rounded-full group-hover:hidden'/></a>
-                <a href="#" target="_blank"><img src={WAHover} alt="Whatsapp Logo" className='w-10 h-10 rounded-full hidden group-hover:block'/></a>
+                <a href="/" target="_blank"><img src={WA} alt="Whatsapp Logo" className='w-10 h-10 rounded-full group-hover:hidden'/></a>
+                <a href="/" target="_blank"><img src={WAHover} alt="Whatsapp Logo" className='w-10 h-10 rounded-full hidden group-hover:block'/></a>
             </div>
             <div className='group duration-150 rounded-full'>
-                <a href="#" target="_blank"><img src={Gmail} alt="Gmail Logo" className='w-10 h-10 rounded-full group-hover:hidden'/></a>
-                <a href="#" target="_blank"><img src={GmailHover} alt="Gmail Logo" className='w-10 h-10 rounded-full hidden group-hover:block'/></a>
+                <a href="/" target="_blank"><img src={Gmail} alt="Gmail Logo" className='w-10 h-10 rounded-full group-hover:hidden'/></a>
+                <a href="/" target="_blank"><img src={GmailHover} alt="Gmail Logo" className='w-10 h-10 rounded-full hidden group-hover:block'/></a>
             </div>
             <div className='group duration-150 rounded-full'>
-                <a href="#" target="_blank"><img src={YT} alt="Youtube Logo" className='w-10 h-10 rounded-full group-hover:hidden'/></a>     
-                <a href="#" target="_blank"><img src={YTHover} alt="Youtube Logo" className='w-10 h-10 rounded-full hidden group-hover:block'/></a>
+                <a href="/" target="_blank"><img src={YT} alt="Youtube Logo" className='w-10 h-10 rounded-full group-hover:hidden'/></a>     
+                <a href="/" target="_blank"><img src={YTHover} alt="Youtube Logo" className='w-10 h-10 rounded-full hidden group-hover:block'/></a>
             </div>
         </div>
     </section>

@@ -47,7 +47,7 @@ const Home = () => {
     const newIndex = lastSlide ? 0 : currentIndex + 1
     setCurrentIndex(newIndex)
   }
-
+  console.log(item)
   return (
     <div className='overflow-hidden'>
         <Navbar/>
@@ -66,11 +66,10 @@ const Home = () => {
                 </div>
                 <div className='md:container'>
                   <div className='font-century text-[25px] leading-[42px] font-bold text-[#262626] sm:text-[36px] w-full'>
-                    <h3 className='text-center md:text-start'>{item[currentIndex].attributes.Title}</h3>
+                    <a href={`/${process.env.REACT_APP_EDU}/${item[currentIndex].attributes.Categories}/${item[currentIndex].attributes.Title}`}><h3 className='text-center md:text-start'>{item[currentIndex].attributes.Title}</h3></a>
                   </div>
                   <div className='font-inter leading-[28px] gap-2 font-normal text-[#6B7280] mt-4 mx-2 md:mx-0 sm:text-[18px]'>
                     <p className='text-center md:text-start line-clamp-3'>{item[currentIndex].attributes.Body}</p>
-                    {/* <a className='rounded-md text-[#009FCC] font-600' href={`/${process.env.REACT_APP_EDU}/${item[currentIndex].attributes.Categories}/${item[currentIndex].attributes.Title}`}>Baca Selengkapnya...</a> */}
                   </div>
                   <div className='flex justify-evenly mt-4 md:justify-center w-4/5 mx-auto md:w-full'>
                     <button onClick={prevSlide} className='p-1 cursor-pointer md:mr-10'>

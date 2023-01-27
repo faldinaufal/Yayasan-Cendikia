@@ -9,7 +9,7 @@ const Register = () => {
     const [email, setEmail] = useState()
     const [name, setName] = useState()
     const [password, setPassword] = useState()
-    const [msg, setMsg] = useState()
+    // const [msg, setMsg] = useState()
     const navigate = useNavigate()
 
     useEffect(() => {
@@ -23,14 +23,12 @@ const Register = () => {
                 username: name,
                 password: password
                 
-            }).then(response => {
-                console.log("Berhasil Daftar")
-                console.log('User token', response.data.user.username);
             })
+            // .then(response => {
+            // })
             navigate('/login')
         } catch (error) {
-            setMsg(error)
-            console.log(msg)
+            console.log(error)
         }
     }
 
