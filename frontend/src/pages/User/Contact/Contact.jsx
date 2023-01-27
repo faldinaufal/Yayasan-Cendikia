@@ -24,26 +24,28 @@ const Contact = () => {
     if(!jwttoken){
       return (navigate("/login"))
     }
-    const getTherapist = async () => {
-      try {
-        const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/therapists?filters[terapisId][$eq]=${Terapis}&populate=*`)
-        setData(res.data.data)
-      } catch (error) {
-        console.log(error)
+    if(jwttoken) {
+      const getTherapist = async () => {
+        try {
+          const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/therapists?filters[terapisId][$eq]=${Terapis}&populate=*`)
+          setData(res.data.data)
+        } catch (error) {
+          console.log(error)
+        }
       }
-    }
-    const getTherapistID = async () => {
-      try {
-        await axios.get(`${process.env.REACT_APP_API_URL}/api/therapists?filters[terapisId][$eq]=${Terapis}`)
-        .then((res) => {
-          setTherapistId(res.data.data)
-        })
-      } catch (error) {
-        console.log(error)
+      const getTherapistID = async () => {
+        try {
+          await axios.get(`${process.env.REACT_APP_API_URL}/api/therapists?filters[terapisId][$eq]=${Terapis}`)
+          .then((res) => {
+            setTherapistId(res.data.data)
+          })
+        } catch (error) {
+          console.log(error)
+        }
       }
+      getTherapistID()
+      getTherapist()
     }
-    getTherapistID()
-    getTherapist()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   },[jwttoken])
 
