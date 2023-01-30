@@ -33,21 +33,26 @@ const Contact = () => {
           console.log(error)
         }
       }
-      const getTherapistID = async () => {
-        try {
-          await axios.get(`${process.env.REACT_APP_API_URL}/api/therapists?filters[terapisId][$eq]=${Terapis}`)
-          .then((res) => {
-            setTherapistId(res.data.data)
-          })
-        } catch (error) {
-          console.log(error)
-        }
-      }
-      getTherapistID()
+      // const getTherapistID = async () => {
+      //   try {
+      //     await axios.get(`${process.env.REACT_APP_API_URL}/api/therapists?filters[terapisId][$eq]=${Terapis}`)
+      //     .then((res) => {
+      //       setTherapistId(res.data.data)
+      //     })
+      //   } catch (error) {
+      //     console.log(error)
+      //   }
+      // }
+      // getTherapistID()
       getTherapist()
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   },[jwttoken])
+
+  // if(data != null) {
+  //   let id = data[0]
+  //   console.log(id)
+  // }
 
   const Post = async () => {
     try {
