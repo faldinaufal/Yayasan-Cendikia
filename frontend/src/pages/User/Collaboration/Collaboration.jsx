@@ -23,7 +23,6 @@ const Collaboration = () => {
           }
         }
       })
-      console.log("Pesan Berhasil Terkirim")
       window.location.reload(false);
     } catch (error) {
         console.log(error)

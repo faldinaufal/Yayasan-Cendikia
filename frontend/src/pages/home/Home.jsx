@@ -47,7 +47,7 @@ const Home = () => {
     const newIndex = lastSlide ? 0 : currentIndex + 1
     setCurrentIndex(newIndex)
   }
-  console.log(item)
+
   return (
     <div className='overflow-hidden'>
         <Navbar/>

@@ -15,7 +15,7 @@ const Contact = () => {
   const [phoneNumber, setPhoneNumber] = useState(null)
   const [description, setDescription] = useState(null)
   const [data, setData] = useState([])
-  const [therapistId, setTherapistId] = useState() 
+  // const [therapistId, setTherapistId] = useState() 
   const navigate = useNavigate()
 
   const jwttoken = cookies.get('token')

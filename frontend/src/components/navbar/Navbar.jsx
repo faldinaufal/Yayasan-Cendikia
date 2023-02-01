@@ -16,18 +16,20 @@ const Navbar = () => {
   const [data, setData] = useState()
 
   useEffect(() => { 
-    const getMe = async () => {
-      try {
-        await axios.get(`${process.env.REACT_APP_API_URL}/api/users/me?populate=*`, {
-          headers: {
-            Authorization: `Bearer ${jwttoken}`
-          },
-        }).then((response) => setData(response.data.userRole))
-      } catch (error) {
-        // console.log(error)
+    if(jwttoken) {
+      const getMe = async () => {
+        try {
+          await axios.get(`${process.env.REACT_APP_API_URL}/api/users/me?populate=*`, {
+            headers: {
+              Authorization: `Bearer ${jwttoken}`
+            },
+          }).then((response) => setData(response.data.userRole))
+        } catch (error) {
+          console.log(error)
+        }
       }
+      getMe()
     }
-    getMe()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   })
 

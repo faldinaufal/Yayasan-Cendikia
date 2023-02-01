@@ -27,11 +27,10 @@ const Login = () => {
           password: password
         }).then((res)=> {
           cookies.set('token', res.data.jwt, {path: "/"})
-          console.log("Berhasil Masuk")
           navigate("/")
         }).catch((error) => {
-          console.log(error)  
-          console.log(error.response.data.error.message)
+          console.log(error)
+        //   console.log(error.response.data.error.message)
           setMsg("Email atau Password Salah")
         })
     }
