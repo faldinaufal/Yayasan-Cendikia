@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { Navbar, Footer } from '../../../components'
 import Cookies from 'universal-cookie'
 import axios from 'axios'
+import ImgProfileDefault from '../../../assets/image/noProfile2.jpg'
 
 const Profile = () => {
     const cookies = new Cookies()
@@ -41,7 +42,11 @@ const Profile = () => {
                             <div>
                                 <label htmlFor="img" className='cursor-pointer'>
                                     <div className='hover:opacity-80'>
-                                        <img className='object-cover rounded-full w-[250px] h-[250px]' src={process.env.REACT_APP_API_URL+data.photoProfile.url} alt="" />
+                                    {data.photoProfile === null ?
+                                        <img className='object-cover rounded-full w-[250px] h-[250px]' src={ImgProfileDefault} alt="Foto Profil" />
+                                    :data.photoProfile !== null &&
+                                        <img className='object-cover rounded-full w-[250px] h-[250px]' src={process.env.REACT_APP_API_URL+data.photoProfile.url} alt="Foto Profil" />
+                                    }
                                     </div>
                                 </label> 
                                 <input type="file" id='img' className='hidden'/>
