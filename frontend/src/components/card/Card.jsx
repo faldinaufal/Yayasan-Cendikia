@@ -11,8 +11,11 @@ const Card = ({index}) => {
         return new Date(value).toLocaleDateString("en-GB", options);
     }
 
+    var cat = index.attributes.Categories.toLowerCase()
+    var title = index.attributes.Title.replace(/\s+/g, '-').toLowerCase()
+
     return (
-        <a href={`/${process.env.REACT_APP_EDU}/${index.attributes.Categories}/${index.attributes.Title}`}>
+        <a href={`/${process.env.REACT_APP_EDU}/${cat}/${title}`}>
             <div className='rounded-lg w-[384px] h-[453px] mx-auto relative shadow-card sm:w-[430px] sm:h-[480px] lg:h-[452px] lg:w-[384px]'>
                 <div className='w-[384px] overflow-hidden rounded-t-md h-[240px] sm:w-[430px] sm:h-[270px] lg:w-[384px] lg:h-[240px]'>
                     <img src={process.env.REACT_APP_API_URL+index.attributes.Image.data.attributes.url} alt="Gambar Artikel" className='w-[384px] rounded-t-lg h-[240px] sm:w-[430px] sm:h-[270px] lg:w-[384px] lg:h-[240px]'/>

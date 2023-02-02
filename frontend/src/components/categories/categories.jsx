@@ -3,7 +3,6 @@ import axios from 'axios'
 import Card from '../card/Card'
 
 const Categories = ({categories}) => {
-
     const [post, setPost] = useState([])
 
     useEffect(() => {
