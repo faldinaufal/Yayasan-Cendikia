@@ -60,18 +60,29 @@ const Contact = () => {
         method: "POST",
         url: `${process.env.REACT_APP_API_URL}/api/consultations`,
         data: {
-          "data": {
-            Name: name,
-            Email: email,
+          data: {
+            name: name,
+            email: email,
             phoneNumber: phoneNumber,
-            Description : description
-          }
+            description : description
+          }         
         },
         headers: {
           Authorization: `Bearer ${jwttoken}`
         },
       })
-      console.log("Berhasil Mengirim Pesan")
+      // await axios.post(`${process.env.REACT_APP_API_URL}/api/consultations`, {
+      //   data: {
+      //     Name: name,
+      //     Email: email,
+      //     phoneNumber: phoneNumber,
+      //     Description : description
+      //   }
+      // }, {
+      //   headers: {
+      //     Authorization: `Bearer ${jwttoken}`
+      //   },
+      // })
       window.location.reload(false);
     } catch (error) {
         console.log(error)
@@ -140,9 +151,6 @@ const Contact = () => {
                             <button id='button' type='button' onClick={Post} className='bg-[#9CA3AF] text-[#6B7280] duration-200 hover:bg-[#009FCC] hover:text-white rounded-[4px] text-center py-3'>
                               <p className='font-inter text-base font-semibold '>Kirim</p>
                             </button>
-                            {/* <button type='button' className='bg-[#9CA3AF] text-[#6B7280] duration-200 hover:bg-[#009FCC] hover:text-white rounded-[4px] text-center py-3'>
-                                <p className='font-inter text-base font-semibold '>Kirim</p>
-                            </button> */}
                         </div>
                     </div>
                 </form>

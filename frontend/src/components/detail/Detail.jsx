@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import {FaChevronRight, FaCalendarAlt} from 'react-icons/fa'
-import {AiFillEye} from 'react-icons/ai'
+// import {AiFillEye} from 'react-icons/ai'
 import axios from 'axios'
 
 const DetailPost = () => {
@@ -23,7 +23,14 @@ const DetailPost = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
 
-  
+  function formatMyDate(value) {
+    var options = {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+    };
+    return new Date(value).toLocaleDateString("en-GB", options);
+}
 
   if(Categories === "Article") {
     return (
@@ -36,14 +43,14 @@ const DetailPost = () => {
             <p className='text-gray2 ml-[14.67px]'>{Title}</p>
           </div>
           <p className='font-century font-700 text-2xl text-center sm:text-start sm:text-5xl text-dark mb-4'>{Title}</p>
-          <div className='flex items-center text-gray2 font-inter font-400 ml-3 sm:ml-0'>
-            <FaCalendarAlt className='mr-1 text-[#1A1A1A]'/>
-            <p className='mr-3'>31 January 2030</p>
-            <AiFillEye className='mr-1'/>
-            <p>1234x dibaca</p>
-          </div>
             {post.map((index) => (
               <div>
+                <div className='flex items-center text-gray2 font-inter font-400 ml-3 sm:ml-0'>
+                  <FaCalendarAlt className='mr-1 text-[#1A1A1A]'/>
+                  <p className='mr-3'>{formatMyDate(index.attributes.createdAt)}</p>
+                  {/* <AiFillEye className='mr-1'/>
+                  <p>1234x dibaca</p> */}
+                </div>
                 <img src={process.env.REACT_APP_API_URL+index.attributes.Image.data.attributes.url} alt="Gambar Artikel" className='w-[1200px] h-[380px] sm:h-[600px] rounded-2xl my-6'/>
                 <p className='font-inter text-[18px] leading-7 text-dark mx-2 sm:mx-0'>{index.attributes.Body}</p>
                 <div className='flex justify-center my-6'>
@@ -66,14 +73,14 @@ const DetailPost = () => {
             <p className='text-gray2 ml-[14.67px]'>{Title}</p>
           </div>
           <p className='font-century font-700 text-2xl sm:text-5xl text-dark mb-4 text-center sm:text-start'>{Title}</p>
-          <div className='flex items-center text-gray2 font-inter font-400 ml-3 sm:ml-0'>
-            <FaCalendarAlt className='mr-1 text-[#1A1A1A]'/>
-            <p className='mr-3'>31 January 2030</p>
-            <AiFillEye className='mr-1'/>
-            <p>1234x dibaca</p>
-          </div>
             {post.map((index) => (
               <div>
+                 <div className='flex items-center text-gray2 font-inter font-400 ml-3 sm:ml-0'>
+                  <FaCalendarAlt className='mr-1 text-[#1A1A1A]'/>
+                  <p className='mr-3'>{formatMyDate(index.attributes.createdAt)}</p>
+                  {/* <AiFillEye className='mr-1'/>
+                  <p>1234x dibaca</p> */}
+                </div>
                 <img src={process.env.REACT_APP_API_URL+index.attributes.Image.data.attributes.url} alt="Gambar Artikel" className='w-[1200px] h-[380px] sm:h-[600px] rounded-2xl my-6'/>
                 <p className='font-inter text-[18px] leading-7 text-dark mx-2 sm:mx-0'>{index.attributes.Body}</p>
                 <div className='flex justify-center my-6'>
@@ -96,14 +103,15 @@ const DetailPost = () => {
             <p className='text-gray2 ml-[14.67px]'>{Title}</p>
           </div>
           <p className='font-century font-700 text-2xl sm:text-5xl text-dark mb-4 text-center sm:text-start'>{Title}</p>
-          <div className='flex items-center text-gray2 font-inter font-400 ml-3 sm:ml-0'>
-            <FaCalendarAlt className='mr-1 text-[#1A1A1A]'/>
-            <p className='mr-3'>31 January 2030</p>
-            <AiFillEye className='mr-1'/>
-            <p>1234x dibaca</p>
-          </div>
+          
             {post.map((index) => (
               <div>
+                <div className='flex items-center text-gray2 font-inter font-400 ml-3 sm:ml-0'>
+                  <FaCalendarAlt className='mr-1 text-[#1A1A1A]'/>
+                  <p className='mr-3'>{formatMyDate(index.attributes.createdAt)}</p>
+                  {/* <AiFillEye className='mr-1'/>
+                  <p>1234x dibaca</p> */}
+                </div>
                 <img src={process.env.REACT_APP_API_URL+index.attributes.Image.data.attributes.url} alt="Gambar Artikel" className='w-[1200px] h-[380px] sm:h-[600px] rounded-2xl my-6'/>
                 <p className='font-inter text-[18px] leading-7 text-dark mx-2 sm:mx-0'>{index.attributes.Body}</p>
                 <div className='flex justify-center my-6'>
