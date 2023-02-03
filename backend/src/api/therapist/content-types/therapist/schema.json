@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "therapists",
+  "info": {
+    "singularName": "therapist",
+    "pluralName": "therapists",
+    "displayName": "Therapist",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "terapisId": {
+      "type": "uid",
+      "required": true
+    },
+    "skill": {
+      "type": "string",
+      "required": true
+    },
+    "experience": {
+      "type": "string",
+      "required": true
+    },
+    "jobTime": {
+      "type": "string",
+      "required": true
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "therapist"
+    },
+    "consultations": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::consultation.consultation",
+      "mappedBy": "therapist"
+    }
+  }
+}

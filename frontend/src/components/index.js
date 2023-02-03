@@ -9,5 +9,6 @@ import TherapistCard from "./cardTerapis/cardTerapis";
 import ConsultationCard from "./cardKonsultasi/cardKonsultasi";
 import DetailPost from "./detail/Detail";
 import Medsos from "./medsos/Medsos";
+import MessageCard from "./messageCard/messageCard";
 
-export { Footer, Navbar, Banner, Card, Categories, Post, ImageProfile, TherapistCard, ConsultationCard, DetailPost, Medsos }
+export { Footer, Navbar, Banner, Card, Categories, Post, ImageProfile, TherapistCard, ConsultationCard, DetailPost, MessageCard, Medsos }

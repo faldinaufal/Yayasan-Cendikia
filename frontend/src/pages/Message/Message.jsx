@@ -1,116 +1,63 @@
-import React, { useEffect } from 'react'
-import { Navbar, Footer } from '../../components'
-import {AiOutlineClose} from 'react-icons/ai'
+import React, { useEffect, useState } from 'react'
+import { Navbar, Footer, MessageCard } from '../../components'
 import Cookies from 'universal-cookie'
 import { useNavigate } from 'react-router-dom'
+import axios from 'axios'
 
 const Message = () => {
     const cookies = new Cookies()
     const navigate = useNavigate()
+    const [data, setData] = useState()
 
     const jwttoken = cookies.get('token')
 
     useEffect(() => { 
         if(!jwttoken){
-        return navigate("/")
+            return navigate("/")
         }
+        getMe()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     },[jwttoken])
     
+    const getMe = async () => {
+        try {
+            await axios.get(`${process.env.REACT_APP_API_URL}/api/users/me?populate=*`, {
+            headers: {
+                Authorization: `Bearer ${jwttoken}`
+            },
+            }).then((response) => setData(response.data))
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
     return (
-        <section>
+        <div>
             <Navbar/>
             <div className='container my-10'>
                 <h1 className='font-century text-[40px] sm:text-[48px] text-[#009FCC] mt-10 mb-2 text-center sm:text-start'>Pesan</h1>
                 <div className='flex items-center justify-center flex-wrap gap-6'>
-                    <div className='shadow-card bg-[#E0E7FF] rounded-md w-[288px]'>
-                        <div className='mx-2 relative py-2 font-inter text-center'>
-                                <button className='text-xl absolute right-1 duration-200 opacity-60'><AiOutlineClose/></button>
-                                <div className='font-600 mt-2'>
-                                    <p>Wyero JR</p>
-                                    <p className='my-1'>Wyero@gmail.co.id</p>
-                                    <a href="https://wa.me/0812341102" target={'_blank'} className='duration-200 hover:text-white'>08122233344</a>
-                                </div>
-                                <div className='text-start mt-1 mx-4'>
-                                    <p className='font-600'>Deskripsi : </p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis odio alias, adipisci nemo ipsa eaque cumque, facilis accusantium deleniti dolore quia, aspernatur fugit nam perferendis iusto facere expedita quam id!</p>
-                                </div>
-                        </div>
-                    </div>
-                    <div className='shadow-card bg-[#E0E7FF] rounded-md w-[288px]'>
-                        <div className='mx-2 relative py-2 font-inter text-center'>
-                                <button className='text-xl absolute right-1 duration-200 opacity-60'><AiOutlineClose/></button>
-                                <div className='font-600 mt-2'>
-                                    <p>Wyero JR</p>
-                                    <p className='my-1'>Wyero@gmail.co.id</p>
-                                    <a href="https://wa.me/0812341102" target={'_blank'} className='duration-200 hover:opacity-60'>08122233344</a>
-                                </div>
-                                <div className='text-start mt-1 mx-4'>
-                                    <p className='font-600'>Deskripsi : </p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis odio alias, adipisci nemo ipsa eaque cumque, facilis accusantium deleniti dolore quia, aspernatur fugit nam perferendis iusto facere expedita quam id!</p>
-                                </div>
-                        </div>
-                    </div>
-                    <div className='shadow-card bg-[#E0E7FF] rounded-md w-[288px]'>
-                        <div className='mx-2 relative py-2 font-inter text-center'>
-                                <button className='text-xl absolute right-1 duration-200 opacity-60'><AiOutlineClose/></button>
-                                <div className='font-600 mt-2'>
-                                    <p>Wyero JR</p>
-                                    <p className='my-1'>Wyero@gmail.co.id</p>
-                                    <a href="https://wa.me/0812341102" target={'_blank'} className='duration-200 hover:opacity-60'>08122233344</a>
-                                </div>
-                                <div className='text-start mt-1 mx-4'>
-                                    <p className='font-600'>Deskripsi : </p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis odio alias, adipisci nemo ipsa eaque cumque, facilis accusantium deleniti dolore quia, aspernatur fugit nam perferendis iusto facere expedita quam id!</p>
-                                </div>
-                        </div>
-                    </div>
-                    <div className='shadow-card bg-[#E0E7FF] rounded-md w-[288px]'>
-                        <div className='mx-2 relative py-2 font-inter text-center'>
-                                <button className='text-xl absolute right-1 duration-200 opacity-60'><AiOutlineClose/></button>
-                                <div className='font-600 mt-2'>
-                                    <p>Wyero JR</p>
-                                    <p className='my-1'>Wyero@gmail.co.id</p>
-                                    <a href="https://wa.me/0812341102" target={'_blank'} className='duration-200 hover:opacity-60'>08122233344</a>
-                                </div>
-                                <div className='text-start mt-1 mx-4'>
-                                    <p className='font-600'>Deskripsi : </p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis odio alias, adipisci nemo ipsa eaque cumque, facilis accusantium deleniti dolore quia, aspernatur fugit nam perferendis iusto facere expedita quam id!</p>
-                                </div>
-                        </div>
-                    </div>
-                    <div className='shadow-card bg-[#E0E7FF] rounded-md w-[288px]'>
-                        <div className='mx-2 relative py-2 font-inter text-center'>
-                                <button className='text-xl absolute right-1 duration-200 opacity-60'><AiOutlineClose/></button>
-                                <div className='font-600 mt-2'>
-                                    <p>Wyero JR</p>
-                                    <p className='my-1'>Wyero@gmail.co.id</p>
-                                    <a href="https://wa.me/0812341102" target={'_blank'} className='duration-200 hover:opacity-60'>08122233344</a>
-                                </div>
-                                <div className='text-start mt-1 mx-4'>
-                                    <p className='font-600'>Deskripsi : </p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis odio alias, adipisci nemo ipsa eaque cumque, facilis accusantium deleniti dolore quia, aspernatur fugit nam perferendis iusto facere expedita quam id!</p>
-                                </div>
-                        </div>
-                    </div>
-                    <div className='shadow-card bg-[#E0E7FF] rounded-md w-[288px]'>
-                        <div className='mx-2 relative py-2 font-inter text-center'>
-                                <button className='text-xl absolute right-1 duration-200 opacity-60'><AiOutlineClose/></button>
-                                <div className='font-600 mt-2'>
-                                    <p>Wyero JR</p>
-                                    <p className='my-1'>Wyero@gmail.co.id</p>
-                                    <a href="https://wa.me/0812341102" target={'_blank'} className='duration-200 hover:opacity-60'>08122233344</a>
-                                </div>
-                                <div className='text-start mt-1 mx-4'>
-                                    <p className='font-600'>Deskripsi : </p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis odio alias, adipisci nemo ipsa eaque cumque, facilis accusantium deleniti dolore quia, aspernatur fugit nam perferendis iusto facere expedita quam id!</p>
-                                </div>
-                        </div>
-                    </div>
+                    <MessageCard/>
+                    <MessageCard/>
+                    <MessageCard/>
+                    <MessageCard/>
+                    <MessageCard/>
+                    <MessageCard/>
                 </div>
             </div>
             <Footer/>
-        </section>
+        </div>
     )
 }
+
+ {/*  <div>
+    <Navbar/>
+    <div className='container grid justify-items-center gap-5 my-20'>
+        <h1 className='font-century text-[48px] text-[#009FCC]'>Pesan</h1>
+        <p className='font-inter text-[24px]'>Halaman ini tidak tersedia, Silahkan Tekan tombol untuk kembali ke beranda</p>
+        <a href="/"><button className='px-3 py-2 bg-[#009FCC] text-white text-lg font-bold font-inter rounded-sm duration-150 hover:bg-gray1'>Kembali ke beranda</button></a>
+    </div>
+    <Footer/>
+</div> */}
 
 export default Message
