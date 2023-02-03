@@ -4,9 +4,9 @@ module.exports = ({ env }) => ({
     connection: {
       host: env('DATABASE_HOST', 'localhost'),
       port: env.int('DATABASE_PORT', 3306),
-      database: env('DATABASE_NAME', 'Databases'),
+      database: env('DATABASE_NAME', 'Cendikia'),
       user: env('DATABASE_USERNAME', 'root'),
-      password: env('DATABASE_PASSWORD', 'password'),
+      password: env('DATABASE_PASSWORD', 'wyeroJR#'),
       ssl: env.bool('DATABASE_SSL', false),
     },
   },

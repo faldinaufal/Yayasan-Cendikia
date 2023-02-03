@@ -111,8 +111,8 @@ const Navbar = () => {
                 <NavLink to={`/${process.env.REACT_APP_JOIN}`} className={({isActive})=>isActive?activeLink:normalLink}>Join Yuk</NavLink>
                 <NavLink to={`/${process.env.REACT_APP_ABOUT}`} className={({isActive})=>isActive?activeLink:normalLink}>Tentang Kami</NavLink>
               </div>
-              <div className='absolute right-0 hidden md:flex md:items-center md:'>
-                  <a href={`/${process.env.REACT_APP_LOGIN}`} >
+              <div className='absolute right-0 bottom-0 top-0 hidden md:flex md:items-center'>
+                  <a href={`/${process.env.REACT_APP_LOGIN}`} className=' border-2 border-red-400'>
                    <button className='w-[146px] mt-5 h-[48px] bg-[#009FCC] font-inter text-base font-semibold text-white rounded hover:bg-white hover:text-[#009FCC] hover:border-[#009FCC] hover:border-2 flex items-center justify-center'>Masuk / Daftar</button>
                   </a>
               </div>
