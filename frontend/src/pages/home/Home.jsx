@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { Banner, Footer, Navbar, Categories, Post } from '../../components'
+import { Banner, Footer, Navbar, Categories } from '../../components'
 import ArrowLeft from '../../assets/Icon/Button.svg'
 import ArrowRight from '../../assets/Icon/Button-1.svg'
 import LogoM1 from '../../assets/image/LogoM1.svg'
@@ -14,6 +14,9 @@ import './style.css'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import axios from 'axios'
+import Slider from 'react-slick'
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 const Home = () => {
   const [item, setItem] = useState()
@@ -34,6 +37,26 @@ const Home = () => {
    {},{},{}
   ]
 
+  const slideImage = [
+    {image: LogoM1},
+    {image: LogoM2},
+    {image: LogoM3},
+    {image: LogoM4},
+    {image: LogoM5},
+    {image: LogoM6},
+    {image: LogoM1},
+    {image: LogoM2},
+    {image: LogoM3},
+    {image: LogoM4},
+    {image: LogoM5},
+    {image: LogoM6},
+    {image: LogoM2},
+    {image: LogoM3},
+    {image: LogoM4},
+    {image: LogoM5},
+    {image: LogoM6},
+  ]
+
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const prevSlide = () => {
@@ -48,6 +71,39 @@ const Home = () => {
     setCurrentIndex(newIndex)
   }
 
+  var settings = {
+    className: "center",
+    centerMode: true,
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 5,
+    initialSlide: 0,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1.5,
+        }
+      }
+    ]
+  };
   return (
     <div className='overflow-hidden'>
         <Navbar/>
@@ -70,7 +126,6 @@ const Home = () => {
                   </div>
                   <div className='font-inter leading-[28px] gap-2 font-normal text-[#6B7280] mt-4 mx-2 md:mx-0 sm:text-[18px]'>
                     <p className='text-center md:text-start line-clamp-3'>{item[currentIndex].attributes.Body}</p>
-                    {/* <a className='rounded-md text-[#009FCC] font-600' href={`/${process.env.REACT_APP_EDU}/${item[currentIndex].attributes.Categories}/${item[currentIndex].attributes.Title}`}>Baca Selengkapnya...</a> */}
                   </div>
                   <div className='flex justify-evenly mt-4 md:justify-center w-4/5 mx-auto md:w-full'>
                     <button onClick={prevSlide} className='p-1 cursor-pointer md:mr-10'>
@@ -90,40 +145,16 @@ const Home = () => {
             <div className='text-[40px] font-century leading-[58px] text-[#009FCC] md:text-[48px] mb-10'>
               <h2 className='text-center md:text-start'>Mitra Kerja</h2>
             </div>
-            <div className='mt-10 flex gap-3 justify-center flex-wrap md:gap-6'>
-              <div className='w-[180px] h-[120px] bg-white rounded-lg flex justify-center items-center'>
-                <img src={LogoM1} alt="Logo Mitra" className='w-[130px] h-[80px]'/>
-              </div>
-              <div className='w-[180px] h-[120px] bg-white rounded-lg flex justify-center items-center'>
-                <img src={LogoM2} alt="Logo Mitra" className='w-[130px] h-[80px]'/>
-              </div>
-              <div className='w-[180px] h-[120px] bg-white rounded-lg flex justify-center items-center'>
-                <img src={LogoM3} alt="Logo Mitra" className='w-[130px] h-[80px]'/>
-              </div>
-              <div className='w-[180px] h-[120px] bg-white rounded-lg flex justify-center items-center'>
-                <img src={LogoM4} alt="Logo Mitra" className='w-[130px] h-[80px]'/>
-              </div>
-              <div className='w-[180px] h-[120px] bg-white rounded-lg flex justify-center items-center'>
-                <img src={LogoM5} alt="Logo Mitra" className='w-[130px] h-[80px]'/>
-              </div>
-              <div className='w-[180px] h-[120px] bg-white rounded-lg flex justify-center items-center'>
-                <img src={LogoM6} alt="Logo Mitra" className='w-[130px] h-[80px]'/>
-              </div>
-              <div className='w-[180px] h-[120px] bg-white rounded-lg flex justify-center items-center'>
-                <img src={LogoM1} alt="Logo Mitra" className='w-[130px] h-[80px]'/>
-              </div>
-              <div className='w-[180px] h-[120px] bg-white rounded-lg flex justify-center items-center'>
-                <img src={LogoM2} alt="Logo Mitra" className='w-[130px] h-[80px]'/>
-              </div>
-              <div className='w-[180px] h-[120px] bg-white rounded-lg flex justify-center items-center'>
-                <img src={LogoM3} alt="Logo Mitra" className='w-[130px] h-[80px]'/>
-              </div>
-              <div className='w-[180px] h-[120px] bg-white rounded-lg flex justify-center items-center'>
-                <img src={LogoM4} alt="Logo Mitra" className='w-[130px] h-[80px]'/>
-              </div>
-              <div className='w-[180px] h-[120px] bg-white rounded-lg flex justify-center items-center'>
-                <img src={LogoM5} alt="Logo Mitra" className='w-[130px] h-[80px]'/>
-              </div>
+            <div>
+              <Slider {...settings}>
+                {slideImage.map((slideImage, index) => (
+                  <div key={index} >
+                    <div className='w-[180px] h-[120px] rounded-lg flex justify-center items-center'>
+                        <img src={slideImage.image} alt={slideImage.image} className='w-[130px] h-[80px]'/>
+                    </div>
+                  </div>
+                ))}
+              </Slider>
             </div>
           </div>
         </div>

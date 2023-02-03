@@ -2,6 +2,21 @@
     background: linear-gradient(90deg, #BFECFC 0%, #F3AACD 100%);
 }
 
+/* .slick-slide > div {
+    margin: 0 10px;
+  }
+  .slick-list {
+    margin: 0 -10px;
+  } */
+button::before{
+    margin-top: 5px;
+}
+
+@media  screen and (max-width:480px) {
+    button::before{
+        display: none;
+    }
+}
 .text {
     font-style: normal;
     font-weight: 700;
