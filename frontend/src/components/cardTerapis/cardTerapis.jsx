@@ -9,7 +9,7 @@ const TherapistCard = ({index}) => {
     return (
         <div>
             <a href={`/${id}/consultation`}>
-                <div className='flex border-[1px] border-gray1 rounded-md w-[384px] h-[160px] p-[16px]'>
+                <div className='flex border-[1px] border-gray1 rounded-md sm:w-[384px] p-[16px]'>
                     {index.photoProfile == null ?
                         <img src={ImgProfileDefault} alt="Foto Profil" className='w-[80px] h-[80px] rounded-full mb-2'/> 
                     :
@@ -17,7 +17,7 @@ const TherapistCard = ({index}) => {
                     }
                 <div className='font-inter w-[264px] ml-2'>
                     <p className='text-lg font-600 text-dark'>{index.username}</p>
-                    <p className='text-gray2'>{index.therapist.skill}</p>
+                    <p className='text-gray2 my-1'>{index.therapist.skill}</p>
                     <div className='text-gray2 text-[14px] font-600'>
                     <div className='flex items-center'>
                         <MdWork className='text-[17px] mr-2'/>

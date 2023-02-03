@@ -163,7 +163,7 @@ const Home = () => {
             <div className='text-[40px] font-century leading-[58px] text-[#009FCC] md:text-[48px]'>
               <h2 className='text-center md:text-start'>Artikel Terbaru</h2>
             </div>
-            <div className='mt-10 flex gap-4'>
+            <div className='mt-10 flex flex-wrap justify-center gap-4'>
               {item && item.slice(0,3).map((index) => (
                 <Card index={index}/>
               ))}
