@@ -67,11 +67,11 @@ const UserLogin = () => {
           </div>
           <div>
           <div>
-            <a href={`/profile/${data.username}`} className='flex items-center gap-2 rounded-lg my-2 border-white border-[1px] py-2 duration-200 hover:bg-[#009FCC] hover:text-white'>
+            <a href={`/profile/${data.username.replace(/\s+/g, '-').toLowerCase()}`} className='flex items-center gap-2 rounded-lg my-2 border-white border-[1px] py-2 duration-200 hover:bg-[#009FCC] hover:text-white'>
               <span className='ml-3 text-2xl'><CgProfile/></span>
               <span className='text-century font-600'>Profil</span>
             </a>
-            <a href={`/profile/${data.username}/change-password`} className='flex items-center gap-2 rounded-lg my-2 border-white border-[1px] py-2 duration-200 hover:bg-[#009FCC] hover:text-white'>
+            <a href={`/profile/${data.username.replace(/\s+/g, '-').toLowerCase()}/change-password`} className='flex items-center gap-2 rounded-lg my-2 border-white border-[1px] py-2 duration-200 hover:bg-[#009FCC] hover:text-white'>
               <span className='ml-3 text-2xl'><RiLockPasswordFill/></span>
               <span className='text-century font-600'>Ganti Password</span>
             </a>

@@ -38,20 +38,20 @@ const SeePost = () => {
           <p className='font-inter mr-4'>Bagikan</p>
           <div className='relative flex flex-wrap justify-center gap-4'>
             <div className='group duration-150 rounded-full'>
-                <a href="#" target="_blank"><img src={Fb} alt="Facebook Logo" className='w-9 h-9 rounded-full group-hover:hidden'/></a>
-                <a href="#" target="_blank"><img src={FbHover} alt="Facebook Logo" className='w-9 h-9 rounded-full hidden group-hover:block'/></a>
+                <a href="/" target="_blank"><img src={Fb} alt="Facebook Logo" className='w-9 h-9 rounded-full group-hover:hidden'/></a>
+                <a href="/" target="_blank"><img src={FbHover} alt="Facebook Logo" className='w-9 h-9 rounded-full hidden group-hover:block'/></a>
             </div>
             <div className='group duration-150 rounded-full'>
-                <a href="#" target="_blank"><img src={IG} alt="Instagram Logo" className='w-9 h-9 rounded-full group-hover:hidden'/></a>
-                <a href="#" target="_blank"><img src={IGHover} alt="Instagram Logo" className='w-9 h-9 rounded-full hidden group-hover:block'/></a>
+                <a href="/" target="_blank"><img src={IG} alt="Instagram Logo" className='w-9 h-9 rounded-full group-hover:hidden'/></a>
+                <a href="/" target="_blank"><img src={IGHover} alt="Instagram Logo" className='w-9 h-9 rounded-full hidden group-hover:block'/></a>
             </div>
             <div className='group duration-150 rounded-full'>
-                <a href="#" target="_blank"><img src={Twitter} alt="Twitter Logo" className='w-9 h-9 rounded-full group-hover:hidden'/></a>
-                <a href="#" target="_blank"><img src={TwitterHover} alt="Twitter Logo" className='w-9 h-9 rounded-full hidden group-hover:block'/></a>
+                <a href="/" target="_blank"><img src={Twitter} alt="Twitter Logo" className='w-9 h-9 rounded-full group-hover:hidden'/></a>
+                <a href="/" target="_blank"><img src={TwitterHover} alt="Twitter Logo" className='w-9 h-9 rounded-full hidden group-hover:block'/></a>
             </div>
             <div className='group duration-150 rounded-full'>
-                <a href="#" target="_blank"><img src={YT} alt="Youtube Logo" className='w-9 h-9 rounded-full group-hover:hidden'/></a>     
-                <a href="#" target="_blank"><img src={YTHover} alt="Youtube Logo" className='w-9 h-9 rounded-full hidden group-hover:block'/></a>
+                <a href="/" target="_blank"><img src={YT} alt="Youtube Logo" className='w-9 h-9 rounded-full group-hover:hidden'/></a>     
+                <a href="/" target="_blank"><img src={YTHover} alt="Youtube Logo" className='w-9 h-9 rounded-full hidden group-hover:block'/></a>
             </div>
           </div>
         </div>

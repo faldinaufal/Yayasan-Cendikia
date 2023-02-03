@@ -38,7 +38,6 @@ const AboutUs = () => {
                     Description : description
                 }
             })
-            console.log("Berhasil Mengirim Pesan")
             window.location.reload(false);
         } catch (error) {
             setMsg(error)

@@ -20,7 +20,7 @@ const Post = ({categories, pages}) => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
 
-    if(categories === "Article") {
+    if(categories === "article") {
         return (
             <div className='container mb-20'>
                 <div className='flex items-center font-inter font-600 mt-10 mb-6 ml-2 sm:ml-0'>
@@ -40,7 +40,7 @@ const Post = ({categories, pages}) => {
             </div>
         )
     }
-    if(categories === "Event") {
+    if(categories === "event") {
         return (
             <div className='container mb-20'>
                 <div className='flex items-center font-inter font-600 mt-10 mb-6 ml-2 sm:ml-0'>
@@ -59,7 +59,7 @@ const Post = ({categories, pages}) => {
             </div>
         )
     }
-    if(categories === "Story") {
+    if(categories === "story") {
         return (
             <div className='container mb-20'>
                 <div className='flex items-center font-inter font-600 mt-10 mb-6 ml-2 sm:ml-0'>

@@ -4,9 +4,11 @@ import {FaCalendarAlt} from 'react-icons/fa'
 import ImgProfileDefault from '../../assets/image/noProfile2.jpg'
 
 const TherapistCard = ({index}) => {
+    var id = index.therapist.terapisId.toLowerCase()
+    
     return (
         <div>
-            <a href={`/${index.therapist.terapisId}/consultation`}>
+            <a href={`/${id}/consultation`}>
                 <div className='flex border-[1px] border-gray1 rounded-md w-[384px] h-[160px] p-[16px]'>
                     {index.photoProfile == null ?
                         <img src={ImgProfileDefault} alt="Foto Profil" className='w-[80px] h-[80px] rounded-full mb-2'/> 

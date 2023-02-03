@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { Banner, Footer, Navbar, Categories } from '../../components'
+import { Banner, Footer, Navbar, Card } from '../../components'
 import ArrowLeft from '../../assets/Icon/Button.svg'
 import ArrowRight from '../../assets/Icon/Button-1.svg'
 import LogoM1 from '../../assets/image/LogoM1.svg'
@@ -122,7 +122,7 @@ const Home = () => {
                 </div>
                 <div className='md:container'>
                   <div className='font-century text-[25px] leading-[42px] font-bold text-[#262626] sm:text-[36px] w-full'>
-                    <h3 className='text-center md:text-start'>{item[currentIndex].attributes.Title}</h3>
+                    <a href={`/${process.env.REACT_APP_EDU}/${item[currentIndex].attributes.Categories.toLowerCase()}/${item[currentIndex].attributes.Title.replace(/\s+/g, '-').toLowerCase()}`}><h3 className='text-center md:text-start'>{item[currentIndex].attributes.Title}</h3></a>
                   </div>
                   <div className='font-inter leading-[28px] gap-2 font-normal text-[#6B7280] mt-4 mx-2 md:mx-0 sm:text-[18px]'>
                     <p className='text-center md:text-start line-clamp-3'>{item[currentIndex].attributes.Body}</p>
@@ -163,8 +163,10 @@ const Home = () => {
             <div className='text-[40px] font-century leading-[58px] text-[#009FCC] md:text-[48px]'>
               <h2 className='text-center md:text-start'>Artikel Terbaru</h2>
             </div>
-            <div className='mt-10'>
-              <Categories categories="Article"/>
+            <div className='mt-10 flex gap-4'>
+              {item && item.slice(0,3).map((index) => (
+                <Card index={index}/>
+              ))}
             </div>
             <div className='flex justify-center items-center mt-10'>
               <Link to={`/${process.env.REACT_APP_EDU}/${process.env.REACT_APP_POST_ARTICLE}`} className='w-[183px] h-[48px] px-3 py-4 rounded-[4px]'>
