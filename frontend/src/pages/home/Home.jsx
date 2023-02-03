@@ -66,7 +66,7 @@ const Home = () => {
                 </div>
                 <div className='md:container'>
                   <div className='font-century text-[25px] leading-[42px] font-bold text-[#262626] sm:text-[36px] w-full'>
-                    <a href={`/${process.env.REACT_APP_EDU}/${item[currentIndex].attributes.Categories}/${item[currentIndex].attributes.Title}`}><h3 className='text-center md:text-start'>{item[currentIndex].attributes.Title}</h3></a>
+                    <a href={`/${process.env.REACT_APP_EDU}/${item[currentIndex].attributes.Categories.toLowerCase()}/${item[currentIndex].attributes.Title.replace(/\s+/g, '-').toLowerCase()}`}><h3 className='text-center md:text-start'>{item[currentIndex].attributes.Title}</h3></a>
                   </div>
                   <div className='font-inter leading-[28px] gap-2 font-normal text-[#6B7280] mt-4 mx-2 md:mx-0 sm:text-[18px]'>
                     <p className='text-center md:text-start line-clamp-3'>{item[currentIndex].attributes.Body}</p>
