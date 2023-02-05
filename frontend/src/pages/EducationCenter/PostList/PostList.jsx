@@ -35,21 +35,50 @@ const Education = () => {
         <div className='flex items-center justify-center mt-10 mb-20 gap-5'>
           {Page === 1 ? 
             <div className='text-[#009FCC]'></div>
-          :
-          Page !== 1 && Page > 1 &&
+          :Page !== 1 && Page > 1 &&
             <div className='flex gap-2'>
               <a  href={`/${process.env.REACT_APP_EDU}/${cat}/pages/${Page-1}`} className='text-[#009FCC] duration-200 hover:text-gray2'><FaChevronLeft/></a>
             </div>
           }
-          {Page >= 1 && Page < 4 ?
+          {Page === 1 && post === 1 ?
+            <div className='flex gap-4'>
+              <a href={`/${process.env.REACT_APP_EDU}/${cat}`} className='text-[#009FCC] duration-200 hover:text-gray2 font-inter'>1</a>
+            </div>
+          :Page >= 1 && post === 2?
+            <div className='flex gap-4'>
+              <a href={`/${process.env.REACT_APP_EDU}/${cat}`} className='text-[#009FCC] duration-200 hover:text-gray2 font-inter'>1</a>
+              <a href={`/${process.env.REACT_APP_EDU}/${cat}/pages/2`} className='text-[#009FCC] duration-200 hover:text-gray2 font-inter'>2</a>
+            </div>
+          :Page >= 1 && post === 3?
             <div className='flex gap-4'>
               <a href={`/${process.env.REACT_APP_EDU}/${cat}`} className='text-[#009FCC] duration-200 hover:text-gray2 font-inter'>1</a>
               <a href={`/${process.env.REACT_APP_EDU}/${cat}/pages/2`} className='text-[#009FCC] duration-200 hover:text-gray2 font-inter'>2</a>
               <a href={`/${process.env.REACT_APP_EDU}/${cat}/pages/3`} className='text-[#009FCC] duration-200 hover:text-gray2 font-inter'>3</a>
-              <a href={`/${process.env.REACT_APP_EDU}/${cat}/pages/4`} className='text-[#009FCC] duration-200 hover:text-gray2 font-inter'>4</a>
-              <a href={`/${process.env.REACT_APP_EDU}/${cat}/pages/5`} className='text-[#009FCC] duration-200 hover:text-gray2 font-inter'>5</a>
             </div>
-          :Page >=4 && Page < post-2 ?
+          :Page >= 1 && post === 4?
+          <div className='flex gap-4'>
+            <a href={`/${process.env.REACT_APP_EDU}/${cat}`} className='text-[#009FCC] duration-200 hover:text-gray2 font-inter'>1</a>
+            <a href={`/${process.env.REACT_APP_EDU}/${cat}/pages/2`} className='text-[#009FCC] duration-200 hover:text-gray2 font-inter'>2</a>
+            <a href={`/${process.env.REACT_APP_EDU}/${cat}/pages/3`} className='text-[#009FCC] duration-200 hover:text-gray2 font-inter'>3</a>
+            <a href={`/${process.env.REACT_APP_EDU}/${cat}/pages/4`} className='text-[#009FCC] duration-200 hover:text-gray2 font-inter'>4</a>
+          </div>
+          :Page >= 1 && post === 5?
+          <div className='flex gap-4'>
+            <a href={`/${process.env.REACT_APP_EDU}/${cat}`} className='text-[#009FCC] duration-200 hover:text-gray2 font-inter'>1</a>
+            <a href={`/${process.env.REACT_APP_EDU}/${cat}/pages/2`} className='text-[#009FCC] duration-200 hover:text-gray2 font-inter'>2</a>
+            <a href={`/${process.env.REACT_APP_EDU}/${cat}/pages/3`} className='text-[#009FCC] duration-200 hover:text-gray2 font-inter'>3</a>
+            <a href={`/${process.env.REACT_APP_EDU}/${cat}/pages/4`} className='text-[#009FCC] duration-200 hover:text-gray2 font-inter'>4</a>
+            <a href={`/${process.env.REACT_APP_EDU}/${cat}/pages/5`} className='text-[#009FCC] duration-200 hover:text-gray2 font-inter'>5</a>
+          </div>
+          :Page >=1 && Page < 5 ?
+          <div className='flex gap-4'>
+            <a href={`/${process.env.REACT_APP_EDU}/${cat}`} className='text-[#009FCC] duration-200 hover:text-gray2 font-inter'>1</a>
+            <a href={`/${process.env.REACT_APP_EDU}/${cat}/pages/2`} className='text-[#009FCC] duration-200 hover:text-gray2 font-inter'>2</a>
+            <a href={`/${process.env.REACT_APP_EDU}/${cat}/pages/3`} className='text-[#009FCC] duration-200 hover:text-gray2 font-inter'>3</a>
+            <a href={`/${process.env.REACT_APP_EDU}/${cat}/pages/4`} className='text-[#009FCC] duration-200 hover:text-gray2 font-inter'>4</a>
+            <a href={`/${process.env.REACT_APP_EDU}/${cat}/pages/5`} className='text-[#009FCC] duration-200 hover:text-gray2 font-inter'>5</a>
+          </div>
+          :Page >=4 && Page < post-1 ?
            <div className='flex gap-4'>
               <a href={`/${process.env.REACT_APP_EDU}/${cat}/pages/${Page-2}`} className='text-[#009FCC] duration-200 hover:text-gray2 font-inter'>{Page-2}</a>
               <a href={`/${process.env.REACT_APP_EDU}/${cat}/pages/${Page-1}`} className='text-[#009FCC] duration-200 hover:text-gray2 font-inter'>{Page-1}</a>
@@ -74,10 +103,7 @@ const Education = () => {
               <a href={`/${process.env.REACT_APP_EDU}/${cat}/pages/${Page}`} className='text-[#009FCC] duration-200 hover:text-gray2 font-inter'>{Page}</a>
             </div>
           }
-          {/* {Page < post && Page >=5 &&
-            <a  href={`/${process.env.REACT_APP_EDU}/${cat}/pages/${post}`} className='text-[#009FCC] duration-200 hover:text-gray2 font-inter'>{post}</a>
-          } */}
-          {Page === 1 ? 
+          {Page > 1 && post === 2 ? 
             <div className='flex gap-2'>
               <a  href={`/${process.env.REACT_APP_EDU}/${cat}/pages/${Page-1+2}`} className='text-[#009FCC] duration-200 hover:text-gray2'><FaChevronRight/></a>
             </div>
