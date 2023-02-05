@@ -13,7 +13,7 @@ const ConsultationCard = ({index}) => {
                     {index.photoProfile == null ?
                      <img src={ImgProfileDefault} alt="Foto Profil" className='w-[80px] h-[80px] rounded-full mb-2'/> 
                     :
-                     <img src={process.env.REACT_APP_API_URL+index.photoProfile.url} alt="Foto Profil" className='w-[80px] h-[80px] rounded-full mb-2'/>
+                     <img src={process.env.REACT_APP_API_URL+index.photoProfile.url} alt="Foto Profil" className='w-[80px] object-cover h-[80px] rounded-full mb-2'/>
                     }
                     <p className='font-inter font-600 text-[18px] text-dark mb-1'>{index.username}</p>
                     <p className='font-inter text-gray2'>{index.therapist.skill}</p>

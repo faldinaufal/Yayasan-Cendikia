@@ -53,10 +53,10 @@ const DetailPost = () => {
                   {/* <AiFillEye className='mr-1'/>
                   <p>1234x dibaca</p> */}
                 </div>
-                <img src={process.env.REACT_APP_API_URL+index.attributes.Image.data.attributes.url} alt="Gambar Artikel" className='w-[1200px] h-[380px] sm:h-[600px] rounded-2xl my-6'/>
+                <img src={process.env.REACT_APP_API_URL+index.attributes.Image.data.attributes.url} alt="Gambar Artikel" className='w-[1200px] object-cover h-[380px] sm:h-[600px] rounded-2xl my-6'/>
                 <p className='font-inter text-[18px] leading-7 text-dark mx-2 sm:mx-0'>{index.attributes.Body}</p>
                 <div className='flex justify-center my-6'>
-                  <img src={process.env.REACT_APP_API_URL+index.attributes.Image.data.attributes.url} alt="Gambar Artikel" className='w-[600px] h-[400px] rounded-lg'/>
+                  <img src={process.env.REACT_APP_API_URL+index.attributes.Image.data.attributes.url} alt="Gambar Artikel" className='w-[600px] h-[400px] object-cover rounded-lg'/>
                 </div>
               </div>
             ))}

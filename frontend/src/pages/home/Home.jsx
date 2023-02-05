@@ -118,7 +118,7 @@ const Home = () => {
             {item && 
              (<div className='gap-5 flex flex-col justify-center items-center mb-5 md:flex-row'>
                 <div className='md:container'>
-                  <img src={process.env.REACT_APP_API_URL+item[currentIndex].attributes.Image.data.attributes.url} alt="Gambar Keluarga" className='w-[350px] h-[250px] rounded-md sm:w-[588px] sm:h-[360px]'/>
+                  <img src={process.env.REACT_APP_API_URL+item[currentIndex].attributes.Image.data.attributes.url} alt="Gambar Postingan" className='w-[350px] h-[250px] object-cover rounded-md sm:w-[588px] sm:h-[360px]'/>
                 </div>
                 <div className='md:container'>
                   <div className='font-century text-[25px] leading-[42px] font-bold text-[#262626] sm:text-[36px] w-full'>
