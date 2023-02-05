@@ -40,6 +40,10 @@
         "Story"
       ],
       "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "Title"
     }
   }
 }

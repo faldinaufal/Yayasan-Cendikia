@@ -5,17 +5,15 @@ import {FaChevronRight, FaCalendarAlt} from 'react-icons/fa'
 import axios from 'axios'
 
 const DetailPost = () => {
-  let { Title } = useParams()
+  let { slug } = useParams()
   let { Categories } = useParams()
 
   const [post, setPost] = useState([])
 
-  var title = Title.replace(/-/g, ' ')
-
   useEffect(() => {
     const fetch = async () => {
       try {
-          const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/posts?filters[Title][$eq]=${title}&populate=*`)
+          const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/posts?filters[slug][$eq]=${slug}&populate=*`)
           setPost(res.data.data)
       } catch (error) {
           console.log(error);
