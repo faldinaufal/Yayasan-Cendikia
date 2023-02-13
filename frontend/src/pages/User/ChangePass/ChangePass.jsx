@@ -38,7 +38,7 @@ const ChangePass = () => {
             setMsg("Password Berhasil Diubah")
         } catch (error) {
             console.log(error)
-            setMsg("Password lama salah atau Password baru tidak sama!")
+            setMsg("Password Tidak Sesuai")
         }
     }
 
@@ -53,7 +53,7 @@ const ChangePass = () => {
                         <p>{msg}</p>
                     </div>
                     }
-                    {msg === "Password lama salah atau Password baru tidak sama!" &&
+                    {msg === "Password Tidak Sesuai" &&
                     <div className='bg-pink-200 bg-opacity-60 p-2 text-red-600 mx-5 rounded-md text-[15px] font-inter'>
                         <p>{msg}</p>
                     </div>
