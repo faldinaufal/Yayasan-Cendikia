@@ -21,7 +21,7 @@
       "type": "richtext",
       "required": true
     },
-    "Image": {
+    "Featured_Image": {
       "type": "media",
       "multiple": false,
       "required": true,
@@ -40,6 +40,13 @@
         "Story"
       ],
       "required": true
+    },
+    "Excerpt": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "Title"
     }
   }
 }
