@@ -2,12 +2,6 @@ import React, { useEffect } from 'react'
 import { Banner, Footer, Navbar, Card } from '../../components'
 import ArrowLeft from '../../assets/Icon/Button.svg'
 import ArrowRight from '../../assets/Icon/Button-1.svg'
-import LogoM1 from '../../assets/image/LogoM1.svg'
-import LogoM2 from '../../assets/image/LogoM2.svg'
-import LogoM3 from '../../assets/image/LogoM3.svg'
-import LogoM4 from '../../assets/image/LogoM4.svg'
-import LogoM5 from '../../assets/image/LogoM5.svg'
-import LogoM6 from '../../assets/image/LogoM6.svg'
 import {AiOutlineRight} from 'react-icons/ai'
 import image2 from '../../assets/image/image1.png'
 import './style.css'
@@ -20,9 +14,10 @@ import "slick-carousel/slick/slick-theme.css";
 
 const Home = () => {
   const [item, setItem] = useState()
+  const [partner, setPartner] = useState()
 
   useEffect(() => { 
-    const fetch = async () => {
+    const fetchPosts = async () => {
       try {
           const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/posts?sort[1]=id%3Adesc&populate=*`)
           setItem(res.data.data)
@@ -30,33 +25,42 @@ const Home = () => {
           console.log(error);
       }
     }
-    fetch()
+    const fetchPartners = async () => {
+      try {
+          const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/partners?populate=*`)
+          setPartner(res.data.data)
+      } catch (error) {
+          console.log(error);
+      }
+    }
+    fetchPartners()
+    fetchPosts()
   },[])
 
   const slides = [
    {},{},{}
   ]
 
-  const slideImage = [
-    {image: LogoM1},
-    {image: LogoM2},
-    {image: LogoM3},
-    {image: LogoM4},
-    {image: LogoM5},
-    {image: LogoM6},
-    {image: LogoM1},
-    {image: LogoM2},
-    {image: LogoM3},
-    {image: LogoM4},
-    {image: LogoM5},
-    {image: LogoM6},
-    {image: LogoM2},
-    {image: LogoM3},
-    {image: LogoM4},
-    {image: LogoM5},
-    {image: LogoM6},
-  ]
-
+  // const slideImage = [
+  //   {image: LogoM1},
+  //   {image: LogoM2},
+  //   {image: LogoM3},
+  //   {image: LogoM4},
+  //   {image: LogoM5},
+  //   {image: LogoM6},
+  //   {image: LogoM1},
+  //   {image: LogoM2},
+  //   {image: LogoM3},
+  //   {image: LogoM4},
+  //   {image: LogoM5},
+  //   {image: LogoM6},
+  //   {image: LogoM2},
+  //   {image: LogoM3},
+  //   {image: LogoM4},
+  //   {image: LogoM5},
+  //   {image: LogoM6},
+  // ]
+  
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const prevSlide = () => {
@@ -147,11 +151,9 @@ const Home = () => {
             </div>
             <div>
               <Slider {...settings}>
-                {slideImage.map((slideImage, index) => (
-                  <div key={index} >
-                    <div className='w-[180px] h-[120px] rounded-lg flex justify-center items-center'>
-                        <img src={slideImage.image} alt={slideImage.image} className='w-[130px] h-[80px]'/>
-                    </div>
+                {partner.map((index) => (
+                  <div className='w-[180px] h-[120px] rounded-lg flex justify-center items-center'>
+                      <img src={process.env.REACT_APP_API_URL+index.attributes.logo.data.attributes.url} alt={index.attributes.name} className='w-[130px] h-[80px]'/>
                   </div>
                 ))}
               </Slider>

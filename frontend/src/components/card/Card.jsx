@@ -22,7 +22,7 @@ const Card = ({index}) => {
                 </div>
                 <div className='w-full mx-auto sm:text-start sm:w-[430px] lg:w-[384px]'>
                     <p className='font-century font-700 text-[23px] mx-4 leading-[30px] my-4 sm:mx-4 sm:text-2xl'>{index?.attributes.Title}</p>  
-                    <p className='limit-content font-inter font-400 text-gray2 leading-6 mx-4'>{index.attributes.Body}</p>
+                    <p className='limit-content font-inter font-400 text-gray2 leading-6 mx-4'>{index.attributes.Excerpt}</p>
                 </div>
                 <div className='m-4 sm:m-4 sm:absolute sm:bottom-0'>
                     <p className='font-inter text-[12px] text-gray2'>{formatMyDate(index?.attributes.createdAt)}</p>

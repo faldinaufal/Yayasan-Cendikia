@@ -29,7 +29,7 @@ const Banner = () => {
                             </a>
                         </div>
                         <div>
-                            <a href={`/`} className='flex items-center w-[180px] rounded-lg px-2 py-4 bg-white gap-1'>
+                            <a href={`/contact/collaboration`} className='flex items-center w-[180px] rounded-lg px-2 py-4 bg-white gap-1'>
                                 <img src={KerjasamaIcon} alt="Kerjasama Icon" />
                                 <p className='text-base font-semibold font-inter'>Kerjasama</p>
                             </a>

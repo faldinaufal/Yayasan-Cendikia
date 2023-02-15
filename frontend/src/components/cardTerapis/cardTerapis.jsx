@@ -4,7 +4,7 @@ import {FaCalendarAlt} from 'react-icons/fa'
 import ImgProfileDefault from '../../assets/image/noProfile2.jpg'
 
 const TherapistCard = ({index}) => {
-    var id = index.therapist.terapisId.toLowerCase()
+    var id = index.username.replace(/\s+/g, '-').toLowerCase()
     
     return (
         <div>
