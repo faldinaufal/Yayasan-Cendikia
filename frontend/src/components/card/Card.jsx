@@ -12,7 +12,6 @@ const Card = ({index}) => {
     }
 
     var cat = index.attributes.Categories.toLowerCase()
-    var title = index.attributes.Title.replace(/\s+/g, '-').toLowerCase()
 
     return (
         <a href={`/${process.env.REACT_APP_EDU}/${cat}/${index.attributes.slug}`}>
