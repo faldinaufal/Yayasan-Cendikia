@@ -41,26 +41,6 @@ const Home = () => {
    {},{},{}
   ]
 
-  // const slideImage = [
-  //   {image: LogoM1},
-  //   {image: LogoM2},
-  //   {image: LogoM3},
-  //   {image: LogoM4},
-  //   {image: LogoM5},
-  //   {image: LogoM6},
-  //   {image: LogoM1},
-  //   {image: LogoM2},
-  //   {image: LogoM3},
-  //   {image: LogoM4},
-  //   {image: LogoM5},
-  //   {image: LogoM6},
-  //   {image: LogoM2},
-  //   {image: LogoM3},
-  //   {image: LogoM4},
-  //   {image: LogoM5},
-  //   {image: LogoM6},
-  // ]
-  
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const prevSlide = () => {
@@ -108,6 +88,7 @@ const Home = () => {
       }
     ]
   };
+
   return (
     <div className='overflow-hidden'>
         <Navbar/>
@@ -122,7 +103,7 @@ const Home = () => {
             {item && 
              (<div className='gap-5 flex flex-col justify-center items-center mb-5 md:flex-row'>
                 <div className='md:container'>
-                  <img src={process.env.REACT_APP_API_URL+item[currentIndex].attributes.Image.data.attributes.url} alt="Gambar Keluarga" className='w-[350px] h-[250px] rounded-md sm:w-[588px] sm:h-[360px]'/>
+                  <img src={process.env.REACT_APP_API_URL+item[currentIndex].attributes.Image.data.attributes.url} alt="Gambar Keluarga" className='w-[350px] h-[250px] object-cover rounded-md sm:w-[588px] sm:h-[360px]'/>
                 </div>
                 <div className='md:container'>
                   <div className='font-century text-[25px] leading-[42px] font-bold text-[#262626] sm:text-[36px] w-full'>
@@ -151,7 +132,7 @@ const Home = () => {
             </div>
             <div>
               <Slider {...settings}>
-                {partner.map((index) => (
+                {partner && partner.map((index) => (
                   <div className='w-[180px] h-[120px] rounded-lg flex justify-center items-center'>
                       <img src={process.env.REACT_APP_API_URL+index.attributes.logo.data.attributes.url} alt={index.attributes.name} className='w-[130px] h-[80px]'/>
                   </div>
