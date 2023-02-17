@@ -76,7 +76,7 @@ const DetailPost = () => {
                   <p className='mr-3'>{formatMyDate(index.attributes.createdAt)}</p>
                 </div>
                 <img src={process.env.REACT_APP_API_URL+index.attributes.Image.data.attributes.url} alt="Gambar Artikel" className='w-full object-cover sm:w-[1200px] h-[330px] sm:h-[600px] rounded-2xl my-6'/>
-                <p className='font-inter text-[18px] leading-7 text-dark mx-2 text-justify sm:mx-0'>{index.attributes.Body}</p>
+                <ReactMarkdown className='bodyContent grid font-inter text-[18px] leading-7 text-justify justify-items-center indent-8 tracking-wide text-dark mx-2 sm:mx-0'>{index.attributes.Body}</ReactMarkdown>
               </div>
             ))}
       </div>
@@ -101,7 +101,7 @@ const DetailPost = () => {
                   <p className='mr-3'>{formatMyDate(index.attributes.createdAt)}</p>
                 </div>
                 <img src={process.env.REACT_APP_API_URL+index.attributes.Image.data.attributes.url} alt="Gambar Artikel" className='w-full object-cover sm:w-[1200px] h-[330px] sm:h-[600px] rounded-2xl my-6'/>
-                <p className='font-inter text-[18px] leading-7 text-dark mx-2 text-justify sm:mx-0'>{index.attributes.Body}</p>
+                <ReactMarkdown className='bodyContent grid font-inter text-[18px] leading-7 text-justify justify-items-center indent-8 tracking-wide text-dark mx-2 sm:mx-0'>{index.attributes.Body}</ReactMarkdown>
               </div>
             ))}
       </div>
