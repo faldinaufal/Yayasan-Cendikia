@@ -81,11 +81,11 @@ const Navbar = () => {
 
   if(!jwttoken){
     return (
-      <div className={`shadow-navbar h-[88px] bg-white w-full ${open && 'fixed top-0 z-50'} md:flex md:justify-center md:items-center`}>
+      <div className={`shadow-navbar h-[66px] md:h-[88px] bg-white w-full ${open && 'fixed top-0 z-50'} md:flex md:justify-center md:items-center`}>
           <div className='md:container relative items-center md:flex md:h-[48px]'>
             <div className='font-inter text-base align-middle font-semibold leading-6 gap-6 md:flex md:items-center'>
-              <div className='mt-5 mb-7 flex items-center justify-between mx-2 md:mt-0 md:mb-0 md:mx-0 md:block md:pr-4'>
-                <a href='/'><img src={Logo} alt="Logo Yayasan Cendikia" className='w-[60px] h-[60px] md:w-[48px] md:h-[48px]'/></a>
+              <div className='mt-5 flex items-center justify-between mx-2 md:mt-0 md:mb-0 md:mx-0 md:block md:pr-4'>
+                <a href='/'><img src={Logo} alt="Logo Yayasan Cendikia" className='w-[40px] h-[40px] md:w-[48px] md:h-[48px]'/></a>
                 <div className='md:hidden ml-auto mr-3 flex items-center gap-2'>
                 </div>
                 <div onClick={()=>setOpen(!open)} className='md:hidden'>

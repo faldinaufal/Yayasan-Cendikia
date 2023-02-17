@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import {FaChevronRight, FaCalendarAlt} from 'react-icons/fa'
-// import {AiFillEye} from 'react-icons/ai'
+import ReactMarkdown from 'react-markdown'
 import axios from 'axios'
+import './detail.css'
 
 const DetailPost = () => {
   let { slug } = useParams()
@@ -49,11 +50,8 @@ const DetailPost = () => {
                   <FaCalendarAlt className='mr-1 text-[#1A1A1A]'/>
                   <p className='mr-3'>{formatMyDate(index.attributes.createdAt)}</p>
                 </div>
-                <img src={process.env.REACT_APP_API_URL+index.attributes.Image.data.attributes.url} alt="Gambar Artikel" className='w-full sm:w-[1200px] h-[330px] sm:h-[600px] rounded-2xl my-6'/>
-                <p className='font-inter text-[18px] leading-7 text-justify text-dark mx-2 sm:mx-0'>{index.attributes.Body}</p>
-                <div className='flex justify-center my-6'>
-                  <img src={process.env.REACT_APP_API_URL+index.attributes.Image.data.attributes.url} alt="Gambar Artikel" className='w-full h-[300px] sm:w-[600px] sm:h-[400px] rounded-lg'/>
-                </div>
+                <img src={process.env.REACT_APP_API_URL+index.attributes.Image.data.attributes.url} alt="Gambar Artikel" className='w-full object-cover sm:w-[1200px] h-[330px] sm:h-[600px] rounded-2xl my-6'/>
+                <ReactMarkdown className='bodyContent grid font-inter text-[18px] leading-7 text-justify justify-items-center indent-8 tracking-wide text-dark mx-2 sm:mx-0'>{index.attributes.Body}</ReactMarkdown>
               </div>
             ))}
       </div>
@@ -77,11 +75,8 @@ const DetailPost = () => {
                   <FaCalendarAlt className='mr-1 text-[#1A1A1A]'/>
                   <p className='mr-3'>{formatMyDate(index.attributes.createdAt)}</p>
                 </div>
-                <img src={process.env.REACT_APP_API_URL+index.attributes.Image.data.attributes.url} alt="Gambar Artikel" className='w-full sm:w-[1200px] h-[330px] sm:h-[600px] rounded-2xl my-6'/>
+                <img src={process.env.REACT_APP_API_URL+index.attributes.Image.data.attributes.url} alt="Gambar Artikel" className='w-full object-cover sm:w-[1200px] h-[330px] sm:h-[600px] rounded-2xl my-6'/>
                 <p className='font-inter text-[18px] leading-7 text-dark mx-2 text-justify sm:mx-0'>{index.attributes.Body}</p>
-                <div className='flex justify-center my-6'>
-                  <img src={process.env.REACT_APP_API_URL+index.attributes.Image.data.attributes.url} alt="Gambar Artikel" className='w-full h-[300px] sm:w-[600px] sm:h-[400px] rounded-lg'/>
-                </div>
               </div>
             ))}
       </div>
@@ -105,16 +100,14 @@ const DetailPost = () => {
                   <FaCalendarAlt className='mr-1 text-[#1A1A1A]'/>
                   <p className='mr-3'>{formatMyDate(index.attributes.createdAt)}</p>
                 </div>
-                <img src={process.env.REACT_APP_API_URL+index.attributes.Image.data.attributes.url} alt="Gambar Artikel" className='w-full sm:w-[1200px] h-[330px] sm:h-[600px] rounded-2xl my-6'/>
+                <img src={process.env.REACT_APP_API_URL+index.attributes.Image.data.attributes.url} alt="Gambar Artikel" className='w-full object-cover sm:w-[1200px] h-[330px] sm:h-[600px] rounded-2xl my-6'/>
                 <p className='font-inter text-[18px] leading-7 text-dark mx-2 text-justify sm:mx-0'>{index.attributes.Body}</p>
-                <div className='flex justify-center my-6'>
-                  <img src={process.env.REACT_APP_API_URL+index.attributes.Image.data.attributes.url} alt="Gambar Artikel" className='w-full h-[300px] sm:w-[600px] sm:h-[400px] rounded-lg'/>
-                </div>
               </div>
             ))}
       </div>
     )
   }
 }
+
 
 export default DetailPost
