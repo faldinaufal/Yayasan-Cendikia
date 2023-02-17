@@ -86,7 +86,7 @@ const Login = () => {
                         <a href='/forgot/password' className='font-inter font-600 text-[#009FCC] hover:opacity-70 duration-200 flex justify-center mt-2 mb-[174px]'>Lupa Password</a>
                     </div>
                     <div className='flex flex-col items-center mb-10'>
-                        <img src={logoYayasan} alt={logoYayasan} className='w-12 h-12 mb-4'/>
+                        <img src={logoYayasan} alt={logoYayasan} className='h-10 mb-4'/>
                         <p className='font-inter text-gray3 text-center'>&copy; 2022 Ruang Disabilitas. All Rights Reserved.</p>
                     </div>
                 </div>

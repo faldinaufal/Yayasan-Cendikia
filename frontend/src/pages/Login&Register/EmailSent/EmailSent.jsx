@@ -23,7 +23,7 @@ const EmailSent = () => {
                     <Link to='/forgot/password' className='font-600 text-[#009FCC] hover:opacity-70 duration-200'>Kirim ulang email</Link>
                 </div>
                 <div className='flex flex-col items-center mb-10 mt-[308px]'>
-                    <img src={logoYayasan} alt={logoYayasan} className='w-12 h-12 mb-4'/>
+                    <img src={logoYayasan} alt={logoYayasan} className='h-10 mb-4'/>
                     <p className='font-inter text-gray3 text-center'>&copy; 2022 Ruang Disabilitas. All Rights Reserved.</p>
                 </div>
             </div>

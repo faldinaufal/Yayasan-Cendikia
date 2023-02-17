@@ -1,7 +1,7 @@
 import React from 'react'
 import {HiOutlineMail} from 'react-icons/hi'
 import {HiOutlineMapPin} from 'react-icons/hi2'
-import logoYayasan from '../../assets/image/logo-cendikia.svg'
+import logoYayasan from '../../assets/image/Logo Yayasan.png'
 import logoSalt from '../../assets/image/logoSalt.svg'
 import Medsos from '../medsos/Medsos'
 
@@ -50,8 +50,8 @@ const Footer = () => {
                 <div className='mt-10 w-[282px]'>
                     <p className='font-century text-2xl font-700 mb-4'>Kolaborasi Bersama</p>
                     <div className='flex gap-6'>
-                        <img src={logoYayasan} alt={logoYayasan} className='w-[60px] h-[60px]'/>
-                        <img src={logoSalt} alt={logoSalt} className='w-[110px] h-[60px]'/>
+                        <img src={logoYayasan} alt={logoYayasan} className='h-[40px]'/>
+                        <img src={logoSalt} alt={logoSalt} className='h-[52px]'/>
                     </div>
                 </div>
             </section>
