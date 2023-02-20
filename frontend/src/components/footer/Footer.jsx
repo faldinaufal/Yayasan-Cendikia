@@ -59,7 +59,7 @@ const Footer = () => {
         <div className='w-full bg-[#6B7280] h-[2px] mt-2'></div>
         <div className='text-white font-inter text-16 font-400 py-5 container flex flex-col gap-2 md:flex-row md:justify-between'>
             <p className='text-center'>&copy; 2022 Ruang Disabilitas. All Rights Reserved.</p>
-            <p className='text-center'>Power by <span className='font-600'>SALT Academy</span></p>
+            <p className='text-center'>Powered by <span className='font-600'>SALT Academy</span></p>
         </div>
     </footer>
   )

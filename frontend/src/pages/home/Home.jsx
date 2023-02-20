@@ -110,7 +110,7 @@ const Home = () => {
                     <a href={`/${process.env.REACT_APP_EDU}/${item[currentIndex].attributes.Categories.toLowerCase()}/${item[currentIndex].attributes.slug}`}><h3 className='text-center md:text-start'>{item[currentIndex].attributes.Title}</h3></a>
                   </div>
                   <div className='font-inter leading-[28px] gap-2 font-normal text-[#6B7280] mt-4 mx-2 md:mx-0 sm:text-[18px]'>
-                    <p className='text-center md:text-start line-clamp-3'>{item[currentIndex].attributes.Body}</p>
+                    <p className='text-center md:text-start line-clamp-3'>{item[currentIndex].attributes.Excerpt}</p>
                   </div>
                   <div className='flex justify-evenly mt-4 md:justify-center w-4/5 mx-auto md:w-full'>
                     <button onClick={prevSlide} className='p-1 cursor-pointer md:mr-10'>

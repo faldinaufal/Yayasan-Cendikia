@@ -5,17 +5,20 @@ import bag from '../../../assets/Icon/bag.svg'
 import {FaCalendarAlt} from 'react-icons/fa'
 import Cookies from 'universal-cookie'
 import { useNavigate, useParams } from 'react-router-dom'
+import defaultPhoto from '../../../assets/image/noProfile2.jpg'
 import axios from 'axios'
 
 const Contact = () => {
-  let { Terapis } = useParams()
+  let { username } = useParams()
   const cookies = new Cookies()
   const [name, setName] = useState(null)
   const [email, setEmail] = useState(null)
   const [phoneNumber, setPhoneNumber] = useState(null)
   const [description, setDescription] = useState(null)
   const [data, setData] = useState([])
-  // const [therapistId, setTherapistId] = useState() 
+  // const [userData, setUserData] = useState([])
+  const [userId, setUserId] = useState()
+  const [therapistId, setTherapistId] = useState() 
   const navigate = useNavigate()
 
   const jwttoken = cookies.get('token')
@@ -27,32 +30,29 @@ const Contact = () => {
     if(jwttoken) {
       const getTherapist = async () => {
         try {
-          const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/therapists?filters[terapisId][$eq]=${Terapis}&populate=*`)
-          setData(res.data.data)
+          const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/users?filters[slug][$eq]=${username}&populate=*`)
+          setData(res.data)
+          setTherapistId(res.data[0].id)
         } catch (error) {
           console.log(error)
         }
       }
-      // const getTherapistID = async () => {
-      //   try {
-      //     await axios.get(`${process.env.REACT_APP_API_URL}/api/therapists?filters[terapisId][$eq]=${Terapis}`)
-      //     .then((res) => {
-      //       setTherapistId(res.data.data)
-      //     })
-      //   } catch (error) {
-      //     console.log(error)
-      //   }
-      // }
-      // getTherapistID()
+      const getMe = async () => {
+      try {
+          await axios.get(`${process.env.REACT_APP_API_URL}/api/users/me?populate=*`, {
+              headers: {
+                  Authorization: `Bearer ${jwttoken}`
+              },
+              }).then((response) => setUserId(response.data.id))
+          } catch (error) {
+              console.log(error)
+          }
+      }
+      getMe()
       getTherapist()
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   },[jwttoken])
-
-  // if(data != null) {
-  //   let id = data[0]
-  //   console.log(id)
-  // }
 
   const Post = async () => {
     try {
@@ -64,25 +64,15 @@ const Contact = () => {
             name: name,
             email: email,
             phoneNumber: phoneNumber,
-            description : description
+            description : description,
+            therapist : therapistId,
+            user : userId
           }         
         },
         headers: {
           Authorization: `Bearer ${jwttoken}`
         },
       })
-      // await axios.post(`${process.env.REACT_APP_API_URL}/api/consultations`, {
-      //   data: {
-      //     Name: name,
-      //     Email: email,
-      //     phoneNumber: phoneNumber,
-      //     Description : description
-      //   }
-      // }, {
-      //   headers: {
-      //     Authorization: `Bearer ${jwttoken}`
-      //   },
-      // })
       window.location.reload(false);
     } catch (error) {
         console.log(error)
@@ -114,22 +104,26 @@ const Contact = () => {
             <div className='flex items-center justify-center gap-6 my-4 flex-wrap'>
                 {data.map((item) => (
                   <div className='flex flex-col p-2 items-center rounded-md w-[350px] sm:w-[450px] lg:w-[350px] border-[1.5px] border-gray-300'>
-                    <img src={profile} alt={profile} className='w-24 h-24 rounded-full'/>
+                    {item.photoProfile === null ?
+                      <img src={defaultPhoto} alt={profile} className='w-24 h-24 rounded-full'/>
+                    :item.photoProfile !== null &&
+                      <img src={process.env.REACT_APP_API_URL+item.photoProfile.url} alt={profile} className='w-24 h-24 rounded-full'/>
+                    }
                     <div className='w-full text-center text-gray2 font-inter'>
-                        <p className='text-dark font-600 text-[20px]'>{item.attributes.user.data.attributes.username}</p>
-                        <p>{item.attributes.skill}</p>
+                        <p className='text-dark font-600 text-[20px]'>{item.username}</p>
+                        <p>{item.therapist.skill}</p>
                         <div className='flex items-center gap-3 justify-center my-2'>
                             <img src={bag} alt={bag} />
-                            <span>{item.attributes.experience}</span>
+                            <span>{item.therapist.experience}</span>
                         </div>
                         <div className='flex items-center gap-3 justify-center'>
                             <FaCalendarAlt/>
-                            <span className='font-600'>{item.attributes.jobTime}</span>
+                            <span className='font-600'>{item.therapist.jobTime}</span>
                         </div>
                     </div>
                   </div>
                 ))}
-                <form action="" className='w-[384px] sm:w-[450px] lg:w-[384px]'>
+                <form action="" className='w-[384px] sm:w-[450px] lg:w-[520px]'>
                     <div className='p-6 grid gap-10 bg-[#E0E7FF] rounded-lg lg:mx-0'>
                         <div className='grid gap-4'>
                             <div className='grid gap-1'>
