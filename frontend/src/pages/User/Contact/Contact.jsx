@@ -5,6 +5,7 @@ import bag from '../../../assets/Icon/bag.svg'
 import {FaCalendarAlt} from 'react-icons/fa'
 import Cookies from 'universal-cookie'
 import { useNavigate, useParams } from 'react-router-dom'
+import defaultPhoto from '../../../assets/image/noProfile2.jpg'
 import axios from 'axios'
 
 const Contact = () => {
@@ -15,13 +16,12 @@ const Contact = () => {
   const [phoneNumber, setPhoneNumber] = useState(null)
   const [description, setDescription] = useState(null)
   const [data, setData] = useState([])
-  // const [userId, setUserId] = useState()
-  // const [therapistId, setTherapistId] = useState() 
+  // const [userData, setUserData] = useState([])
+  const [userId, setUserId] = useState()
+  const [therapistId, setTherapistId] = useState() 
   const navigate = useNavigate()
 
   const jwttoken = cookies.get('token')
-
-  let Username = username.replace(/-/g, ' ')
 
   useEffect(() => { 
     if(!jwttoken){
@@ -30,12 +30,25 @@ const Contact = () => {
     if(jwttoken) {
       const getTherapist = async () => {
         try {
-          const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/users?filters[username][$eq]=${Username}&populate=*`)
+          const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/users?filters[slug][$eq]=${username}&populate=*`)
           setData(res.data)
+          setTherapistId(res.data[0].id)
         } catch (error) {
           console.log(error)
         }
       }
+      const getMe = async () => {
+      try {
+          await axios.get(`${process.env.REACT_APP_API_URL}/api/users/me?populate=*`, {
+              headers: {
+                  Authorization: `Bearer ${jwttoken}`
+              },
+              }).then((response) => setUserId(response.data.id))
+          } catch (error) {
+              console.log(error)
+          }
+      }
+      getMe()
       getTherapist()
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -52,6 +65,8 @@ const Contact = () => {
             email: email,
             phoneNumber: phoneNumber,
             description : description,
+            therapist : therapistId,
+            user : userId
           }         
         },
         headers: {
@@ -89,7 +104,11 @@ const Contact = () => {
             <div className='flex items-center justify-center gap-6 my-4 flex-wrap'>
                 {data.map((item) => (
                   <div className='flex flex-col p-2 items-center rounded-md w-[350px] sm:w-[450px] lg:w-[350px] border-[1.5px] border-gray-300'>
-                    <img src={process.env.REACT_APP_API_URL+item.photoProfile.url} alt={profile} className='w-24 h-24 rounded-full'/>
+                    {item.photoProfile === null ?
+                      <img src={defaultPhoto} alt={profile} className='w-24 h-24 rounded-full'/>
+                    :item.photoProfile !== null &&
+                      <img src={process.env.REACT_APP_API_URL+item.photoProfile.url} alt={profile} className='w-24 h-24 rounded-full'/>
+                    }
                     <div className='w-full text-center text-gray2 font-inter'>
                         <p className='text-dark font-600 text-[20px]'>{item.username}</p>
                         <p>{item.therapist.skill}</p>
