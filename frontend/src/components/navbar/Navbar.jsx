@@ -14,16 +14,18 @@ const Navbar = () => {
   const cookies = new Cookies()
   const jwttoken = cookies.get('token')
   const [data, setData] = useState()
+  const [slug, setSlug] = useState()
 
   useEffect(() => { 
     if(jwttoken) {
       const getMe = async () => {
         try {
-          await axios.get(`${process.env.REACT_APP_API_URL}/api/users/me?populate=*`, {
+          const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/users/me?populate=*`, {
             headers: {
               Authorization: `Bearer ${jwttoken}`
-            },
-          }).then((response) => setData(response.data.userRole))
+            }})
+          setSlug(response.data.therapist.terapisId)
+          setData(response.data.userRole)
         } catch (error) {
           console.log(error)
         }
@@ -31,7 +33,7 @@ const Navbar = () => {
       getMe()
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  })
+  },[])
 
   if(jwttoken) {
     return (
@@ -42,7 +44,7 @@ const Navbar = () => {
                 <a href='/'><img src={Logo} alt="Logo Yayasan Cendikia" className='h-[28px] md:h-[32px]'/></a>
                 <div className='md:hidden ml-auto mr-3 flex items-center gap-2'>
                   {data === "Terapis" &&
-                    <a href='/consultation/message'><AiOutlineMessage className='text-4xl mt-1 hover:opacity-60 duration-200'/></a>
+                    <a href={`/consultation/${slug}/message`}><AiOutlineMessage className='text-4xl mt-1 hover:opacity-60 duration-200'/></a>
                   }
                   <UserLogin/>
                 </div>
@@ -69,7 +71,7 @@ const Navbar = () => {
                 </div>
                 <div className='absolute right-0 hidden md:flex gap-2 md:items-center'>
                   {data === "Terapis" &&
-                    <a href='/consultation/message'><AiOutlineMessage className='text-4xl mt-1 hover:opacity-60 duration-200'/></a>
+                    <a href={`/consultation/${slug}/message`}><AiOutlineMessage className='text-4xl mt-1 hover:opacity-60 duration-200'/></a>
                   }
                   <UserLogin/>
                 </div>

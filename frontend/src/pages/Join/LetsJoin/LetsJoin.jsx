@@ -20,8 +20,6 @@ const LetsJoin = () => {
       Fetch()
   },[])
 
-  console.log(data)
-
   return (
     <section>
       <nav>

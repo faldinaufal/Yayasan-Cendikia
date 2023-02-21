@@ -29,7 +29,7 @@ const Routing = () => {
             <Route path="/profile/:username/change-password" element={<ChangePass/>}/>
             <Route path="/contact/collaboration" element={<Collaboration/>}/>
             <Route path="/:username/consultation" element={<Contact/>}/>
-            <Route path="/consultation/message" element={<Message/>}/>
+            <Route path="/consultation/:terapisId/message" element={<Message/>}/>
         </Routes>
     </Router>
   )
