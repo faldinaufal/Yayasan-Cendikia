@@ -61,7 +61,6 @@ const Profile = () => {
                                     <label htmlFor="email" className='font-century text-lg'>Email</label>
                                     <input disabled type="email" value={data.email} id='email' className='border-[1px] mt-1 sm:mt-0 border-dark rounded-md py-2 px-3 w-full focus:outline-[1px] focus:outline-[#009FCC] invalid:focus:outline-pink-500'/>
                                 </div>
-                                {/* <button className='font-inter bg-[#009FCC] w-[90px] py-2 rounded-md text-white font-600 mt-5 hover:bg-white hover:border-2 duration-200 hover:border-[#009FCC] hover:text-black'>Update</button> */}
                             </div>  
                         </form>
                     </div>

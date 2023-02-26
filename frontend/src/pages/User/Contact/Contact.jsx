@@ -32,7 +32,7 @@ const Contact = () => {
         try {
           const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/users?filters[slug][$eq]=${username}&populate=*`)
           setData(res.data)
-          setTherapistId(res.data[0].id)
+          setTherapistId(res.data[0].therapist.id)
         } catch (error) {
           console.log(error)
         }
@@ -53,7 +53,7 @@ const Contact = () => {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   },[jwttoken])
-
+    
   const Post = async () => {
     try {
       await axios({

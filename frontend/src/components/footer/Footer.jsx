@@ -8,9 +8,9 @@ import Medsos from '../medsos/Medsos'
 const Footer = () => {
   return (
     <footer className='bg-[#262626]'>
-        <div className='container text-white'>
+        <div className='container text-white flex justify-center'>
             <section className='flex lg:justify-evenly flex-wrap pb-3 pt-1'>
-                <div className='font-century w-[588px] mt-10 mb-1 lg:mr-1'>
+                <div className='hidden sm:grid font-century w-[588px] mt-10 mb-1 lg:mr-1'>
                     <p className='text-2xl font-700 mb-4'>Ruang Disabilitas</p>
                     <p className='text-base font-inter font-400 leading-24'>
                         Ruang Disabilitas adalah sebuah ruang melatih potensi dan mengembangkan sebuah bakat yang dimiliki
@@ -30,8 +30,8 @@ const Footer = () => {
                     </div>
                      <Medsos/>
                 </div>
-                <div className='mt-10 mr-1 mb-1 w-[282px]'>
-                    <p className='font-century text-2xl font-700 mb-4'>Tautan Cepat</p>
+                <div className='hidden sm:block mt-10 w-[282px]'>
+                    <p className='font-century text-2xl font-700'>Tautan Cepat</p>
                     <div className='ml-1 font-inter text-16 font-600'>
                         <div className='mb-1 duration-150 hover:translate-x-2 w-[65px]'>
                             <a href='/' className='duration-150 hover:opacity-70'>Beranda</a>

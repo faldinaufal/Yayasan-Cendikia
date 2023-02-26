@@ -45,8 +45,8 @@ const ChangePass = () => {
     return (
         <section>
             <Navbar/>
-            <div className='container my-12 md:my-36'>
-                <div className=''>
+            <div className='container my-12 md:my-36 grid justify-center'>
+                <div className='max-w-[750px] lg:w-[750px]'>
                     <h1 className='font-century text-[40px] mb-2 sm:text-[48px] text-center text-[#009FCC] sm:text-start sm:ml-5'>Ganti Password</h1>
                     {msg === "Password Berhasil Diubah" &&
                     <div className='bg-[#79EC66] p-2 mx-5 rounded-md bg-opacity-50 text-[15px] text-green-600 font-inter'>
