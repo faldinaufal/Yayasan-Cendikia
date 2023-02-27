@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "therapies",
+  "info": {
+    "singularName": "therapie",
+    "pluralName": "therapies",
+    "displayName": "Therapies",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "string",
+      "required": true
+    },
+    "phoneNumber": {
+      "type": "biginteger",
+      "required": true
+    },
+    "description": {
+      "type": "richtext",
+      "required": true
+    },
+    "therapist": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::therapist.therapist",
+      "inversedBy": "therapies"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}

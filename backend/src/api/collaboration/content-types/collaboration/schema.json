@@ -4,7 +4,8 @@
   "info": {
     "singularName": "collaboration",
     "pluralName": "collaborations",
-    "displayName": "Collaboration"
+    "displayName": "Collaboration",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,16 +13,20 @@
   "pluginOptions": {},
   "attributes": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "email": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "contact": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "description": {
-      "type": "richtext"
+      "type": "richtext",
+      "required": true
     }
   }
 }

@@ -8,6 +8,8 @@ const Message = () => {
     let {terapisId} = useParams()
     const cookies = new Cookies()
     const [data, setData] = useState()
+    const [therapiesLength, setTherapiesLength] = useState()
+    const [consultationLength, setConsultationLength] = useState()
     const [userRole, setUserRole] = useState()
 
     const jwttoken = cookies.get('token')
@@ -31,7 +33,9 @@ const Message = () => {
                     headers: {
                         Authorization: `Bearer ${jwttoken}`
                     }})
-                    setData(response.data.data[0].attributes.consultations.data)
+                    setData(response.data.data)
+                    setTherapiesLength(response.data.data[0].attributes.therapies.data)
+                    setConsultationLength(response.data.data[0].attributes.consultations.data)
                 } catch (error) {
                     console.log(error)
                 }
@@ -41,7 +45,9 @@ const Message = () => {
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     },[jwttoken])
+    
     console.log(data)
+
     if(jwttoken && userRole === "Terapis") {
         return (
             <div>
@@ -49,7 +55,7 @@ const Message = () => {
                 <div className='container min-h-[50vh] my-10'>
                     <h1 className='font-century text-[40px] sm:text-[48px] text-[#009FCC] mt-10 mb-2 text-center sm:text-start'>Pesan</h1>
                     <div className='flex items-center justify-center flex-wrap gap-6'>
-                        {data && data.length < 1 ?
+                        {data && therapiesLength.length < 1 && consultationLength.length < 1 ?
                             <p className='font-inter text-[24px]'>Anda tidak memiliki pesan konsultasi</p>
                         :data && data.map((index) => (
                             <MessageCard data={index} />

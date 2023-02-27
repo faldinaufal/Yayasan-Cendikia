@@ -9,7 +9,7 @@ const TherapistCard = ({index}) => {
     
     return (
         <div>
-            <a href={`/${index.slug}/consultation`}>
+            <a href={`/${index.slug}/therapies`}>
                 <div className='flex border-[1px] border-gray1 rounded-md sm:w-[384px] p-[16px]'>
                     {index.photoProfile == null ?
                         <img src={ImgProfileDefault} alt="Foto Profil" className='w-[80px] h-[80px] rounded-full mb-2'/> 
@@ -26,7 +26,7 @@ const TherapistCard = ({index}) => {
                     </div>
                     <div className='flex items-center my-1'>
                         <BiDollar className='text-[20px] mr-2'/>
-                        <p>Rp. 150.000</p>
+                        <p>{index.therapist.price}</p>
                     </div>
                     <div className='flex items-center'>
                         <FaCalendarAlt className='text-[17px] mr-2'/>
