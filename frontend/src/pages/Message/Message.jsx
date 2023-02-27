@@ -45,8 +45,6 @@ const Message = () => {
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     },[jwttoken])
-    
-    console.log(data)
 
     if(jwttoken && userRole === "Terapis") {
         return (
