@@ -9,7 +9,7 @@ const Register = () => {
     const [email, setEmail] = useState()
     const [name, setName] = useState()
     const [password, setPassword] = useState()
-    // const [msg, setMsg] = useState()
+    const [msg, setMsg] = useState()
     const navigate = useNavigate()
 
     useEffect(() => {
@@ -29,6 +29,7 @@ const Register = () => {
             navigate('/login')
         } catch (error) {
             console.log(error)
+            setMsg("Email telah digunakan")
         }
     }
 
@@ -60,6 +61,11 @@ const Register = () => {
                         </a>
                         <p className='font-century font-700 text-4xl mt-10 mb-2'>Daftar</p>
                         <p className='font-inter leading-6 text-gray3 mb-10 text-center sm:text-start'>Daftarkan akun untuk bergabung bersama Ruang Disabilitas</p>
+                        {msg != null &&
+                        <div className='font-inter bg-pink-200 bg-opacity-60 p-2 rounded-md text-[14px] text-red-600 text-center'>
+                            <p>{msg}</p>
+                        </div>
+                        }
                         <div>
                             <div className='font-inter font-600 flex flex-col mb-4'>
                                 <label htmlFor="email" className='mb-1'>Email</label>

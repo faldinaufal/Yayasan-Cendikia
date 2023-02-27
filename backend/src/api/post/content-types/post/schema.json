@@ -43,10 +43,12 @@
     },
     "slug": {
       "type": "uid",
-      "targetField": "Title"
+      "targetField": "Title",
+      "required": true
     },
     "Excerpt": {
-      "type": "richtext"
+      "type": "richtext",
+      "required": true
     }
   }
 }
