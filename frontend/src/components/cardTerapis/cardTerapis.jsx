@@ -1,6 +1,7 @@
 import React from 'react'
 import {MdWork} from 'react-icons/md'
 import {FaCalendarAlt} from 'react-icons/fa'
+import {BiDollar} from 'react-icons/bi'
 import ImgProfileDefault from '../../assets/image/noProfile2.jpg'
 
 const TherapistCard = ({index}) => {
@@ -19,9 +20,13 @@ const TherapistCard = ({index}) => {
                     <p className='text-lg font-600 text-dark'>{index.username}</p>
                     <p className='text-gray2 my-1'>{index.therapist.skill}</p>
                     <div className='text-gray2 text-[14px] font-600'>
-                    <div className='flex items-center'>
+                    <div className='flex items-center '>
                         <MdWork className='text-[17px] mr-2'/>
                         <p>{index.therapist.experience}</p>
+                    </div>
+                    <div className='flex items-center my-1'>
+                        <BiDollar className='text-[20px] mr-2'/>
+                        <p>Rp. 150.000</p>
                     </div>
                     <div className='flex items-center'>
                         <FaCalendarAlt className='text-[17px] mr-2'/>

@@ -3,6 +3,7 @@ import { Navbar, Footer } from '../../../components'
 import { profile } from '../../../assets/image'
 import bag from '../../../assets/Icon/bag.svg'
 import {FaCalendarAlt} from 'react-icons/fa'
+import {BiDollar} from 'react-icons/bi'
 import Cookies from 'universal-cookie'
 import { useNavigate, useParams } from 'react-router-dom'
 import defaultPhoto from '../../../assets/image/noProfile2.jpg'
@@ -100,7 +101,7 @@ const Contact = () => {
     <section>
         <Navbar/>
         <div className='container my-12'>
-            <p className='font-century text-[40px] text-center sm:text-[48px] font-700'>Konsultasi</p>
+            <p className='font-century text-[40px] text-center sm:text-[48px] font-700'>Terapi/Konsultasi</p>
             <div className='flex items-center justify-center gap-6 my-4 flex-wrap'>
                 {data.map((item) => (
                   <div className='flex flex-col p-2 items-center rounded-md w-[350px] sm:w-[450px] lg:w-[350px] border-[1.5px] border-gray-300'>
@@ -115,6 +116,10 @@ const Contact = () => {
                         <div className='flex items-center gap-3 justify-center my-2'>
                             <img src={bag} alt={bag} />
                             <span>{item.therapist.experience}</span>
+                        </div>
+                        <div className='flex items-center gap-3 justify-center my-2'>
+                            <BiDollar className='text-xl'/>
+                            <span className='font-600'>Rp. 150.000</span>
                         </div>
                         <div className='flex items-center gap-3 justify-center'>
                             <FaCalendarAlt/>
