@@ -80,13 +80,27 @@
         "Terapis",
         "Member"
       ],
-      "default": "Member"
+      "default": "Member",
+      "required": false
     },
     "therapist": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::therapist.therapist",
       "mappedBy": "user"
+    },
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "username",
+      "required": true
     }
   }
 }

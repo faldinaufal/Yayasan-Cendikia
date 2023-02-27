@@ -14,7 +14,8 @@
   "attributes": {
     "terapisId": {
       "type": "uid",
-      "required": true
+      "required": true,
+      "default": "therapist"
     },
     "skill": {
       "type": "string",
@@ -38,6 +39,16 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::consultation.consultation",
+      "mappedBy": "therapist"
+    },
+    "price": {
+      "type": "string",
+      "required": true
+    },
+    "therapies": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::therapie.therapie",
       "mappedBy": "therapist"
     }
   }

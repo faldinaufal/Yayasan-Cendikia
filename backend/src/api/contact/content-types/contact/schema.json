@@ -13,16 +13,20 @@
   "pluginOptions": {},
   "attributes": {
     "Name": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Email": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Description": {
-      "type": "richtext"
+      "type": "richtext",
+      "required": true
     },
     "phoneNumber": {
-      "type": "integer"
+      "type": "integer",
+      "required": true
     }
   }
 }

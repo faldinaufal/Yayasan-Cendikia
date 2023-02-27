@@ -4,7 +4,7 @@ import { Home, AboutUs, Message} from '../pages';
 import { Educenter, PostList, SeePost} from '../pages/EducationCenter'
 import { LetsJoin, JoinConsul, JoinThera } from '../pages/Join';
 import { Login, Register, ForgotPass, EmailSent, UpdatePass, PassSucc } from '../pages/Login&Register';
-import { Profile, ChangePass, Contact, Collaboration } from '../pages/User';
+import { Profile, ChangePass, Consultation, Collaboration, Therapies } from '../pages/User';
 
 const Routing = () => {
   return (
@@ -28,7 +28,8 @@ const Routing = () => {
             <Route path="/profile/:username" element={<Profile/>}/>
             <Route path="/profile/:username/change-password" element={<ChangePass/>}/>
             <Route path="/contact/collaboration" element={<Collaboration/>}/>
-            <Route path="/:username/consultation" element={<Contact/>}/>
+            <Route path="/:username/consultation" element={<Consultation/>}/>
+            <Route path="/:username/therapies" element={<Therapies/>}/>
             <Route path="/consultation/:terapisId/message" element={<Message/>}/>
         </Routes>
     </Router>

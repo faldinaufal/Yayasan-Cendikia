@@ -47,7 +47,7 @@
       "required": true
     },
     "Excerpt": {
-      "type": "richtext",
+      "type": "text",
       "required": true
     }
   }
