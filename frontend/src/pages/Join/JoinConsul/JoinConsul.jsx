@@ -15,7 +15,7 @@ const JoinConsul = () => {
           } catch (error) {
               console.log(error);
           }
-          }
+        }
       Fetch()
   },[])
 
