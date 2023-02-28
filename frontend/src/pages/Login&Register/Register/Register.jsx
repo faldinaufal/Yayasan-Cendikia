@@ -7,7 +7,8 @@ import axios from 'axios'
 
 const Register = () => {
     const [email, setEmail] = useState()
-    const [name, setName] = useState()
+    const [firstName, setFirstName] = useState()
+    const [lastName, setLastName] = useState()
     const [password, setPassword] = useState()
     const [msg, setMsg] = useState()
     const navigate = useNavigate()
@@ -20,12 +21,11 @@ const Register = () => {
         try {
             await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/local/register`, {
                 email: email,
-                username: name,
-                password: password
-                
+                username: firstName,
+                password: password,
+                firstName: firstName,
+                lastName: lastName
             })
-            // .then(response => {
-            // })
             navigate('/login')
         } catch (error) {
             console.log(error)
@@ -35,7 +35,7 @@ const Register = () => {
 
     function abc() {
         var element = document.getElementById("button");
-        if (email != null && name != null && password != null) {
+        if (email != null && firstName != null && password != null && !lastName) {
             element.style.backgroundColor = "#009FCC"; 
             element.style.color = "#FFFFFF";
             element.addEventListener("mouseout", function(){
@@ -72,8 +72,12 @@ const Register = () => {
                                 <input type="email" placeholder='Email' onChange={(e) => setEmail(e.target.value)} id='email' className='font-400 border-2 border-gray1 py-3 px-4 rounded-md invalid:outline-pink-500 text-gray2 valid:border-2 invalid:text-pink-500 outline-2 outline-blue-500 invalid:border-pink-600'/>
                             </div>
                             <div className='font-inter font-600 flex flex-col mb-4'>
-                                <label htmlFor="nama" className='mb-1'>Nama</label>
-                                <input type="text" placeholder='Nama' id='nama' onChange={(e) => setName(e.target.value)} className='font-400 border-2 focus:outline-2 focus:outline-blue-500 border-gray1 py-3 px-4 rounded-md text-gray2 valid:border-2'/>
+                                <label htmlFor="firstname" className='mb-1'>Nama Pertama</label>
+                                <input type="text" placeholder='Nama Terakhir' id='firstname' onChange={(e) => setFirstName(e.target.value)} className='font-400 border-2 focus:outline-2 focus:outline-blue-500 border-gray1 py-3 px-4 rounded-md text-gray2 valid:border-2'/>
+                            </div>
+                            <div className='font-inter font-600 flex flex-col mb-4'>
+                                <label htmlFor="lastname" className='mb-1'>Nama Terakhir</label>
+                                <input type="text" placeholder='Nama Terakhir' id='lastname' onChange={(e) => setLastName(e.target.value)} className='font-400 border-2 focus:outline-2 focus:outline-blue-500 border-gray1 py-3 px-4 rounded-md text-gray2 valid:border-2'/>
                             </div>
                             <div className='font-inter font-600 flex flex-col'>
                                 <label htmlFor="password" className='mb-1'>Password</label>
