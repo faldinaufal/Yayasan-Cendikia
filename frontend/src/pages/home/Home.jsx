@@ -101,7 +101,7 @@ const Home = () => {
               <h2 className='text-center md:text-start'>Education Center</h2>
             </div>
             {item && 
-             (<div className='gap-5 flex flex-col justify-center items-center mb-5 md:flex-row'>
+              <div className='gap-5 flex flex-col justify-center items-center mb-5 md:flex-row'>
                 <div className='md:container'>
                   <img src={process.env.REACT_APP_API_URL+item[currentIndex].attributes.Image.data.attributes.url} alt="Gambar Keluarga" className='w-[350px] h-[250px] object-cover rounded-md sm:w-[588px] sm:h-[360px]'/>
                 </div>
@@ -121,7 +121,7 @@ const Home = () => {
                     </button>
                   </div>
                 </div>
-              </div>)
+              </div>
             }
           </div>
         </div>
