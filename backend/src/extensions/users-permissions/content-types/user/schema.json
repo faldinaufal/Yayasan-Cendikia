@@ -99,8 +99,7 @@
     },
     "slug": {
       "type": "uid",
-      "targetField": "username",
-      "required": true
+      "targetField": "username"
     }
   }
 }

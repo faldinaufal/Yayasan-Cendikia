@@ -55,7 +55,6 @@ const TherapistCard = ({index}) => {
                       </div>
                     </div>
                     }
-                    
                 </div>
               </div>
             </a>

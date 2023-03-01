@@ -68,20 +68,20 @@ const Register = () => {
                         }
                         <div>
                             <div className='font-inter font-600 flex flex-col mb-4'>
+                                <label htmlFor="firstname" className='mb-1'>Nama Depan</label>
+                                <input type="text" placeholder='Nama Depan' id='firstname' onChange={(e) => setFirstName(e.target.value)} className='font-400 border-2 focus:outline-2 focus:outline-blue-500 border-gray1 py-3 px-4 rounded-md text-gray2 valid:border-2'/>
+                            </div>
+                            <div className='font-inter font-600 flex flex-col mb-4'>
+                                <label htmlFor="lastname" className='mb-1'>Nama Belakang</label>
+                                <input type="text" placeholder='Nama Belakang' id='lastname' onChange={(e) => setLastName(e.target.value)} className='font-400 border-2 focus:outline-2 focus:outline-blue-500 border-gray1 py-3 px-4 rounded-md text-gray2 valid:border-2'/>
+                            </div>
+                            <div className='font-inter font-600 flex flex-col mb-4'>
                                 <label htmlFor="email" className='mb-1'>Email</label>
                                 <input type="email" placeholder='Email' onChange={(e) => setEmail(e.target.value)} id='email' className='font-400 border-2 border-gray1 py-3 px-4 rounded-md invalid:outline-pink-500 text-gray2 valid:border-2 invalid:text-pink-500 outline-2 outline-blue-500 invalid:border-pink-600'/>
                             </div>
-                            <div className='font-inter font-600 flex flex-col mb-4'>
-                                <label htmlFor="firstname" className='mb-1'>Nama Pertama</label>
-                                <input type="text" placeholder='Nama Terakhir' id='firstname' onChange={(e) => setFirstName(e.target.value)} className='font-400 border-2 focus:outline-2 focus:outline-blue-500 border-gray1 py-3 px-4 rounded-md text-gray2 valid:border-2'/>
-                            </div>
-                            <div className='font-inter font-600 flex flex-col mb-4'>
-                                <label htmlFor="lastname" className='mb-1'>Nama Terakhir</label>
-                                <input type="text" placeholder='Nama Terakhir' id='lastname' onChange={(e) => setLastName(e.target.value)} className='font-400 border-2 focus:outline-2 focus:outline-blue-500 border-gray1 py-3 px-4 rounded-md text-gray2 valid:border-2'/>
-                            </div>
                             <div className='font-inter font-600 flex flex-col'>
-                                <label htmlFor="password" className='mb-1'>Password</label>
-                                <input type="password" placeholder='Password' id='password' onChange={(e) => setPassword(e.target.value)} className='font-400 border-2 border-gray1 py-3 px-4 rounded-md text-gray2 valid:border-2 outline-blue-500'/>
+                                <label htmlFor="password" className='mb-1'>Kata Sandi</label>
+                                <input type="password" placeholder='Kata ssandi' id='password' onChange={(e) => setPassword(e.target.value)} className='font-400 border-2 border-gray1 py-3 px-4 rounded-md text-gray2 valid:border-2 outline-blue-500'/>
                             </div>
                             <button id='button' onClick={Register} className='my-10 w-full hover:bg-[#009FCC] duration-200 hover:text-white bg-gray1 rounded-md font-inter font-600 text-gray2 py-3'>Daftar</button>
                         </div>
