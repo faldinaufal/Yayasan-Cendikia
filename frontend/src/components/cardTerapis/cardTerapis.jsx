@@ -18,23 +18,46 @@ const TherapistCard = ({index}) => {
                     }
                 <div className='font-inter w-[264px] ml-2'>
                     <p className='text-lg font-600 text-dark'>{index.username}</p>
-                    <p className='text-gray2 my-1'>{index.therapist.skill}</p>
-                    <div className='text-gray2 text-[14px] font-600'>
-                    <div className='flex items-center '>
-                        <MdWork className='text-[17px] mr-2'/>
-                        <p>{index.therapist.experience}</p>
+                    {index.therapist = null ?
+                    <div>
+                      <p className='text-gray2 my-1'></p>
+                      <div className='text-gray2 text-[14px] font-600'>
+                        <div className='flex items-center '>
+                          <MdWork className='text-[17px] mr-2'/>
+                          <p></p>
+                        </div>
+                        <div className='flex items-center my-1'>
+                          <BiDollar className='text-[20px] mr-2'/>
+                          <p></p>
+                        </div>
+                        <div className='flex items-center'>
+                          <FaCalendarAlt className='text-[17px] mr-2'/>
+                          <p></p>
+                        </div>
+                      </div>
                     </div>
-                    <div className='flex items-center my-1'>
-                        <BiDollar className='text-[20px] mr-2'/>
-                        <p>{index.therapist.price}</p>
+                    :index.therapist != null &&
+                    <div>
+                      <p className='text-gray2 my-1'>{index.therapist.skill}</p>
+                      <div className='text-gray2 text-[14px] font-600'>
+                        <div className='flex items-center '>
+                          <MdWork className='text-[17px] mr-2'/>
+                          <p>{index.therapist.experience}</p>
+                        </div>
+                        <div className='flex items-center my-1'>
+                          <BiDollar className='text-[20px] mr-2'/>
+                          <p>{index.therapist.price}</p>
+                        </div>
+                        <div className='flex items-center'>
+                          <FaCalendarAlt className='text-[17px] mr-2'/>
+                          <p>{index.therapist.jobTime}</p>
+                        </div>
+                      </div>
                     </div>
-                    <div className='flex items-center'>
-                        <FaCalendarAlt className='text-[17px] mr-2'/>
-                        <p>{index.therapist.jobTime}</p>
-                    </div>
-                    </div>
+                    }
+                    
                 </div>
-                </div>
+              </div>
             </a>
         </div>
     )
