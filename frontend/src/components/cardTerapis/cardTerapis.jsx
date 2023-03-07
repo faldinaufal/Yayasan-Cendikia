@@ -1,7 +1,6 @@
 import React from 'react'
 import {MdWork} from 'react-icons/md'
 import {FaCalendarAlt} from 'react-icons/fa'
-import {BiDollar} from 'react-icons/bi'
 import ImgProfileDefault from '../../assets/image/noProfile2.jpg'
 
 const TherapistCard = ({index}) => {
@@ -18,23 +17,45 @@ const TherapistCard = ({index}) => {
                     }
                 <div className='font-inter w-[264px] ml-2'>
                     <p className='text-lg font-600 text-dark'>{index.username}</p>
-                    <p className='text-gray2 my-1'>{index.therapist.skill}</p>
-                    <div className='text-gray2 text-[14px] font-600'>
-                    <div className='flex items-center '>
-                        <MdWork className='text-[17px] mr-2'/>
-                        <p>{index.therapist.experience}</p>
+                    {index.therapist = null ?
+                    <div>
+                      <p className='text-gray2 my-1'></p>
+                      <div className='text-gray2 text-[14px] font-600'>
+                        <div className='flex items-center '>
+                          <MdWork className='text-[17px] mr-2'/>
+                          <p></p>
+                        </div>
+                        <div className='flex items-center my-1'>
+                          <p className='text-[20px] mr-2'>Rp.</p>
+                          <p></p>
+                        </div>
+                        <div className='flex items-center'>
+                          <FaCalendarAlt className='text-[17px] mr-2'/>
+                          <p></p>
+                        </div>
+                      </div>
                     </div>
-                    <div className='flex items-center my-1'>
-                        <BiDollar className='text-[20px] mr-2'/>
-                        <p>{index.therapist.price}</p>
+                    :index.therapist != null &&
+                    <div>
+                      <p className='text-gray2 my-1'>{index.therapist.skill}</p>
+                      <div className='text-gray2 text-[14px] font-600'>
+                        <div className='flex items-center '>
+                          <MdWork className='text-[17px] mr-2'/>
+                          <p>{index.therapist.experience}</p>
+                        </div>
+                        <div className='flex items-center my-1'>
+                          <p>Rp.</p>
+                          <p>{index.therapist.price}</p>
+                        </div>
+                        <div className='flex items-center'>
+                          <FaCalendarAlt className='text-[17px] mr-2'/>
+                          <p>{index.therapist.jobTime}</p>
+                        </div>
+                      </div>
                     </div>
-                    <div className='flex items-center'>
-                        <FaCalendarAlt className='text-[17px] mr-2'/>
-                        <p>{index.therapist.jobTime}</p>
-                    </div>
-                    </div>
+                    }
                 </div>
-                </div>
+              </div>
             </a>
         </div>
     )

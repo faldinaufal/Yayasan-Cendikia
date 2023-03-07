@@ -3,7 +3,6 @@ import { Navbar, Footer } from '../../../components'
 import { profile } from '../../../assets/image'
 import bag from '../../../assets/Icon/bag.svg'
 import {FaCalendarAlt} from 'react-icons/fa'
-import {BiDollar} from 'react-icons/bi'
 import Cookies from 'universal-cookie'
 import { useNavigate, useParams } from 'react-router-dom'
 import defaultPhoto from '../../../assets/image/noProfile2.jpg'
@@ -118,7 +117,7 @@ const Contact = () => {
                             <span>{item.therapist.experience}</span>
                         </div>
                         <div className='flex items-center gap-3 justify-center my-2'>
-                            <BiDollar className='text-xl'/>
+                            <p className='font-600'>Rp.</p>
                             <span className='font-600'>{item.therapist.price}</span>
                         </div>
                         <div className='flex items-center gap-3 justify-center'>

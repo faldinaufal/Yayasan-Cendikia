@@ -132,7 +132,7 @@ const Home = () => {
             </div>
             <div>
               <Slider {...settings}>
-                {partner && partner.map((index) => (
+                {partner && partner.map(index => (
                   <div className='w-[180px] h-[120px] rounded-lg flex justify-center items-center'>
                       <img src={process.env.REACT_APP_API_URL+index.attributes.logo.data.attributes.url} alt={index.attributes.name} className='w-[130px] h-[80px]'/>
                   </div>
