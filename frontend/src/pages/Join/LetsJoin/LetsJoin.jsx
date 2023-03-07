@@ -5,9 +5,8 @@ import { kerjasama } from '../../../assets/image'
 import axios from 'axios'
 
 const LetsJoin = () => {
-
   const [data, setData] = useState([])
-
+  
   useEffect(() => {
       const Fetch = async () => {
           try {
@@ -36,7 +35,7 @@ const LetsJoin = () => {
           </div>
           <div className='flex flex-wrap justify-center gap-6'>
             {data.slice(0,3).map((index) => (
-                <TherapistCard index={index} key={index.id}/>
+              <TherapistCard index={index} key={index.id}/>
             ))}
           </div>
         </div>

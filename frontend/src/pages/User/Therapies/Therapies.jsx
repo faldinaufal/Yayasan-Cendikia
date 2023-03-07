@@ -16,7 +16,6 @@ const Contact = () => {
   const [phoneNumber, setPhoneNumber] = useState(null)
   const [description, setDescription] = useState(null)
   const [data, setData] = useState([])
-  // const [userData, setUserData] = useState([])
   const [userId, setUserId] = useState()
   const [therapistId, setTherapistId] = useState() 
   const navigate = useNavigate()
@@ -102,8 +101,8 @@ const Contact = () => {
         <div className='container my-12'>
             <p className='font-century text-[40px] text-center sm:text-[48px] lg:pr-32 font-700'>Terapi</p>
             <div className='flex items-center justify-center gap-6 my-4 flex-wrap'>
-                {data.map((item) => (
-                  <div className='flex flex-col p-2 items-center rounded-md w-[350px] sm:w-[450px] lg:w-[350px] border-[1.5px] border-gray-300'>
+                {data.map((item, index) => (
+                  <div key={index} className='flex flex-col p-2 items-center rounded-md w-[350px] sm:w-[450px] lg:w-[350px] border-[1.5px] border-gray-300'>
                     {item.photoProfile === null ?
                       <img src={defaultPhoto} alt={profile} className='w-24 h-24 rounded-full'/>
                     :item.photoProfile !== null &&

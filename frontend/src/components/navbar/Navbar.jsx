@@ -24,7 +24,9 @@ const Navbar = () => {
             headers: {
               Authorization: `Bearer ${jwttoken}`
             }})
-          setSlug(response.data.therapist.terapisId)
+          if(response.data.userRole === "Terapis") {
+            setSlug(response.data.therapist.terapisId)
+          }
           setData(response.data.userRole)
         } catch (error) {
           console.log(error)

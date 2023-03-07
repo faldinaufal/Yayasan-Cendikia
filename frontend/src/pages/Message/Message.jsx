@@ -72,9 +72,7 @@ const Message = () => {
                     <p className='font-inter text-[24px]'>Halaman ini tidak tersedia, Silahkan Tekan tombol untuk kembali ke beranda</p>
                     <a href="/"><button className='px-3 py-2 bg-[#009FCC] text-white text-lg font-bold font-inter rounded-sm duration-150 hover:bg-gray1'>Kembali ke beranda</button></a>
                 </div>
-                <div className="absolute bottom-0 right-0 left-0">
-                    <Footer/>
-                </div>
+                <Footer/>
             </div>
         )
     }
